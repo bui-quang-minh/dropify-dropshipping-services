@@ -4,43 +4,171 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Dropify</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Dropify.styles.css" asp-append-version="true" />
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/plugins/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Dropify</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+    <header class="header">
+        <div class="header-fixed">
+            <nav class="navbar navbar-expand-lg header-nav">
+                <div class="navbar-header">
+                    <a id="mobile_btn" href="javascript:void(0);">
+                        <span class="bar-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </a>
+                    <a href="index.html" class="navbar-brand logo">
+                        <img src="/assets/img/logo.png" class="img-fluid" alt="Logo">
+                    </a>
+                </div>
+                <div class="main-menu-wrapper">
+                    <div class="menu-header">
+                        <a href="index.html" class="menu-logo">
+                            <img src="/assets/img/logo.png" class="img-fluid" alt="Logo">
+                        </a>
+                        <a id="menu_close" class="menu-close" href="javascript:void(0);">
+                            <i class="fas fa-times"></i>
+                        </a>
+                    </div>
+                    <ul class="main-nav">
+                        <li class="">
+                            <a href="">Home <i class=""></i></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        <li class="has-submenu active">
+                            <a>Products <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li class="has-submenu active">
+                                    <a href="Product/AllProduct">Product</a>
+                                    <ul class="submenu">
+                                        <li class="active"><a href="blog.html">Active Product</a></li>
+                                        <li><a href="blog-details.html">Inactive Product</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-submenu">
+                                    <a href="blog.html">Provider</a>
+                                    <ul class="submenu">
+                                        @foreach (Models.Supplier s in Model.suppliers)
+                                        {
+                                            <li><a href="">@s.SupplierName</a></li>
+                                        }
+                                    </ul>
+                                </li>
+                                <li class="has-submenu">
+                                    <a href="blog.html">Category</a>
+                                    <ul class="submenu">
+                                        @foreach (Models.Category c in Model.categories)
+                                        {
+                                            <li><a href="">@c.CategoryName</a></li>
+                                        }
+                                    </ul>
+                                <li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href>Mentee <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li class="has-submenu">
+                                    <a href="#">Mentors</a>
+                                    <ul class="submenu">
+                                        <li><a href="map-grid.html">Map Grid</a></li>
+                                        <li><a href="map-list.html">Map List</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="search.html">Search Mentor</a></li>
+                                <li><a href="profile.html">Mentor Profile</a></li>
+                                <li><a href="bookings-mentee.html">Bookings</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="booking-success.html">Booking Success</a></li>
+                                <li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
+                                <li><a href="favourites.html">Favourites</a></li>
+                                <li><a href="chat-mentee.html">Chat</a></li>
+                                <li><a href="profile-settings-mentee.html">Profile Settings</a></li>
+                                <li><a href="change-password.html">Change Password</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href>Pages <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="voice-call.html">Voice Call</a></li>
+                                <li><a href="video-call.html">Video Call</a></li>
+                                <li><a href="search.html">Search Mentors</a></li>
+                                <li><a href="components.html">Components</a></li>
+                                <li class="has-submenu">
+                                    <a href="invoices.html">Invoices</a>
+                                    <ul class="submenu">
+                                        <li><a href="invoices.html">Invoices</a></li>
+                                        <li><a href="invoice-view.html">Invoice View</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="blank-page.html">Starter Page</a></li>
+                                <li><a href="login.html">Login</a></li>
+                                <li><a href="register.html">Register</a></li>
+                                <li><a href="forgot-password.html">Forgot Password</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href>Blog <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="blog-list.html">Blog List</a></li>
+                                <li><a href="blog-grid.html">Blog Grid</a></li>
+                                <li><a href="blog-details.html">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="admin/index.html" target="_blank">Admin</a>
+                        </li>
+                        <li class="login-link">
+                            <a href="login.html">Login / Signup</a>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </nav>
+                <ul class="nav header-navbar-rht">
+
+                    <li class="nav-item dropdown has-arrow logged-item">
+                        <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+                            <span class="user-img">
+                                <img class="rounded-circle" src="/assets/img/user/user.jpg" width="31" alt="Darren Elder">
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <div class="user-header">
+                                <div class="avatar avatar-sm">
+                                    <img src="/assets/img/user/user.jpg" alt="User Image" class="avatar-img rounded-circle">
+                                </div>
+                                <div class="user-text">
+                                    <h6>Jonathan Doe</h6>
+                                    <p class="text-muted mb-0">Mentor</p>
+                                </div>
+                            </div>
+                            <a class="dropdown-item" href="dashboard.html">Dashboard</a>
+                            <a class="dropdown-item" href="profile-settings.html">Profile Settings</a>
+                            <a class="dropdown-item" href="login.html">Logout</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
+    <!--
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2024 - Dropify - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
+    -->
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
