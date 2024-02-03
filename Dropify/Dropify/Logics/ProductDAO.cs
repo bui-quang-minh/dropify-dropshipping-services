@@ -39,5 +39,15 @@ namespace Dropify.Logics
                 return db.Products.Where(x => x.CategoryId == id).ToList();
             }
         }
+
+        public void Save(Product product)
+        {
+            using (var db = new prn211_dropshippingContext())
+            {
+               db.Products.Add(product);
+               
+                
+            }
+        }
     }
 }

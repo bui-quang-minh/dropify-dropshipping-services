@@ -1,9 +1,16 @@
+using Dropify.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
+builder.Services.AddDbContext<prn211_dropshippingContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("prn211_dropshipping")));
+builder.Services.AddScoped<prn211_dropshippingContext>();
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

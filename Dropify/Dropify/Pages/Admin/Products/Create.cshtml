@@ -1,0 +1,80 @@
+﻿@page
+@model Dropify.Pages.Admin.ManageProduct.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Edit</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Product.ProductId" />
+            <div class="form-group">
+                <label asp-for="Product.Name" class="control-label"></label>
+                <input asp-for="Product.Name" class="form-control" />
+                <span asp-validation-for="Product.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.SupplierId" class="control-label"></label>
+                <select asp-for="Product.SupplierId" class="form-control" asp-items="ViewBag.SupplierId"></select>
+                <span asp-validation-for="Product.SupplierId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.CategoryId" class="control-label"></label>
+                <select asp-for="Product.CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.OriginalPrice" class="control-label"></label>
+                <input asp-for="Product.OriginalPrice" class="form-control" />
+                <span asp-validation-for="Product.OriginalPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.SellOutPrice" class="control-label"></label>
+                <input asp-for="Product.SellOutPrice" class="form-control" />
+                <span asp-validation-for="Product.SellOutPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.CreatedDate" class="control-label"></label>
+                <input asp-for="Product.CreatedDate" class="form-control" />
+                <span asp-validation-for="Product.CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.StartDate" class="control-label"></label>
+                <input asp-for="Product.StartDate" class="form-control" />
+                <span asp-validation-for="Product.StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.EndDate" class="control-label"></label>
+                <input asp-for="Product.EndDate" class="form-control" />
+                <span asp-validation-for="Product.EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.Shipdate" class="control-label"></label>
+                <input asp-for="Product.Shipdate" class="form-control" />
+                <span asp-validation-for="Product.Shipdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.Status" class="control-label"></label>
+                <input asp-for="Product.Status" class="form-control" />
+                <span asp-validation-for="Product.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
