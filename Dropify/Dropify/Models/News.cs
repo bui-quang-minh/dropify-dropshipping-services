@@ -10,7 +10,7 @@ namespace Dropify.Models
         public int? ProductId { get; set; }
         public string? ImgUrl { get; set; }
         public string? NewsContents { get; set; }
-        public string? CreatedBy { get; set; }
+        public string CreatedBy { get; set; } = null!;
         public DateTime? CreatedDate { get; set; }
         public string? Statis { get; set; }
 

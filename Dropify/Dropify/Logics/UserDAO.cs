@@ -11,6 +11,7 @@ namespace Dropify.Logics
                 return db.Users.ToList();
             }
         }
+        
         public UserDetail Login(String email, String password)
         {
             using (var db = new prn211_dropshippingContext())

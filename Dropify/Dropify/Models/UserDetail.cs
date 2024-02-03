@@ -13,12 +13,12 @@ namespace Dropify.Models
 
         public int Udid { get; set; }
         public int? Uid { get; set; }
-        public string? Name { get; set; }
-        public DateTime? Dob { get; set; }
-        public string? Sex { get; set; }
-        public string? PhoneNumber { get; set; }
+        public string Name { get; set; } = null!;
+        public DateTime Dob { get; set; }
+        public string Sex { get; set; } = null!;
+        public string PhoneNumber { get; set; } = null!;
         public string? ImgUrl { get; set; }
-        public bool? Admin { get; set; }
+        public bool Admin { get; set; }
         public string? Status { get; set; }
 
         public virtual User? UidNavigation { get; set; }

@@ -29,19 +29,12 @@ namespace Dropify.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var builder = new ConfigurationBuilder()
-                        .SetBasePath(Directory.GetCurrentDirectory())
-                        .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-            IConfiguration configRoot = builder.Build();
-            optionsBuilder.UseSqlServer(configRoot.GetConnectionString("prn211_dropshipping"));
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Server=DESKTOP-IRABI1B\\MSSQLSERVER01; database=prn211_dropshipping;uid=sa;pwd=123;TrustServerCertificate=true");
+            }
         }
-
-//        {
-//            if (!optionsBuilder.IsConfigured)
-//            {
-//                optionsBuilder.UseSqlServer("Server=DESKTOP-IRABI1B\\MSSQLSERVER01; database=prn211_dropshipping;uid=sa;pwd=123;TrustServerCertificate=true");
-//           }
-//        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -51,7 +44,9 @@ namespace Dropify.Models
 
                 entity.Property(e => e.CategoryName).HasMaxLength(100);
 
-                entity.Property(e => e.ChangedDate).HasColumnType("datetime");
+                entity.Property(e => e.ChangedDate)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
 
                 entity.Property(e => e.Status).HasMaxLength(50);
             });
@@ -62,7 +57,9 @@ namespace Dropify.Models
 
                 entity.Property(e => e.CreatedBy).HasMaxLength(100);
 
-                entity.Property(e => e.CreatedDate).HasColumnType("datetime");
+                entity.Property(e => e.CreatedDate)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
 
                 entity.Property(e => e.ImgUrl)
                     .HasMaxLength(255)
@@ -82,7 +79,9 @@ namespace Dropify.Models
 
             modelBuilder.Entity<Order>(entity =>
             {
-                entity.Property(e => e.OrderedDate).HasColumnType("datetime");
+                entity.Property(e => e.OrderedDate)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
 
                 entity.Property(e => e.OrderedPrice).HasColumnType("decimal(18, 2)");
 
@@ -93,6 +92,7 @@ namespace Dropify.Models
                 entity.HasOne(d => d.Address)
                     .WithMany(p => p.Orders)
                     .HasForeignKey(d => d.AddressId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Orders__AddressI__4AB81AF0");
 
                 entity.HasOne(d => d.Ud)
@@ -124,7 +124,9 @@ namespace Dropify.Models
 
             modelBuilder.Entity<Product>(entity =>
             {
-                entity.Property(e => e.CreatedDate).HasColumnType("datetime");
+                entity.Property(e => e.CreatedDate)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
 
                 entity.Property(e => e.EndDate).HasColumnType("datetime");
 
@@ -162,6 +164,7 @@ namespace Dropify.Models
                 entity.HasOne(d => d.Product)
                     .WithMany(p => p.ProductDetails)
                     .HasForeignKey(d => d.ProductId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__ProductDe__Produ__3F466844");
             });
 
@@ -171,7 +174,9 @@ namespace Dropify.Models
 
                 entity.Property(e => e.ContactNumber).HasMaxLength(20);
 
-                entity.Property(e => e.CooperateDate).HasColumnType("datetime");
+                entity.Property(e => e.CooperateDate)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
 
                 entity.Property(e => e.EndDate).HasColumnType("datetime");
 
@@ -216,7 +221,8 @@ namespace Dropify.Models
 
                 entity.Property(e => e.ImgUrl)
                     .HasMaxLength(255)
-                    .HasColumnName("ImgURL");
+                    .HasColumnName("ImgURL")
+                    .HasDefaultValueSql("(N'https://vnn-imgs-a1.vgcloud.vn/image1.ictnews.vn/_Files/2020/03/17/trend-avatar-1.jpg')");
 
                 entity.Property(e => e.Name).HasMaxLength(100);
 

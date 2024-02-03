@@ -12,7 +12,7 @@ namespace Dropify.Models
 
         public int CategoryId { get; set; }
         public int? CategoryParent { get; set; }
-        public string? CategoryName { get; set; }
+        public string CategoryName { get; set; } = null!;
         public DateTime? ChangedDate { get; set; }
         public string? Status { get; set; }
 

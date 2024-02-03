@@ -11,10 +11,10 @@ namespace Dropify.Models
         }
 
         public int SupplierId { get; set; }
-        public string? SupplierName { get; set; }
+        public string SupplierName { get; set; } = null!;
         public DateTime? CooperateDate { get; set; }
-        public string? ContactEmail { get; set; }
-        public string? ContactNumber { get; set; }
+        public string ContactEmail { get; set; } = null!;
+        public string ContactNumber { get; set; } = null!;
         public DateTime? EndDate { get; set; }
         public string? Status { get; set; }
 

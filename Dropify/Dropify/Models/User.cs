@@ -11,8 +11,8 @@ namespace Dropify.Models
         }
 
         public int Uid { get; set; }
-        public string? Email { get; set; }
-        public string? Pword { get; set; }
+        public string Email { get; set; } = null!;
+        public string Pword { get; set; } = null!;
         public string? Status { get; set; }
 
         public virtual ICollection<UserDetail> UserDetails { get; set; }

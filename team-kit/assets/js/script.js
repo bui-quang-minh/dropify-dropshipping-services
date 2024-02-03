@@ -493,3 +493,17 @@ Version      : 1.0
 	}
 	
 })(jQuery);
+
+function convertToVND(number) {
+	// Convert the number to a string and split it into parts before the decimal and after the decimal
+	const parts = number.toString().split('.');
+	
+	// Format the part before the decimal separator
+	const formattedBeforeDecimal = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+	
+	// Join the parts back together with the decimal separator
+	const result = formattedBeforeDecimal + (parts[1] ? '.' + parts[1] : '');
+	
+	// Return the formatted result with VND symbol
+	return result + ' VND';
+  }

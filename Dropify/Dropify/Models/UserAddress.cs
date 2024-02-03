@@ -12,7 +12,7 @@ namespace Dropify.Models
 
         public int AddressId { get; set; }
         public int? Udid { get; set; }
-        public string? Address { get; set; }
+        public string Address { get; set; } = null!;
         public bool? Default { get; set; }
         public string? Status { get; set; }
 

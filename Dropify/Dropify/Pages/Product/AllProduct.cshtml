@@ -41,10 +41,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
-
+                        <!--Search bar-->
                         <div class="profile-sidebar">
-                            
-                            
                             
                         </div>
 
@@ -56,16 +54,17 @@
                                 <nav class="user-tabs">
                                     <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
                                         <li>
-                                            <a class="nav-link active" href="#activeservice" data-bs-toggle="tab">Active Blog</a>
+                                            <a class="nav-link active" href="#activeservice" data-bs-toggle="tab">Active Products</a>
                                         </li>
                                         <li>
-                                            <a class="nav-link" href="#inactiveservice" data-bs-toggle="tab">Inactive Blog</a>
+                                            <a class="nav-link" href="#inactiveservice" data-bs-toggle="tab">Inactive Products</a>
                                         </li>
                                     </ul>
                                 </nav>
 
 
                                 <div class="tab-content">
+
 
                                     <div role="tabpanel" id="activeservice" class="tab-pane fade show active">
                                         <div class="row">
@@ -76,12 +75,12 @@
                                             <div class="col-12 col-md-6 col-xl-4 d-flex">
                                                 <div class="course-box blog grid-blog">
                                                     <div class="blog-image mb-0">
-                                                        <a href="blog-details.html"><img class="img-fluid" src="@p.ProductThumbnailImage" alt="Post Image"></a>
+                                                        <a href="/Product/ProductDetail?productId=@p.ProductId"><img class="img-fluid" src="@p.ProductThumbnailImage" alt="Post Image"></a>
                                                     </div>
                                                     <div class="course-content">
                                                         <span class="date">@p.StartDate</span>
-                                                        <span class="course-title">@p.Name</span>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                                            <span class="course-title"><a href="/Product/ProductDetail?productId=@p.ProductId">@p.Name</a></span>
+                                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                                                         <div class="row">
                                                             <div class="col">
                                                             </div>
@@ -95,8 +94,6 @@
                                                 </div>
                                             </div>
                                             }
-
-
                                         </div>
                                     </div>
 
