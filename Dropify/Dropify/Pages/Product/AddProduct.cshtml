@@ -71,46 +71,86 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h3 class="pb-3">Add Blog</h3>
-                                        <form action="https://mentoring.dreamguystech.com/html/template/blog.html">
+                                        <h3 class="pb-3">Add Product</h3>
+                                        <form action="AddProduct" method="post">
                                             <div class="service-fields mb-3">
-                                                <h4 class="heading-2">Service Information</h4>
+                                                <h4 class="heading-2">Product Information</h4>
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
-                                                            <label>Blog Title <span class="text-danger">*</span></label>
-                                                            <input class="form-control" type="text" value="Abacus Study for beginner - Part I">
+                                                            <label>Product Title <span class="text-danger">*</span></label>
+                                                            <input class="form-control" name="productName" type="text" placeholder="Enter product name ...">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="service-fields mb-3">
-                                                <h4 class="heading-2">Blog Category</h4>
+                                                <h4 class="heading-2">Product Category</h4>
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <label>Category <span class="text-danger">*</span></label>
                                                             <select class="form-control select form-select" name="category">
-                                                                <option value="1">Abacus Study for beginner - Part I</option>
-                                                                <option value="2" selected="selected">Abacus Study for beginner - Part II</option>
-                                                                <option value="3">Abacus Study for beginner - Part III</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group">
-                                                            <label>Sub Category <span class="text-danger">*</span></label>
-                                                            <select class="form-control select form-select" name="subcategory">
-                                                                <option value="1">Abacus Study for experienced - Part I</option>
-                                                                <option value="2" selected="selected">Abacus Study for experienced - Part II</option>
-                                                                <option value="3">Abacus Study for experienced - Part III</option>
+                                                            @foreach (var item in Model.availableCategory)
+                                                                {
+                                                                    <option value="@item.CategoryId">@item.CategoryName</option>
+                                                                }
                                                             </select>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        <div class="service-fields mb-3">
+                                            <h4 class="heading-2">Product Color</h4>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label>Color (Optional)</label><label style="color:gray">- each seperated by a semicolon ";".</label>
+                                                        <input class="form-control" type="text" placeholder="Enter color...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="service-fields mb-3">
+                                            <h4 class="heading-2">Product Size</h4>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label>Size (Optional)</label><label style="color:gray">- each seperated by a semicolon ";".</label>
+                                                        <input class="form-control" type="text" placeholder="Enter size...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="service-fields mb-3">
+                                            <h4 class="heading-2">Product Options</h4>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label>Options (Optional)</label><label style="color:gray">- each seperated by a semicolon ";".</label>
+                                                        <input class="form-control" type="text" placeholder="Enter Options...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                             <div class="service-fields mb-3">
-                                                <h4 class="heading-2">Blog Details</h4>
+                                                <h4 class="heading-2">Product Details</h4>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label>Product Original Price <span class="text-danger">*</span></label>
+                                                        <input class="form-control" type="text" placeholder="Enter product original price ...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label>Product Sell Out Price <span class="text-danger">*</span></label>
+                                                        <input class="form-control" type="text" placeholder="Enter product sell out price ...">
+                                                    </div>
+                                                </div>
+                                            </div>
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
@@ -121,7 +161,7 @@
                                                 </div>
                                             </div>
                                             <div class="service-fields mb-3">
-                                                <h4 class="heading-2">Blog Images </h4>
+                                            <h4 class="heading-2">Product Images </h4> <label style="color:gray">- First picture will be used as thumbnail.</label>
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="service-upload">
