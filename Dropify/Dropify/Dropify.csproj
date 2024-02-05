@@ -16,9 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Admin\" />
     <Folder Include="Pages\Profile\" />
     <Folder Include="Views\" />
+    <Folder Include="wwwroot\Admin\" />
   </ItemGroup>
 
   <ItemGroup>
