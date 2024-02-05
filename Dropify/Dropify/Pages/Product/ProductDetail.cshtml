@@ -136,7 +136,7 @@
                                 <s style="font-size: 22px; font-weight:bold">@originalPriceVND</s>
                                 <p style="font-size: 22px; font-weight:bold" class="text-danger">@discountVND</p>
 
-                                <form class="search-form" method="post">
+                                <form class="search-form" action="ProductDetail" method="post">
                                     <!--Color-->
                                     <div class="input-group">
                                          @{
@@ -212,6 +212,11 @@
                                                 <span id="hide"></span><input type="number" class="number_custom" name="amount" max="100" min="1" step="1" id="amount" value="1">
                                             </span>
                                         </div>
+                                    </div>
+                                    <div class="input-group">
+
+                                        <input class="add-to-cart" style="content: f07a" type="submit" value="Add to cart">
+                                        
                                     </div>
                                 </form>
                             </div>
