@@ -5,6 +5,446 @@
       "PackagePath": "staticwebassets\\Dropify.bundle.scp.css"
     },
     {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\bootstrap-datetimepicker.min.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\bootstrap-datetimepicker.min.css"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\ckeditor.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\ckeditor.css"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\feather.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\feather.css"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\feathericon.min.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\feathericon.min.css"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\style.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\style.css"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\Feather144f.svg",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Feather144f.svg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\Feather144f.ttf",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Feather144f.ttf"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\Feather144f.woff",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Feather144f.woff"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\MaterialIcons-Regular.eot",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\MaterialIcons-Regular.eot"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\MaterialIcons-Regular.html",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\MaterialIcons-Regular.html"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\MaterialIcons-Regular.ttf",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\MaterialIcons-Regular.ttf"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\MaterialIcons-Regular.woff",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\MaterialIcons-Regular.woff"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\feathericon.eot",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\feathericon.eot"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\feathericon.svg",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\feathericon.svg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\feathericon.ttf",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\feathericon.ttf"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\feathericon.woff",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\feathericon.woff"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\feathericond41d.eot",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\feathericond41d.eot"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfont3e6e.eot",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfont3e6e.eot"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfont3e6e.html",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfont3e6e.html"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfont3e6e.svg",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfont3e6e.svg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfont3e6e.ttf",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfont3e6e.ttf"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfont3e6e.woff",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfont3e6e.woff"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfontd41d.eot",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfontd41d.eot"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\blog\\blog-01.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\blog\\blog-01.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\blog\\blog-02.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\blog\\blog-02.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\blog\\blog-03.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\blog\\blog-03.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\Admin\\img\\favicon.png"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\github.html",
+      "PackagePath": "staticwebassets\\Admin\\img\\github.html"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\icons\\invoices-icon1.svg",
+      "PackagePath": "staticwebassets\\Admin\\img\\icons\\invoices-icon1.svg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\icons\\invoices-icon2.svg",
+      "PackagePath": "staticwebassets\\Admin\\img\\icons\\invoices-icon2.svg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\icons\\invoices-icon3.svg",
+      "PackagePath": "staticwebassets\\Admin\\img\\icons\\invoices-icon3.svg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\icons\\invoices-icon4.svg",
+      "PackagePath": "staticwebassets\\Admin\\img\\icons\\invoices-icon4.svg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\icons\\invoices-icon5.svg",
+      "PackagePath": "staticwebassets\\Admin\\img\\icons\\invoices-icon5.svg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\img-01.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\img-01.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\invoice-circle1.png",
+      "PackagePath": "staticwebassets\\Admin\\img\\invoice-circle1.png"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\invoice-circle2.png",
+      "PackagePath": "staticwebassets\\Admin\\img\\invoice-circle2.png"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\logo-small.png",
+      "PackagePath": "staticwebassets\\Admin\\img\\logo-small.png"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\logo-white.png",
+      "PackagePath": "staticwebassets\\Admin\\img\\logo-white.png"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\logo.png",
+      "PackagePath": "staticwebassets\\Admin\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-01.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-01.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-03.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-03.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-04.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-04.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-06.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-06.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-07.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-07.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-08.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-08.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-09.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-09.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-10.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-10.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-11.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-11.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-12.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-12.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-13.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-13.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-14.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-14.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-17.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-17.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-18.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-18.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\signature.png",
+      "PackagePath": "staticwebassets\\Admin\\img\\signature.png"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\user\\user.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user1.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\user\\user1.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user11.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\user\\user11.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user12.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\user\\user12.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user2.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\user\\user2.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user3.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\user\\user3.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user4.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\user\\user4.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user5.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\user\\user5.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user6.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\user\\user6.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user7.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\user\\user7.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user8.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\user\\user8.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user9.jpg",
+      "PackagePath": "staticwebassets\\Admin\\img\\user\\user9.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\bootstrap-datetimepicker.min.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\bootstrap-datetimepicker.min.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\chart.morris.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\chart.morris.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\ckeditor.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\ckeditor.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\feather.min.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\feather.min.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\form-validation.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\form-validation.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\jquery-3.6.0.min.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\jquery-3.6.0.min.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\jquery.maskedinput.min.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\jquery.maskedinput.min.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\mask.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\mask.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\moment.min.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\moment.min.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\script.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\script.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\bootstrap-tagsinput\\css\\bootstrap-tagsinput.css",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap-tagsinput\\css\\bootstrap-tagsinput.css"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\bootstrap-tagsinput\\js\\bootstrap-tagsinput.js",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap-tagsinput\\js\\bootstrap-tagsinput.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\datatables\\datatables.min.css",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\datatables\\datatables.min.css"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\datatables\\datatables.min.js",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\datatables\\datatables.min.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\datatables\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\datatables\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\css\\all.min.css"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.html",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.html"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400d41d.eot",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400d41d.eot"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.html",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.html"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400d41d.eot",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400d41d.eot"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.html",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.html"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900d41d.eot",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900d41d.eot"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\morris\\morris.css",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\morris\\morris.css"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\morris\\morris.min.js",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\morris\\morris.min.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\raphael\\raphael.min.js",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\raphael\\raphael.min.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\select2\\css\\select2.min.css",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\select2\\css\\select2.min.css"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\select2\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\select2\\js\\select2.min.js"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\slimscroll\\jquery.slimscroll.min.js",
+      "PackagePath": "staticwebassets\\Admin\\plugins\\slimscroll\\jquery.slimscroll.min.js"
+    },
+    {
       "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\css\\bootstrap-datetimepicker.min.css",
       "PackagePath": "staticwebassets\\assets\\css\\bootstrap-datetimepicker.min.css"
     },
