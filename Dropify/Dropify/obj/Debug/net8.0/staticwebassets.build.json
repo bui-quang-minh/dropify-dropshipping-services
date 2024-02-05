@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ApF1QxV2lofvq+ePVQrBOM8c8iX1gjmmbiwgpIxiwko=",
+  "Hash": "GXbPHIDLqEiT4zV9mRC9y9R+d0+U9rK8gV6tG6dp2gA=",
   "Source": "Dropify",
   "BasePath": "_content/Dropify",
   "Mode": "Default",
@@ -55,10 +55,6 @@
       "OriginalItemSpec": "D:\\PRN221\\Dropify\\Dropify\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Dropify.bundle.scp.css"
     },
     {
-      "Identity": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\css\\bootstrap.min.css",
-      "SourceId": "Dropify",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\",
       "Identity": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\bootstrap.min.css",
       "SourceId": "Dropify",
       "SourceType": "Discovered",
