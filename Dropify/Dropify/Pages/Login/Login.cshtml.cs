@@ -30,6 +30,7 @@ namespace Dropify.Pages.Login
                     if (userDAO.Authentication(Email,Password))
                     {
                         TempData["ErrorMessage"] = "Credentials!";
+                        HttpContext.Session.SetString("user_email", Email);
                         return RedirectToPage("/Index");
                     }
                     else

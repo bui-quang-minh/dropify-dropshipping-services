@@ -50,6 +50,7 @@ namespace Dropify.Pages.Register
             {
                 if (ud.Register(Email, Password, fullName))
                 {
+                    HttpContext.Session.SetString("user_email", Email);
                     return RedirectToPage("/Index");
                 }
                 else
