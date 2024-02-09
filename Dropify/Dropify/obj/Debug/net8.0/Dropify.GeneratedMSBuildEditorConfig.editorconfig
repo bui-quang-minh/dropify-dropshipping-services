@@ -9,13 +9,13 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Dropify
 build_property.RootNamespace = Dropify
-build_property.ProjectDir = D:\PRN221\Dropify\Dropify\
+build_property.ProjectDir = C:\Users\hoang\OneDrive\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\PRN221\Dropify\Dropify
+build_property.MSBuildProjectDirectory = C:\Users\hoang\OneDrive\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify
 build_property._RazorSourceGeneratorDebug = 
 
 [D:/PRN221/Dropify/Dropify/Pages/Admin/Products/AddProduct.cshtml]
@@ -26,46 +26,55 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdHNcQWxsUHJvZHVjdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Error.cshtml]
+[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Index.cshtml]
+[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Login/Login.cshtml]
+[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Login/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Privacy.cshtml]
+[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PRN221/Dropify/Dropify/Pages/Product/AllProduct.cshtml]
+[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Product/AddProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxBZGRQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Product/AllProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxBbGxQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Product/ProductDetail.cshtml]
+[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Product/ProductDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxQcm9kdWN0RGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Register/Register.cshtml]
+[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Register/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXJcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/_ViewImports.cshtml]
+[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/_ViewStart.cshtml]
+[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Shared/_Layout.cshtml]
+[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-zkzlqd7e7z
+
+[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-hzp8w2mrf2

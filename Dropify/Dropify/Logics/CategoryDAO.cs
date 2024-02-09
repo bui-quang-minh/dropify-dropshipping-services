@@ -13,6 +13,14 @@ namespace Dropify.Logics
                 return db.Categories.ToList();
             }
         }
+        // lấy category nhưng bỏ cateID = 1 vì id = 1 là "Tất cả category" nên kh lấy : NQT 
+        public List<Category> GetCategories()
+        {
+            using (var db = new prn211_dropshippingContext())
+            {
+                return db.Categories.Where(c => c.CategoryId != 1).ToList();    
+            }
+        }
 
         // Chỉ lấy các category không phải là category cha
         // Người viết: Bùi Quang Minh
@@ -34,6 +42,14 @@ namespace Dropify.Logics
                 }
                 returnList.Remove(returnList.Where(x => x.CategoryId == 1).FirstOrDefault());
                 return returnList;
+            }
+        }
+
+        public void updateCategory(Category category)
+        {
+            using(var db = new prn211_dropshippingContext())
+            {
+                db.Categories.Update(category);
             }
         }
     }
