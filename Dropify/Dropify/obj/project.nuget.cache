@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "/e7XsUm/a4XdNHjWCc4lFWDi3TK289gDcAKfNYK8gCWzlhVRad6tXS8idwJwTYOubQqqsqWErmisKjjeQ/jCNQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hoang\\OneDrive\\Documents\\PRN221\\Project_PRN221\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
+  "projectFilePath": "D:\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\buiqu\\.nuget\\packages\\cloudinarydotnet\\1.21.0\\cloudinarydotnet.1.21.0.nupkg.sha512",
     "C:\\Users\\buiqu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

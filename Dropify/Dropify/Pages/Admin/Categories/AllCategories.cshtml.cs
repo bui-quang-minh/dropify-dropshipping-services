@@ -42,7 +42,6 @@ namespace Dropify.Pages.Admin.ManageCategoris
                 }
                 else
                 {
-                   
                     cate.CategoryId = category.CategoryId;
                     cate.CategoryName = category.CategoryName;
                     cate.Status = category.Status;
