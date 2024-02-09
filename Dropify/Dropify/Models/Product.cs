@@ -35,7 +35,8 @@ namespace Dropify.Models
             {
                 using (var db = new prn211_dropshippingContext())
                 {
-                    return db.ProductDetails.FirstOrDefault(x => x.ProductId == ProductId && x.Type.Equals("P_IMAGE_THUMBNAIL")).Attribute;
+                    var productDetail = db.ProductDetails.FirstOrDefault(x => x.ProductId == ProductId && x.Type.Equals("P_IMAGE_THUMBNAIL"));
+                    return productDetail?.Attribute; 
                 }
             }
 
@@ -59,7 +60,9 @@ namespace Dropify.Models
         {
             get
             {
-                return new ProductDAO().GetProductCategoryById(CategoryId ?? 0).CategoryName;
+                 var category =  new ProductDAO().GetProductCategoryById(CategoryId ?? 0);
+                return category?.CategoryName ;
+               
             }
             set
             {
