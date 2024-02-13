@@ -121,7 +121,7 @@
                             <a href="search.html">
                                 <div class="sub-categories bg-software align-items-center">
                                     <div class="categories-img d-flex justify-content-center align-items-center">
-                                        <img src="/assets/img/categories/cate-3.svg" alt>
+                                        <img src="/assets/img/categories/cate-27.png" alt>
                                     </div>
                                     <div class="categories-text text-center">
                                         <h4>Phụ kiện máy tính</h4>
@@ -175,309 +175,61 @@
             <div class="container">
                 <div class="section-top-head">
                     <div class="section-header aos " data-aos="fade-up">
-                        <h2>Most Trending Courses</h2>
+                        <h2>Most Trending Products</h2>
                         <p class="sub-title">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget aenean
-                            accumsan bibendum gravida maecenas augue elementum et neque. Suspendisse imperdiet.
+                            Explore the latest and hottest products that everyone is talking about. 
+                            Whether it's cutting-edge electronics or innovative gadgets,
+                            discover what's trending and stay ahead of the curve in today's dynamic market. 
                         </p>
                     </div>
+
                     <div class="section-btn align-items-center aos " data-aos="fade-up">
                         <a href="search.html" class="btn btn-primary">View All</a>
                     </div>
                 </div>
                 <div class="course-two-all aos " data-aos="fade-up">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="course-box">
-                                <div class="product">
-                                    <div class="product-img">
-                                        <a href="search.html">
-                                            <img class="img-fluid" alt src="/assets/img/trend-img.png" width="600"
-                                                 height="300">
-                                        </a>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="course-info d-flex align-items-center">
-                                            <div class="rating rating-star">
-                                                <i class="fas fa-star filled"></i>
-                                                <span class="d-inline-block average-rating rate-point ">
-                                                    4.4<span class="rate-star-point">(15)</span>
-                                                </span>
-                                            </div>
-                                            <div class="course-view">
-                                                <i class="fas fa-file-alt file-pink"></i>
-                                                <div class="course-point">
-                                                    <span>85</span>
-                                                </div>
-                                            </div>
-                                            <div class="course-view">
-                                                <i class="fas fa-user-graduate"></i>
-                                                <div class="graduate-point">
-                                                    <span>85</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3 class="title">
+                        @foreach(var item in Model.ListProducts)
+                        {
+                            <div class="col-lg-4 col-md-6">
+                                <div class="course-box">
+                                    <div class="product">
+                                        <div class="product-img">
                                             <a href="search.html">
-                                                Information About UI/UX Design
-                                                Degree
+                                                <img class="img-fluid" alt src="/assets/img/trend-img5.png" width="600"
+                                                     height="300">
                                             </a>
-                                        </h3>
-                                        <div class="rating rating-star rating-two align-items-center">
-                                            <div class="rating-img">
-                                                <img src="/assets/img/user/user2.jpg" alt>
+                                        </div>
+                                        <div class="product-content">
+                                            <div class="course-info d-flex align-items-center">
+                                                <div class="rating rating-star">
+                                                    <i class="fas fa-star filled"></i>
+                                                    <span class="d-inline-block average-rating rate-point ">
+                                                        4.2<span class="rate-star-point">(15)</span>
+                                                    </span>
+                                                </div>
+                                                
                                             </div>
-                                            <h5>Nicole Brown</h5>
-                                            <div class="course-price">
-                                                <h4><span>$99.00</span>$200</h4>
+                                            <h3 class="title">
+                                                @item.Name
+                                            </h3>
+                                            <div class="rating rating-star rating-two align-items-center">
+                                                <div class="rating-img">
+                                                    <img src="/assets/img/user/user2.jpg" alt>
+                                                </div>
+                                                <h5>James Collins</h5>
+                                                <div class="course-price">
+                                                    <h4>
+                                                        <span>$@item.SellOutPrice</span>
+                                                        <span>$@item.OriginalPrice</span>
+                                                    </h4>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="course-box">
-                                <div class="product">
-                                    <div class="product-img">
-                                        <a href="search.html">
-                                            <img class="img-fluid" alt src="/assets/img/trend-img1.png" width="600"
-                                                 height="300">
-                                        </a>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="course-info d-flex align-items-center">
-                                            <div class="rating rating-star">
-                                                <i class="fas fa-star filled"></i>
-                                                <span class="d-inline-block average-rating rate-point ">
-                                                    4.1<span class="rate-star-point">(15)</span>
-                                                </span>
-                                            </div>
-                                            <div class="course-view">
-                                                <i class="fas fa-file-alt file-pink"></i>
-                                                <div class="course-point">
-                                                    <span>70</span>
-                                                </div>
-                                            </div>
-                                            <div class="course-view">
-                                                <i class="fas fa-user-graduate"></i>
-                                                <div class="graduate-point">
-                                                    <span>70</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3 class="title">
-                                            <a href="search.html">
-                                                Photography Crash Course for
-                                                Photographer
-                                            </a>
-                                        </h3>
-                                        <div class="rating rating-star rating-two align-items-center">
-                                            <div class="rating-img">
-                                                <img src="/assets/img/user/user3.jpg" alt>
-                                            </div>
-                                            <h5>Chalmers</h5>
-                                            <div class="course-price">
-                                                <h4><span>$99.00</span>$400</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="course-box">
-                                <div class="product">
-                                    <div class="product-img">
-                                        <a href="search.html">
-                                            <img class="img-fluid" alt src="/assets/img/trend-img2.png" width="600"
-                                                 height="300">
-                                        </a>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="course-info d-flex align-items-center">
-                                            <div class="rating rating-star">
-                                                <i class="fas fa-star filled"></i>
-                                                <span class="d-inline-block average-rating rate-point ">
-                                                    4.5<span class="rate-star-point">(15)</span>
-                                                </span>
-                                            </div>
-                                            <div class="course-view">
-                                                <i class="fas fa-file-alt file-pink"></i>
-                                                <div class="course-point">
-                                                    <span>95</span>
-                                                </div>
-                                            </div>
-                                            <div class="course-view">
-                                                <i class="fas fa-user-graduate"></i>
-                                                <div class="graduate-point">
-                                                    <span>95</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3 class="title">
-                                            <a href="search.html">
-                                                React – The Complete Guide (React
-                                                Router)
-                                            </a>
-                                        </h3>
-                                        <div class="rating rating-star rating-two align-items-center">
-                                            <div class="rating-img">
-                                                <img src="/assets/img/user/user4.jpg" alt>
-                                            </div>
-                                            <h5>Pennebaker</h5>
-                                            <div class="course-price">
-                                                <h4><span>$99.00</span>$600</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="course-box">
-                                <div class="product">
-                                    <div class="product-img">
-                                        <a href="search.html">
-                                            <img class="img-fluid" alt src="/assets/img/trend-img3.png" width="600"
-                                                 height="300">
-                                        </a>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="course-info d-flex align-items-center">
-                                            <div class="rating rating-star">
-                                                <i class="fas fa-star filled"></i>
-                                                <span class="d-inline-block average-rating rate-point ">
-                                                    4.3<span class="rate-star-point">(15)</span>
-                                                </span>
-                                            </div>
-                                            <div class="course-view">
-                                                <i class="fas fa-file-alt file-pink"></i>
-                                                <div class="course-point">
-                                                    <span>80</span>
-                                                </div>
-                                            </div>
-                                            <div class="course-view">
-                                                <i class="fas fa-user-graduate"></i>
-                                                <div class="graduate-point">
-                                                    <span>80</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3 class="title">
-                                            <a href="search.html">
-                                                Email & Affiliate Marketing
-                                                Mastermind
-                                            </a>
-                                        </h3>
-                                        <div class="rating rating-star rating-two align-items-center">
-                                            <div class="rating-img">
-                                                <img src="/assets/img/user/user5.jpg" alt>
-                                            </div>
-                                            <h5>Bryan Eadie</h5>
-                                            <div class="course-price">
-                                                <h4><span>$99.00</span>$400</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="course-box">
-                                <div class="product">
-                                    <div class="product-img">
-                                        <a href="search.html">
-                                            <img class="img-fluid" alt src="/assets/img/trend-img4.png" width="600"
-                                                 height="300">
-                                        </a>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="course-info d-flex align-items-center">
-                                            <div class="rating rating-star">
-                                                <i class="fas fa-star filled"></i>
-                                                <span class="d-inline-block average-rating rate-point ">
-                                                    4.4<span class="rate-star-point">(15)</span>
-                                                </span>
-                                            </div>
-                                            <div class="course-view">
-                                                <i class="fas fa-file-alt file-pink"></i>
-                                                <div class="course-point">
-                                                    <span>75</span>
-                                                </div>
-                                            </div>
-                                            <div class="course-view">
-                                                <i class="fas fa-user-graduate"></i>
-                                                <div class="graduate-point">
-                                                    <span>75</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3 class="title">
-                                            <a href="search.html">
-                                                Java (Beginner) Programming
-                                                Tutorials
-                                            </a>
-                                        </h3>
-                                        <div class="rating rating-star rating-two align-items-center">
-                                            <div class="rating-img">
-                                                <img src="/assets/img/user/user6.jpg" alt>
-                                            </div>
-                                            <h5>Angel Watson</h5>
-                                            <div class="course-price">
-                                                <h4><span>$99.00</span>$300</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="course-box">
-                                <div class="product">
-                                    <div class="product-img">
-                                        <a href="search.html">
-                                            <img class="img-fluid" alt src="/assets/img/trend-img5.png" width="600"
-                                                 height="300">
-                                        </a>
-                                    </div>
-                                    <div class="product-content">
-                                        <div class="course-info d-flex align-items-center">
-                                            <div class="rating rating-star">
-                                                <i class="fas fa-star filled"></i>
-                                                <span class="d-inline-block average-rating rate-point ">
-                                                    4.2<span class="rate-star-point">(15)</span>
-                                                </span>
-                                            </div>
-                                            <div class="course-view">
-                                                <i class="fas fa-file-alt file-pink"></i>
-                                                <div class="course-point">
-                                                    <span>90</span>
-                                                </div>
-                                            </div>
-                                            <div class="course-view">
-                                                <i class="fas fa-user-graduate"></i>
-                                                <div class="graduate-point">
-                                                    <span>90</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3 class="title">
-                                            <a href="search.html">Php (Beginner) Programming Tutorials</a>
-                                        </h3>
-                                        <div class="rating rating-star rating-two align-items-center">
-                                            <div class="rating-img">
-                                                <img src="/assets/img/user/user2.jpg" alt>
-                                            </div>
-                                            <h5>James Collins</h5>
-                                            <div class="course-price">
-                                                <h4><span>$99.00</span>$100</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        }
                     </div>
                 </div>
             </div>
@@ -490,9 +242,7 @@
                     <div class="section-header aos " data-aos="fade-up">
                         <h2>Top Rating Instructor</h2>
                         <p class="sub-title">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget aenean
-                            accumsan bibendum gravida maecenas augue elementum et neque. Suspendisse imperdiet.
-                        </p>
+                            Khám phá những hướng dẫn viên được đánh giá cao nhất. Họ là những chuyên gia hàng đầu trong lĩnh vực của mình, sẵn lòng chia sẻ kiến thức và kinh nghiệm để giúp bạn thành công. Hãy tận dụng cơ hội học hỏi từ những người giỏi nhất và tiến xa trên con đường của bạn.
                     </div>
                     <div class="section-btn align-items-center aos " data-aos="fade-up">
                         <a href="profile.html" class="btn btn-primary">View All</a>
@@ -646,7 +396,7 @@
             </div>
         </section>
 
-
+@* 
         <section class="trending-courses trending-courses-two popular-course-two same-dots ">
             <div class="container">
                 <div class="section-top-head">
@@ -1154,7 +904,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> *@
 
 
         <section class="testimonial-two">
@@ -1166,15 +916,9 @@
                     <div>
                         <div class="testimonial-all d-flex justify-content-center">
                             <div class="testimonial-two-head text-center">
-                                <h3>It was a very good experience 1</h3>
+                                <h3>It was a very good experience </h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec
-                                    turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat
-                                    duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim
-                                    arcu. Elementum felis magna pretium in tincidunt. Suspendisse sed magna eget nibh in
-                                    turpis. Consequat duis diam lacus arcu. urpis orci lectus maecenas. Suspendisse sed
-                                    magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis
-                                    id augue sit cursus pellentesque enim arcu
+                                    This is the best website I have ever seen.
                                 </p>
                             </div>
                         </div>
@@ -1182,15 +926,9 @@
                     <div>
                         <div class="testimonial-all d-flex justify-content-center">
                             <div class="testimonial-two-head text-center">
-                                <h3>Donec a sem pharetra</h3>
+                                <h3>It was a very good experience </h3>
                                 <p>
-                                    Donec a sem pharetra, ultricies ipsum id, hendrerit metus. Proin libero dui,
-                                    scelerisque nec purus ac, malesuada fermentum elit. Nunc pellentesque blandit
-                                    gravida. Nullam convallis, magna eu vulputate fermentum, nulla risus dignissim mi,
-                                    eu pulvinar sem ex vel nulla. In est sapien, pellentesque sit amet faucibus eu,
-                                    egestas in mauris. Sed vestibulum sapien arcu, id consequat tellus commodo
-                                    fermentum. Donec eu tincidunt nunc, vitae rhoncus elit. Aenean varius enim arcu, a
-                                    sollicitudin libero lacinia quis. Maecenas interdum sapien ante
+                                    This is the best website I have ever seen
                                 </p>
                             </div>
                         </div>
@@ -1198,15 +936,9 @@
                     <div>
                         <div class="testimonial-all d-flex justify-content-center">
                             <div class="testimonial-two-head text-center">
-                                <h3>It was a very good experience 3</h3>
+                                <h3>It was a very good experience </h3>
                                 <p>
-                                    Proin ligula tortor, semper non purus a, efficitur placerat mi. Orci varius natoque
-                                    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi tempor
-                                    efficitur sem et convallis. Donec vitae tristique mauris. Vivamus ac ornare dui, non
-                                    varius ex.In est sapien, pellentesque sit amet faucibus eu, egestas in mauris. Sed
-                                    vestibulum sapien arcu, id consequat tellus commodo fermentum. Donec eu tincidunt
-                                    nunc, vitae rhoncus elit. Aenean varius enim arcu, a sollicitudin libero lacinia
-                                    quis.
+                                    This is the best website I have ever seen.
                                 </p>
                             </div>
                         </div>
@@ -1214,16 +946,9 @@
                     <div>
                         <div class="testimonial-all d-flex justify-content-center">
                             <div class="testimonial-two-head text-center">
-                                <h3>Nullam vestibulum consectetur</h3>
+                                <h3>It was a very good experience </h3>
                                 <p>
-                                    Suspendisse auctor aliquam turpis, id luctus enim rutrum id. Nullam vestibulum
-                                    consectetur nisl, ut tincidunt justo facilisis eu. Vestibulum dignissim magna id
-                                    neque aliquam, ut dapibus tellus ornare. Praesent id rhoncus ex. Proin sit amet
-                                    pulvinar neque. Sed accumsan euismod sapien vel eleifend. Praesent sit amet congue
-                                    tortor. Nulla eleifend condimentum pretium.In est sapien, pellentesque sit amet
-                                    faucibus eu, egestas in mauris. Sed vestibulum sapien arcu, id consequat tellus
-                                    commodo fermentum. Donec eu tincidunt nunc, vitae rhoncus elit. Aenean varius enim
-                                    arcu, a sollicitudin libero lacinia quis.
+                                    This is the best website I have ever seen.
                                 </p>
                             </div>
                         </div>
@@ -1231,15 +956,9 @@
                     <div>
                         <div class="testimonial-all d-flex justify-content-center">
                             <div class="testimonial-two-head text-center">
-                                <h3>Lorem ipsum dolor sit amet</h3>
+                                <h3>It was a very good experience </h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vulputate congue rutrum.
-                                    Fusce suscipit tortor ex, et sodales leo aliquam ut. Suspendisse fermentum est vel
-                                    augue egestas, et fringilla mauris varius. Pellentesque in pharetra dui. Sed commodo
-                                    nulla nec rhoncus elementum.In est sapien, pellentesque sit amet faucibus eu,
-                                    egestas in mauris. Sed vestibulum sapien arcu, id consequat tellus commodo
-                                    fermentum. Donec eu tincidunt nunc, vitae rhoncus elit. Aenean varius enim arcu, a
-                                    sollicitudin libero lacinia quis.
+                                    This is the best website I have ever seen.
                                 </p>
                             </div>
                         </div>
@@ -1247,16 +966,9 @@
                     <div>
                         <div class="testimonial-all d-flex justify-content-center">
                             <div class="testimonial-two-head text-center">
-                                <h3>Suspendisse auctor aliquam</h3>
+                                <h3>It was a very good experience </h3>
                                 <p>
-                                    Suspendisse auctor aliquam turpis, id luctus enim rutrum id. Nullam vestibulum
-                                    consectetur nisl, ut tincidunt justo facilisis eu. Vestibulum dignissim magna id
-                                    neque aliquam, ut dapibus tellus ornare. Praesent id rhoncus ex. Proin sit amet
-                                    pulvinar neque. Sed accumsan euismod sapien vel eleifend. Praesent sit amet congue
-                                    tortor. Nulla eleifend condimentum pretium.In est sapien, pellentesque sit amet
-                                    faucibus eu, egestas in mauris. Sed vestibulum sapien arcu, id consequat tellus
-                                    commodo fermentum. Donec eu tincidunt nunc, vitae rhoncus elit. Aenean varius enim
-                                    arcu, a sollicitudin libero lacinia quis.
+                                    This is the best website I have ever seen.
                                 </p>
                             </div>
                         </div>
@@ -1304,7 +1016,7 @@
         </section>
 
 
-        <section class="new-course new-course-join">
+        @* <section class="new-course new-course-join">
             <div class="container">
                 <div class="new-course-background">
                     <div class="row">
@@ -1331,7 +1043,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> *@
 
 
         <footer class="footer footer-two">
@@ -1352,7 +1064,7 @@
                                         <a href="https://www.facebook.com/profile.php?id=61556136665929">Facebook</a>
                                     </li>
                                     <li>
-                                        <p>dropify842@gmail.com</p>
+                                        <p>Email: dropify842@gmail.com</p>
                                     </li>
                                 </ul>
                             </div>
@@ -1363,7 +1075,7 @@
                                 </div>
                                 <form action="">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="E-Mail Adresse">
+                                        <input type="text" class="form-control" placeholder="E-Mail Address">
                                         <a href="search.html" class="btn bg-path d-flex align-items-center">
                                             <i class="fas fa-arrow-up"></i>
                                         </a>
@@ -1389,12 +1101,10 @@
                             <div class="footer-widget footer-menu">
                                 <h2 class="footer-title">For Guest</h2>
                                 <ul>
-                                    <li><a href="search.html">Search Mentors</a></li>
+                                    <li><a href="search.html">Search Products</a></li>
                                     <li><a href="login.html">Login</a></li>
                                     <li><a href="register.html">Register</a></li>
-                                    <li><a href="booking.html">Booking</a></li>
-                                    <li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
-                                </ul>
+                                    
                             </div>
 
                         </div>
@@ -1403,11 +1113,10 @@
                             <div class="footer-widget footer-menu">
                                 <h2 class="footer-title">For Admin</h2>
                                 <ul>
-                                    <li><a href="appointments.html">Appointments</a></li>
-                                    <li><a href="chat.html">Chat</a></li>
+                                    <li><a href="appointments.html">Search Products</a></li>
                                     <li><a href="login.html">Login</a></li>
                                     <li><a href="register.html">Register</a></li>
-                                    <li><a href="dashboard.html">Mentor Dashboard</a></li>
+                                    <li><a href="dashboard.html">Admin Dashboard</a></li>
                                 </ul>
                             </div>
 
