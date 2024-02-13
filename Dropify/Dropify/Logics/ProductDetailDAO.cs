@@ -18,5 +18,13 @@ namespace Dropify.Logics
                 return db.ProductDetails.Where(x => x.ProductId == id).ToList();
             }
         }
+        public void AddProductDetail(ProductDetail p)
+        {
+            using (var db = new prn211_dropshippingContext())
+            {
+                db.ProductDetails.Add(p);
+                db.SaveChanges();
+            }
+        }
     }
 }

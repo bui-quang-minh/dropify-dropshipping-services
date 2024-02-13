@@ -35,7 +35,8 @@ namespace Dropify.Models
             {
                 using (var db = new prn211_dropshippingContext())
                 {
-                    return db.ProductDetails.FirstOrDefault(x => x.ProductId == ProductId && x.Type.Equals("P_IMAGE_THUMBNAIL")).Attribute;
+                    var thumbnailImage = db.ProductDetails.FirstOrDefault(x => x.ProductId == ProductId && x.Type.Equals("P_IMAGE_THUMBNAIL"));
+                    return thumbnailImage?.Attribute;
                 }
             }
 
@@ -48,7 +49,8 @@ namespace Dropify.Models
         {
             get
             {
-                return new UserDetailDAO().GetUserDetailById(CreatedBy);
+                var u = new UserDetailDAO().GetUserDetailById(CreatedBy);
+                return u;
             }
             set
             {
@@ -59,7 +61,8 @@ namespace Dropify.Models
         {
             get
             {
-                return new ProductDAO().GetProductCategoryById(CategoryId ?? 0).CategoryName;
+                var cat = new ProductDAO().GetProductCategoryById(CategoryId ?? 0);
+                return cat?.CategoryName;
             }
             set
             {
