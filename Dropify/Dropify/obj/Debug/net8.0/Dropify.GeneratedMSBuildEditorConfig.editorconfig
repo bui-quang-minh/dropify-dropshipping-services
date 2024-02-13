@@ -18,6 +18,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\admin\Desktop\PRN221\Final_Project\PRN221\Dropify\Dropify
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/admin/Desktop/PRN221/Final_Project/PRN221/Dropify/Dropify/Pages/Admin/Categories/AllCategories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0ZWdvcmllc1xBbGxDYXRlZ29yaWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/PRN221/Final_Project/PRN221/Dropify/Dropify/Pages/Admin/Products/AddProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdHNcQWRkUHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/admin/Desktop/PRN221/Final_Project/PRN221/Dropify/Dropify/Pages/Admin/Products/AllProducts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdHNcQWxsUHJvZHVjdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,10 +44,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/admin/Desktop/PRN221/Final_Project/PRN221/Dropify/Dropify/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/admin/Desktop/PRN221/Final_Project/PRN221/Dropify/Dropify/Pages/Product/AddProduct.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxBZGRQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/admin/Desktop/PRN221/Final_Project/PRN221/Dropify/Dropify/Pages/Product/AllProduct.cshtml]
@@ -65,6 +69,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/admin/Desktop/PRN221/Final_Project/PRN221/Dropify/Dropify/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/PRN221/Final_Project/PRN221/Dropify/Dropify/Pages/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-zkzlqd7e7z
 
 [C:/Users/admin/Desktop/PRN221/Final_Project/PRN221/Dropify/Dropify/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
