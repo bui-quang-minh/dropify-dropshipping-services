@@ -28,7 +28,8 @@ namespace Dropify.Pages.Admin.ManageCategoris
 
         public void OnGet()
         {
-           Categories = cd.GetCategories();
+            //Categories = cd.GetCategories();
+            Categories = con.Categories.Where(c => c.Status != "Hide").ToList();
         }
 
         public IActionResult OnPostEdit() {
@@ -58,6 +59,24 @@ namespace Dropify.Pages.Admin.ManageCategoris
            
            
         }
+        public IActionResult OnPostDelete()
+        {
+            int cid = int.Parse( Request.Form["c_id"].ToString());
+            var cate = con.Categories.Find(cid);
+            if (cate != null)
+            {
+                cate.Status = "Hide";
+                cd.updateCategory(cate);
+                con.SaveChanges();
+                return RedirectToPage("AllCategories");
+            }
+            else
+            {
+                return NotFound();
+            }
+           
+        }
+
     }
 
 
