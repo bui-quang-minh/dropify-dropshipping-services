@@ -50,8 +50,6 @@ namespace Dropify.Logics
                 return p.ProductId;
             }
         }
-<<<<<<< Updated upstream
-=======
         public List<Product> GetProductByStatus(string status)
         {
             List<Product> products = new List<Product>();
@@ -105,6 +103,5 @@ namespace Dropify.Logics
                 }
             }
         }
->>>>>>> Stashed changes
     }
 }
