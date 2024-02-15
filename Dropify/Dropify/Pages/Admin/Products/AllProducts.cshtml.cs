@@ -26,7 +26,7 @@ namespace Dropify.Pages.Admin.ManageProduct
        
 
         public IList<Category> categories { get; set; }
-        public IList<Supplier> suppliers { get; set; }
+        public IList<Models.Supplier> suppliers { get; set; }
         public IList<Models.Product> ListProduct { get;set; }
         public IList<Models.Product> ListProduct1 { get; set; }
         public IList<Models.Product> ListProduct2 { get; set; }
@@ -50,24 +50,28 @@ namespace Dropify.Pages.Admin.ManageProduct
         }
         public IActionResult OnPostDelete()
         {
-
-            int pid = int.Parse(Request.Form["p_id"].ToString());
-
-            var pro = con.Products.Find(pid);
-            if (pro != null)
+            try
             {
-                if (!pro.Status.Equals("Cancel") )
+                int pid = int.Parse(Request.Form["p_id"].ToString());
+
+                var pro = con.Products.Find(pid);
+                if (pro != null)
                 {
-                    pro.Status = "Cancel";
-                    con.Products.Update(pro);
-                    con.SaveChanges();
+                    if (!pro.Status.Equals("Cancel"))
+                    {
+                        pro.Status = "Cancel";
+                        con.Products.Update(pro);
+                        con.SaveChanges();
 
+                    }
                 }
-              
+                return RedirectToPage("AllProducts");
 
-
+            }catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
             }
-            return RedirectToPage("AllProducts");
+           
         }
         public IActionResult OnPostRestore()
         {

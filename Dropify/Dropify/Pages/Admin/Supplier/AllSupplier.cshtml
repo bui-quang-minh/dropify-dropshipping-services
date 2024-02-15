@@ -1,5 +1,5 @@
 ﻿@page
-@model Dropify.Pages.Admin.ManageCategoris.CategoriesModel ;
+@model Dropify.Pages.Admin.ManageSupplier.SupplierModel ;
 
 @{
     Layout = "_AdminLayout";
@@ -39,10 +39,10 @@
                     <li >
                         <a href="/Admin/Products/AllProducts"><span>Manage Product</span></a>
                     </li>
-                    <li class="active">
-                        <a href="#"><span>Manage Category</span></a>
-                    </li>
                     <li>
+                        <a href="/Admin/Categories/AllCategories"><span>Manage Category</span></a>
+                    </li>
+                    <li class="active">
                         <a href="/Admin/Supplier/AllSupplier"><span>Manage Supplier</span></a>
                     </li>
 
@@ -139,7 +139,7 @@
                 <div class="page-header">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h3 class="page-title">Management Category</h3>
+                            <h3 class="page-title">Management Supplier</h3>
                         </div>
 
 
@@ -149,7 +149,7 @@
                 <div class="col">
                     <a class="btn btn-success" data-bs-toggle="modal" href="#add_modal">
                         <i class="fe fe-plus"></i>
-                        New Category
+                        New Supplier
                     </a>
                 </div>
                 <br />
@@ -164,39 +164,51 @@
                                     <table class="datatable table table-hover table-center mb-0">
                                         <thead>
                                             <tr>
-                                                <th width="100">CategoryID</th>
+                                                <th width="100">SupplierID</th>
                                                 <th width="300">Name</th>
-                                                <th width="300" class="text-center">Status</th>
-                                                <th width="300" class="text-end">Action</th>
+                                                <th width="300">Email</th>
+                                                <th width="200">Number</th>
+                                                <th >CooperateDate</th>
+                                                <th  class="text-center">Status</th>
+                                                <th  class="text-end">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @if (Model.suppliers != null)
                                             {
-                                                @foreach (var p in Model.Categories)
+                                                @foreach (var s in Model.suppliers)
                                                 {
 
                                                     <tr>
                                                         <td>
-                                                            @p.CategoryId
+                                                            @s.SupplierId
                                                         </td>
                                                         <td>
-                                                            <span class="limitedText">@p.CategoryName</span>
+                                                            <span class="limitedText">@s.SupplierName</span>
+                                                        </td>
+                                                        <td>
+                                                            <span>@s.ContactEmail</span>
+                                                        </td>
+                                                        <td>
+                                                            <span >@s.ContactNumber</span>
+                                                        </td>
+                                                        <td>
+                                                            <span>@s.CooperateDate</span>
                                                         </td>
 
-                                                        @if (p.Status != null &&  p.Status.Equals("Active"))
+                                                        @if (s.Status != null &&  s.Status.Equals("Active"))
                                                         {
                                                             <td class="text-center">
-                                                                <span class="badge badge-pill bg-success inv-badge">@p.Status</span>
+                                                                <span class="badge badge-pill bg-success inv-badge">@s.Status</span>
                                                             </td>
                                                         }
-                                                        @if (p.Status != null &&  p.Status.Equals("Inactive"))
+                                                        @if (s.Status != null &&  s.Status.Equals("Inactive"))
                                                         {
                                                             <td class="text-center">
-                                                                <span class="badge badge-pill bg-secondary inv-badge">@p.Status</span>
+                                                                <span class="badge badge-pill bg-secondary inv-badge">@s.Status</span>
                                                             </td>
                                                         }
-                                                        @if (p.Status == null)
+                                                        @if (s.Status == null)
                                                         {
                                                             <td class="text-center">
                                                                 <span class="badge badge-pill bg-danger inv-badge">Null</span>
@@ -206,13 +218,13 @@
 
                                                         <td class="text-end" >
                                                             <div class="actions">
-                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.CategoryId"
-                                                                data-name="@p.CategoryName" 
-                                                                 data-status="@p.Status" 
+                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@s.SupplierId"
+                                                                data-name="@s.SupplierName" 
+                                                                 data-status="@s.Status" data-email="@s.ContactEmail" data-phone="@s.ContactNumber" data-coodate="@s.CooperateDate"
                                                                 data-bs-target="#edit_modal" href="#edit_modal">
                                                                     <i class="fe fe-pencil"></i> Edit
                                                                 </a>
-                                                                <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@p.CategoryId" class="btn btn-sm bg-danger-light">
+                                                                <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@s.SupplierId" class="btn btn-sm bg-danger-light">
                                                                     <i class="fe fe-trash"></i> Delete
                                                                 </a>
                                                             </div>
@@ -238,7 +250,7 @@
             <div class="modal-content"  >
 
                 <div class="modal-body">
-                    <form method="post" asp-page="/Admin/Categories/AllCategories" asp-page-handler="Delete">
+                    <form method="post" asp-page="/Admin/Supplier/AllSupplier" asp-page-handler="Delete">
                         <div class="form-content p-2">
                             <h4 class="modal-title">Delete</h4>
                             <p class="mb-4">Are you sure want to delete?</p>
@@ -267,27 +279,45 @@
                         </div>
                         <div class="card">
                             <div class="card-body">
-                                <form method="post" asp-page-handler="Edit" asp-page="/Admin/Categories/AllCategories" autocomplete="off">
+                                <form method="post" asp-page-handler="Edit" asp-page="/Admin/Supplier/AllSupplier" autocomplete="off">
                                     <div class="row">
                                         <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
                                         <div class="col-md-12">
                                             <div class="form-group mb-3">
-                                                <label>CategoryID</label>
-                                                <input class="form-control" id="categoryID" asp-for="category.CategoryId" type="text" readonly>
+                                                <label>SupplierID</label>
+                                                <input class="form-control" id="supplierID" asp-for="supplier.SupplierId" type="text" readonly>
                                             </div>
                                         </div>
                                        
                                         <div class="col-md-12">
                                             <div class="form-group mb-3">
-                                                <label>CategoryName</label>
-                                                <input class="form-control" id="categoryName" asp-for="category.CategoryName"  type="text">
+                                                <label>SupplierName</label>
+                                                <input class="form-control" id="supplierName" asp-for="supplier.SupplierName" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group mb-3">
+                                                <label>Email</label>
+                                                <input class="form-control" id="email" asp-for="supplier.ContactEmail" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label>Phone</label>
+                                                <input class="form-control" id="phone" asp-for="supplier.ContactNumber" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label>CooperateDate</label>
+                                                <input class="form-control" id="CooperateDate" asp-for="supplier.CooperateDate" type="date">
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
                                             <div class="form-group mb-3">
                                                 <label> Status </label>
-                                                <select class="form-control" asp-for="category.Status"  id="cStatus">
+                                                <select class="form-control" asp-for="supplier.Status"  id="sStatus">
                                                     <option value="Active">Active</option>
                                                     <option value="Inactive">Inactive</option>
                                                 </select>
@@ -321,21 +351,21 @@
                         </div>
                         <div class="card">
                             <div class="card-body">
-                                <form method="post" asp-page-handler="Add" asp-page="/Admin/Categories/AllCategories" autocomplete="off">
+                                <form method="post" asp-page-handler="Add" asp-page="/Admin/Supplier/AllSupplier" autocomplete="off">
                                    <div class="row">
                                      <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
                                     
                                        <div class="col-md-12">
                                             <div class="form-group mb-3">
                                                 <label>Name</label>
-                                                <input class="form-control" asp-for="category.CategoryName" type="text">
+                                                <input class="form-control" asp-for="supplier.SupplierName" type="text">
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
                                             <div class="form-group mb-3">
                                                 <label> Status </label>
-                                                <select class="form-control" asp-for="category.Status">
+                                                <select class="form-control" asp-for="supplier.Status">
                                                     <option value="Active">Active</option>
                                                     <option value="Inactive">Inactive</option>
                                                 </select>
@@ -368,11 +398,12 @@
     <script src="~/Admin/js/feather.min.js"></script>
 
     <script src="~/Admin/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="~/Admin/js/script.js"></script>
 
     @* <script src="~/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="~/Admin/plugins/datatables/datatables.min.js"></script> *@
 
-    <script src="~/Admin/js/script.js"></script>
+   
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -387,6 +418,7 @@
                     var id = link.dataset.id;
                     
                     document.getElementById('c_id').value = id;
+                    console.log(id);
                    
                 });
             });
@@ -402,17 +434,26 @@
             links.forEach(function (link) {
                 link.addEventListener('click', function () {
                     
-                    var cateId = link.dataset.id;
+                    var suppId = link.dataset.id;
                     var Name = link.dataset.name;
+                    var phone = link.dataset.phone;
+                    var email = link.dataset.email;
+                    var coodate = link.dataset.coodate;
                     var Status = link.dataset.status;
-                    document.getElementById('categoryID').value = cateId;
-                    document.getElementById('categoryName').value = Name;
-                    document.getElementById('cStatus').value = Status;
-                    console.log(cateId);
-                    console.log(Name);
-                    console.log(Status);
-                  
+                    document.getElementById('supplierID').value = suppId;
+                    document.getElementById('supplierName').value = Name;
+                    document.getElementById('email').value = email;
+                    document.getElementById('phone').value = phone;
+                    document.getElementById('sStatus').value = Status;
                     
+                    var datecoo = formatDate(coodate);
+                    document.getElementById('CooperateDate').value = datecoo;
+                    function formatDate(d) {
+                        var part = d.split(/[\/ :]/);
+                        var formaterDate = part[2] + '-' + part[1] + '-' + part[0];
+                        return formaterDate;
+
+                    }
 
                 });
             });

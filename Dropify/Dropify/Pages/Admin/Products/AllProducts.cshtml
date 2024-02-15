@@ -34,7 +34,7 @@
                         <span><i class="fe fe-home"></i> Main</span>
                     </li>
                     <li>
-                        <a href="index.html"><span>Dashboard</span></a>
+                        <a href="/Admin/Dashboard"><span>Dashboard</span></a>
                     </li>
 
                     <li class="active">
@@ -42,6 +42,9 @@
                     </li>
                     <li >
                         <a href="/Admin/Categories/AllCategories"><span>Manage Category</span></a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Supplier/AllSupplier"><span>Manage Supplier</span></a>
                     </li>
 
                     <li>
@@ -953,6 +956,7 @@
                         return formaterDate;
 
                     }
+                 
                    
                     // Update modal content with the extracted values
                     
@@ -996,9 +1000,8 @@
             var amount = parseFloat(amountString.replace(',', '.')); // Chuyển đổi dấu phẩy sang dấu chấm cho số dấu phẩy động
             var formattedMoney = amount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
             money.textContent = formattedMoney; // Gán giá trị đã định dạng vào phần tử HTML
-            console.log(formattedMoney);
+           
         });
-
 
     </script>
 </body>
