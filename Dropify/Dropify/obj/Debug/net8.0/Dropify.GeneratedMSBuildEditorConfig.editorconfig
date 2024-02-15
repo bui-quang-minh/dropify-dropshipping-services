@@ -22,21 +22,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0ZWdvcmllc1xBbGxDYXRlZ29yaWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Admin/Products/AddProduct.cshtml]
-[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Admin/Categories/AllCategories.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0ZWdvcmllc1xBbGxDYXRlZ29yaWVzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Admin/Dashboard.cshtml]
+[D:/PRN221/Dropify/Dropify/Pages/Admin/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Admin/Products/AddProduct.cshtml]
+[D:/PRN221/Dropify/Dropify/Pages/Admin/Products/AddProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdHNcQWRkUHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Admin/Products/AllProducts.cshtml]
+[D:/PRN221/Dropify/Dropify/Pages/Admin/Products/AllProducts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdHNcQWxsUHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/Dropify/Dropify/Pages/Admin/Supplier/AllSupplier.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU3VwcGxpZXJcQWxsU3VwcGxpZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PRN221/Dropify/Dropify/Pages/Cart.cshtml]
@@ -44,11 +43,6 @@ build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PRN221/Dropify/Dropify/Pages/Error.cshtml]
-[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Admin/Supplier/AllSupplier.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU3VwcGxpZXJcQWxsU3VwcGxpZXIuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
@@ -65,7 +59,6 @@ build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PRN221/Dropify/Dropify/Pages/Product/AllProduct.cshtml]
-[C:/Users/hoang/OneDrive/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Product/AllProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxBbGxQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
