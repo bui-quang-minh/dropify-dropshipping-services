@@ -16,8 +16,7 @@ namespace Dropify.Pages.Admin.ManageCategoris
         public Models.Category  category { get; set; }
         private readonly prn211_dropshippingContext con;
         public CategoryDAO cd = new CategoryDAO();
-       
-
+        
         public List<Category> Categories { get; set; }
 
         public CategoriesModel(prn211_dropshippingContext context)
