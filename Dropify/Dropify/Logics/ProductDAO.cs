@@ -50,7 +50,6 @@ namespace Dropify.Logics
                 return p.ProductId;
             }
         }
-        
         public List<Product> GetProductByStatus(string status)
         {
             List<Product> products = new List<Product>();
@@ -62,6 +61,46 @@ namespace Dropify.Logics
               .Where(p => p.Status == status).ToList();
 
                return products;
+            }
+        }
+        public List<Product> SearchProduct(String name, int cid, int sid)
+        {
+            List<Product> products = new List<Product>();
+            if (cid != -1 && sid != -1)
+            {
+                using (var db = new prn211_dropshippingContext())
+                {
+                    products = db.Products.Where(p => p.Name.Contains(name) && p.CategoryId == cid && p.SupplierId == sid).ToList();
+
+                    return products;
+                }
+            }
+            else if (cid != -1 && sid == -1)
+            {
+                using (var db = new prn211_dropshippingContext())
+                {
+                    products = db.Products.Where(p => p.Name.Contains(name) && p.CategoryId == cid).ToList();
+
+                    return products;
+                }
+            }
+            else if (sid != -1 && cid == -1)
+            {
+                using (var db = new prn211_dropshippingContext())
+                {
+                    products = db.Products.Where(p => p.Name.Contains(name) && p.SupplierId == sid).ToList();
+
+                    return products;
+                }
+            }
+            else
+            {
+                using (var db = new prn211_dropshippingContext())
+                {
+                    products = db.Products.Where(p => p.Name.Contains(name)).ToList();
+
+                    return products;
+                }
             }
         }
     }

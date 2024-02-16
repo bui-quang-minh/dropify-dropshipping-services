@@ -42,9 +42,32 @@
                 <div class="row">
                     <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
                         <!--Search bar-->
-                        <div class="profile-sidebar">
-                            
-                        </div>
+                        <form asp-page="/Product/AllProduct" asp-page-handler="Search">
+                            <div class="profile-sidebar">
+                                <input class="form-control" type="text" name="searchString" placeholder="Search for ..."></input><br>
+                                <h5>Filter by Category</h5>
+                                @{
+                                    foreach (var cat in Model.categories)
+                                    {
+                                        <input type="checkbox" name="categorySearch" value="@cat.CategoryId"/> <span>@cat.CategoryName</span><br>
+                                    }
+                                }
+                                <br>
+                                <h5>Filter by Supplier</h5>
+                                @{
+                                    foreach (var cat in Model.suppliers)
+                                    {
+                                        <input type="checkbox" name="supplierSearch" value="@cat.SupplierId" /> <span>@cat.SupplierName</span>
+
+                                        <br>
+                                    }
+                                }
+                                <br>
+                                <div class="submit-section">
+                                    <button style="width:100%" type="submit" class="btn btn-primary submit-btn">Search</button>
+                                </div>
+                            </div>
+                        </form>
 
                     </div>
                     <div class="col-md-7 col-lg-8 col-xl-9">
@@ -97,290 +120,11 @@
                                         </div>
                                     </div>
 
-
-                                    <div role="tabpanel" id="inactiveservice" class="tab-pane fade">
-                                        <div class="row">
-                                            <div class="col-12 col-md-6 col-xl-4 d-flex">
-                                                <div class="course-box blog grid-blog">
-                                                    <div class="blog-image mb-0">
-                                                        <a href="blog-details.html"><img class="img-fluid" src="/assets/img/blog/blog-04.jpg" alt="Post Image"></a>
-                                                    </div>
-                                                    <div class="course-content">
-                                                        <span class="date">April 09 2020</span>
-                                                        <span class="course-title">Abacus Study for beginner - Part III</span>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <a href="edit-blog.html" class="text-success">
-                                                                    <i class="far fa-edit"></i> Edit
-                                                                </a>
-                                                            </div>
-                                                            <div class="col text-end">
-                                                                <a href="javascript:void(0);" class="text-success">
-                                                                    <i class="fas fa-toggle-on"></i> Active
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-6 col-xl-4 d-flex">
-                                                <div class="course-box blog grid-blog">
-                                                    <div class="blog-image mb-0">
-                                                        <a href="blog-details.html"><img class="img-fluid" src="/assets/img/blog/blog-05.jpg" alt="Post Image"></a>
-                                                    </div>
-                                                    <div class="course-content">
-                                                        <span class="date">April 09 2020</span>
-                                                        <span class="course-title">Abacus Study for beginner - Part III</span>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <a href="edit-blog.html" class="text-success">
-                                                                    <i class="far fa-edit"></i> Edit
-                                                                </a>
-                                                            </div>
-                                                            <div class="col text-end">
-                                                                <a href="javascript:void(0);" class="text-success">
-                                                                    <i class="fas fa-toggle-on"></i> Active
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-6 col-xl-4 d-flex">
-                                                <div class="course-box blog grid-blog">
-                                                    <div class="blog-image mb-0">
-                                                        <a href="blog-details.html"><img class="img-fluid" src="/assets/img/blog/blog-06.jpg" alt="Post Image"></a>
-                                                    </div>
-                                                    <div class="course-content">
-                                                        <span class="date">April 09 2020</span>
-                                                        <span class="course-title">Abacus Study for beginner - Part III</span>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <a href="edit-blog.html" class="text-success">
-                                                                    <i class="far fa-edit"></i> Edit
-                                                                </a>
-                                                            </div>
-                                                            <div class="col text-end">
-                                                                <a href="javascript:void(0);" class="text-success">
-                                                                    <i class="fas fa-toggle-on"></i> Active
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-6 col-xl-4 d-flex">
-                                                <div class="course-box blog grid-blog">
-                                                    <div class="blog-image mb-0">
-                                                        <a href="blog-details.html"><img class="img-fluid" src="/assets/img/blog/blog-07.jpg" alt="Post Image"></a>
-                                                    </div>
-                                                    <div class="course-content">
-                                                        <span class="date">April 09 2020</span>
-                                                        <span class="course-title">Abacus Study for beginner - Part III</span>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <a href="edit-blog.html" class="text-success">
-                                                                    <i class="far fa-edit"></i> Edit
-                                                                </a>
-                                                            </div>
-                                                            <div class="col text-end">
-                                                                <a href="javascript:void(0);" class="text-success">
-                                                                    <i class="fas fa-toggle-on"></i> Active
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-6 col-xl-4 d-flex">
-                                                <div class="course-box blog grid-blog">
-                                                    <div class="blog-image mb-0">
-                                                        <a href="blog-details.html"><img class="img-fluid" src="/assets/img/blog/blog-08.jpg" alt="Post Image"></a>
-                                                    </div>
-                                                    <div class="course-content">
-                                                        <span class="date">April 09 2020</span>
-                                                        <span class="course-title">Abacus Study for beginner - Part III</span>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <a href="edit-blog.html" class="text-success">
-                                                                    <i class="far fa-edit"></i> Edit
-                                                                </a>
-                                                            </div>
-                                                            <div class="col text-end">
-                                                                <a href="javascript:void(0);" class="text-success">
-                                                                    <i class="fas fa-toggle-on"></i> Active
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-6 col-xl-4 d-flex">
-                                                <div class="course-box blog grid-blog">
-                                                    <div class="blog-image mb-0">
-                                                        <a href="blog-details.html"><img class="img-fluid" src="/assets/img/blog/blog-09.jpg" alt="Post Image"></a>
-                                                    </div>
-                                                    <div class="course-content">
-                                                        <span class="date">April 09 2020</span>
-                                                        <span class="course-title">Abacus Study for beginner - Part III</span>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <a href="edit-blog.html" class="text-success">
-                                                                    <i class="far fa-edit"></i> Edit
-                                                                </a>
-                                                            </div>
-                                                            <div class="col text-end">
-                                                                <a href="javascript:void(0);" class="text-success">
-                                                                    <i class="fas fa-toggle-on"></i> Active
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-
-        <footer class="footer">
-
-            <div class="footer-top">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6">
-
-                            <div class="footer-widget footer-about">
-                                <div class="footer-logo">
-                                    <img src="/assets/img/logo.png" alt="logo">
-                                </div>
-                                <div class="footer-about-content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <div class="social-icon">
-                                        <ul>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-twitter"></i> </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank"><i class="fab fa-dribbble"></i> </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-
-                            <div class="footer-widget footer-menu">
-                                <h2 class="footer-title">For Mentee</h2>
-                                <ul>
-                                    <li><a href="search.html">Search Mentors</a></li>
-                                    <li><a href="login.html">Login</a></li>
-                                    <li><a href="register.html">Register</a></li>
-                                    <li><a href="booking.html">Booking</a></li>
-                                    <li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-
-                            <div class="footer-widget footer-menu">
-                                <h2 class="footer-title">For Mentors</h2>
-                                <ul>
-                                    <li><a href="appointments.html">Appointments</a></li>
-                                    <li><a href="chat.html">Chat</a></li>
-                                    <li><a href="login.html">Login</a></li>
-                                    <li><a href="register.html">Register</a></li>
-                                    <li><a href="dashboard.html">Mentor Dashboard</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-
-                            <div class="footer-widget footer-contact">
-                                <h2 class="footer-title">Contact Us</h2>
-                                <div class="footer-contact-info">
-                                    <div class="footer-address">
-                                        <span><i class="fas fa-map-marker-alt"></i></span>
-                                        <p> 3556 Beech Street, San Francisco,<br> California, CA 94108 </p>
-                                    </div>
-                                    <p>
-                                        <i class="fas fa-phone-alt"></i>
-                                        +1 315 369 5943
-                                    </p>
-                                    <p class="mb-0">
-                                        <i class="fas fa-envelope"></i>
-                                        <a href="https://mentoring.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ee838b809a819c878089ae8b968f839e828bc08d8183">[email&#160;protected]</a>
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="footer-bottom">
-                <div class="container-fluid">
-
-                    <div class="copyright">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <div class="copyright-text">
-                                    <p class="mb-0">&copy; 2020 Mentoring. All rights reserved.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </footer>
-
-    </div>
-
-    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p></p>
-                </div>
-                <div class="modal-footer">
-                    <a href="javascript:;" class="btn btn-success si_accept_confirm">Yes</a>
-                    <button type="button" class="btn btn-danger si_accept_cancel" data-dismiss="modal">Cancel</button>
                 </div>
             </div>
         </div>

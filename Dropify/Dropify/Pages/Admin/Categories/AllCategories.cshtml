@@ -33,7 +33,7 @@
                         <span><i class="fe fe-home"></i> Main</span>
                     </li>
                     <li>
-                        <a href="index.html"><span>Dashboard</span></a>
+                        <a href="/Admin/Dashboard"><span>Dashboard</span></a>
                     </li>
 
                     <li >
@@ -41,6 +41,9 @@
                     </li>
                     <li class="active">
                         <a href="#"><span>Manage Category</span></a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Supplier/AllSupplier"><span>Manage Supplier</span></a>
                     </li>
 
                     <li>
@@ -168,7 +171,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @if (Model.Categories != null)
+                                            @if (Model.suppliers != null)
                                             {
                                                 @foreach (var p in Model.Categories)
                                                 {
@@ -235,12 +238,12 @@
             <div class="modal-content"  >
 
                 <div class="modal-body">
-                    <form method="post" asp-page="/Admin/Products/AllProducts" asp-page-handler="Delete">
+                    <form method="post" asp-page="/Admin/Categories/AllCategories" asp-page-handler="Delete">
                         <div class="form-content p-2">
                             <h4 class="modal-title">Delete</h4>
                             <p class="mb-4">Are you sure want to delete?</p>
                             <button type="submit" id="MyLink" class="btn btn-primary" >Delete </button>
-                            <input type="hidden" value="" id="p_id" name="p_id"  />
+                            <input type="hidden" value="" id="c_id" name="c_id"  />
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                         </div>
                     </form>
@@ -383,7 +386,7 @@
 
                     var id = link.dataset.id;
                     
-                    document.getElementById('p_id').value = id;
+                    document.getElementById('c_id').value = id;
                    
                 });
             });

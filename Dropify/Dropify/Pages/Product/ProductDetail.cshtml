@@ -37,6 +37,63 @@
                 </div>
             </div>
         </div>
+        @{
+            DateTime? startDate = Model.product.StartDate;
+            DateTime? endDate = Model.product.EndDate;
+            DateTime? createDate = Model.product.CreatedDate;
+            DateTime? ShipDate = Model.product.Shipdate;
+            DateTime now = DateTime.Now;
+            int dateDiff = 0;
+            int totalTime = 0;
+            if (startDate != null)
+            {
+                dateDiff = (int)Math.Round(now.Subtract(startDate.Value).TotalDays);
+            }
+            if (startDate != null && endDate != null)
+            {
+                totalTime = (int)Math.Round(endDate.Value.Subtract(startDate.Value).TotalDays);
+            }
+            //Product price calculation
+            decimal originalPrice = Model.product.SellOutPrice / 100 * 115 ?? 0;
+            double percent = (double)15 / 100 * (double)dateDiff / totalTime * 100;
+            int discountPercent = (int)Math.Round(percent);
+            decimal discount = Model.product.SellOutPrice / 100 * (100 + discountPercent) ?? 0;
+            static string ConvertToVND(double number)
+            {
+                string[] parts = number.ToString().Split('.');
+                string formattedBeforeDecimal = string.Format("{0:n0}", Convert.ToInt64(parts[0]));
+                string result = formattedBeforeDecimal + (parts.Length > 1 ? "." + parts[1] : "");
+                return result + " VND";
+            }
+            string originalPriceVND = ConvertToVND(Convert.ToDouble(originalPrice));
+            string discountVND = ConvertToVND(Convert.ToDouble(discount));
+            //Product Progress calculation
+            String progress = "";
+            int progressValue = 0;
+            if (startDate.HasValue && createDate.HasValue && now >= createDate && now < startDate)
+            {
+                progress = "Create";
+                TimeSpan difference = now - createDate.Value;
+                progressValue = (int)Math.Round(difference.TotalDays)*2;
+            }
+            else if (startDate.HasValue && endDate.HasValue && now >= startDate && now < endDate)
+            {
+                progress = "Start";
+                TimeSpan difference = now - startDate.Value;
+                progressValue = (int)Math.Round(difference.TotalDays)*2;
+            }
+            else if (endDate.HasValue && ShipDate.HasValue && now >= endDate && now < ShipDate)
+            {
+                progress = "Ship";
+                TimeSpan difference = now - endDate.Value;
+                progressValue = (int)Math.Round(difference.TotalDays)*2;
+            }
+            else
+            {
+                progress = "Done";
+                progressValue = 100;
+            }
+        }
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
@@ -85,17 +142,76 @@
                             </div>
                             <div class="card blog-share clearfix">
                                 <div class="card-header">
-                                    <h4 class="card-title">Share the post</h4>
+                                    <h4 class="card-title">Product Progress</h4>
                                 </div>
+
                                 <div class="card-body">
-                                    <ul class="social-share">
-                                        <li><a href="#" title="Facebook"><i class="fab fa-facebook"></i></a></li>
-                                        <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
-                                        <li><a href="#" title="Google Plus"><i class="fab fa-google-plus"></i></a></li>
-                                        <li><a href="#" title="Youtube"><i class="fab fa-youtube"></i></a></li>
-                                    </ul>
+                                    @{
+                                        if (progress.Equals("Create"))
+                                        {
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: @progressValue%" aria-valuenow="@progressValue" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-1">
+                                                    <img src="https://file.hstatic.net/1000269366/file/target_eebd1d64d3dd45538ee759df6885cb80.svg">
+                                                </div>
+                                                <div class="col-11">
+                                                    <h4>Sản phẩm sẽ được bày bán vào @Model.product.StartDate ! </h4>
+                                                </div>
+                                            </div>
+                                        } else if(progress.Equals("Start"))
+                                        {
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: @progressValue%" aria-valuenow="@progressValue" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-1">
+                                                    <img src="https://file.hstatic.net/1000269366/file/product_b3e91e5f145848f8a71117142b4f66fa.svg">
+                                                </div>
+                                                <div class="col-11">
+                                                    <h4>Đang trong thời điểm đặt sản phẩm nè! </h4>
+                                                </div>
+                                            </div>
+                                        } else if (progress.Equals("Ship"))
+                                        {
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: @progressValue%" aria-valuenow="@progressValue" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-1">
+                                                    <img src="https://file.hstatic.net/1000269366/file/rocket_37ab32c546bc494696b44207ac0b6a4b.svg">
+                                                </div>
+                                                <div class="col-11">
+                                                    <h4>Các sản phẩm đang được giao </h4>
+                                                </div>
+                                            </div>
+                                        }else if (progress.Equals("Done"))
+                                        {
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-1">
+                                                    <img src="https://file.hstatic.net/1000269366/file/rocket_37ab32c546bc494696b44207ac0b6a4b.svg">
+                                                </div>
+                                                <div class="col-11">
+                                                    <h4>Chiến dịch đã hoàn thành !</h4>
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                                    
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -105,33 +221,7 @@
                         <div class="card search-widget">
 
                             <div class="card-body">
-                                @{
-                                    DateTime? startDate = Model.product.StartDate;
-                                    DateTime? endDate = Model.product.EndDate;
-                                    DateTime now = DateTime.Now;
-                                    int dateDiff = 0;
-                                    int totalTime = 0;
-                                    if(startDate != null){
-                                        dateDiff = (int)Math.Round(now.Subtract(startDate.Value).TotalDays);
-                                    }
-                                    if (startDate != null && endDate != null)
-                                    {
-                                        totalTime = (int)Math.Round(endDate.Value.Subtract(startDate.Value).TotalDays);
-                                    }
-                                    decimal originalPrice = Model.product.SellOutPrice / 100 * 115 ?? 0;
-                                    double percent = (double)15 / 100 * (double)dateDiff / totalTime * 100;
-                                    int discountPercent = (int)Math.Round(percent);
-                                    decimal discount = Model.product.SellOutPrice / 100 * (100 + discountPercent) ?? 0;
-                                    static string ConvertToVND(double number)
-                                    {
-                                        string[] parts = number.ToString().Split('.');
-                                        string formattedBeforeDecimal = string.Format("{0:n0}", Convert.ToInt64(parts[0]));
-                                        string result = formattedBeforeDecimal + (parts.Length > 1 ? "." + parts[1] : "");
-                                        return result + " VND";
-                                    }
-                                    string originalPriceVND = ConvertToVND(Convert.ToDouble(originalPrice));
-                                    string discountVND = ConvertToVND(Convert.ToDouble(discount));
-                                }
+                                
 
                                 <s style="font-size: 22px; font-weight:bold">@originalPriceVND</s>
                                 <p style="font-size: 22px; font-weight:bold" class="text-danger">@discountVND</p>
