@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Extensions.Options;
 
 namespace Dropify.Models
 {
@@ -34,6 +35,8 @@ namespace Dropify.Models
                         .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
             IConfiguration configRoot = builder.Build();
             optionsBuilder.UseSqlServer(configRoot.GetConnectionString("prn211_dropshipping"));
+
+            optionsBuilder.EnableSensitiveDataLogging();
         }
 
 

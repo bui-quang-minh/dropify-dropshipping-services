@@ -9,7 +9,7 @@ namespace Dropify.Pages
     // Ngày: 16/2/2024
     public class BasePageModel : PageModel
     {
-        public List<Models.Category> categories = new CategoryDAO().GetAllCategories();
+        public List<Models.Category> categories = new CategoryDAO().GetParentCategories();
         public List<Models.Supplier> suppliers = new SupplierDAO().GetAllSuppliers();
         public List<Models.User> users = new UserDAO().GetAllUsers();
     }

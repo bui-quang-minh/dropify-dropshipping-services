@@ -107,7 +107,7 @@ namespace Dropify.Logics
             {
                 using (var db = new prn211_dropshippingContext())
                 {
-                    products = db.Products.Where(p => p.Name.ToLower().Contains(name.ToLower()) && p.SupplierId == sid).ToList();
+                    products = db.Products.Where(p =>  p.Name.ToLower().Contains(name.ToLower()) && p.SupplierId == sid).ToList();
                     return products;
                 }
             }
@@ -115,7 +115,7 @@ namespace Dropify.Logics
             {
                 using (var db = new prn211_dropshippingContext())
                 {
-                    products = db.Products.Where(p => p.Name.ToLower().Contains(name.ToLower())).ToList();
+                    products = db.Products.Where(p =>  p.Name.ToLower().Contains(name.ToLower())).ToList();
                     return products;
                 }
             }

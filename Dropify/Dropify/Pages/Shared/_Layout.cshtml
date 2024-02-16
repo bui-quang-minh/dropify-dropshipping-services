@@ -52,20 +52,33 @@
                                     </ul>
                                 </li>
                                 <li class="has-submenu">
-                                    <a href="blog.html">Provider</a>
+                                    <a href="">Provider</a>
                                     <ul class="submenu">
                                         @foreach (Models.Supplier s in Model.suppliers)
                                         {
-                                            <li><a href="">@s.SupplierName</a></li>
+                                            <li><a href="/Product/AllProduct?supplierSearch=@s.SupplierId">@s.SupplierName</a></li>
                                         }
                                     </ul>
                                 </li>
                                 <li class="has-submenu">
-                                    <a href="blog.html">Category</a>
+                                    <a href="">Category</a>
                                     <ul class="submenu">
                                         @foreach (Models.Category c in Model.categories)
                                         {
-                                            <li><a href="">@c.CategoryName</a></li>
+                                            if (c.ChildCategory.Count > 0){
+                                            <li class="has-submenu"><a href="">@c.CategoryName</a>
+                                                <ul class="submenu">
+                                                    @foreach (Models.Category c2 in c.ChildCategory)
+                                                    {
+                                                        <li><a href="/Product/AllProduct?categorySearch=@c2.CategoryId">@c2.CategoryName</a></li>
+                                                    }
+                                                </ul>
+                                            </li>
+                                            }
+                                            else
+                                            {
+                                                <li class=""><a href="/Product/AllProduct?categorySearch=@c.CategoryId">@c.CategoryName</a></li>
+                                            }
                                         }
                                     </ul>
                                 <li>
