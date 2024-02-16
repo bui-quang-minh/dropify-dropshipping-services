@@ -1,7 +1,9 @@
 ﻿@page
 @model Dropify.Pages.Admin.ManageProduct.ProductModel
 
-
+@{
+    Layout = "_AdminLayout";
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,234 +26,113 @@
 </head>
 <body>
 
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-inner slimscroll">
+            <div id="sidebar-menu" class="sidebar-menu">
+                <ul>
+                    <li class="menu-title">
+                        <span><i class="fe fe-home"></i> Main</span>
+                    </li>
+                    <li>
+                        <a href="/Admin/Dashboard"><span>Dashboard</span></a>
+                    </li>
+
+                    <li class="active">
+                        <a href="/Admin/Products/AllProducts"><span>Manage Product</span></a>
+                    </li>
+                    <li >
+                        <a href="/Admin/Categories/AllCategories"><span>Manage Category</span></a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Supplier/AllSupplier"><span>Manage Supplier</span></a>
+                    </li>
+
+                    <li>
+                        <a href="settings.html"><span>Settings</span></a>
+                    </li>
+
+                    <li>
+                        <a href="profile.html"><span>My Profile</span></a>
+                    </li>
+                    <li class="submenu">
+                        <a href="#"><span>Blog</span> <span class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li><a href="blog.html"> Blog </a></li>
+                            <li><a href="blog-details.html"> Blog Details </a></li>
+                            <li><a href="add-blog.html"> Add Blog </a></li>
+                            <li><a href="edit-blog.html"> Edit Blog </a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#"><span> Authentication </span> <span class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li><a href="login.html"> Login </a></li>
+                            <li><a href="register.html"> Register </a></li>
+                            <li><a href="forgot-password.html"> Forgot Password </a></li>
+                            <li><a href="lock-screen.html"> Lock Screen </a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#"><span> Error Pages </span> <span class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li><a href="error-404.html">404 Error </a></li>
+                            <li><a href="error-500.html">500 Error </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="blank-page.html"><span>Blank Page</span></a>
+                    </li>
+                    <li class="menu-title">
+                        <span><i class="fe fe-star-o"></i> UI Interface</span>
+                    </li>
+                    <li>
+                        <a href="components.html"><span>Components</span></a>
+                    </li>
+                    <li class="submenu">
+                        <a href="#"><span> Forms </span> <span class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li><a href="form-basic-inputs.html">Basic Inputs </a></li>
+                            <li><a href="form-input-groups.html">Input Groups </a></li>
+                            <li><a href="form-horizontal.html">Horizontal Form </a></li>
+                            <li><a href="form-vertical.html"> Vertical Form </a></li>
+                            <li><a href="form-mask.html"> Form Mask </a></li>
+                            <li><a href="form-validation.html"> Form Validation </a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#"><span> Tables </span> <span class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li><a href="tables-basic.html">Basic Tables </a></li>
+                            <li><a href="data-tables.html">Data Table </a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="javascript:void(0);"><span>Multi Level</span> <span class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li class="submenu">
+                                <a href="javascript:void(0);"> <span>Level 1</span> <span class="menu-arrow"></span></a>
+                                <ul style="display: none;">
+                                    <li><a href="javascript:void(0);"><span>Level 2</span></a></li>
+                                    <li class="submenu">
+                                        <a href="javascript:void(0);"> <span> Level 2</span> <span class="menu-arrow"></span></a>
+                                        <ul style="display: none;">
+                                            <li><a href="javascript:void(0);">Level 3</a></li>
+                                            <li><a href="javascript:void(0);">Level 3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:void(0);"> <span>Level 2</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"> <span>Level 1</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="main-wrapper">
-
-        <div class="header">
-
-            <div class="header-left">
-                <a href="index.html" class="logo">
-                    <img src="~/Admin/img/Logo.jpg" alt="Logo" height="58"  >
-                </a>
-                <a href="index.html" class="logo logo-small">
-                    <img src="~/Admin/img/Logo.jpg" alt="Logo"  height="58" width="58">
-                </a>
-            </div>
-
-            <a href="javascript:void(0);" id="toggle_btn">
-                <i class="fe fe-text-align-left"></i>
-            </a>
-            <div class="top-nav-search">
-                <form>
-                    <input type="text" class="form-control" placeholder="Search here">
-                    <button class="btn" type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-
-            <a class="mobile_btn" id="mobile_btn">
-                <i class="fa fa-bars"></i>
-            </a>
-
-
-            <ul class="nav user-menu">
-
-                <li class="nav-item dropdown noti-dropdown">
-                    <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-                        <i class="fe fe-bell"></i> <span class="badge badge-pill">3</span>
-                    </a>
-                    <div class="dropdown-menu notifications">
-                        <div class="topnav-dropdown-header">
-                            <span class="notification-title">Notifications</span>
-                            <a href="javascript:void(0)" class="clear-noti"> Clear All </a>
-                        </div>
-                        <div class="noti-content">
-                            <ul class="notification-list">
-                                <li class="notification-message">
-                                    <a href="#">
-                                        <div class="media d-flex">
-                                            <span class="avatar avatar-sm flex-shrink-0">
-                                                <img class="avatar-img rounded-circle" alt="User Image" src="~/Admin/img/user/user.jpg">
-                                            </span>
-                                            <div class="media-body flex-grow-1">
-                                                <p class="noti-details"><span class="noti-title">Jonathan Doe</span> Schedule <span class="noti-title">his appointment</span></p>
-                                                <p class="noti-time"><span class="notification-time">4 mins ago</span></p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="notification-message">
-                                    <a href="#">
-                                        <div class="media d-flex">
-                                            <span class="avatar avatar-sm flex-shrink-0">
-                                                <img class="avatar-img rounded-circle" alt="User Image" src="~/Admin/img/user/user1.jpg">
-                                            </span>
-                                            <div class="media-body flex-grow-1">
-                                                <p class="noti-details"><span class="noti-title">Julie Pennington</span> has booked her appointment to <span class="noti-title">Ruby Perrin</span></p>
-                                                <p class="noti-time"><span class="notification-time">6 mins ago</span></p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="notification-message">
-                                    <a href="#">
-                                        <div class="media d-flex">
-                                            <span class="avatar avatar-sm flex-shrink-0">
-                                                <img class="avatar-img rounded-circle" alt="User Image" src="~/Admin/img/user/user2.jpg">
-                                            </span>
-                                            <div class="media-body flex-grow-1">
-                                                <p class="noti-details"><span class="noti-title">Tyrone Roberts</span> sent a amount of $210 for his <span class="noti-title">appointment</span></p>
-                                                <p class="noti-time"><span class="notification-time">8 mins ago</span></p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="notification-message">
-                                    <a href="#">
-                                        <div class="media d-flex">
-                                            <span class="avatar avatar-sm flex-shrink-0">
-                                                <img class="avatar-img rounded-circle" alt="User Image" src="~/Admin/img/user/user4.jpg">
-                                            </span>
-                                            <div class="media-body flex-grow-1">
-                                                <p class="noti-details"><span class="noti-title">Patricia Manzi</span> send a message <span class="noti-title"> to his Mentee</span></p>
-                                                <p class="noti-time"><span class="notification-time">12 mins ago</span></p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="topnav-dropdown-footer">
-                            <a href="#">View all Notifications</a>
-                        </div>
-                    </div>
-                </li>
-
-
-                <li class="nav-item dropdown has-arrow">
-                    <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-                        <span class="user-img"><img class="rounded-circle" src="~/Admin/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span>
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="user-header">
-                            <div class="avatar avatar-sm">
-                                <img src="~/Admin/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
-                            </div>
-                            <div class="user-text">
-                                <h6>Ryan Taylor</h6>
-                                <p class="text-muted mb-0">Administrator</p>
-                            </div>
-                        </div>
-                        <a class="dropdown-item" href="profile.html">My Profile</a>
-                        <a class="dropdown-item" href="settings.html">Settings</a>
-                        <a class="dropdown-item" href="login.html">Logout</a>
-                    </div>
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <div class="sidebar" id="sidebar">
-            <div class="sidebar-inner slimscroll">
-                <div id="sidebar-menu" class="sidebar-menu">
-                    <ul>
-                        <li class="menu-title">
-                            <span><i class="fe fe-home"></i> Main</span>
-                        </li>
-                        <li>
-                            <a href="index.html"><span>Dashboard</span></a>
-                        </li>
-                        
-                        <li class="active">
-                            <a href="categories.html"><span>Manage Product</span></a>
-                        </li>
-                       
-                        <li>
-                            <a href="settings.html"><span>Settings</span></a>
-                        </li>
-                       
-                        <li>
-                            <a href="profile.html"><span>My Profile</span></a>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><span>Blog</span> <span class="menu-arrow"></span></a>
-                            <ul style="display: none;">
-                                <li><a href="blog.html"> Blog </a></li>
-                                <li><a href="blog-details.html"> Blog Details </a></li>
-                                <li><a href="add-blog.html"> Add Blog </a></li>
-                                <li><a href="edit-blog.html"> Edit Blog </a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><span> Authentication </span> <span class="menu-arrow"></span></a>
-                            <ul style="display: none;">
-                                <li><a href="login.html"> Login </a></li>
-                                <li><a href="register.html"> Register </a></li>
-                                <li><a href="forgot-password.html"> Forgot Password </a></li>
-                                <li><a href="lock-screen.html"> Lock Screen </a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><span> Error Pages </span> <span class="menu-arrow"></span></a>
-                            <ul style="display: none;">
-                                <li><a href="error-404.html">404 Error </a></li>
-                                <li><a href="error-500.html">500 Error </a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="blank-page.html"><span>Blank Page</span></a>
-                        </li>
-                        <li class="menu-title">
-                            <span><i class="fe fe-star-o"></i> UI Interface</span>
-                        </li>
-                        <li>
-                            <a href="components.html"><span>Components</span></a>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><span> Forms </span> <span class="menu-arrow"></span></a>
-                            <ul style="display: none;">
-                                <li><a href="form-basic-inputs.html">Basic Inputs </a></li>
-                                <li><a href="form-input-groups.html">Input Groups </a></li>
-                                <li><a href="form-horizontal.html">Horizontal Form </a></li>
-                                <li><a href="form-vertical.html"> Vertical Form </a></li>
-                                <li><a href="form-mask.html"> Form Mask </a></li>
-                                <li><a href="form-validation.html"> Form Validation </a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><span> Tables </span> <span class="menu-arrow"></span></a>
-                            <ul style="display: none;">
-                                <li><a href="tables-basic.html">Basic Tables </a></li>
-                                <li><a href="data-tables.html">Data Table </a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="javascript:void(0);"><span>Multi Level</span> <span class="menu-arrow"></span></a>
-                            <ul style="display: none;">
-                                <li class="submenu">
-                                    <a href="javascript:void(0);"> <span>Level 1</span> <span class="menu-arrow"></span></a>
-                                    <ul style="display: none;">
-                                        <li><a href="javascript:void(0);"><span>Level 2</span></a></li>
-                                        <li class="submenu">
-                                            <a href="javascript:void(0);"> <span> Level 2</span> <span class="menu-arrow"></span></a>
-                                            <ul style="display: none;">
-                                                <li><a href="javascript:void(0);">Level 3</a></li>
-                                                <li><a href="javascript:void(0);">Level 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="javascript:void(0);"> <span>Level 2</span></a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);"> <span>Level 1</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
 
         <div class="page-wrapper">
             <div class="content container-fluid">
@@ -260,95 +141,441 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <h3 class="page-title">Management Product</h3>
-                            
+
                         </div>
                     </div>
                 </div>
-                <div class="row mb-5">
+              
                     <div class="col">
                         <a class="btn btn-success" data-bs-toggle="modal" href="#add_modal">
                             <i class="fe fe-plus"></i>
                             New Product
                         </a>
                     </div>
-                </div>
+               
+                <br />
+               
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
+                            <li class="nav-item">
+                                <a class="nav-link active"
+                                   href="#bottom-justified-tab" data-bs-toggle="tab">Release</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#bottom-justified-tab1"
+                                   data-bs-toggle="tab">Selling</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#bottom-justified-tab2"
+                                   data-bs-toggle="tab">Shipping</a>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="#bottom-justified-tab3"
+                                   data-bs-toggle="tab">Success</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#bottom-justified-tab4"
+                                   data-bs-toggle="tab">Cancel</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane show active" id="bottom-justified-tab">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class=" table table-hover table-center mb-0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="100">ProductID</th>
+                                                                <th width="300">Name</th>
+                                                                <th width="300">Categories</th>
+                                                                <th width="300">Supplier</th>
+                                                                <th width="100">Original Price</th>
+                                                                <th width="100">Sell Out Price</th>
+                                                                <th width="100">Status</th>
+                                                                <th class="text-end">Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @if (Model.ListProduct != null)
+                                                            {
+                                                                @foreach (var p in Model.ListProduct)
+                                                                {
 
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="datatable table table-hover table-center mb-0">
-                                        <thead>
-                                            <tr>
-                                                <th width="100">ProductID</th>
-                                                <th width="300">Name</th>
-                                                <th width="300">Categories</th>
-                                                <th width ="300">Supplier</th>
-                                                <th width="100">Original Price</th>
-                                                <th width="100">Sell Out Price</th>
-                                                <th width ="100">Status</th>
-                                                <th class="text-end">Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @if (Model.ListProduct != null)
-                                            {
-                                                @foreach (var p in Model.ListProduct)
-                                                {
+                                                                    <tr>
+                                                                        <td>
+                                                                            @p.ProductId
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="limitedText">@p.Name</span>
+                                                                        </td>
+                                                                        <td>@p.Category.CategoryName </td>
+                                                                        <td>
+                                                                            @p.Supplier.SupplierName
 
-                                                    <tr>
-                                                        <td>
-                                                            @p.ProductId
-                                                        </td>
-                                                        <td>
-                                                            @p.Name
-                                                        </td>
-                                                        <td>@p.Category.CategoryName </td>
-                                                        <td>
-                                                            @p.Supplier.SupplierName
-                                                           
-                                                        </td>
+                                                                        </td>
 
-                                                        <td>
-                                                            @p.OriginalPrice
-                                                        </td>
-                                                        <td>
-                                                            @p.SellOutPrice
-                                                        </td>
+                                                                        <td>
+                                                                            <span class="price">@p.OriginalPrice</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="price"> @p.SellOutPrice</span>
+                                                                        </td>
 
-                                                        <td>
-                                                            @p.Status
-                                                        </td>
+                                                                        <td>
+                                                                            @p.Status
+                                                                        </td>
 
-                                                        <td class="text-end">
-                                                            <div class="actions">
-                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.ProductId"
-                                                                data-name="@p.Name" data-cate="@p.CategoryId" data-supp="@p.SupplierId"
-                                                                   data-oprice="@p.OriginalPrice" data-sprice="@p.SellOutPrice" data-create="@p.CreatedDate" data-end="@p.EndDate"
-                                                                   data-start="@p.StartDate" data-ship="@p.Shipdate" data-status="@p.Status" 
-                                                                data-bs-target="#edit_modal" href="#edit_modal">
-                                                                    <i class="fe fe-pencil"></i> Edit
-                                                                </a>
-                                                                <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@p.ProductId" class="btn btn-sm bg-danger-light">
-                                                                    <i class="fe fe-trash"></i> Delete
-                                                                </a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
+                                                                        <td class="text-end">
+                                                                            <div class="actions">
+                                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.ProductId"
+                                                                                   data-name="@p.Name" data-cate="@p.CategoryId" data-supp="@p.SupplierId"
+                                                                                   data-oprice="@p.OriginalPrice" data-sprice="@p.SellOutPrice" data-create="@p.CreatedDate" data-end="@p.EndDate"
+                                                                                   data-start="@p.StartDate" data-ship="@p.Shipdate" data-status="@p.Status"
+                                                                                   data-bs-target="#edit_modal" href="#edit_modal">
+                                                                                    <i class="fe fe-pencil"></i> Edit
+                                                                                </a>
+                                                                                <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@p.ProductId" class="btn btn-sm bg-danger-light">
+                                                                                    <i class="fe fe-trash"></i> Delete
+                                                                                </a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
 
 
-                                                }
-                                            }
+                                                                }
+                                                            }
 
-                                           
-                                        </tbody>
-                                    </table>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="bottom-justified-tab1">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class=" table table-hover table-center mb-0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="100">ProductID</th>
+                                                                <th width="300">Name</th>
+                                                                <th width="300">Categories</th>
+                                                                <th width="300">Supplier</th>
+                                                                <th width="100">Original Price</th>
+                                                                <th width="100">Sell Out Price</th>
+                                                                <th width="100">Status</th>
+                                                                <th class="text-end">Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @if (Model.ListProduct2 != null)
+                                                            {
+                                                                @foreach (var p in Model.ListProduct2)
+                                                                {
+
+                                                                    <tr>
+                                                                        <td>
+                                                                            @p.ProductId
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="limitedText">@p.Name</span>
+                                                                        </td>
+                                                                        <td>@p.Category.CategoryName </td>
+                                                                        <td>
+                                                                            @p.Supplier.SupplierName
+
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <span class="price">@p.OriginalPrice</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="price"> @p.SellOutPrice</span>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            @p.Status
+                                                                        </td>
+
+                                                                        <td class="text-end">
+                                                                            <div class="actions">
+                                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.ProductId"
+                                                                                   data-name="@p.Name" data-cate="@p.CategoryId" data-supp="@p.SupplierId"
+                                                                                   data-oprice="@p.OriginalPrice" data-sprice="@p.SellOutPrice" data-create="@p.CreatedDate" data-end="@p.EndDate"
+                                                                                   data-start="@p.StartDate" data-ship="@p.Shipdate" data-status="@p.Status"
+                                                                                   data-bs-target="#edit_modal" href="#edit_modal">
+                                                                                    <i class="fe fe-pencil"></i> Edit
+                                                                                </a>
+                                                                                <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@p.ProductId" class="btn btn-sm bg-danger-light">
+                                                                                    <i class="fe fe-trash"></i> Delete
+                                                                                </a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+
+
+                                                                }
+                                                            }
+
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="bottom-justified-tab2">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class=" table table-hover table-center mb-0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="100">ProductID</th>
+                                                                <th width="300">Name</th>
+                                                                <th width="300">Categories</th>
+                                                                <th width="300">Supplier</th>
+                                                                <th width="100">Original Price</th>
+                                                                <th width="100">Sell Out Price</th>
+                                                                <th width="100">Status</th>
+                                                                <th class="text-end">Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @if (Model.ListProduct3 != null)
+                                                            {
+                                                                @foreach (var p in Model.ListProduct3)
+                                                                {
+
+                                                                    <tr>
+                                                                        <td>
+                                                                            @p.ProductId
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="limitedText">@p.Name</span>
+                                                                        </td>
+                                                                        <td>@p.Category.CategoryName </td>
+                                                                        <td>
+                                                                            @p.Supplier.SupplierName
+
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <span class="price">@p.OriginalPrice</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="price"> @p.SellOutPrice</span>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            @p.Status
+                                                                        </td>
+
+                                                                        <td class="text-end">
+                                                                            <div class="actions">
+                                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.ProductId"
+                                                                                   data-name="@p.Name" data-cate="@p.CategoryId" data-supp="@p.SupplierId"
+                                                                                   data-oprice="@p.OriginalPrice" data-sprice="@p.SellOutPrice" data-create="@p.CreatedDate" data-end="@p.EndDate"
+                                                                                   data-start="@p.StartDate" data-ship="@p.Shipdate" data-status="@p.Status"
+                                                                                   data-bs-target="#edit_modal" href="#edit_modal">
+                                                                                    <i class="fe fe-pencil"></i> Edit
+                                                                                </a>
+                                                                                <a data-bs-toggle="modal" data-bs-target="#restore_modal" href="#restore_modal" data-reid="@p.ProductId" class="btn btn-sm bg-warning-light">
+                                                                                    <i class="fe fe-trash"></i> Restore
+                                                                                </a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+
+
+                                                                }
+                                                            }
+
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="bottom-justified-tab3">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class=" table table-hover table-center mb-0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="100">ProductID</th>
+                                                                <th width="300">Name</th>
+                                                                <th width="300">Categories</th>
+                                                                <th width="300">Supplier</th>
+                                                                <th width="100">Original Price</th>
+                                                                <th width="100">Sell Out Price</th>
+                                                                <th width="100">Status</th>
+                                                                <th class="text-end">Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @if (Model.ListProduct4 != null)
+                                                            {
+                                                                @foreach (var p in Model.ListProduct3)
+                                                                {
+
+                                                                    <tr>
+                                                                        <td>
+                                                                            @p.ProductId
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="limitedText">@p.Name</span>
+                                                                        </td>
+                                                                        <td>@p.Category.CategoryName </td>
+                                                                        <td>
+                                                                            @p.Supplier.SupplierName
+
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <span class="price">@p.OriginalPrice</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="price"> @p.SellOutPrice</span>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            @p.Status
+                                                                        </td>
+
+                                                                        <td class="text-end">
+                                                                            <div class="actions">
+                                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.ProductId"
+                                                                                   data-name="@p.Name" data-cate="@p.CategoryId" data-supp="@p.SupplierId"
+                                                                                   data-oprice="@p.OriginalPrice" data-sprice="@p.SellOutPrice" data-create="@p.CreatedDate" data-end="@p.EndDate"
+                                                                                   data-start="@p.StartDate" data-ship="@p.Shipdate" data-status="@p.Status"
+                                                                                   data-bs-target="#edit_modal" href="#edit_modal">
+                                                                                    <i class="fe fe-pencil"></i> Edit
+                                                                                </a>
+                                                                                <a data-bs-toggle="modal" data-bs-target="#restore_modal" href="#restore_modal" data-reid="@p.ProductId" class="btn btn-sm bg-warning-light">
+                                                                                    <i class="fe fe-trash"></i> Restore
+                                                                                </a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+
+
+                                                                }
+                                                            }
+
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="bottom-justified-tab4">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class=" table table-hover table-center mb-0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="100">ProductID</th>
+                                                                <th width="300">Name</th>
+                                                                <th width="300">Categories</th>
+                                                                <th width="300">Supplier</th>
+                                                                <th width="100">Original Price</th>
+                                                                <th width="100">Sell Out Price</th>
+                                                                <th width="100">Status</th>
+                                                                <th class="text-end">Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @if (Model.ListProduct4 != null)
+                                                            {
+                                                                @foreach (var p in Model.ListProduct4)
+                                                                {
+
+                                                                    <tr>
+                                                                        <td>
+                                                                            @p.ProductId
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="limitedText">@p.Name</span>
+                                                                        </td>
+                                                                        <td>@p.Category.CategoryName </td>
+                                                                        <td>
+                                                                            @p.Supplier.SupplierName
+
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <span class="price">@p.OriginalPrice</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="price"> @p.SellOutPrice</span>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            @p.Status
+                                                                        </td>
+
+                                                                        <td class="text-end">
+                                                                            <div class="actions">
+                                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.ProductId"
+                                                                                   data-name="@p.Name" data-cate="@p.CategoryId" data-supp="@p.SupplierId"
+                                                                                   data-oprice="@p.OriginalPrice" data-sprice="@p.SellOutPrice" data-create="@p.CreatedDate" data-end="@p.EndDate"
+                                                                                   data-start="@p.StartDate" data-ship="@p.Shipdate" data-status="@p.Status"
+                                                                                   data-bs-target="#edit_modal" href="#edit_modal">
+                                                                                    <i class="fe fe-pencil"></i> Edit
+                                                                                </a>
+                                                                                <a data-bs-toggle="modal" data-bs-target="#restore_modal" href="#restore_modal" data-reid="@p.ProductId" class="btn btn-sm bg-warning-light">
+                                                                                    <i class="fe fe-trash"></i> Restore
+                                                                                </a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+
+
+                                                                }
+                                                            }
+
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+                
             </div>
         </div>
 
@@ -368,6 +595,27 @@
                         </div>
                     </form>
                     
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="restore_modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <form method="post" asp-page="/Admin/Products/AllProducts" asp-page-handler="Restore">
+                        <div class="form-content p-2">
+                            <h4 class="modal-title text-center">Restore</h4>
+                            <p class="mb-4 text-center">Are you sure want to Restore?</p>
+                            <div class="d-flex me-1 justify-content-center" >
+                            <button  type="submit" id="MyLink" class="btn btn-primary" style="margin-right:6px ;width:75px ;"> Restore </button>
+                            <input type="hidden" value="" id="restore_id" name="restore_id" />
+                            <button type="button" class="btn btn-danger" style="width : 75px;" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>
@@ -470,8 +718,11 @@
                                             <div class="form-group mb-3">
                                                 <label> Status </label>
                                                 <select class="form-control" asp-for="product.Status"  id="pStatus">
-                                                    <option value="Active">Active</option>
-                                                    <option value="Inactive">Inactive</option>
+                                                    <option value="Release">Release</option>
+                                                    <option value="Selling">Selling</option>
+                                                    <option value="Shipping">Shipping</option>
+                                                    <option value="Success">Success</option>
+                                                    <option value="Cancel">Cancel</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -597,8 +848,8 @@
                                             <div class="form-group mb-3">
                                                 <label> Status </label>
                                                 <select class="form-control" asp-for="product.Status">
-                                                    <option value="Active">Active</option>
-                                                    <option value="Inactive">Inactive</option>
+                                                    <option value="Release">Release</option>
+                                                    <option value="Hold">Hold</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -656,6 +907,25 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Get modal and link elements
+            var modal = document.getElementById('restore_modal');
+            var links = document.querySelectorAll('[data-bs-target="#restore_modal"]');
+
+            // Add event listener for when any of the links is clicked
+            links.forEach(function (link) {
+                link.addEventListener('click', function () {
+
+                    var id = link.dataset.reid;
+
+                    document.getElementById('restore_id').value = id;
+                    console.log(id);
+
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get modal and link elements
             var modal = document.getElementById('edit_modal');
             var links = document.querySelectorAll('[data-bs-target="#edit_modal"]');
 
@@ -676,13 +946,9 @@
                     var Status = link.dataset.status;
 
                     var create = formatDate(createDate);
-                     var start = formatDate(startDate);
+                    var start = formatDate(startDate);
                     var end = formatDate(endDate);
-                      var ship = formatDate(shipDate);
-                   
-                  
-                    
-                    
+                    var ship = formatDate(shipDate);
 
                     function formatDate(d) {
                         var part = d.split(/[\/ :]/);
@@ -690,7 +956,7 @@
                         return formaterDate;
 
                     }
-
+                 
                    
                     // Update modal content with the extracted values
                     
@@ -711,40 +977,32 @@
                     document.getElementById('pStatus').value = Status;
                    
 
-
-                    var selectElement = document.querySelector('.supplier-name');
-
-                    var options1 = selectElement.options;
-
-                    for (var i = 0; i < options1.length; i++) {
-                        if (options1[i].value === supplier) {
-                            options1[i].selected = true;
-                            break; // Dừng vòng lặp nếu đã tìm thấy giá trị
-                        }
-                    }
-
-
-                    // Lấy phần tử select bằng cách sử dụng ID hoặc class
-                    var selectElement = document.querySelector('.category-name');
-                    // Lấy tất cả các option trong select
-                    var options = selectElement.options;
-
-
-                    // Duyệt qua từng option và kiểm tra giá trị
-                    for (var i = 0; i < options.length; i++) {
-                        if (options[i].value === Category) {
-                           
-                            // Nếu giá trị của option trùng với giá trị cần kiểm tra, chọn option đó
-                            options[i].selected = true;
-                            break; // Dừng vòng lặp nếu đã tìm thấy giá trị
-                        }
-                    }
-
-
-
                 });
             });
         });
+    </script>
+    <script>
+        var maxLength = 70;
+        var elements = document.querySelectorAll('.limitedText');
+        elements.forEach(function (element) {
+            if (element.textContent.length > maxLength) {
+                element.textContent = element.textContent.substring(0, maxLength) + '...';
+            }
+
+        });
+    </script>
+
+    <script>
+        var moneys = document.querySelectorAll('.price');
+        moneys.forEach(function (money) {
+            // Lấy giá trị số từ phần tử HTML
+            var amountString = money.textContent.replace(/[^\d,-]/g, ''); // Loại bỏ các ký tự không phải số, dấu phẩy hoặc dấu trừ
+            var amount = parseFloat(amountString.replace(',', '.')); // Chuyển đổi dấu phẩy sang dấu chấm cho số dấu phẩy động
+            var formattedMoney = amount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+            money.textContent = formattedMoney; // Gán giá trị đã định dạng vào phần tử HTML
+           
+        });
+
     </script>
 </body>
 

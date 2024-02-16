@@ -24,13 +24,13 @@
                             <span></span>
                         </span>
                     </a>
-                    <a href="index.html" class="navbar-brand logo">
+                    <a href="/" class="navbar-brand logo">
                         <img src="/assets/img/logo.png" class="img-fluid" alt="Logo">
                     </a>
                 </div>
                 <div class="main-menu-wrapper">
                     <div class="menu-header">
-                        <a href="index.html" class="menu-logo">
+                        <a href="/" class="menu-logo">
                             <img src="/assets/img/logo.png" class="img-fluid" alt="Logo">
                         </a>
                         <a id="menu_close" class="menu-close" href="javascript:void(0);">
@@ -39,13 +39,13 @@
                     </div>
                     <ul class="main-nav">
                         <li class="">
-                            <a href="">Home <i class=""></i></a>
+                            <a href="/">Home <i class=""></i></a>
                         </li>
                         <li class="has-submenu active">
                             <a>Products <i class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
                                 <li class="has-submenu active">
-                                    <a href="Product/AllProduct">Product</a>
+                                    <a href="/Product/AllProduct">Product</a>
                                     <ul class="submenu">
                                         <li class="active"><a href="blog.html">Active Product</a></li>
                                         <li><a href="blog-details.html">Inactive Product</a></li>
@@ -71,21 +71,29 @@
                                 <li>
                             </ul>
                         </li>
-                        <li class="has-submenu">
-                            <a href>News<i class="fas fa-chevron-down"></i></a>
-                            <ul class="submenu">
-                                <li><a href="favourites.html">Favourites</a></li>
-                                <li><a href="chat-mentee.html">Chat</a></li>
-                                <li><a href="profile-settings-mentee.html">Profile Settings</a></li>
-                                <li><a href="change-password.html">Change Password</a></li>
-                            </ul>
+                        <li class="">
+                            <a href="/News">News <i class=""></i></a>
+                        </li>
+                        <li class="">
+                            <a href="/AboutUs">About Us <i class=""></i></a>
                         </li>
                         <li class="has-submenu">
-                            <a href>Admin <i class="fas fa-chevron-down"></i></a>
+                            <a href="/Admin/Dashboard">Admin <i class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
-                                <li><a href="blog-list.html">Blog List</a></li>
-                                <li><a href="blog-grid.html">Blog Grid</a></li>
-                                <li><a href="blog-details.html">Blog Details</a></li>
+                                <!--All Products (Admin Site)	/Admin/Products/AllProducts
+                                All Categories(Admin Site)	/Admin/Categories/AllCategories
+                                All Supplier(Admin Site)	/Admin/Supplier/AllSupplier
+                                Dashboard(Admin Site)	/Admin/Dashboard
+                                All News (Admin Site)	/Admin/News
+                                All Orders (Admin Site)	/Admin/AllOrders
+                                All Users (Admin Site)	/Admin/AllUsers-->
+                                <li><a href="/Admin/Dashboard">Dashboard</a></li>
+                                <li><a href="/Admin/Products/AllProducts">All Products</a></li>
+                                <li><a href="/Admin/Categories/AllCategories">All Categories</a></li>
+                                <li><a href="/Admin/Supplier/AllSupplier">All Supplier</a></li>
+                                <li><a href="/Admin/News">All News</a></li>
+                                <li><a href="/Admin/AllOrders">All Orders</a></li>
+                                <li><a href="/Admin/AllUsers">All Users</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -123,13 +131,122 @@
             @RenderBody()
         </main>
     </div>
-    <!--
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Dropify - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <footer class="footer">
+
+        <div class="footer-top">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="footer-widget footer-about">
+                            <div class="footer-logo">
+                                <img src="/assets/img/logo.png" alt="logo">
+                            </div>
+                            <div class="footer-about-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <div class="social-icon">
+                                    <ul>
+                                        <li>
+                                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank"><i class="fab fa-twitter"></i> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank"><i class="fab fa-dribbble"></i> </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="footer-widget footer-menu">
+                            <h2 class="footer-title">For Mentee</h2>
+                            <ul>
+                                <li><a href="search.html">Search Mentors</a></li>
+                                <li><a href="login.html">Login</a></li>
+                                <li><a href="register.html">Register</a></li>
+                                <li><a href="booking.html">Booking</a></li>
+                                <li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="footer-widget footer-menu">
+                            <h2 class="footer-title">For Mentors</h2>
+                            <ul>
+                                <li><a href="appointments.html">Appointments</a></li>
+                                <li><a href="chat.html">Chat</a></li>
+                                <li><a href="login.html">Login</a></li>
+                                <li><a href="register.html">Register</a></li>
+                                <li><a href="dashboard.html">Mentor Dashboard</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="footer-widget footer-contact">
+                            <h2 class="footer-title">Contact Us</h2>
+                            <div class="footer-contact-info">
+                                <div class="footer-address">
+                                    <span><i class="fas fa-map-marker-alt"></i></span>
+                                    <p> 3556 Beech Street, San Francisco,<br> California, CA 94108 </p>
+                                </div>
+                                <p>
+                                    <i class="fas fa-phone-alt"></i>
+                                    +1 315 369 5943
+                                </p>
+                                <p class="mb-0">
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="https://mentoring.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ee838b809a819c878089ae8b968f839e828bc08d8183">[email&#160;protected]</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
+
+
+        <div class="footer-bottom">
+            <div class="container-fluid">
+
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <div class="copyright-text">
+                                <p class="mb-0">&copy; 2020 Mentoring. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </footer>
-    -->
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+    <script src="/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
+
+    <script src="/assets/js/script.js"></script>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

@@ -11,5 +11,12 @@ namespace Dropify.Logics
                 return db.Suppliers.ToList();
             }
         }
+        public void EditSupplier(Supplier supp)
+        {
+            using (var db = new prn211_dropshippingContext())
+            {
+                db.Suppliers.Update(supp);
+            }
+        }
     }
 }

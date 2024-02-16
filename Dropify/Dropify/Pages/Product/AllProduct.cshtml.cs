@@ -19,11 +19,12 @@ namespace Dropify.Pages.Product
             string search = Request.Form["searchString"].ToString();
             var category = Request.Form["categorySearch"];
             var supplier = Request.Form["supplierSearch"];
+
             if (category.Count == 0 && supplier.Count == 0)
             {
                 products = pd.SearchProduct(search, -1, -1);
             }
-            else if (category.Count != 0 && supplier == 0)
+            else if (category.Count != 0 && supplier.Count == 0)
             {
                 products = pd.SearchProduct(search, int.Parse(category),-1);
             }
