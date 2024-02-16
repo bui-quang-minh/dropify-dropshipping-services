@@ -4,6 +4,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Dropify.Pages
 {
+    // Lớp BasePageModel chứa các thuộc tính và phương thức chung cho tất cả các PageModel, Áp dụng cho _Layout.cshtml
+    // Người viết: Bùi Quang Minh
+    // Ngày: 16/2/2024
     public class BasePageModel : PageModel
     {
         public List<Models.Category> categories = new CategoryDAO().GetAllCategories();

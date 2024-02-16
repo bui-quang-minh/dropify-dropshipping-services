@@ -25,7 +25,7 @@ namespace Dropify.Pages.Admin.Products
             var originalPrice = Request.Form["originalPrice"];
             var sellOutPrice = Request.Form["sellOutPrice"];
             var description = Request.Form["description"];
-
+            //Create new product
             Models.Product p = new Models.Product();
             p.Name = name;
             p.SupplierId = int.Parse(supplier);
@@ -49,6 +49,7 @@ namespace Dropify.Pages.Admin.Products
             int productId = new ProductDAO().AddProduct(p);
 
             //Save product details
+            //P_COLOR
             if (!string.IsNullOrEmpty(p_color))
             {
                 string[] colors = p_color.ToString().Split(';');
@@ -61,6 +62,7 @@ namespace Dropify.Pages.Admin.Products
                     new ProductDetailDAO().AddProductDetail(p_c);
                 }
             }
+            //P_SIZE
             if (!string.IsNullOrEmpty(p_size))
             {
                 string[] sizes = p_size.ToString().Split(';');
@@ -73,6 +75,7 @@ namespace Dropify.Pages.Admin.Products
                     new ProductDetailDAO().AddProductDetail(p_s);
                 }
             }
+            //P_OPTIONS
             if (!string.IsNullOrEmpty(p_options))
             {
                 string[] options = p_options.ToString().Split(';');
@@ -85,6 +88,7 @@ namespace Dropify.Pages.Admin.Products
                     new ProductDetailDAO().AddProductDetail(p_o);
                 }
             }
+            //P_IMAGE_THUMBNAIL, P_IMAGE_CONTENTS
             if (images != null && images.Count > 0)
             {
                 for (int i = 0; i < images.Count; i++)
@@ -107,6 +111,7 @@ namespace Dropify.Pages.Admin.Products
                     new ProductDetailDAO().AddProductDetail(p_i);
                 }
             }
+            //P_DESCRIPTION
             if (!string.IsNullOrEmpty(description)) { 
                 Models.ProductDetail p_d = new Models.ProductDetail();
                 p_d.Type = "P_DESCRIPTION";

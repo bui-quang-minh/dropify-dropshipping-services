@@ -4,6 +4,9 @@ namespace Dropify.Logics
 {
     public class SupplierDAO
     {
+        //Lấy tất cả supplier từ database
+        //Người viết: Bùi Quang Minh
+        //Ngày: 16/2/2024
         public List<Supplier> GetAllSuppliers()
         {
             using (var db = new prn211_dropshippingContext())

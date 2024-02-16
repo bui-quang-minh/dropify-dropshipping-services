@@ -4,6 +4,9 @@ namespace Dropify.Logics
 {
     public class UserDetailDAO
     {
+        // Lấy tất cả user detail từ database
+        // Người viết: Bùi Quang Minh
+        // Ngày: 16/2/2024
         public List<UserDetail> GetAllUserDetails()
         {
             using (var db = new prn211_dropshippingContext())

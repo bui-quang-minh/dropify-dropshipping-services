@@ -6,7 +6,7 @@ namespace Dropify.Logics
 {
     public class UserDAO
     {
-        
+        // Lấy tất cả user từ database
         public List<User> GetAllUsers()
         {
             using (var db = new prn211_dropshippingContext())
