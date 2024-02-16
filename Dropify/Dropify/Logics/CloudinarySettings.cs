@@ -4,12 +4,18 @@ using System.Security.Principal;
 
 namespace Dropify.Logics
 {
+    // Settings của Cloudinary
+    // Người viết: Bùi Quang Minh
+    // Ngày: 16/2/2024
     public class CloudinarySettings
     {
         public string CloudName { get; set; }
         public string ApiKey { get; set; }
         public string ApiSecret { get; set; }
         public CloudinarySettings() { }
+        // Lấy thông tin settings của Cloudinary từ appsettings.json
+        // Người viết: Bùi Quang Minh
+        // Ngày: 16/2/2024
         public static CloudinarySettings GetCloudinarySettings()
         {
             var configuration = new ConfigurationBuilder()
@@ -21,6 +27,9 @@ namespace Dropify.Logics
             configuration.GetSection("CloudinarySettings").Bind(cloudinarySettings);
             return cloudinarySettings;
         }
+        // Upload ảnh lên Cloudinary
+        // Người viết: Bùi Quang Minh
+        // Ngày: 16/2/2024
         public ImageUploadResult CloudinaryUpload(IFormFile f)
         {
             CloudinarySettings cs = GetCloudinarySettings();

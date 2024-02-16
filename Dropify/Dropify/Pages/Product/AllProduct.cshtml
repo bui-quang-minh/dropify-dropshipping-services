@@ -47,7 +47,7 @@
                                 <input class="form-control" type="text" name="searchString" placeholder="Search for ..."></input><br>
                                 <h5>Filter by Category</h5>
                                 @{
-                                    foreach (var cat in Model.categories)
+                                    foreach (var cat in Model.childCategories)
                                     {
                                         <input type="checkbox" name="categorySearch" value="@cat.CategoryId"/> <span>@cat.CategoryName</span><br>
                                     }

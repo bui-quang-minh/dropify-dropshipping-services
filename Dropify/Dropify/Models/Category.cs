@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Dropify.Logics;
+using Microsoft.AspNetCore.Http.HttpResults;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Dropify.Models
 {
@@ -17,5 +20,18 @@ namespace Dropify.Models
         public string? Status { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
+
+        [NotMapped]
+        public virtual List<Category>? ChildCategory
+        {
+            get
+            {
+                var c = new CategoryDAO().GetChildByParentId(CategoryId);
+                return c;
+            }
+            set
+            {
+            }
+        }
     }
 }
