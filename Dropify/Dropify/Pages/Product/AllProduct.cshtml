@@ -1,0 +1,145 @@
+﻿@page
+@model Dropify.Pages.Product.AllProductModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from mentoring.dreamguystech.com/html/template/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 May 2023 10:32:09 GMT -->
+<head>
+    <meta charset="utf-8">
+    <title>Mentoring</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/plugins/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div class="breadcrumb-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-12 col-12">
+                        <nav aria-label="breadcrumb" class="page-breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Products</li>
+                            </ol>
+                        </nav>
+                        <h2 class="breadcrumb-title">Products</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+                        <!--Search bar-->
+                        <form asp-page="/Product/AllProduct" asp-page-handler="Search">
+                            <div class="profile-sidebar">
+                                <input class="form-control" type="text" name="searchString" placeholder="Search for ..."></input><br>
+                                <h5>Filter by Category</h5>
+                                @{
+                                    foreach (var cat in Model.childCategories)
+                                    {
+                                        <input type="checkbox" name="categorySearch" value="@cat.CategoryId"/> <span>@cat.CategoryName</span><br>
+                                    }
+                                }
+                                <br>
+                                <h5>Filter by Supplier</h5>
+                                @{
+                                    foreach (var cat in Model.suppliers)
+                                    {
+                                        <input type="checkbox" name="supplierSearch" value="@cat.SupplierId" /> <span>@cat.SupplierName</span>
+
+                                        <br>
+                                    }
+                                }
+                                <br>
+                                <div class="submit-section">
+                                    <button style="width:100%" type="submit" class="btn btn-primary submit-btn">Search</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="col-md-7 col-lg-8 col-xl-9">
+                        <div class="row">
+                            <div class="col-12">
+
+                                <nav class="user-tabs">
+                                    <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
+                                        <li>
+                                            <a class="nav-link active" href="#activeservice" data-bs-toggle="tab">Active Products</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="#inactiveservice" data-bs-toggle="tab">Inactive Products</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+
+                                <div class="tab-content">
+
+
+                                    <div role="tabpanel" id="activeservice" class="tab-pane fade show active">
+                                        <div class="row">
+
+
+                                            @foreach (Models.Product p in Model.products)
+                                            {
+                                            <div class="col-12 col-md-6 col-xl-4 d-flex">
+                                                <div class="course-box blog grid-blog">
+                                                    <div class="blog-image mb-0">
+                                                        <a href="/Product/ProductDetail?productId=@p.ProductId"><img class="img-fluid" src="@p.ProductThumbnailImage" alt="Post Image"></a>
+                                                    </div>
+                                                    <div class="course-content">
+                                                        <span class="date">@p.StartDate</span>
+                                                            <span class="course-title"><a href="/Product/ProductDetail?productId=@p.ProductId">@p.Name</a></span>
+                                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                            </div>
+                                                            <div class="col text-end">
+                                                                    <a href="javascript:void(0);" class="far fa-edit">
+                                                                    <i class="far fa-trash-alt"></i> @p.SellOutPrice
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            }
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+    <script src="/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+
+<!-- Mirrored from mentoring.dreamguystech.com/html/template/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 May 2023 10:32:14 GMT -->
+</html>

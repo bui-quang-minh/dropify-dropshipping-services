@@ -1,0 +1,567 @@
+﻿@page
+@model Dropify.Pages.Product.ProductDetailModel
+@{
+
+}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <title>Mentoring</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/plugins/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div class="breadcrumb-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-12 col-12">
+                        <nav aria-label="breadcrumb" class="page-breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                em active" aria-current="page">Product</li>
+                            </ol>
+                        </nav>
+                        <h2 class="breadcrumb-title">Product Details</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @{
+            DateTime? startDate = Model.product.StartDate;
+            DateTime? endDate = Model.product.EndDate;
+            DateTime? createDate = Model.product.CreatedDate;
+            DateTime? ShipDate = Model.product.Shipdate;
+            DateTime now = DateTime.Now;
+            int dateDiff = 0;
+            int totalTime = 0;
+            if (startDate != null)
+            {
+                dateDiff = (int)Math.Round(now.Subtract(startDate.Value).TotalDays);
+            }
+            if (startDate != null && endDate != null)
+            {
+                totalTime = (int)Math.Round(endDate.Value.Subtract(startDate.Value).TotalDays);
+            }
+            //Product price calculation
+            decimal originalPrice = Model.product.SellOutPrice / 100 * 115 ?? 0;
+            double percent = (double)15 / 100 * (double)dateDiff / totalTime * 100;
+            int discountPercent = (int)Math.Round(percent);
+            decimal discount = Model.product.SellOutPrice / 100 * (100 + discountPercent) ?? 0;
+            static string ConvertToVND(double number)
+            {
+                string[] parts = number.ToString().Split('.');
+                string formattedBeforeDecimal = string.Format("{0:n0}", Convert.ToInt64(parts[0]));
+                string result = formattedBeforeDecimal + (parts.Length > 1 ? "." + parts[1] : "");
+                return result + " VND";
+            }
+            string originalPriceVND = ConvertToVND(Convert.ToDouble(originalPrice));
+            string discountVND = ConvertToVND(Convert.ToDouble(discount));
+            //Product Progress calculation
+            String progress = "";
+            int progressValue = 0;
+            if (startDate.HasValue && createDate.HasValue && now >= createDate && now < startDate)
+            {
+                progress = "Create";
+                TimeSpan difference = now - createDate.Value;
+                progressValue = (int)Math.Round(difference.TotalDays)*2;
+            }
+            else if (startDate.HasValue && endDate.HasValue && now >= startDate && now < endDate)
+            {
+                progress = "Start";
+                TimeSpan difference = now - startDate.Value;
+                progressValue = (int)Math.Round(difference.TotalDays)*2;
+            }
+            else if (endDate.HasValue && ShipDate.HasValue && now >= endDate && now < ShipDate)
+            {
+                progress = "Ship";
+                TimeSpan difference = now - endDate.Value;
+                progressValue = (int)Math.Round(difference.TotalDays)*2;
+            }
+            else
+            {
+                progress = "Done";
+                progressValue = 100;
+            }
+        }
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                        <div class="blog-view">
+                            <div class="blog blog-single-post">
+                                <div class="blog-image row">
+                                    <a href="javascript:void(0);"><img alt src="@Model.product.ProductThumbnailImage" class="img-fluid"></a>
+                                </div>
+                                <div class="row">
+                                    @foreach (var pd in Model.productDetail)
+                                    {
+                                        @if (pd.Type == "P_IMAGE_THUMBNAIL")
+                                        {
+                                            <div class="col"><img alt src="@pd.Attribute" class="img-fluid"></div>
+                                        }
+                                        @if (pd.Type == "P_IMAGE_CONTENTS") {
+                                            <div class="col"><img alt src="@pd.Attribute" class="img-fluid"></div>
+                                        }
+                                    }
+                                </div>
+                                <br></br>
+                                <h3 class="blog-title">@Model.product.Name</h3>
+                                <div class="blog-info clearfix">
+                                    <div class="post-left">
+                                        <ul>
+                                            <li>
+                                                <div class="post-author">
+                                                    <a href="profile.html"><img src="@Model.product.ProductCreateBy.ImgUrl" alt="Post Author"> <span>@Model.product.ProductCreateBy.Name</span></a>
+                                                </div>
+                                            </li>
+                                            <li><i class="far fa-calendar"></i>@Model.product.CreatedDate</li>
+                                            <li><i class="fa fa-tags"></i>@Model.product.ProductCategory</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="blog-content">
+                                    @foreach (var pd in Model.productDetail)
+                                    {
+                                        @if (pd.Type == "P_DESCRIPTION")
+                                        {
+                                            <p>@Html.Raw(pd.Attribute)</p>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                            <div class="card blog-share clearfix">
+                                <div class="card-header">
+                                    <h4 class="card-title">Product Progress</h4>
+                                </div>
+
+                                <div class="card-body">
+                                    @{
+                                        if (progress.Equals("Create"))
+                                        {
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: @progressValue%" aria-valuenow="@progressValue" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-1">
+                                                    <img src="https://file.hstatic.net/1000269366/file/target_eebd1d64d3dd45538ee759df6885cb80.svg">
+                                                </div>
+                                                <div class="col-11">
+                                                    <h4>Sản phẩm sẽ được bày bán vào @Model.product.StartDate ! </h4>
+                                                </div>
+                                            </div>
+                                        } else if(progress.Equals("Start"))
+                                        {
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: @progressValue%" aria-valuenow="@progressValue" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-1">
+                                                    <img src="https://file.hstatic.net/1000269366/file/product_b3e91e5f145848f8a71117142b4f66fa.svg">
+                                                </div>
+                                                <div class="col-11">
+                                                    <h4>Đang trong thời điểm đặt sản phẩm nè! </h4>
+                                                </div>
+                                            </div>
+                                        } else if (progress.Equals("Ship"))
+                                        {
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: @progressValue%" aria-valuenow="@progressValue" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-1">
+                                                    <img src="https://file.hstatic.net/1000269366/file/rocket_37ab32c546bc494696b44207ac0b6a4b.svg">
+                                                </div>
+                                                <div class="col-11">
+                                                    <h4>Các sản phẩm đang được giao </h4>
+                                                </div>
+                                            </div>
+                                        }else if (progress.Equals("Done"))
+                                        {
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-1">
+                                                    <img src="https://file.hstatic.net/1000269366/file/rocket_37ab32c546bc494696b44207ac0b6a4b.svg">
+                                                </div>
+                                                <div class="col-11">
+                                                    <h4>Chiến dịch đã hoàn thành !</h4>
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12 sidebar-right theiaStickySidebar"> 
+
+                        <div class="card search-widget">
+
+                            <div class="card-body">
+                                
+
+                                <s style="font-size: 22px; font-weight:bold">@originalPriceVND</s>
+                                <p style="font-size: 22px; font-weight:bold" class="text-danger">@discountVND</p>
+
+                                <form class="search-form" action="ProductDetail" method="post">
+                                    <!--Color-->
+                                    <div class="input-group">
+                                         @{
+                                             int i = 0;
+                                         }
+                                         @foreach (var pd in Model.productDetail)
+                                         {
+                                            
+                                            @if (pd.Type.Equals("P_COLOR"))
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    <h4 class="form-label" style="padding-top:6px">Color: &nbsp;</h4>
+                                                    i++;
+                                                }                                                
+                                                    <input class="input_custom" type="radio" id="@pd.ProductDetailId" name="p_color" value="@pd.ProductDetailId"/>
+                                                    <label for="@pd.ProductDetailId" class="label_custom">@pd.Attribute</label><div>&nbsp;</div><br>
+                                                }
+                                             }
+                                    </div>
+                                    <!--Size-->
+                                    <div class="input-group">
+                                        @{
+                                            i = 0;
+                                        }
+                                        @foreach (var pd in Model.productDetail)
+                                        {
+
+                                            @if (pd.Type.Equals("P_SIZE"))
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    <h4 class="form-label" style="padding-top:6px">Size: &nbsp;</h4>
+                                                    i++;
+                                                }
+                                                <input class="input_custom" type="radio" id="@pd.ProductDetailId" name="p_size" value="@pd.ProductDetailId" />
+                                                <label for="@pd.ProductDetailId" class="label_custom">@pd.Attribute</label>
+
+                                                <div>&nbsp;</div>
+
+                                                <br>
+                                            }
+                                        }
+                                    </div>
+                                    <!--Options-->
+                                    <div class="input-group">
+                                        @{
+                                            i = 0;
+                                        }
+                                        @foreach (var pd in Model.productDetail)
+                                        {
+
+                                            @if (pd.Type.Equals("P_OPTIONS"))
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    <h4 class="form-label" style="padding-top:6px">Options: &nbsp;</h4>
+                                                    i++;
+                                                }
+                                                <input class="input_custom" type="radio" id="@pd.ProductDetailId" name="p_options" value="@pd.ProductDetailId" />
+                                                <label for="@pd.ProductDetailId" class="label_custom">@pd.Attribute</label>
+
+                                                <div>&nbsp;</div>
+
+                                                <br>
+                                            }
+                                        }
+                                    </div>
+                                    <div class="plazo">Amount<span class="asterix">*</span></div>
+                                    <div class="input-group">
+                                        <div class="number">
+                                            <span class='number-wrapper'>
+                                                <span id="hide"></span><input type="number" class="number_custom" name="amount" max="100" min="1" step="1" id="amount" value="1">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+
+                                        <input class="add-to-cart" style="content: f07a" type="submit" value="Add to cart">
+                                        
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="card post-widget">
+                            <div class="card-header">
+                                <h4 class="card-title">Latest Posts</h4>
+                            </div>
+                            <div class="card-body">
+                                <ul class="latest-posts">
+                                    <li>
+                                        <div class="post-thumb">
+                                            <a href="blog-details.html">
+                                                <img class="img-fluid" src="/assets/img/blog/blog-thumb-01.jpg" alt>
+                                            </a>
+                                        </div>
+                                        <div class="post-info">
+                                            <h4>
+                                                <a href="blog-details.html">Lorem Ipsum is simply dummy text of the printing</a>
+                                            </h4>
+                                            <p>4 Dec 2019</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="post-thumb">
+                                            <a href="blog-details.html">
+                                                <img class="img-fluid" src="/assets/img/blog/blog-thumb-02.jpg" alt>
+                                            </a>
+                                        </div>
+                                        <div class="post-info">
+                                            <h4>
+                                                <a href="blog-details.html">It is a long established fact that a reader will be</a>
+                                            </h4>
+                                            <p>3 Dec 2019</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="post-thumb">
+                                            <a href="blog-details.html">
+                                                <img class="img-fluid" src="/assets/img/blog/blog-thumb-03.jpg" alt>
+                                            </a>
+                                        </div>
+                                        <div class="post-info">
+                                            <h4>
+                                                <a href="blog-details.html">here are many variations of passages of Lorem Ipsum</a>
+                                            </h4>
+                                            <p>3 Dec 2019</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="post-thumb">
+                                            <a href="blog-details.html">
+                                                <img class="img-fluid" src="/assets/img/blog/blog-thumb-04.jpg" alt>
+                                            </a>
+                                        </div>
+                                        <div class="post-info">
+                                            <h4>
+                                                <a href="blog-details.html">The standard chunk of Lorem Ipsum used since the</a>
+                                            </h4>
+                                            <p>2 Dec 2019</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="post-thumb">
+                                            <a href="blog-details.html">
+                                                <img class="img-fluid" src="/assets/img/blog/blog-thumb-05.jpg" alt>
+                                            </a>
+                                        </div>
+                                        <div class="post-info">
+                                            <h4>
+                                                <a href="blog-details.html">to generate Lorem Ipsum which looks reasonable.</a>
+                                            </h4>
+                                            <p>1 Dec 2019</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="card category-widget">
+                            <div class="card-header">
+                                <h4 class="card-title">Blog Categories</h4>
+                            </div>
+                            <div class="card-body">
+                                <ul class="categories">
+                                    <li><a href="#">HTML <span>(62)</span></a></li>
+                                    <li><a href="#">Css <span>(27)</span></a></li>
+                                    <li><a href="#">Java Script <span>(41)</span></a></li>
+                                    <li><a href="#">Photoshop <span>(16)</span></a></li>
+                                    <li><a href="#">Wordpress <span>(55)</span></a></li>
+                                    <li><a href="#">VB <span>(07)</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="card tags-widget">
+                            <div class="card-header">
+                                <h4 class="card-title">Tags</h4>
+                            </div>
+                            <div class="card-body">
+                                <ul class="tags">
+                                    <li><a href="#" class="tag">HTML</a></li>
+                                    <li><a href="#" class="tag">Css</a></li>
+                                    <li><a href="#" class="tag">Java Script</a></li>
+                                    <li><a href="#" class="tag">Jquery</a></li>
+                                    <li><a href="#" class="tag">Wordpress</a></li>
+                                    <li><a href="#" class="tag">Php</a></li>
+                                    <li><a href="#" class="tag">Angular js</a></li>
+                                    <li><a href="#" class="tag">React js</a></li>
+                                    <li><a href="#" class="tag">Vue js</a></li>
+                                    <li><a href="#" class="tag">Photoshop</a></li>
+                                    <li><a href="#" class="tag">Ajax</a></li>
+                                    <li><a href="#" class="tag">Json</a></li>
+                                    <li><a href="#" class="tag">C</a></li>
+                                    <li><a href="#" class="tag">C++</a></li>
+                                    <li><a href="#" class="tag">Vb</a></li>
+                                    <li><a href="#" class="tag">Vb.net</a></li>
+                                    <li><a href="#" class="tag">Asp.net</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+
+            <div class="footer-top">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+
+                            <div class="footer-widget footer-about">
+                                <div class="footer-logo">
+                                    <img src="/assets/img/logo.png" alt="logo">
+                                </div>
+                                <div class="footer-about-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    <div class="social-icon">
+                                        <ul>
+                                            <li>
+                                                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank"><i class="fab fa-twitter"></i> </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank"><i class="fab fa-dribbble"></i> </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+
+                            <div class="footer-widget footer-menu">
+                                <h2 class="footer-title">For Mentee</h2>
+                                <ul>
+                                    <li><a href="search.html">Search Mentors</a></li>
+                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="register.html">Register</a></li>
+                                    <li><a href="booking.html">Booking</a></li>
+                                    <li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+
+                            <div class="footer-widget footer-menu">
+                                <h2 class="footer-title">For Mentors</h2>
+                                <ul>
+                                    <li><a href="appointments.html">Appointments</a></li>
+                                    <li><a href="chat.html">Chat</a></li>
+                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="register.html">Register</a></li>
+                                    <li><a href="dashboard.html">Mentor Dashboard</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+
+                            <div class="footer-widget footer-contact">
+                                <h2 class="footer-title">Contact Us</h2>
+                                <div class="footer-contact-info">
+                                    <div class="footer-address">
+                                        <span><i class="fas fa-map-marker-alt"></i></span>
+                                        <p> 3556 Beech Street, San Francisco,<br> California, CA 94108 </p>
+                                    </div>
+                                    <p>
+                                        <i class="fas fa-phone-alt"></i>
+                                        +1 315 369 5943
+                                    </p>
+                                    <p class="mb-0">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="https://mentoring.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ec81898298839e85828bac89948d819c8089c28f8381">[email&#160;protected]</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="footer-bottom">
+                <div class="container-fluid">
+
+                    <div class="copyright">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <div class="copyright-text">
+                                    <p class="mb-0">&copy; 2020 Mentoring. All rights reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <!-- Main Quill library -->
+    <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+    <script src="/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+
+<!-- Mirrored from mentoring.dreamguystech.com/html/template/blog-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 May 2023 10:32:18 GMT -->
+</html>
