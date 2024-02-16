@@ -66,12 +66,11 @@ namespace Dropify.Logics
         public List<Product> SearchProduct(String name, int cid, int sid)
         {
             List<Product> products = new List<Product>();
-            if (cid != -1 && sid != -1)
+            if (cid != -1 && sid != -1 )
             {
                 using (var db = new prn211_dropshippingContext())
                 {
-                    products = db.Products.Where(p => p.Name.Contains(name) && p.CategoryId == cid && p.SupplierId == sid).ToList();
-
+                    products = db.Products.Where(p => p.Name.ToLower().Contains(name.ToLower()) && p.CategoryId == cid && p.SupplierId == sid).ToList();
                     return products;
                 }
             }
@@ -79,8 +78,7 @@ namespace Dropify.Logics
             {
                 using (var db = new prn211_dropshippingContext())
                 {
-                    products = db.Products.Where(p => p.Name.Contains(name) && p.CategoryId == cid).ToList();
-
+                    products = db.Products.Where(p => p.Name.ToLower().Contains(name.ToLower()) && p.CategoryId == cid).ToList();
                     return products;
                 }
             }
@@ -88,8 +86,7 @@ namespace Dropify.Logics
             {
                 using (var db = new prn211_dropshippingContext())
                 {
-                    products = db.Products.Where(p => p.Name.Contains(name) && p.SupplierId == sid).ToList();
-
+                    products = db.Products.Where(p => p.Name.ToLower().Contains(name.ToLower()) && p.SupplierId == sid).ToList();
                     return products;
                 }
             }
@@ -97,8 +94,7 @@ namespace Dropify.Logics
             {
                 using (var db = new prn211_dropshippingContext())
                 {
-                    products = db.Products.Where(p => p.Name.Contains(name)).ToList();
-
+                    products = db.Products.Where(p => p.Name.ToLower().Contains(name.ToLower())).ToList();
                     return products;
                 }
             }
