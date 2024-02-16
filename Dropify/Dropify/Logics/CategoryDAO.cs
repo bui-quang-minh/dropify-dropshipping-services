@@ -44,7 +44,6 @@ namespace Dropify.Logics
                 return returnList;
             }
         }
-
         public void updateCategory(Category category)
         {
             using(var db = new prn211_dropshippingContext())
