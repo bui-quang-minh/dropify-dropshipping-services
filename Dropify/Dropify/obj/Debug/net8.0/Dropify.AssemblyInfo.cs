@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dropify")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0561b4be438f7a1aae8bc4cf668a663dd774dca4")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb8a9d1d4b466eca2992dffdfe7ec64d209db34b")]
->>>>>>> c7b2585e5bf817abe825cd28f8b38554c0a64be3
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a77f3433baacaf96456f66bf54538f0108bcf2ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dropify")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dropify")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

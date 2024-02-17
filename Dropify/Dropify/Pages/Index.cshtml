@@ -2,6 +2,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    
 }
 
 @* <div class="text-center">
@@ -40,19 +41,18 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
-<body class="body-home-one">
+
     <div class="main-wrapper">
         <section class="home-slide-two home-slide-search d-flex align-items-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
+            @* <div class="container">
+                <div class="row"> *@
+                    @* <div class="col-md-6"> *@
                         <div class="home-slide-face aos" data-aos="fade-up">
                             <div class="hometwo-slide-text">
                                 <a href="dashboard.html" class="btn bg-stop-learn">Start Your Journey Now</a>
                                 <h1>Build Your Business <br>with Dropshipping</h1>
                                 <p>Take control of your future by starting your online shopping today</p>
                             </div>
-
                             <div class="search-box ">
                                 <form action="https://mentoring.dreamguystech.com/html/template/search.html">
                                     <div class="form-group search-info location-search ">
@@ -66,15 +66,16 @@
                                 </form>
                             </div>
                         </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
+                        
+                    @* </div> *@
+
+                    @* <div class="col-md-6"> *@
                         <div class="object-slide-img aos " data-aos="fade-up">
                             <img src="/assets/img/path-img6.jpg" alt>
                         </div>
-                    </div>
-                </div>
-            
+                    @* </div> *@
+                @* </div> *@
+            @* </div> *@
         </section>
 
 
@@ -1046,126 +1047,7 @@
         </section> *@
 
 
-        <footer class="footer footer-two">
-
-            <div class="footer-top footer-two-top aos " data-aos="fade-up">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12">
-                            <div class="footer-logo">
-                                <img src="/assets/img/logo.png" alt="logo">
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-
-                            <div class="footer-list">
-                                <ul class="footer-social-list">
-                                    <li>
-                                        <a href="https://www.facebook.com/profile.php?id=61556136665929">Facebook</a>
-                                    </li>
-                                    <li>
-                                        <p>Email: dropify842@gmail.com</p>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="subscriber-two">
-                                <div class="subscriber-two-head">
-                                    <h2>Subscribe</h2>
-                                </div>
-                                <form action="">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="E-Mail Address">
-                                        <a href="search.html" class="btn bg-path d-flex align-items-center">
-                                            <i class="fas fa-arrow-up"></i>
-                                        </a>
-                                    </div>
-                                    <div class="bottom-border-two"></div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-
-                            <div class="footer-widget footer-about">
-                                <div class="footer-about-content">
-                                    <h2 class="footer-title">About Dropify</h2>
-                                    <p class="footer-sub-text">
-                                        DROPIFY is an online platform designed to assist customers in finding product at competitive prices or product that is hard to order (E.g From Amazon or Alibaba). DROPIFY acts as a third-party retailer, provide a competitive price while keeping the high-end value of the product.
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-2 col-md-6">
-
-                            <div class="footer-widget footer-menu">
-                                <h2 class="footer-title">For Guest</h2>
-                                <ul>
-                                    <li><a href="search.html">Search Products</a></li>
-                                    <li><a href="login.html">Login</a></li>
-                                    <li><a href="register.html">Register</a></li>
-                                    
-                            </div>
-
-                        </div>
-                        <div class="col-lg-2 col-md-6">
-
-                            <div class="footer-widget footer-menu">
-                                <h2 class="footer-title">For Admin</h2>
-                                <ul>
-                                    <li><a href="appointments.html">Search Products</a></li>
-                                    <li><a href="login.html">Login</a></li>
-                                    <li><a href="register.html">Register</a></li>
-                                    <li><a href="dashboard.html">Admin Dashboard</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="footer-bottom">
-                <div class="container">
-
-                    <div class="copyright-border"></div>
-                    <div class="copyright ">
-                        <div class="row align-items-center">
-                            <div class="col-md-6 ">
-                                <div class="copyright-text">
-                                    <p class="mb-0">&copy; 2023 Dropify. All rights reserved.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6 ">
-                                <div class="term-privacy">
-                                    <div class="social-icon">
-                                        <ul class="align-items-center">
-                                            <li>
-                                                <a href="javascript:void(0);">Terms</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0);">Privacy </a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0);">Cookies </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="back-to-top show">
-                        <a class="back-to-top-icon align-items-center justify-content-center d-flex show" href="#top">
-                            <i class="fa fa-arrow-up" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </footer>
+        
 
     </div>
 
@@ -1181,7 +1063,7 @@
     <script src="/assets/plugins/aos/aos.js"></script>
 
     <script src="/assets/js/script.js"></script>
-</body>
+
 
 <!-- Mirrored from mentoring.dreamguystech.com/html/template/index-three.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 May 2023 10:30:49 GMT -->
 
