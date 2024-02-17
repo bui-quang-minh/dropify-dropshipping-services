@@ -271,3 +271,6 @@ C:\Users\admin\Desktop\PRN221\Final_Project\PRN221\Dropify\Dropify\obj\Debug\net
 C:\Users\admin\Desktop\PRN221\Final_Project\PRN221\Dropify\Dropify\bin\Debug\net8.0\CloudinaryDotNet.dll
 C:\Users\admin\Desktop\PRN221\Final_Project\PRN221\Dropify\Dropify\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\admin\Desktop\PRN221\Final_Project\PRN221\Dropify\Dropify\obj\Debug\net8.0\scopedcss\Pages\Shared\_AdminLayout.cshtml.rz.scp.css
+D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net8.0\CloudinaryDotNet.dll
+D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net8.0\scopedcss\Pages\Shared\_AdminLayout.cshtml.rz.scp.css
