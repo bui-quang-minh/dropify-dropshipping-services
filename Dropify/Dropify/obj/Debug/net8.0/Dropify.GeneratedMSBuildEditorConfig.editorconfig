@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\admin\Desktop\PRN221\Final_Project\PRN221\Dropify\Dropify
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/admin/Desktop/PRN221/Final_Project/PRN221/Dropify/Dropify/Pages/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXRVcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/admin/Desktop/PRN221/Final_Project/PRN221/Dropify/Dropify/Pages/Admin/Categories/AllCategories.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0ZWdvcmllc1xBbGxDYXRlZ29yaWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Dropify.Pages
 {
-    public class NewsModel : PageModel
+    public class NewsModel : BasePageModel
     {
         public void OnGet()
         {

@@ -5,14 +5,6 @@
     
 }
 
-@* <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
- *@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,14 +14,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <title>Homepage</title>
-
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
-
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="/assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="/assets/plugins/fontawesome/css/all.min.css">
-
     <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
 
@@ -37,8 +21,6 @@
     <link rel="stylesheet" href="/assets/plugins/slick/slick-theme.css">
 
     <link rel="stylesheet" href="/assets/plugins/aos/aos.css">
-
-    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 
@@ -241,175 +223,45 @@
             <div class="container">
                 <div class="section-top-head">
                     <div class="section-header aos " data-aos="fade-up">
-                        <h2>Top Rating Instructor</h2>
+                        <h2>All suppliers</h2>
                         <p class="sub-title">
-                            Khám phá những hướng dẫn viên được đánh giá cao nhất. Họ là những chuyên gia hàng đầu trong lĩnh vực của mình, sẵn lòng chia sẻ kiến thức và kinh nghiệm để giúp bạn thành công. Hãy tận dụng cơ hội học hỏi từ những người giỏi nhất và tiến xa trên con đường của bạn.
+                            Discover our suppliers
                     </div>
                     <div class="section-btn align-items-center aos " data-aos="fade-up">
-                        <a href="profile.html" class="btn btn-primary">View All</a>
+                        <a href="#" class="btn btn-primary">View All</a>
                     </div>
                 </div>
                 <div class="owl-carousel mentoring-course  rating-instructor-slide owl-theme aos " data-aos="fade-up">
+                @foreach (var item in Model.suppliers)
+                {
                     <div class="large-team">
                         <div class="student-img">
                             <a href="profile.html"><img src="/assets/img/user/user22.png" alt></a>
                         </div>
                         <div class="team-name">
                             <h4>
-                                <a href="profile.html">Jack Wilson</a>
+                                <a href="#">@item.SupplierName</a>
                             </h4>
-                            <span class="designation">Developer</span>
+                            <span class="designation">@item.ContactEmail</span>
                         </div>
                     </div>
-                    <div class="large-team">
-                        <div class="student-img">
-                            <a href="profile.html"><img src="/assets/img/user/user23.png" alt></a>
-                        </div>
-                        <div class="team-name ">
-                            <h4>
-                                <a href="profile.html">Anna Richard</a>
-                            </h4>
-                            <span class="designation">PHP Developer</span>
-                        </div>
-                    </div>
-                    <div class="large-team">
-                        <div class="student-img">
-                            <a href="profile.html"><img src="/assets/img/user/user24.png" alt></a>
-                        </div>
-                        <div class="team-name ">
-                            <h4>
-                                <a href="profile.html">Kathelen Monero</a>
-                            </h4>
-                            <span class="designation">Designer</span>
-                        </div>
-                    </div>
-                    <div class="large-team">
-                        <div class="student-img">
-                            <a href="profile.html"><img src="/assets/img/user/user25.png" alt></a>
-                        </div>
-                        <div class="team-name ">
-                            <h4>
-                                <a href="profile.html">Kristen Pala</a>
-                            </h4>
-                            <span class="designation">UI Designer</span>
-                        </div>
-                    </div>
-                    <div class="large-team">
-                        <div class="student-img">
-                            <a href="profile.html"><img src="/assets/img/user/user16.jpg" alt></a>
-                        </div>
-                        <div class="team-name ">
-                            <h4>
-                                <a href="profile.html">Daziy Millar</a>
-                            </h4>
-                            <span class="designation">PHP Expert</span>
-                        </div>
-                    </div>
-                    <div class="large-team">
-                        <div class="student-img">
-                            <a href="profile.html"><img src="/assets/img/user/user17.jpg" alt></a>
-                        </div>
-                        <div class="team-name ">
-                            <h4>
-                                <a href="profile.html">Stan Ritter</a>
-                            </h4>
-                            <span class="designation">Java Developer</span>
-                        </div>
-                    </div>
-                    <div class="large-team">
-                        <div class="student-img">
-                            <a href="profile.html"><img src="/assets/img/user/user18.jpg" alt></a>
-                        </div>
-                        <div class="team-name ">
-                            <h4>
-                                <a href="profile.html">Kozlowski</a>
-                            </h4>
-                            <span class="designation">UI Developer</span>
-                        </div>
-                    </div>
-                    <div class="large-team">
-                        <div class="student-img">
-                            <a href="profile.html"><img src="/assets/img/user/user19.jpg" alt></a>
-                        </div>
-                        <div class="team-name ">
-                            <h4>
-                                <a href="profile.html">Michael Guzman</a>
-                            </h4>
-                            <span class="designation">Angular Expert</span>
-                        </div>
-                    </div>
-                    <div class="large-team">
-                        <div class="student-img">
-                            <a href="profile.html"><img src="/assets/img/user/user20.jpg" alt></a>
-                        </div>
-                        <div class="team-name ">
-                            <h4>
-                                <a href="profile.html">Christian Floyd</a>
-                            </h4>
-                            <span class="designation">.Net Developer</span>
-                        </div>
-                    </div>
-                    <div class="large-team">
-                        <div class="student-img">
-                            <a href="profile.html"><img src="/assets/img/user/user21.jpg" alt></a>
-                        </div>
-                        <div class="team-name ">
-                            <h4>
-                                <a href="profile.html">Shawn Howe</a>
-                            </h4>
-                            <span class="designation">Python Expert</span>
-                        </div>
-                    </div>
-                    <div class="large-team">
-                        <div class="student-img">
-                            <a href="profile.html"><img src="/assets/img/user/user22.jpg" alt></a>
-                        </div>
-                        <div class="team-name ">
-                            <h4>
-                                <a href="profile.html">Robert Clayton</a>
-                            </h4>
-                            <span class="designation">UX Designer</span>
-                        </div>
-                    </div>
-                    <div class="large-team">
-                        <div class="student-img">
-                            <a href="profile.html"><img src="/assets/img/user/user24.jpg" alt></a>
-                        </div>
-                        <div class="team-name ">
-                            <h4>
-                                <a href="profile.html">Trevor Davis</a>
-                            </h4>
-                            <span class="designation">Js Expert</span>
-                        </div>
-                    </div>
-                    <div class="large-team">
-                        <div class="student-img">
-                            <a href="profile.html"><img src="/assets/img/user/user18.jpg" alt></a>
-                        </div>
-                        <div class="team-name ">
-                            <h4>
-                                <a href="profile.html">Paul Dotson</a>
-                            </h4>
-                            <span class="designation">React Developer</span>
-                        </div>
-                    </div>
+                }
                 </div>
             </div>
         </section>
 
-@* 
+
         <section class="trending-courses trending-courses-two popular-course-two same-dots ">
             <div class="container">
                 <div class="section-top-head">
                     <div class="section-header aos " data-aos="fade-up">
-                        <h2>Most Popular Courses</h2>
+                        <h2>News</h2>
                         <p class="sub-title">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget aenean
-                            accumsan bibendum gravida maecenas augue elementum et neque. Suspendisse imperdiet.
+                            The lastest news
                         </p>
                     </div>
                     <div class="section-btn align-items-center aos " data-aos="fade-up">
-                        <a href="search.html" class="btn btn-primary">View All</a>
+                        <a href="" class="btn btn-primary">View All</a>
                     </div>
                 </div>
                 <div class="owl-carousel popular-course-slide-two owl-theme aos " data-aos="fade-up">
@@ -421,36 +273,8 @@
                                 </a>
                             </div>
                             <div class="product-content">
-                                <div class="course-info d-flex align-items-center">
-                                    <div class="rating rating-star">
-                                        <i class="fas fa-star filled"></i>
-                                        <span class="d-inline-block average-rating rate-point ">
-                                            4.6<span class="rate-star-point">(15)</span>
-                                        </span>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-file-alt file-pink"></i>
-                                        <div class="course-point">
-                                            <span>85</span>
-                                        </div>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-user-graduate"></i>
-                                        <div class="graduate-point">
-                                            <span>95</span>
-                                        </div>
-                                    </div>
-                                </div>
                                 <h3 class="title"><a href="search.html">Information About UI/UX Design Degree</a></h3>
-                                <div class="rating rating-star rating-two align-items-center">
-                                    <div class="rating-img">
-                                        <img src="/assets/img/user/user2.jpg" alt>
-                                    </div>
-                                    <h5>Nicole Brown</h5>
-                                    <div class="course-price">
-                                        <h4><span>$99.00</span>$700</h4>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -462,38 +286,9 @@
                                 </a>
                             </div>
                             <div class="product-content">
-                                <div class="course-info d-flex align-items-center">
-                                    <div class="rating rating-star">
-                                        <i class="fas fa-star filled"></i>
-                                        <span class="d-inline-block average-rating rate-point ">
-                                            4.4<span class="rate-star-point">(15)</span>
-                                        </span>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-file-alt file-pink"></i>
-                                        <div class="course-point">
-                                            <span>85</span>
-                                        </div>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-user-graduate"></i>
-                                        <div class="graduate-point">
-                                            <span>85</span>
-                                        </div>
-                                    </div>
-                                </div>
                                 <h3 class="title">
                                     <a href="search.html">Photography Crash Course for Photographer</a>
                                 </h3>
-                                <div class="rating rating-star rating-two align-items-center">
-                                    <div class="rating-img">
-                                        <img src="/assets/img/user/user3.jpg" alt>
-                                    </div>
-                                    <h5>Paul Dotson</h5>
-                                    <div class="course-price">
-                                        <h4><span>$99.00</span>$200</h4>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -505,38 +300,11 @@
                                 </a>
                             </div>
                             <div class="product-content">
-                                <div class="course-info d-flex align-items-center">
-                                    <div class="rating rating-star">
-                                        <i class="fas fa-star filled"></i>
-                                        <span class="d-inline-block average-rating rate-point ">
-                                            4.2<span class="rate-star-point">(15)</span>
-                                        </span>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-file-alt file-pink"></i>
-                                        <div class="course-point">
-                                            <span>85</span>
-                                        </div>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-user-graduate"></i>
-                                        <div class="graduate-point">
-                                            <span>75</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <h3 class="title">
                                     <a href="search.html">React – The Complete Guide (React Router)</a>
                                 </h3>
-                                <div class="rating rating-star rating-two align-items-center">
-                                    <div class="rating-img">
-                                        <img src="/assets/img/user/user5.jpg" alt>
-                                    </div>
-                                    <h5>McFarland</h5>
-                                    <div class="course-price">
-                                        <h4><span>$99.00</span>$400</h4>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -548,36 +316,9 @@
                                 </a>
                             </div>
                             <div class="product-content">
-                                <div class="course-info d-flex align-items-center">
-                                    <div class="rating rating-star">
-                                        <i class="fas fa-star filled"></i>
-                                        <span class="d-inline-block average-rating rate-point ">
-                                            3.4<span class="rate-star-point">(15)</span>
-                                        </span>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-file-alt file-pink"></i>
-                                        <div class="course-point">
-                                            <span>65</span>
-                                        </div>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-user-graduate"></i>
-                                        <div class="graduate-point">
-                                            <span>85</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <h3 class="title"><a href="search.html">Java (Beginner) Programming Tutorials</a></h3>
-                                <div class="rating rating-star rating-two align-items-center">
-                                    <div class="rating-img">
-                                        <img src="/assets/img/user/user8.jpg" alt>
-                                    </div>
-                                    <h5>Michael Johnson</h5>
-                                    <div class="course-price">
-                                        <h4><span>$99.00</span>$100</h4>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -589,36 +330,9 @@
                                 </a>
                             </div>
                             <div class="product-content">
-                                <div class="course-info d-flex align-items-center">
-                                    <div class="rating rating-star">
-                                        <i class="fas fa-star filled"></i>
-                                        <span class="d-inline-block average-rating rate-point ">
-                                            4.3<span class="rate-star-point">(15)</span>
-                                        </span>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-file-alt file-pink"></i>
-                                        <div class="course-point">
-                                            <span>85</span>
-                                        </div>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-user-graduate"></i>
-                                        <div class="graduate-point">
-                                            <span>90</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <h3 class="title"><a href="search.html">Information About UI/UX Design Degree</a></h3>
-                                <div class="rating rating-star rating-two align-items-center">
-                                    <div class="rating-img">
-                                        <img src="/assets/img/user/user9.jpg" alt>
-                                    </div>
-                                    <h5>Kurt Jones</h5>
-                                    <div class="course-price">
-                                        <h4><span>$99.00</span>$500</h4>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -630,36 +344,9 @@
                                 </a>
                             </div>
                             <div class="product-content">
-                                <div class="course-info d-flex align-items-center">
-                                    <div class="rating rating-star">
-                                        <i class="fas fa-star filled"></i>
-                                        <span class="d-inline-block average-rating rate-point ">
-                                            4.4<span class="rate-star-point">(15)</span>
-                                        </span>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-file-alt file-pink"></i>
-                                        <div class="course-point">
-                                            <span>80</span>
-                                        </div>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-user-graduate"></i>
-                                        <div class="graduate-point">
-                                            <span>80</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <h3 class="title"><a href="search.html">Php (Beginner) Programming Tutorials</a></h3>
-                                <div class="rating rating-star rating-two align-items-center">
-                                    <div class="rating-img">
-                                        <img src="/assets/img/user/user2.jpg" alt>
-                                    </div>
-                                    <h5>Jerry Bleau</h5>
-                                    <div class="course-price">
-                                        <h4><span>$99.00</span>$400</h4>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -671,36 +358,9 @@
                                 </a>
                             </div>
                             <div class="product-content">
-                                <div class="course-info d-flex align-items-center">
-                                    <div class="rating rating-star">
-                                        <i class="fas fa-star filled"></i>
-                                        <span class="d-inline-block average-rating rate-point ">
-                                            4.4<span class="rate-star-point">(15)</span>
-                                        </span>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-file-alt file-pink"></i>
-                                        <div class="course-point">
-                                            <span>85</span>
-                                        </div>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-user-graduate"></i>
-                                        <div class="graduate-point">
-                                            <span>85</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <h3 class="title"><a href="search.html">Information About UI/UX Design Degree</a></h3>
-                                <div class="rating rating-star rating-two align-items-center">
-                                    <div class="rating-img">
-                                        <img src="/assets/img/user/user5.jpg" alt>
-                                    </div>
-                                    <h5>James Nuno</h5>
-                                    <div class="course-price">
-                                        <h4><span>$99.00</span>$200</h4>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -712,36 +372,9 @@
                                 </a>
                             </div>
                             <div class="product-content">
-                                <div class="course-info d-flex align-items-center">
-                                    <div class="rating rating-star">
-                                        <i class="fas fa-star filled"></i>
-                                        <span class="d-inline-block average-rating rate-point ">
-                                            4.5<span class="rate-star-point">(15)</span>
-                                        </span>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-file-alt file-pink"></i>
-                                        <div class="course-point">
-                                            <span>90</span>
-                                        </div>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-user-graduate"></i>
-                                        <div class="graduate-point">
-                                            <span>90</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <h3 class="title"><a href="search.html">Email & Affiliate Marketing Mastermind</a></h3>
-                                <div class="rating rating-star rating-two align-items-center">
-                                    <div class="rating-img">
-                                        <img src="/assets/img/user/user8.jpg" alt>
-                                    </div>
-                                    <h5>Nicole Brown</h5>
-                                    <div class="course-price">
-                                        <h4><span>$99.00</span>$600</h4>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -753,36 +386,9 @@
                                 </a>
                             </div>
                             <div class="product-content">
-                                <div class="course-info d-flex align-items-center">
-                                    <div class="rating rating-star">
-                                        <i class="fas fa-star filled"></i>
-                                        <span class="d-inline-block average-rating rate-point ">
-                                            4.1<span class="rate-star-point">(15)</span>
-                                        </span>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-file-alt file-pink"></i>
-                                        <div class="course-point">
-                                            <span>75</span>
-                                        </div>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-user-graduate"></i>
-                                        <div class="graduate-point">
-                                            <span>75</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <h3 class="title"><a href="search.html">Information About UI/UX Design Degree</a></h3>
-                                <div class="rating rating-star rating-two align-items-center">
-                                    <div class="rating-img">
-                                        <img src="/assets/img/user/user11.jpg" alt>
-                                    </div>
-                                    <h5>James Nuno</h5>
-                                    <div class="course-price">
-                                        <h4><span>$99.00</span>$300</h4>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -794,36 +400,9 @@
                                 </a>
                             </div>
                             <div class="product-content">
-                                <div class="course-info d-flex align-items-center">
-                                    <div class="rating rating-star">
-                                        <i class="fas fa-star filled"></i>
-                                        <span class="d-inline-block average-rating rate-point ">
-                                            3.4<span class="rate-star-point">(15)</span>
-                                        </span>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-file-alt file-pink"></i>
-                                        <div class="course-point">
-                                            <span>65</span>
-                                        </div>
-                                    </div>
-                                    <div class="course-view">
-                                        <i class="fas fa-user-graduate"></i>
-                                        <div class="graduate-point">
-                                            <span>65</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <h3 class="title"><a href="search.html">Node (Beginner) Programming Tutorials</a></h3>
-                                <div class="rating rating-star rating-two align-items-center">
-                                    <div class="rating-img">
-                                        <img src="/assets/img/user/user7.jpg" alt>
-                                    </div>
-                                    <h5>Omar Branch</h5>
-                                    <div class="course-price">
-                                        <h4><span>$99.00</span>$100</h4>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -832,7 +411,7 @@
         </section>
 
 
-        <section class="blog-home-two">
+        @* <section class="blog-home-two">
             <div class="container">
                 <div class="section-top-head">
                     <div class="section-header aos " data-aos="fade-up">
