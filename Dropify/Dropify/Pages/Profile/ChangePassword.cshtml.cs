@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Dropify.Pages.Profile
 {
-    public class ChangePasswordModel : PageModel
+    public class ChangePasswordModel : BasePageModel
     {
         public void OnGet()
         {

@@ -1,4 +1,286 @@
 ﻿@page
 @model Dropify.Pages.Profile.AddressManagementModel
 @{
+    Layout = "_ProfileLayout";
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title> Categories Page</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="~/Admin/img/favicon.png">
+
+    <link rel="stylesheet" href="~/Admin/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/Admin/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="~/Admin/css/feathericon.min.css">
+
+    <link rel="stylesheet" href="~/Admin/plugins/datatables/datatables.min.css">
+
+    <link rel="stylesheet" href="~/Admin/css/style.css">
+</head>
+<body>
+
+
+        <div class="card">
+            <div class="card-body">
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3 class="page-title">Address Management</h3>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <a class="btn btn-success" data-bs-toggle="modal" href="#add_modal">
+                        <i class="fe fe-plus"></i>
+                        New Address
+                    </a>
+                </div>
+                <br />
+
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="datatable table table-hover table-center mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th width="100">AddressID</th>
+                                                <th width="300">Address</th>
+                                                <th width="300" class="text-center">Status</th>
+                                                <th width="300" class="text-end">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            1
+                                                        </td>
+                                                        <td>
+                                                            <span class="limitedText">Hải Dương</span>
+                                                        </td>
+
+                                                        
+                                                            <td class="text-center">
+                                                                <span class="badge badge-pill bg-success inv-badge">Default</span>
+                                                            </td>
+                                                       
+                                                        <td class="text-end">
+                                                            <div class="actions">
+                                                        <a class="btn btn-sm bg-success-light"
+                                                           data-bs-target="#edit_modal" href="#edit_modal">
+                                                            <i class="fe fe-pencil"></i> Edit
+                                                        </a>
+                                                                <a class="btn btn-sm bg-danger-light">
+                                                                    <i class="fe fe-trash"></i> Delete
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                            <tr>
+                                                <td>
+                                                    2
+                                                </td>
+                                                <td>
+                                                    <span class="limitedText">Hà Nội</span>
+                                                </td>
+
+
+
+                                                <td class="text-center">
+                                                    <span class="badge badge-pill bg-secondary inv-badge">Undefault</span>
+                                                </td>
+
+                                                
+
+
+                                                <td class="text-end">
+                                                    <div class="actions">
+                                                        <a class="btn btn-sm bg-success-light" 
+                                                           data-bs-target="#edit_modal" href="#edit_modal">
+                                                            <i class="fe fe-pencil"></i> Edit
+                                                        </a>
+                                                        <a class="btn btn-sm bg-danger-light">
+                                                            <i class="fe fe-trash"></i> Delete
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <div class="modal fade" id="delete_modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <form method="post" asp-page="/Profile/AddressManagement" asp-page-handler="Delete">
+                        <div class="form-content p-2">
+                            <h4 class="modal-title">Delete</h4>
+                            <p class="mb-4">Are you sure want to delete?</p>
+                            <button type="submit" id="MyLink" class="btn btn-primary">Delete </button>
+                            <input type="hidden" value="" id="c_id" name="c_id" />
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="edit_modal" aria-hidden="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" style="width: 900px ; max-width:100%" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="form-content p-2">
+                        <div class="modal-header border-0">
+                            <h4 class="modal-title">Edit</h4>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <form method="post" asp-page-handler="Edit" asp-page="/Admin/Categories/AllCategories" autocomplete="off">
+                                    <div class="row">
+                                        <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                                        <div class="col-md-12">
+                                            <div class="form-group mb-3">
+                                                <label>AddressID</label>
+                                                <input class="form-control" id="addressID"  type="text" readonly>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group mb-3">
+                                                <label>AddressName</label>
+                                                <input class="form-control" id="AddressName" type="text">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label> Status </label>
+                                                <select class="form-control"  id="cStatus">
+                                                    <option value="Active">Active</option>
+                                                    <option value="Inactive">Inactive</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-4">
+                                            <button class="btn btn-primary" name="form_submit" value="submit" type="submit"> Save </button>
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="add_modal" aria-hidden="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered " style="width: 900px ; max-width:100%" role="document">
+            <div class="modal-content ">
+                <div class="modal-body">
+                    <div class="form-content p-2">
+                        <div class="modal-header border-0">
+                            <h4 class="modal-title">Add Product</h4>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <form method="post" asp-page-handler="Add" asp-page="/Profile/AddressManagement" autocomplete="off">
+                                    <div class="row">
+                                        <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group mb-3">
+                                                <label>Address</label>
+                                                <input class="form-control"  type="text">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label> Status </label>
+                                                <select class="form-control" >
+                                                    <option value="Default">Default</option>
+                                                    <option value="Undefault">Undefault</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-4">
+                                            <button class="btn btn-primary" name="form_submit" value="submit" type="submit"> Save </button>
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="~/Admin/js/jquery-3.6.0.min.js"></script>
+
+    <script src="~/Admin/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/Admin/js/feather.min.js"></script>
+
+    <script src="~/Admin/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    @* <script src="~/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Admin/plugins/datatables/datatables.min.js"></script> *@
+
+    <script src="~/Admin/js/script.js"></script>
+
+
+
+    <script>
+        var maxLength = 70;
+        var elements = document.querySelectorAll('.limitedText');
+        elements.forEach(function (element) {
+            if (element.textContent.length > maxLength) {
+                element.textContent = element.textContent.substring(0, maxLength) + '...';
+            }
+
+        });
+    </script>
+</body>
+
+</html>
