@@ -1,7 +1,9 @@
 ﻿@page
-@model Dropify.Pages.New.AddNewModel
+@model Dropify.Pages.Admin.New.AddNewModel
 @{
+    Layout = "_AdminLayout";
 }
+
 
 
 <!DOCTYPE html>
@@ -13,21 +15,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <title>Mentoring - Add Blog Page</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="~/Admin/img/favicon.png">
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Admin/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="~/Admin/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Admin/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="~/Admin/plugins/fontawesome/css/all.min.css">
 
-    <link rel="stylesheet" href="assets/css/feathericon.min.css">
+    <link rel="stylesheet" href="~/Admin/css/feathericon.min.css">
 
-    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="~/Admin/plugins/select2/css/select2.min.css">
 
-    <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+    <link rel="stylesheet" href="~/Admin/plugins/datatables/datatables.min.css">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="~/Admin/css/style.css">
 </head>
 <body>
 
@@ -37,10 +39,10 @@
 
             <div class="header-left">
                 <a href="index.html" class="logo">
-                    <img src="assets/img/logo.png" alt="Logo">
+                    <img src="~/Admin/img/logo.png" alt="Logo">
                 </a>
                 <a href="index.html" class="logo logo-small">
-                    <img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+                    <img src="~/Admin/img/logo-small.png" alt="Logo" width="30" height="30">
                 </a>
             </div>
 
@@ -76,7 +78,7 @@
                                     <a href="#">
                                         <div class="media d-flex">
                                             <span class="avatar avatar-sm flex-shrink-0">
-                                                <img class="avatar-img rounded-circle" alt="User Image" src="assets/img/user/user.jpg">
+                                                <img class="avatar-img rounded-circle" alt="User Image" src="~/Admin/img/user/user.jpg">
                                             </span>
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details"><span class="noti-title">Jonathan Doe</span> Schedule <span class="noti-title">his appointment</span></p>
@@ -89,7 +91,7 @@
                                     <a href="#">
                                         <div class="media d-flex">
                                             <span class="avatar avatar-sm flex-shrink-0">
-                                                <img class="avatar-img rounded-circle" alt="User Image" src="assets/img/user/user1.jpg">
+                                                <img class="avatar-img rounded-circle" alt="User Image" src="~/Admin/img/user/user1.jpg">
                                             </span>
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details"><span class="noti-title">Julie Pennington</span> has booked her appointment to <span class="noti-title">Ruby Perrin</span></p>
@@ -102,7 +104,7 @@
                                     <a href="#">
                                         <div class="media d-flex">
                                             <span class="avatar avatar-sm flex-shrink-0">
-                                                <img class="avatar-img rounded-circle" alt="User Image" src="assets/img/user/user2.jpg">
+                                                <img class="avatar-img rounded-circle" alt="User Image" src="~/Admin/img/user/user2.jpg">
                                             </span>
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details"><span class="noti-title">Tyrone Roberts</span> sent a amount of $210 for his <span class="noti-title">appointment</span></p>
@@ -115,7 +117,7 @@
                                     <a href="#">
                                         <div class="media d-flex">
                                             <span class="avatar avatar-sm flex-shrink-0">
-                                                <img class="avatar-img rounded-circle" alt="User Image" src="assets/img/user/user4.jpg">
+                                                <img class="avatar-img rounded-circle" alt="User Image" src="~/Admin/img/user/user4.jpg">
                                             </span>
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details"><span class="noti-title">Patricia Manzi</span> send a message <span class="noti-title"> to his Mentee</span></p>
@@ -135,12 +137,12 @@
 
                 <li class="nav-item dropdown has-arrow">
                     <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-                        <span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-12.jpg" width="31" alt="Ryan Taylor"></span>
+                        <span class="user-img"><img class="rounded-circle" src="~/Admin/img/profiles/avatar-12.jpg" width="31" alt="Ryan Taylor"></span>
                     </a>
                     <div class="dropdown-menu">
                         <div class="user-header">
                             <div class="avatar avatar-sm">
-                                <img src="assets/img/profiles/avatar-12.jpg" alt="User Image" class="avatar-img rounded-circle">
+                                <img src="~/Admin/img/profiles/avatar-12.jpg" alt="User Image" class="avatar-img rounded-circle">
                             </div>
                             <div class="user-text">
                                 <h6>Allen Davis</h6>
@@ -207,7 +209,7 @@
                             <a href="profile.html"><span>My Profile</span></a>
                         </li>
                         <li class="submenu">
-                            <a href="#"><span>Blog</span> <span class="menu-arrow"></span></a>
+                            <a href="#"><span>News</span> <span class="menu-arrow"></span></a>
                             <ul style="display: none;">
                                 <li><a href="blog.html"> Blog </a></li>
                                 <li><a href="blog-details.html"> Blog Details </a></li>
@@ -292,10 +294,10 @@
                 <div class="page-header">
                     <div class="row">
                         <div class="col-sm-12">
-                            <h3 class="page-title">Add Blog</h3>
+                            <h3 class="page-title">Add News</h3>
                             <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Add Blog</li>
+                                <li class="breadcrumb-item"><a href="/Admin/Dashboard">Dashboard &nbsp;</a></li>
+                                <li>Add News</li>
                             </ul>
                         </div>
                     </div>
@@ -310,11 +312,11 @@
                                     <div class="col-12 blog-details">
                                         <form>
                                             <div class="form-group">
-                                                <label>Blog Name</label>
+                                                <label>News Name</label>
                                                 <input class="form-control" type="text">
                                             </div>
                                             <div class="form-group">
-                                                <label>Blog Images</label>
+                                                <label>News Images</label>
                                                 <div>
                                                     <input class="form-control" type="file">
                                                     <small class="form-text text-muted">Max. file size: 50 MB. Allowed images: jpg, gif, png. Maximum 10 images only.</small>
@@ -323,17 +325,19 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label>Blog Category</label>
+                                                        <label>News Category</label>
                                                         <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true">
-                                                            <option>Web Design</option>
-                                                            <option>Web Development</option>
-                                                            <option>App Development</option>
+                                                            <option>New about product</option>
+                                                            <option>New about update</option>
+                                                            <option>New about project</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label>Blog Sub Category</label>
+                                                    <!--
+                                                        for future reference
+                                                        <div class="form-group">
+                                                        <label>News Sub Category</label>
                                                         <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true">
                                                             <option>Html</option>
                                                             <option>Css</option>
@@ -344,14 +348,16 @@
                                                             <option>Android</option>
                                                         </select>
                                                     </div>
+                                                    -->
+                                                    
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Blog Description</label>
-<textarea cols="30" rows="6" class="form-control"></textarea>
+                                                <label>Contents</label>
+                                                <textarea cols="30" rows="6" class="form-control"></textarea>
                                             </div>
                                             <div class="form-group">
-                                                <label class="display-block w-100">Blog Status</label>
+                                                <label class="display-block w-100">News Status</label>
                                                 <div>
                                                     <div class="form-check form-radio form-check-inline">
                                                         <input class="form-check-input" id="active" name="active-blog" value="active" type="radio" checked>
@@ -364,7 +370,7 @@
                                                 </div>
                                             </div>
                                             <div class="m-t-20 text-center">
-                                                <button class="btn btn-primary btn-lg">Publish Blog</button>
+                                                <button class="btn btn-primary btn-lg">Publish New</button>
                                             </div>
                                         </form>
                                     </div>
@@ -380,21 +386,21 @@
     </div>
 
 
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="~/Admin/js/jquery-3.6.0.min.js"></script>
 
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Admin/js/bootstrap.bundle.min.js"></script>
 
-    <script src="assets/js/feather.min.js"></script>
+    <script src="~/Admin/js/feather.min.js"></script>
 
-    <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="~/Admin/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-    <script src="assets/plugins/select2/js/select2.min.js"></script>
+    <script src="~/Admin/plugins/select2/js/select2.min.js"></script>
 
-    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="assets/plugins/datatables/datatables.min.js"></script>
+    <script src="~/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Admin/plugins/datatables/datatables.min.js"></script>
 
-    <script src="assets/js/script.js"></script>
+    <script src="~/Admin/js/script.js"></script>
 </body>
 
 <!-- Mirrored from mentoring.dreamguystech.com/html/template/admin/add-blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 May 2023 10:34:00 GMT -->
-</html></html>
+</html>

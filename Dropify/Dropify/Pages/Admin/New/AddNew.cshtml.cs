@@ -2,7 +2,7 @@ using Dropify.Logics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Dropify.Pages.New
+namespace Dropify.Pages.Admin.New
 {
     public class AddNewModel : PageModel
     {
