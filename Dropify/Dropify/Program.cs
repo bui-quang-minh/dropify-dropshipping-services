@@ -27,7 +27,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
+app.UseStaticFiles();// to use wwwroot
 
 app.UseRouting();
 

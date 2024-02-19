@@ -26,6 +26,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/SCHOOL/On school/PRN221/PROJECT/Connecter/PRN221/Dropify/Dropify/Pages/Admin/New/AddNew.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTmV3XEFkZE5ldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SCHOOL/On school/PRN221/PROJECT/Connecter/PRN221/Dropify/Dropify/Pages/Admin/Order/AllOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JkZXJcQWxsT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/SCHOOL/On school/PRN221/PROJECT/Connecter/PRN221/Dropify/Dropify/Pages/Admin/Products/AddProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdHNcQWRkUHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,10 +60,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/SCHOOL/On school/PRN221/PROJECT/Connecter/PRN221/Dropify/Dropify/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/SCHOOL/On school/PRN221/PROJECT/Connecter/PRN221/Dropify/Dropify/Pages/New/AddNew.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3XEFkZE5ldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/SCHOOL/On school/PRN221/PROJECT/Connecter/PRN221/Dropify/Dropify/Pages/Privacy.cshtml]
