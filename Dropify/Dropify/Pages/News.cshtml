@@ -2,3 +2,243 @@
 @model Dropify.Pages.NewsModel
 @{
 }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>News</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="~/Admin/img/favicon.png">
+
+    <link rel="stylesheet" href="~/Admin/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/Admin/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="~/Admin/css/feathericon.min.css">
+
+    <link rel="stylesheet" href="~/Admin/plugins/datatables/datatables.min.css">
+
+    <link rel="stylesheet" href="~/Admin/css/style.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        
+            <div class="content container-fluid">
+
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3 class="page-title">News List</h3>
+
+                        </div>
+                    </div>
+                </div>
+               
+                <br />
+               
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
+                            <li class="nav-item">
+                                <a class="nav-link active"
+                                   href="#bottom-justified-tab" 
+                                   data-bs-toggle="tab">Release</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#bottom-justified-tab1"
+                                   data-bs-toggle="tab">Cancel</a>
+                            </li>
+                            
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane show active" id="bottom-justified-tab">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class=" table table-hover table-center mb-0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="100">News ID</th>
+                                                                <th width="300">News Type</th>
+                                                                <th width="300">Product Id</th>
+                                                                <th width="300">ImgURL</th>
+                                                                <th width="100">News Content</th>
+                                                                <th width="100">Created By</th>
+                                                                <th width="100">Created Date</th>
+                                                                <th class="text-end">Status</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                                <tr>
+                                                                        <td>
+                                                                            1
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="limitedText">N_IMAGE</span>
+                                                                        </td>
+                                                                        <td>1 </td>
+                                                                        <td>
+                                                                            <img src="~/assets/img/img-01.jpg" alt="Image 01" style="height:60px;width:70px"/>
+                                                                        </td>
+                                                                        <td>
+
+                                                                        </td> 
+                                                                        <td>
+                                                                            HyperWork
+                                                                        </td>
+                                                                        <td>
+                                                                            <span> 2024-19-02</span>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            Release
+                                                                        </td>
+
+                                                                        
+                                                                    </tr>
+                                                        <tr>
+                                                            <td>
+                                                                2
+                                                            </td>
+                                                            <td>
+                                                                <span class="limitedText">N_CONTENT</span>
+                                                            </td>
+                                                            <td>1 </td>
+                                                            <td>
+                                                                
+                                                            </td>
+                                                            <td>
+                                                                This is the lastest new about this product
+                                                            </td>
+                                                            <td>
+                                                                HyperWork
+                                                            </td>
+                                                            <td>
+                                                                <span> 2024-19-02</span>
+                                                            </td>
+
+                                                            <td>
+                                                                Release
+                                                            </td>
+
+
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @* <div class="tab-pane" id="bottom-justified-tab1">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class=" table table-hover table-center mb-0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="100">ProductID</th>
+                                                                <th width="300">Name</th>
+                                                                <th width="300">Categories</th>
+                                                                <th width="300">Supplier</th>
+                                                                <th width="100">Original Price</th>
+                                                                <th width="100">Sell Out Price</th>
+                                                                <th width="100">Status</th>
+                                                                <th class="text-end">Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @if (Model.ListProduct2 != null)
+                                                            {
+                                                                @foreach (var p in Model.ListProduct2)
+                                                                {
+
+                                                                    <tr>
+                                                                        <td>
+                                                                            @p.ProductId
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="limitedText">@p.Name</span>
+                                                                        </td>
+                                                                        <td>@p.Category.CategoryName </td>
+                                                                        <td>
+                                                                            @p.Supplier.SupplierName
+
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <span class="price">@p.OriginalPrice</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="price"> @p.SellOutPrice</span>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            @p.Status
+                                                                        </td>
+
+                                                                        <td class="text-end">
+                                                                            <div class="actions">
+                                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.ProductId"
+                                                                                   data-name="@p.Name" data-cate="@p.CategoryId" data-supp="@p.SupplierId"
+                                                                                   data-oprice="@p.OriginalPrice" data-sprice="@p.SellOutPrice" data-create="@p.CreatedDate" data-end="@p.EndDate"
+                                                                                   data-start="@p.StartDate" data-ship="@p.Shipdate" data-status="@p.Status"
+                                                                                   data-bs-target="#edit_modal" href="#edit_modal">
+                                                                                    <i class="fe fe-pencil"></i> Edit
+                                                                                </a>
+                                                                                <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@p.ProductId" class="btn btn-sm bg-danger-light">
+                                                                                    <i class="fe fe-trash"></i> Delete
+                                                                                </a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+
+
+                                                                }
+                                                            }
+
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> *@
+                            
+                    </div>
+                </div>
+
+
+                
+            </div>
+        
+
+    </div>
+
+        <script src="~/Admin/js/jquery-3.6.0.min.js"></script>
+
+        <script src="~/Admin/js/bootstrap.bundle.min.js"></script>
+
+        <script src="~/Admin/js/feather.min.js"></script>
+
+        <script src="~/Admin/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+        <script src="~/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="~/Admin/plugins/datatables/datatables.min.js"></script>
+
+        <script src="~/Admin/js/script.js"></script>
+
+    
+</body>
+
+</html>
