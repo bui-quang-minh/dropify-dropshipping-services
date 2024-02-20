@@ -19,6 +19,7 @@ namespace Dropify.Pages.Product
             if (Request.Query.TryGetValue("categorySearch", out var cid) || Request.Query.TryGetValue("supplierSearch", out var sid)) {
                 Request.Query.TryGetValue("categorySearch", out cid);
                 Request.Query.TryGetValue("supplierSearch", out sid);
+
                 if (string.IsNullOrEmpty(cid) && string.IsNullOrEmpty(sid))
                 {
                     products = pd.SearchProduct("", -1, -1);
@@ -35,6 +36,7 @@ namespace Dropify.Pages.Product
                 {
                     products = pd.SearchProduct("", int.Parse(cid), int.Parse(sid));
                 }
+
             }
             else {
                 products = pd.GetAllProducts();
@@ -45,22 +47,65 @@ namespace Dropify.Pages.Product
             string search = Request.Form["searchString"].ToString();
             var category = Request.Form["categorySearch"];
             var supplier = Request.Form["supplierSearch"];
-
+            //Perform search
             if (category.Count == 0 && supplier.Count == 0)
             {
-                products = pd.SearchProduct(search, -1, -1);
+                products.AddRange(pd.SearchProduct(search, -1, -1));
             }
             else if (category.Count != 0 && supplier.Count == 0)
             {
-                products = pd.SearchProduct(search, int.Parse(category),-1);
+                if (category.Count > 1) { 
+                    foreach (var c in category)
+                    {
+                        products.AddRange(pd.SearchProduct(search, int.Parse(c), -1));
+                    }
+                }
+                else if (category.Count == 1) {
+                    products.AddRange(pd.SearchProduct(search, int.Parse(category), -1));
+                }
             }
             else if (category.Count == 0 && supplier.Count != 0)
             {
-                products = pd.SearchProduct(search, -1, int.Parse(supplier));
+                if (supplier.Count > 1) { 
+                    foreach (var s in supplier)
+                    {
+                        products.AddRange(pd.SearchProduct(search, -1, int.Parse(s)));
+                    }
+                }
+                else if (supplier.Count == 1) {
+                    products.AddRange(pd.SearchProduct(search, -1, int.Parse(supplier)));
+                }
             }
             else
             {
-                products = pd.SearchProduct(search, int.Parse(category), int.Parse(supplier));
+                if (category.Count > 1 && supplier.Count > 1)
+                {
+                    foreach (var c in category)
+                    {
+                        foreach (var s in supplier)
+                        {
+                            products.AddRange(pd.SearchProduct(search, int.Parse(c), int.Parse(s)));
+                        }
+                    }
+                }
+                else if (category.Count > 1 && supplier.Count ==1)
+                {
+                    foreach (var c in category)
+                    {
+                        products.AddRange(pd.SearchProduct(search, int.Parse(c), int.Parse(supplier)));
+                    }
+                }
+                else if (category.Count == 1 && supplier.Count > 1)
+                {
+                    foreach (var s in supplier)
+                    {
+                        products.AddRange(pd.SearchProduct(search, int.Parse(category), int.Parse(s)));
+                    }
+                }
+                else
+                {
+                    products.AddRange(pd.SearchProduct(search, int.Parse(category), int.Parse(supplier)));
+                }
             }
             return Page();
         }

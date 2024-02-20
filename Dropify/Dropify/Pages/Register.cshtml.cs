@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Text;
 
-namespace Dropify.Pages.Register
+namespace Dropify.Pages
 {
     public class RegisterModel : PageModel
     {
@@ -21,18 +21,18 @@ namespace Dropify.Pages.Register
         public string last_name { get; set; }
         public void OnGet()
         {
-            
+
 
         }
         public IActionResult OnPost()
         {
             TempData.Clear();
             UserDAO ud = new UserDAO();
-            string fullName = first_name +" "+ last_name;
+            string fullName = first_name + " " + last_name;
 
             StringBuilder errorMessages = new StringBuilder();
 
-            if (string.IsNullOrEmpty(first_name.Trim())||string.IsNullOrEmpty(last_name.Trim()))
+            if (string.IsNullOrEmpty(first_name.Trim()) || string.IsNullOrEmpty(last_name.Trim()))
             {
                 errorMessages.AppendLine("First Name and Last Name are required");
             }

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Security.Cryptography.X509Certificates;
 
-namespace Dropify.Pages.Login
+namespace Dropify.Pages
 {
     public class LoginModel : PageModel
     {
@@ -24,10 +24,10 @@ namespace Dropify.Pages.Login
             List<Models.User> users = basePageModel.users;
             foreach (Models.User user in users)
             {
-                if(user.Email == Email)
+                if (user.Email == Email)
                 {
                     UserDAO userDAO = new UserDAO();
-                    if (userDAO.Authentication(Email,Password))
+                    if (userDAO.Authentication(Email, Password))
                     {
                         TempData["ErrorMessage"] = "Credentials!";
                         HttpContext.Session.SetString("user_email", Email);

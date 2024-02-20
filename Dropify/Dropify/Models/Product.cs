@@ -27,6 +27,24 @@ namespace Dropify.Models
         public string? Status { get; set; }
         public int CreatedBy { get; set; }
         public int ModifiedBy { get; set; }
+        [NotMapped]
+        public virtual string? ProductShortenName
+        {
+            get
+            {
+                if (Name.Length <= 50)
+                {
+                    return Name;
+                }
+                else
+                {
+                    return Name.Substring(0, 50) + "...";
+                }
+            }
+            set
+            {
+            }
+        }
 
         [NotMapped]
         public virtual string? ProductThumbnailImage
@@ -63,6 +81,27 @@ namespace Dropify.Models
             {
                 var cat = new ProductDAO().GetProductCategoryById(CategoryId ?? 0);
                 return cat?.CategoryName;
+            }
+            set
+            {
+            }
+        }
+
+        [NotMapped]
+        public virtual string? ProductDescription
+        {
+            get
+            {
+                using (var db = new prn211_dropshippingContext())
+                {
+                    var description = db.ProductDetails.FirstOrDefault(x => x.ProductId == ProductId && x.Type.Equals("P_DESCRIPTION"));
+                    if (description?.Attribute.Length <= 97)
+                    return description?.Attribute;
+                    else
+                    {
+                        return description?.Attribute.Substring(0, 97) + "...";
+                    }
+                }
             }
             set
             {

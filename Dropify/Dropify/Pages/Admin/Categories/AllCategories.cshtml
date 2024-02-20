@@ -1,5 +1,5 @@
 ﻿@page
-@model Dropify.Pages.Admin.ManageCategoris.CategoriesModel ;
+@model Dropify.Pages.Admin.ManageCategoris.CategoriesModel
 
 @{
     Layout = "_AdminLayout";
@@ -25,112 +25,7 @@
     <link rel="stylesheet" href="~/Admin/css/style.css">
 </head>
 <body>
-    <div class="sidebar" id="sidebar">
-        <div class="sidebar-inner slimscroll">
-            <div id="sidebar-menu" class="sidebar-menu">
-                <ul>
-                    <li class="menu-title">
-                        <span><i class="fe fe-home"></i> Main</span>
-                    </li>
-                    <li>
-                        <a href="/Admin/Dashboard"><span>Dashboard</span></a>
-                    </li>
-
-                    <li >
-                        <a href="/Admin/Products/AllProducts"><span>Manage Product</span></a>
-                    </li>
-                    <li class="active">
-                        <a href="#"><span>Manage Category</span></a>
-                    </li>
-                    <li>
-                        <a href="/Admin/Supplier/AllSupplier"><span>Manage Supplier</span></a>
-                    </li>
-
-                    <li>
-                        <a href="settings.html"><span>Settings</span></a>
-                    </li>
-
-                    <li>
-                        <a href="profile.html"><span>My Profile</span></a>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><span>Blog</span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a href="blog.html"> Blog </a></li>
-                            <li><a href="blog-details.html"> Blog Details </a></li>
-                            <li><a href="add-blog.html"> Add Blog </a></li>
-                            <li><a href="edit-blog.html"> Edit Blog </a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><span> Authentication </span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a href="login.html"> Login </a></li>
-                            <li><a href="register.html"> Register </a></li>
-                            <li><a href="forgot-password.html"> Forgot Password </a></li>
-                            <li><a href="lock-screen.html"> Lock Screen </a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><span> Error Pages </span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a href="error-404.html">404 Error </a></li>
-                            <li><a href="error-500.html">500 Error </a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="blank-page.html"><span>Blank Page</span></a>
-                    </li>
-                    <li class="menu-title">
-                        <span><i class="fe fe-star-o"></i> UI Interface</span>
-                    </li>
-                    <li>
-                        <a href="components.html"><span>Components</span></a>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><span> Forms </span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a href="form-basic-inputs.html">Basic Inputs </a></li>
-                            <li><a href="form-input-groups.html">Input Groups </a></li>
-                            <li><a href="form-horizontal.html">Horizontal Form </a></li>
-                            <li><a href="form-vertical.html"> Vertical Form </a></li>
-                            <li><a href="form-mask.html"> Form Mask </a></li>
-                            <li><a href="form-validation.html"> Form Validation </a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><span> Tables </span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a href="tables-basic.html">Basic Tables </a></li>
-                            <li><a href="data-tables.html">Data Table </a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"><span>Multi Level</span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li class="submenu">
-                                <a href="javascript:void(0);"> <span>Level 1</span> <span class="menu-arrow"></span></a>
-                                <ul style="display: none;">
-                                    <li><a href="javascript:void(0);"><span>Level 2</span></a></li>
-                                    <li class="submenu">
-                                        <a href="javascript:void(0);"> <span> Level 2</span> <span class="menu-arrow"></span></a>
-                                        <ul style="display: none;">
-                                            <li><a href="javascript:void(0);">Level 3</a></li>
-                                            <li><a href="javascript:void(0);">Level 3</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="javascript:void(0);"> <span>Level 2</span></a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);"> <span>Level 1</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+   
    
     <div class="main-wrapper">
 
@@ -167,7 +62,7 @@
                                                 <th width="100">CategoryID</th>
                                                 <th width="300">Name</th>
                                                 <th width="300" class="text-center">Status</th>
-                                                <th width="300" class="text-end">Action</th>
+                                                <th width="300" class="text-center">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -202,9 +97,9 @@
                                                                 <span class="badge badge-pill bg-danger inv-badge">Null</span>
                                                             </td>
                                                         }
-                                                       
 
-                                                        <td class="text-end" >
+
+                                                        <td class="text-start">
                                                             <div class="actions">
                                                                 <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.CategoryId"
                                                                 data-name="@p.CategoryName" 
@@ -215,6 +110,20 @@
                                                                 <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@p.CategoryId" class="btn btn-sm bg-danger-light">
                                                                     <i class="fe fe-trash"></i> Delete
                                                                 </a>
+                                                                @{
+                                                                    @foreach(var c in Model.AvaiCategories)
+                                                                    {
+                                                                        if (p.CategoryId == c.CategoryParent)
+                                                                        {
+                                                                            <a href="/Admin/Categories/CategoryChildren?id=@p.CategoryId" class="btn btn-sm bg-warning-light"><i class="fa fa-eye"></i> More </a>
+                                                                            break;
+                                                                        }
+                                                                        
+                                                                    }
+                                                                   
+
+                                                                }
+                                                               
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -328,14 +237,20 @@
                                        <div class="col-md-12">
                                             <div class="form-group mb-3">
                                                 <label>Name</label>
-                                                <input class="form-control" asp-for="category.CategoryName" type="text">
+                                                <input class="form-control" name="cateName" asp-for="category.CategoryName" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label> Change Date </label>
+                                                <input class="form-control" name="changedDate" asp-for="category.ChangedDate" type="date">
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
                                             <div class="form-group mb-3">
                                                 <label> Status </label>
-                                                <select class="form-control" asp-for="category.Status">
+                                                <select class="form-control" name="status" asp-for="category.Status">
                                                     <option value="Active">Active</option>
                                                     <option value="Inactive">Inactive</option>
                                                 </select>

@@ -18,6 +18,7 @@ namespace Dropify.Pages.Admin.ManageCategoris
         public CategoryDAO cd = new CategoryDAO();
         
         public List<Category> Categories { get; set; }
+        public List<Category> AvaiCategories { get; set; }
 
         public CategoriesModel(prn211_dropshippingContext context)
         {
@@ -28,7 +29,8 @@ namespace Dropify.Pages.Admin.ManageCategoris
         public void OnGet()
         {
             //Categories = cd.GetCategories();
-            Categories = con.Categories.Where(c => c.Status != "Hide").ToList();
+            Categories = con.Categories.Where(c => c.Status != "Hide" && c.CategoryParent == null).ToList();
+            AvaiCategories = cd.GetAvailableCategories();
         }
 
         public IActionResult OnPostEdit() {
@@ -74,6 +76,24 @@ namespace Dropify.Pages.Admin.ManageCategoris
             }
            
         }
+        //public IActionResult OnPostAdd()
+        //{
+        //    try {
+        //        Models.Category cate = new Models.Category();
+        //        cate.CategoryName = "PC Gaming";
+        //        //cate.ChangedDate = DateTime.Parse( Request.Form["changeDate"]);
+        //        //cate.Status = Request.Form["status"];
+        //        cd.addCategory(cate);
+        //        con.SaveChanges();
+        //        return RedirectToPage("AllCategories");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new Exception(ex.Message);
+        //    }
+           
+
+        //}
 
     }
 
