@@ -167,7 +167,7 @@
                                                 <th width="100">CategoryID</th>
                                                 <th width="300">Name</th>
                                                 <th width="300" class="text-center">Status</th>
-                                                <th width="300" class="text-end">Action</th>
+                                                <th width="300" class="text-center">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -202,9 +202,9 @@
                                                                 <span class="badge badge-pill bg-danger inv-badge">Null</span>
                                                             </td>
                                                         }
-                                                       
 
-                                                        <td class="text-end" >
+
+                                                        <td class="text-start">
                                                             <div class="actions">
                                                                 <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.CategoryId"
                                                                 data-name="@p.CategoryName" 
@@ -215,6 +215,20 @@
                                                                 <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@p.CategoryId" class="btn btn-sm bg-danger-light">
                                                                     <i class="fe fe-trash"></i> Delete
                                                                 </a>
+                                                                @{
+                                                                    @foreach(var c in Model.AvaiCategories)
+                                                                    {
+                                                                        if (p.CategoryId == c.CategoryParent)
+                                                                        {
+                                                                            <a href="/Admin/Categories/CategpryChildren/@p.CategoryId" class="btn btn-sm bg-warning-light"><i class="fa fa-eye"></i> More </a>
+                                                                            break;
+                                                                        }
+                                                                        
+                                                                    }
+                                                                   
+
+                                                                }
+                                                               
                                                             </div>
                                                         </td>
                                                     </tr>

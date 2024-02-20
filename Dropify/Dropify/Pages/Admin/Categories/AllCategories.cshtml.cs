@@ -19,6 +19,7 @@ namespace Dropify.Pages.Admin.ManageCategoris
        
 
         public List<Category> Categories { get; set; }
+        public List<Category> AvaiCategories { get; set; }
 
         public CategoriesModel(prn211_dropshippingContext context)
         {
@@ -29,7 +30,8 @@ namespace Dropify.Pages.Admin.ManageCategoris
         public void OnGet()
         {
             //Categories = cd.GetCategories();
-            Categories = con.Categories.Where(c => c.Status != "Hide").ToList();
+            Categories = con.Categories.Where(c => c.Status != "Hide" && c.CategoryParent == null).ToList();
+            AvaiCategories = cd.GetAvailableCategories();
         }
 
         public IActionResult OnPostEdit() {
