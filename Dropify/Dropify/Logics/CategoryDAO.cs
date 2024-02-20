@@ -61,6 +61,13 @@ namespace Dropify.Logics
                 db.Categories.Update(category);
             }
         }
+        public void addCategory(Category category)
+        {
+            using (var db = new prn211_dropshippingContext())
+            {
+                db.Categories.Add(category);
+            }
+        }
 
         // lấy category con theo id cha 
         public List<Category> getCateChildren(int id)
@@ -71,5 +78,6 @@ namespace Dropify.Logics
             }
         }
 
+     
     }
 }

@@ -15,7 +15,10 @@ namespace Dropify.Pages.Admin.Categories
             Request.Query.TryGetValue("id", out var id);
             categories = cd.getCateChildren(int.Parse(id));
             category = cd.GetCateById(int.Parse(id));
-            //return RedirectToPage("/Admin/Categories/CategoryChildren");
+           
         }
+
+      
+        
     }
 }
