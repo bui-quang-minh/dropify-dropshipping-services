@@ -10,12 +10,12 @@ namespace Dropify.Pages.Admin.Categories
         public CategoryDAO cd = new CategoryDAO();
         public List<Category> categories { get; set; }
         public Category category { get; set; }
-        public IActionResult CateChildren(int id)
+        public void OnGet()
         {
-
-            categories = cd.getCateChildren(id);
-            category = cd.GetCateById(id);
-            return RedirectToPage("/Admin/Categories/CategoryChildren");
+            Request.Query.TryGetValue("id", out var id);
+            categories = cd.getCateChildren(int.Parse(id));
+            category = cd.GetCateById(int.Parse(id));
+            //return RedirectToPage("/Admin/Categories/CategoryChildren");
         }
     }
 }
