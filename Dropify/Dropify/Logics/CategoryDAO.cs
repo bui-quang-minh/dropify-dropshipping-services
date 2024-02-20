@@ -21,6 +21,14 @@ namespace Dropify.Logics
                 return db.Categories.Where(c => c.CategoryId != 1).ToList();    
             }
         }
+        // lấy category by ID
+        public Category GetCateById(int id)
+        {
+            using (var db = new prn211_dropshippingContext())
+            {
+                return db.Categories.FirstOrDefault(c => c.CategoryId == id);
+            }
+        }
 
         // Chỉ lấy các category không phải là category cha
         // Người viết: Bùi Quang Minh
@@ -74,6 +82,8 @@ namespace Dropify.Logics
                 return db.Categories.Where(x=>  x.CategoryParent == id).ToList();
             }
         }
+
+        // update category 
         public void updateCategory(Category category)
         {
             using(var db = new prn211_dropshippingContext())
@@ -81,5 +91,23 @@ namespace Dropify.Logics
                 db.Categories.Update(category);
             }
         }
+        public void addCategory(Category category)
+        {
+            using (var db = new prn211_dropshippingContext())
+            {
+                db.Categories.Add(category);
+            }
+        }
+
+        // lấy category con theo id cha 
+        public List<Category> getCateChildren(int id)
+        {
+            using (var db = new prn211_dropshippingContext())
+            {
+                return db.Categories.Where(c => c.CategoryParent == id).ToList();
+            }
+        }
+
+     
     }
 }
