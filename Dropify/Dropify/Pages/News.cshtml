@@ -1,244 +1,395 @@
 ﻿@page
 @model Dropify.Pages.NewsModel
 @{
+    ViewData["Title"] = "News";
 }
+
 
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Mirrored from mentoring.dreamguystech.com/html/template/blog-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 May 2023 10:32:30 GMT -->
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <title>News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
-    <link rel="shortcut icon" type="image/x-icon" href="~/Admin/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
 
-    <link rel="stylesheet" href="~/Admin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="~/Admin/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/plugins/fontawesome/css/all.min.css">
 
-    <link rel="stylesheet" href="~/Admin/css/feathericon.min.css">
-
-    <link rel="stylesheet" href="~/Admin/plugins/datatables/datatables.min.css">
-
-    <link rel="stylesheet" href="~/Admin/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body>
-
+</main>
+    </div>
     <div class="main-wrapper">
-        
-            <div class="content container-fluid">
-
-                <div class="page-header">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <h3 class="page-title">News List</h3>
-
-                        </div>
+        <div class="breadcrumb-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-12 col-12">
+                        
+                        <h2 class="breadcrumb-title">News</h2>
                     </div>
                 </div>
-               
-                <br />
-               
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
-                            <li class="nav-item">
-                                <a class="nav-link active"
-                                   href="#bottom-justified-tab" 
-                                   data-bs-toggle="tab">Release</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#bottom-justified-tab1"
-                                   data-bs-toggle="tab">Cancel</a>
-                            </li>
-                            
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane show active" id="bottom-justified-tab">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="table-responsive">
-                                                    <table class=" table table-hover table-center mb-0">
-                                                        <thead>
-                                                            <tr>
-                                                                <th width="100">News ID</th>
-                                                                <th width="300">News Type</th>
-                                                                <th width="300">Product Id</th>
-                                                                <th width="300">ImgURL</th>
-                                                                <th width="100">News Content</th>
-                                                                <th width="100">Created By</th>
-                                                                <th width="100">Created Date</th>
-                                                                <th class="text-end">Status</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                                <tr>
-                                                                        <td>
-                                                                            1
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="limitedText">N_IMAGE</span>
-                                                                        </td>
-                                                                        <td>1 </td>
-                                                                        <td>
-                                                                            <img src="~/assets/img/img-01.jpg" alt="Image 01" style="height:60px;width:70px"/>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td> 
-                                                                        <td>
-                                                                            HyperWork
-                                                                        </td>
-                                                                        <td>
-                                                                            <span> 2024-19-02</span>
-                                                                        </td>
-
-                                                                        <td>
-                                                                            Release
-                                                                        </td>
-
-                                                                        
-                                                                    </tr>
-                                                        <tr>
-                                                            <td>
-                                                                2
-                                                            </td>
-                                                            <td>
-                                                                <span class="limitedText">N_CONTENT</span>
-                                                            </td>
-                                                            <td>1 </td>
-                                                            <td>
-                                                                
-                                                            </td>
-                                                            <td>
-                                                                This is the lastest new about this product
-                                                            </td>
-                                                            <td>
-                                                                HyperWork
-                                                            </td>
-                                                            <td>
-                                                                <span> 2024-19-02</span>
-                                                            </td>
-
-                                                            <td>
-                                                                Release
-                                                            </td>
+            </div>
+        </div>
 
 
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                        <div class="row blog-grid-row">
+                            <div class="col-md-6 col-sm-12">
+
+                                <div class="blog grid-blog">
+                                    <div class="blog-image">
+                                        <a href="#"><img class="img-fluid" src="/assets/img/blog/blog-01.jpg" alt="Post Image"></a>
                                     </div>
+                                    <div class="blog-content">
+                                        <ul class="entry-meta meta-item">
+                                            <li>
+                                                <div class="post-author">
+                                                    <a href="#"><img src="/assets/img/user/user1.jpg" alt="Post Author"> <span>Ruby Perrin</span></a>
+                                                </div>
+                                            </li>
+                                            <li><i class="far fa-clock"></i> 4 Dec 2019</li>
+                                        </ul>
+                                        <h3 class="blog-title"><a href="blog-details.html">Sed ut perspiciatis unde omnis iste natus</a></h3>
+                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+
+                                <div class="blog grid-blog">
+                                    <div class="blog-image">
+                                        <a href="#"><img class="img-fluid" src="/assets/img/blog/blog-02.jpg" alt="Post Image"></a>
+                                    </div>
+                                    <div class="blog-content">
+                                        <ul class="entry-meta meta-item">
+                                            <li>
+                                                <div class="post-author">
+                                                    <a href="#"><img src="/assets/img/user/user2.jpg" alt="Post Author"> <span>Darren Elder</span></a>
+                                                </div>
+                                            </li>
+                                            <li><i class="far fa-clock"></i> 3 Dec 2019</li>
+                                        </ul>
+                                        <h3 class="blog-title"><a href="blog-details.html">1914 translation by H. Rackham?</a></h3>
+                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+
+                                <div class="blog grid-blog">
+                                    <div class="blog-image">
+                                        <a href="#"><img class="img-fluid" src="/assets/img/blog/blog-03.jpg" alt="Post Image"></a>
+                                    </div>
+                                    <div class="blog-content">
+                                        <ul class="entry-meta meta-item">
+                                            <li>
+                                                <div class="post-author">
+                                                    <a href="#"><img src="/assets/img/user/user3.jpg" alt="Post Author"> <span>Deborah Angel</span></a>
+                                                </div>
+                                            </li>
+                                            <li><i class="far fa-clock"></i> 3 Dec 2019</li>
+                                        </ul>
+                                        <h3 class="blog-title"><a href="#">At vero eos et accusamus et iusto odio</a></h3>
+                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+
+                                <div class="blog grid-blog">
+                                    <div class="blog-image">
+                                        <a href="#"><img class="img-fluid" src="/assets/img/blog/blog-04.jpg" alt="Post Image"></a>
+                                    </div>
+                                    <div class="blog-content">
+                                        <ul class="entry-meta meta-item">
+                                            <li>
+                                                <div class="post-author">
+                                                    <a href="#"><img src="/assets/img/user/user4.jpg" alt="Post Author"> <span>Sofia Brient</span></a>
+                                                </div>
+                                            </li>
+                                            <li><i class="far fa-clock"></i> 2 Dec 2019</li>
+                                        </ul>
+                                        <h3 class="blog-title"><a href="#">On the other hand, we denounce with righte</a></h3>
+                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+
+                                <div class="blog grid-blog">
+                                    <div class="blog-image">
+                                        <a href="#"><img class="img-fluid" src="/assets/img/blog/blog-05.jpg" alt="Post Image"></a>
+                                    </div>
+                                    <div class="blog-content">
+                                        <ul class="entry-meta meta-item">
+                                            <li>
+                                                <div class="post-author">
+                                                    <a href="#"><img src="/assets/img/user/user5.jpg" alt="Post Author"> <span>Marvin Campbell</span></a>
+                                                </div>
+                                            </li>
+                                            <li><i class="far fa-clock"></i> 1 Dec 2019</li>
+                                        </ul>
+                                        <h3 class="blog-title"><a href="#">The standard chunk of Lorem Ipsum used since</a></h3>
+                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+
+                                <div class="blog grid-blog">
+                                    <div class="blog-image">
+                                        <a href="#"><img class="img-fluid" src="/assets/img/blog/blog-06.jpg" alt="Post Image"></a>
+                                    </div>
+                                    <div class="blog-content">
+                                        <ul class="entry-meta meta-item">
+                                            <li>
+                                                <div class="post-author">
+                                                    <a href="#"><img src="/assets/img/user/user6.jpg" alt="Post Author"> <span>Katharine Berthold</span></a>
+                                                </div>
+                                            </li>
+                                            <li><i class="far fa-clock"></i> 30 Nov 2019</li>
+                                        </ul>
+                                        <h3 class="blog-title"><a href="#">There are many variations of passages of Lorem</a></h3>
+                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+
+                                <div class="blog grid-blog">
+                                    <div class="blog-image">
+                                        <a href="#"><img class="img-fluid" src="/assets/img/blog/blog-07.jpg" alt="Post Image"></a>
+                                    </div>
+                                    <div class="blog-content">
+                                        <ul class="entry-meta meta-item">
+                                            <li>
+                                                <div class="post-author">
+                                                    <a href="#"><img src="/assets/img/user/user7.jpg" alt="Post Author"> <span>Linda Tobin</span></a>
+                                                </div>
+                                            </li>
+                                            <li><i class="far fa-clock"></i> 28 Nov 2019</li>
+                                        </ul>
+                                        <h3 class="blog-title"><a href="#">It is a long established fact that</a></h3>
+                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+
+                                <div class="blog grid-blog">
+                                    <div class="blog-image">
+                                        <a href="#"><img class="img-fluid" src="/assets/img/blog/blog-08.jpg" alt="Post Image"></a>
+                                    </div>
+                                    <div class="blog-content">
+                                        <ul class="entry-meta meta-item">
+                                            <li>
+                                                <div class="post-author">
+                                                    <a href="#"><img src="/assets/img/user/user8.jpg" alt="Post Author"> <span>Paul Richard </span></a>
+                                                </div>
+                                            </li>
+                                            <li><i class="far fa-clock"></i> 25 Nov 2019</li>
+                                        </ul>
+                                        <h3 class="blog-title"><a href="#">Contrary to popular belief, Lorem </a></h3>
+                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+
+                                <div class="blog grid-blog">
+                                    <div class="blog-image">
+                                        <a href="#"><img class="img-fluid" src="/assets/img/blog/blog-09.jpg" alt="Post Image"></a>
+                                    </div>
+                                    <div class="blog-content">
+                                        <ul class="entry-meta meta-item">
+                                            <li>
+                                                <div class="post-author">
+                                                    <a href="#"><img src="/assets/img/user/user9.jpg" alt="Post Author"> <span>John Gibbs</span></a>
+                                                </div>
+                                            </li>
+                                            <li><i class="far fa-clock"></i> 24 Nov 2019</li>
+                                        </ul>
+                                        <h3 class="blog-title"><a href="#">packages and web page editors now use Lorem</a></h3>
+                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+
+                                <div class="blog grid-blog">
+                                    <div class="blog-image">
+                                        <a href="#"><img class="img-fluid" src="/assets/img/blog/blog-10.jpg" alt="Post Image"></a>
+                                    </div>
+                                    <div class="blog-content">
+                                        <ul class="entry-meta meta-item">
+                                            <li>
+                                                <div class="post-author">
+                                                    <a href="#"><img src="/assets/img/user/user10.jpg" alt="Post Author"> <span>Olga Barlow</span></a>
+                                                </div>
+                                            </li>
+                                            <li><i class="far fa-clock"></i> 23 Nov 2019</li>
+                                        </ul>
+                                        <h3 class="blog-title"><a href="#">Lorem Ipsum is simply dummy</a></h3>
+                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="blog-pagination">
+                                    <nav>
+                                        <ul class="pagination justify-content-center">
+                                            <li class="page-item disabled">
+                                                <a class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-double-left"></i></a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">1</a>
+                                            </li>
+                                            <li class="page-item active">
+                                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">3</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a>
+                                            </li>
+                                        </ul>
+                                    </nav>
                                 </div>
                             </div>
-                            @* <div class="tab-pane" id="bottom-justified-tab1">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="table-responsive">
-                                                    <table class=" table table-hover table-center mb-0">
-                                                        <thead>
-                                                            <tr>
-                                                                <th width="100">ProductID</th>
-                                                                <th width="300">Name</th>
-                                                                <th width="300">Categories</th>
-                                                                <th width="300">Supplier</th>
-                                                                <th width="100">Original Price</th>
-                                                                <th width="100">Sell Out Price</th>
-                                                                <th width="100">Status</th>
-                                                                <th class="text-end">Action</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            @if (Model.ListProduct2 != null)
-                                                            {
-                                                                @foreach (var p in Model.ListProduct2)
-                                                                {
+                        </div>
 
-                                                                    <tr>
-                                                                        <td>
-                                                                            @p.ProductId
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="limitedText">@p.Name</span>
-                                                                        </td>
-                                                                        <td>@p.Category.CategoryName </td>
-                                                                        <td>
-                                                                            @p.Supplier.SupplierName
-
-                                                                        </td>
-
-                                                                        <td>
-                                                                            <span class="price">@p.OriginalPrice</span>
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="price"> @p.SellOutPrice</span>
-                                                                        </td>
-
-                                                                        <td>
-                                                                            @p.Status
-                                                                        </td>
-
-                                                                        <td class="text-end">
-                                                                            <div class="actions">
-                                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.ProductId"
-                                                                                   data-name="@p.Name" data-cate="@p.CategoryId" data-supp="@p.SupplierId"
-                                                                                   data-oprice="@p.OriginalPrice" data-sprice="@p.SellOutPrice" data-create="@p.CreatedDate" data-end="@p.EndDate"
-                                                                                   data-start="@p.StartDate" data-ship="@p.Shipdate" data-status="@p.Status"
-                                                                                   data-bs-target="#edit_modal" href="#edit_modal">
-                                                                                    <i class="fe fe-pencil"></i> Edit
-                                                                                </a>
-                                                                                <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@p.ProductId" class="btn btn-sm bg-danger-light">
-                                                                                    <i class="fe fe-trash"></i> Delete
-                                                                                </a>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-
-
-                                                                }
-                                                            }
-
-
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> *@
-                            
                     </div>
+
+                    <div class="col-lg-4 col-md-12 sidebar-right theiaStickySidebar">
+
+                        <div class="card search-widget">
+                            <div class="card-body">
+                                <form class="search-form">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="Search..." class="form-control">
+                                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <div class="card post-widget">
+                            <div class="card-header">
+                                <h4 class="card-title">Latest News</h4>
+                            </div>
+                            <div class="card-body">
+                                <ul class="latest-posts">
+                                    <li>
+                                        <div class="post-thumb">
+                                            <a href="#">
+                                                <img class="img-fluid" src="/assets/img/blog/blog-thumb-01.jpg" alt>
+                                            </a>
+                                        </div>
+                                        <div class="post-info">
+                                            <h4>
+                                                <a href="blog-details.html">Lorem Ipsum is simply dummy text of the printing</a>
+                                            </h4>
+                                            <p>4 Dec 2019</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="post-thumb">
+                                            <a href="#">
+                                                <img class="img-fluid" src="/assets/img/blog/blog-thumb-02.jpg" alt>
+                                            </a>
+                                        </div>
+                                        <div class="post-info">
+                                            <h4>
+                                                <a href="#">It is a long established fact that a reader will be</a>
+                                            </h4>
+                                            <p>3 Dec 2019</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="post-thumb">
+                                            <a href="#">
+                                                <img class="img-fluid" src="/assets/img/blog/blog-thumb-03.jpg" alt>
+                                            </a>
+                                        </div>
+                                        <div class="post-info">
+                                            <h4>
+                                                <a href="#">here are many variations of passages of Lorem Ipsum</a>
+                                            </h4>
+                                            <p>3 Dec 2019</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="post-thumb">
+                                            <a href="#">
+                                                <img class="img-fluid" src="/assets/img/blog/blog-thumb-04.jpg" alt>
+                                            </a>
+                                        </div>
+                                        <div class="post-info">
+                                            <h4>
+                                                <a href="#">The standard chunk of Lorem Ipsum used since the</a>
+                                            </h4>
+                                            <p>2 Dec 2019</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="post-thumb">
+                                            <a href="#">
+                                                <img class="img-fluid" src="/assets/img/blog/blog-thumb-05.jpg" alt>
+                                            </a>
+                                        </div>
+                                        <div class="post-info">
+                                            <h4>
+                                                <a href="#">generate Lorem Ipsum which looks reasonable</a>
+                                            </h4>
+                                            <p>1 Dec 2019</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-
-
-                
             </div>
-        
-
+        </div>
     </div>
 
-        <script src="~/Admin/js/jquery-3.6.0.min.js"></script>
 
-        <script src="~/Admin/js/bootstrap.bundle.min.js"></script>
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
 
-        <script src="~/Admin/js/feather.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
 
-        <script src="~/Admin/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+    <script src="/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
 
-        <script src="~/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
-        <script src="~/Admin/plugins/datatables/datatables.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <div>
+<main>
 
-        <script src="~/Admin/js/script.js"></script>
-
-    
-</body>
-
+<!-- Mirrored from mentoring.dreamguystech.com/html/template/blog-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 May 2023 10:32:31 GMT -->
 </html>
