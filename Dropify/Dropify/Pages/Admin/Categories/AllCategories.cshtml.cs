@@ -13,12 +13,15 @@ namespace Dropify.Pages.Admin.ManageCategoris
     public class CategoriesModel : BasePageModel
     {
         [BindProperty]
-        public Models.Category  category { get; set; }
+        public Models.Category category { get; set; }
+        
         private readonly prn211_dropshippingContext con;
         public CategoryDAO cd = new CategoryDAO();
         
         public List<Category> Categories { get; set; }
-        public List<Category> AvaiCategories { get; set; }
+
+        public List<Category> ParentCategories { get; set; }
+
 
         public CategoriesModel(prn211_dropshippingContext context)
         {
@@ -29,8 +32,8 @@ namespace Dropify.Pages.Admin.ManageCategoris
         public void OnGet()
         {
             //Categories = cd.GetCategories();
-            Categories = con.Categories.Where(c => c.Status != "Hide" && c.CategoryParent == null).ToList();
-            AvaiCategories = cd.GetAvailableCategories();
+           // Categories = con.Categories.Where(c => c.Status != "Hide" && c.CategoryParent == null).ToList();
+            ParentCategories = cd.ParentCategories(); // hiện thị tất cả các category cha => nhấn more để xem category con 
         }
 
         public IActionResult OnPostEdit() {
@@ -76,24 +79,24 @@ namespace Dropify.Pages.Admin.ManageCategoris
             }
            
         }
-        //public IActionResult OnPostAdd()
-        //{
-        //    try {
-        //        Models.Category cate = new Models.Category();
-        //        cate.CategoryName = "PC Gaming";
-        //        //cate.ChangedDate = DateTime.Parse( Request.Form["changeDate"]);
-        //        //cate.Status = Request.Form["status"];
-        //        cd.addCategory(cate);
-        //        con.SaveChanges();
-        //        return RedirectToPage("AllCategories");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new Exception(ex.Message);
-        //    }
-           
+        public IActionResult OnPostAdd()
+        {
+            try
+            {
+               
+                    cd.addCategory(category);
+                    return RedirectToPage("AllCategories");
+                
+             
 
-        //}
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+
+        }
 
     }
 
