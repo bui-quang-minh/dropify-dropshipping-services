@@ -2508,39 +2508,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\GF63\\.nuget\\packages\\": {},
-=======
     "C:\\Users\\Admin\\.nuget\\packages\\": {},
->>>>>>> QuangMinh
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
-      "projectName": "Dropify",
-      "projectPath": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
-      "packagesPath": "C:\\Users\\GF63\\.nuget\\packages\\",
-      "outputPath": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\obj\\",
-=======
       "projectUniqueName": "D:\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
       "projectName": "Dropify",
       "projectPath": "D:\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
       "outputPath": "D:\\PRN221\\Dropify\\Dropify\\obj\\",
->>>>>>> QuangMinh
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\GF63\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> QuangMinh
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2615,11 +2599,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-<<<<<<< HEAD
-      "message": "Problem reading the cache file D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-=======
       "message": "Problem reading the cache file D:\\PRN221\\Dropify\\Dropify\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
->>>>>>> QuangMinh
     }
   ]
 }

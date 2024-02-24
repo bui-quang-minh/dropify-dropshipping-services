@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Dropify.Pages
 {
-    public class LoginModel : PageModel
+    public class LoginModel : BasePageModel
     {
         [BindProperty]
         public string Email { get; set; }
