@@ -14,7 +14,7 @@ namespace Dropify.Logics
                 return db.Users.ToList();
             }
         }
-        
+
         public UserDetail Login(String email, String password)
         {
             using (var db = new prn211_dropshippingContext())
@@ -28,12 +28,12 @@ namespace Dropify.Logics
             }
         }
 
-        
+
         public bool Register(string email, string password, string? fullname)
         {
             using (var db = new prn211_dropshippingContext())
             {
-                UserDAO userDAO = new UserDAO(); 
+                UserDAO userDAO = new UserDAO();
                 var existingUser = db.Users.FirstOrDefault(u => u.Email == email);
 
                 if (existingUser != null)
@@ -64,24 +64,36 @@ namespace Dropify.Logics
                 if (existingUser != null)
                 {
                     string realpass = userDAO.DecryptPass(existingUser.Pword);
-                    if(password.Equals(realpass)) { 
+                    if (password.Equals(realpass))
+                    {
                         return true;
                     }
                 }
                 return false;
             }
         }
-        private string Encryption(string password) 
+        private string Encryption(string password)
         {
             byte[] storePassword = ASCIIEncoding.ASCII.GetBytes(password);
             string encryptpass = Convert.ToBase64String(storePassword);
             return encryptpass;
         }
-        private string DecryptPass(string password) 
+        private string DecryptPass(string password)
         {
             byte[] encryptpass = Convert.FromBase64String(password);
             string decryptpass = ASCIIEncoding.ASCII.GetString(encryptpass);
             return decryptpass;
+        }
+        public bool Authorization(string email)
+        {
+            using (var db = new prn211_dropshippingContext())
+            {
+                var isAdmin = (from u in db.Users
+                               join ud in db.UserDetails on u.Uid equals ud.Uid
+                               where u.Email == email && ud.Admin
+                               select ud).Any();
+                return isAdmin;
+            }
         }
     }
 }
