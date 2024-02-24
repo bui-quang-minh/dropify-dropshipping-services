@@ -68,7 +68,6 @@ D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\ne
 D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.pdb
 D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.genruntimeconfig.cache
 D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\ref\Dropify.dll
-<<<<<<< HEAD
 D:\PRN221\Dropify\Dropify\bin\Debug\net7.0\appsettings.Development.json
 D:\PRN221\Dropify\Dropify\bin\Debug\net7.0\appsettings.json
 D:\PRN221\Dropify\Dropify\bin\Debug\net7.0\Dropify.staticwebassets.runtime.json
@@ -210,4 +209,3 @@ C:\Users\hoang\OneDrive\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\o
 C:\Users\hoang\OneDrive\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.pdb
 C:\Users\hoang\OneDrive\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.genruntimeconfig.cache
 C:\Users\hoang\OneDrive\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\obj\Debug\net7.0\ref\Dropify.dll
->>>>>>> NguyenTuan
