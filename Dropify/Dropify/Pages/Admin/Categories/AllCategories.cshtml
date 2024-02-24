@@ -66,9 +66,9 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @if (Model.suppliers != null)
+                                            @if (Model.ParentCategories != null)
                                             {
-                                                @foreach (var p in Model.Categories)
+                                                @foreach (var p in Model.ParentCategories)
                                                 {
 
                                                     <tr>
@@ -78,7 +78,7 @@
                                                         <td>
                                                             <span class="limitedText">@p.CategoryName</span>
                                                         </td>
-
+                                                        
                                                         @if (p.Status != null &&  p.Status.Equals("Active"))
                                                         {
                                                             <td class="text-center">
@@ -91,15 +91,10 @@
                                                                 <span class="badge badge-pill bg-secondary inv-badge">@p.Status</span>
                                                             </td>
                                                         }
-                                                        @if (p.Status == null)
-                                                        {
-                                                            <td class="text-center">
-                                                                <span class="badge badge-pill bg-danger inv-badge">Null</span>
-                                                            </td>
-                                                        }
+                                                       
 
 
-                                                        <td class="text-start">
+                                                        <td class="text-center">
                                                             <div class="actions">
                                                                 <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.CategoryId"
                                                                 data-name="@p.CategoryName" 
@@ -110,20 +105,10 @@
                                                                 <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@p.CategoryId" class="btn btn-sm bg-danger-light">
                                                                     <i class="fe fe-trash"></i> Delete
                                                                 </a>
-                                                                @{
-                                                                    @foreach(var c in Model.AvaiCategories)
-                                                                    {
-                                                                        if (p.CategoryId == c.CategoryParent)
-                                                                        {
-                                                                            <a href="/Admin/Categories/CategoryChildren?id=@p.CategoryId" class="btn btn-sm bg-warning-light"><i class="fa fa-eye"></i> More </a>
-                                                                            break;
-                                                                        }
-                                                                        
-                                                                    }
-                                                                   
+                                                                 <a href="/Admin/Categories/CategoryChildren?id=@p.CategoryId" class="btn btn-sm bg-warning-light">
+                                                                     <i class="fa fa-eye"></i> More 
+                                                                 </a>
 
-                                                                }
-                                                               
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -223,7 +208,7 @@
                 <div class="modal-body">
                     <div class="form-content p-2">
                         <div class="modal-header border-0">
-                            <h4 class="modal-title">Add Product</h4>
+                            <h4 class="modal-title">Add Category</h4>
                             <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                             </button>
@@ -237,20 +222,20 @@
                                        <div class="col-md-12">
                                             <div class="form-group mb-3">
                                                 <label>Name</label>
-                                                <input class="form-control" name="cateName" asp-for="category.CategoryName" type="text">
+                                                <input class="form-control"  asp-for="category.CategoryName" type="text">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group mb-3">
                                                 <label> Change Date </label>
-                                                <input class="form-control" name="changedDate" asp-for="category.ChangedDate" type="date">
+                                                <input class="form-control"  asp-for="category.ChangedDate" type="date">
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
                                             <div class="form-group mb-3">
                                                 <label> Status </label>
-                                                <select class="form-control" name="status" asp-for="category.Status">
+                                                <select class="form-control" asp-for="category.Status">
                                                     <option value="Active">Active</option>
                                                     <option value="Inactive">Inactive</option>
                                                 </select>

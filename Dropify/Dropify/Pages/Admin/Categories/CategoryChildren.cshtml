@@ -327,21 +327,29 @@
                         </div>
                         <div class="card">
                             <div class="card-body">
-                                <form method="post" asp-page-handler="Add" asp-page="/Admin/Categories/AllCategories" autocomplete="off">
+                                <form method="post" asp-page-handler="Add" asp-page="/Admin/Categories/CategoryChildren" autocomplete="off">
                                    <div class="row">
                                      <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
                                     
                                        <div class="col-md-12">
                                             <div class="form-group mb-3">
                                                 <label>Name</label>
-                                                <input class="form-control" asp-for="category.CategoryName" type="text">
+                                                <input class="form-control" name="cateName" type="text">
                                             </div>
                                         </div>
-
+                                      
+                                         <input class="form-control"  value="@Model.category.CategoryId" name="cateParent" type="hidden">
+                                     
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label> Change Date </label>
+                                                <input class="form-control" name="changeDate" type="date">
+                                            </div>
+                                        </div>
                                         <div class="col-md-6">
                                             <div class="form-group mb-3">
                                                 <label> Status </label>
-                                                <select class="form-control" asp-for="category.Status">
+                                                <select class="form-control" name="status">
                                                     <option value="Active">Active</option>
                                                     <option value="Inactive">Inactive</option>
                                                 </select>
