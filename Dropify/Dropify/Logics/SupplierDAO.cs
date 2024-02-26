@@ -19,6 +19,15 @@ namespace Dropify.Logics
             using (var db = new prn211_dropshippingContext())
             {
                 db.Suppliers.Update(supp);
+                db.SaveChanges();
+            }
+        }
+        public void AddSupplier(Supplier supp)
+        {
+            using (var db = new prn211_dropshippingContext())
+            {
+                db.Suppliers.Add(supp);
+                db.SaveChanges();
             }
         }
     }

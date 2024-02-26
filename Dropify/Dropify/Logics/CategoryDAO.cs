@@ -98,6 +98,7 @@ namespace Dropify.Logics
             using(var db = new prn211_dropshippingContext())
             {
                 db.Categories.Update(category);
+                db.SaveChanges();
             }
         }
         public void addCategory(Category category)
@@ -114,7 +115,7 @@ namespace Dropify.Logics
         {
             using (var db = new prn211_dropshippingContext())
             {
-                return db.Categories.Where(c => c.CategoryParent == id).ToList();
+                return db.Categories.Where(c => c.CategoryParent == id && c.Status != "Hide").ToList();
             }
         }
 
