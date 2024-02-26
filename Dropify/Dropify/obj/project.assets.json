@@ -2508,40 +2508,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\buiqu\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
->>>>>>> origin/NguyenTuan
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "D:\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\PRN221\\Final_Project\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
       "projectName": "Dropify",
-      "projectPath": "D:\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
-      "packagesPath": "C:\\Users\\buiqu\\.nuget\\packages\\",
-      "outputPath": "D:\\PRN221\\Dropify\\Dropify\\obj\\",
-=======
-      "projectUniqueName": "D:\\Documents\\PRN221\\Project_PRN221\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
-      "projectName": "Dropify",
-      "projectPath": "D:\\Documents\\PRN221\\Project_PRN221\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\PRN221\\Project_PRN221\\PRN221\\Dropify\\Dropify\\obj\\",
->>>>>>> origin/NguyenTuan
+      "projectPath": "C:\\Users\\admin\\Desktop\\PRN221\\Final_Project\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\PRN221\\Final_Project\\PRN221\\Dropify\\Dropify\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\buiqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> origin/NguyenTuan
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2605,11 +2584,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
->>>>>>> origin/NguyenTuan
       }
     }
   }
