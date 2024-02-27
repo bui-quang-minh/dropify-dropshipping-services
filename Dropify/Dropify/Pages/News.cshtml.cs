@@ -24,5 +24,13 @@ namespace Dropify.Pages
             }
             else ListNews = nd.GetAllNews(); 
         }
+
+        public IActionResult OnPostSearch()
+        {
+            string SearchString = Request.Form["search_str"].ToString();
+            ListNews = nd.SearchNews(SearchString);
+            LastestNews = nd.GetLastestNews();
+            return RedirectToPage("/News");
+        }
     }
 }

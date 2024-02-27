@@ -128,9 +128,9 @@
 
                         <div class="card search-widget">
                             <div class="card-body">
-                                <form class="search-form">
+                                <form class="search-form" method="post" asp-page="/News" asp-page-handler="Search">
                                     <div class="input-group">
-                                        <input type="text" placeholder="Search..." class="form-control">
+                                    <input type="text" id="search_str" name="search_str" placeholder="Search..." class="form-control">
                                         <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
                                     </div>
                                 </form>

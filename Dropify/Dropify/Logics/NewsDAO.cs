@@ -1,4 +1,5 @@
 ﻿using Dropify.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Dropify.Logics
 {
@@ -34,6 +35,20 @@ namespace Dropify.Logics
             using (var db = new prn211_dropshippingContext())
             {
                 return db.News.Find(id);
+            }
+        }
+        // Search new
+        // Người viết: Hà Anh Dũng
+        // Ngày: 27/2/2024
+        public List<News> SearchNews(string name)
+        {
+            using (var db = new prn211_dropshippingContext())
+            {
+                string searchString = name.ToLower();
+                var newsList = db.News.ToList(); // Lấy toàn bộ dữ liệu từ cơ sở dữ liệu
+
+                // Thực hiện filter dữ liệu ở phía client
+                return newsList.Where(n => n.NewsContents.ToLower().Contains(searchString)).ToList();
             }
         }
     }
