@@ -31,7 +31,7 @@ namespace Dropify.Pages.Profile
             CanceledOrders = od.GetOrderByStatus("Canceled");
         }
 
-        public IActionResult OnPost()
+        public IActionResult OnPostDelete()
         {
             int oid = int.Parse(Request.Form["o_id"].ToString());
 
@@ -43,7 +43,22 @@ namespace Dropify.Pages.Profile
                 con.Orders.Update(order);
                 con.SaveChanges();
             }
-            return RedirectToPage("Profile/Orders");
+            return RedirectToPage("/Profile/Orders");
+        }
+
+        public IActionResult OnPostRestore()
+        {
+            int oid = int.Parse(Request.Form["o_id"].ToString());
+
+            var order = con.Orders.Find(oid);
+            if (order != null)
+            {
+                order.Status = "Canceled";
+                order.ShipStatus = "Not Shipped";
+                con.Orders.Update(order);
+                con.SaveChanges();
+            }
+            return RedirectToPage("/Profile/Orders");
         }
     }
 }
