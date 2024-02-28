@@ -138,7 +138,6 @@ D:\PRN221\Dropify\Dropify\obj\Debug\net7.0\refint\Dropify.dll
 D:\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.pdb
 D:\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.genruntimeconfig.cache
 D:\PRN221\Dropify\Dropify\obj\Debug\net7.0\ref\Dropify.dll
-=======
 C:\Users\hoang\OneDrive\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\hoang\OneDrive\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\bin\Debug\net7.0\appsettings.json
 C:\Users\hoang\OneDrive\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\bin\Debug\net7.0\Dropify.staticwebassets.runtime.json

@@ -10,14 +10,14 @@
         "projectUniqueName": "D:\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
         "projectName": "Dropify",
         "projectPath": "D:\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\buiqu\\.nuget\\packages\\",
         "outputPath": "D:\\PRN221\\Dropify\\Dropify\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\buiqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

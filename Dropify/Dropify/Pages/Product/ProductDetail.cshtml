@@ -226,7 +226,9 @@
                                 <s style="font-size: 22px; font-weight:bold">@originalPriceVND</s>
                                 <p style="font-size: 22px; font-weight:bold" class="text-danger">@discountVND</p>
 
-                                <form class="search-form" action="ProductDetail" method="post">
+                                <form class="search-form" asp-page="/Product/ProductDetail" asp-page-handler="Add">
+                                    <input type="hidden" name="productId" value="@Model.product.ProductId">
+                                    <input type="hidden" name="price" value="@discount">
                                     <!--Color-->
                                     <div class="input-group">
                                          @{
