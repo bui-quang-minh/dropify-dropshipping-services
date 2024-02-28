@@ -51,7 +51,7 @@ namespace Dropify.Pages.Admin.ManageCategoris
                     cate.CategoryName = category.CategoryName;
                     cate.Status = category.Status;
                     cd.updateCategory(cate);    
-                    con.SaveChanges();  
+                   
                     return RedirectToPage("AllCategories");
                 }
 
@@ -65,12 +65,11 @@ namespace Dropify.Pages.Admin.ManageCategoris
         public IActionResult OnPostDelete()
         {
             int cid = int.Parse( Request.Form["c_id"].ToString());
-            var cate = con.Categories.Find(cid);
+            var cate = cd.GetCateById(cid);
             if (cate != null)
             {
                 cate.Status = "Hide";
                 cd.updateCategory(cate);
-                con.SaveChanges();
                 return RedirectToPage("AllCategories");
             }
             else
@@ -83,9 +82,19 @@ namespace Dropify.Pages.Admin.ManageCategoris
         {
             try
             {
-               
+
+                if (category.ChangedDate == null)
+                {
+                    category.ChangedDate = DateTime.Now;
                     cd.addCategory(category);
                     return RedirectToPage("AllCategories");
+                }
+                else
+                {
+                    cd.addCategory(category);
+                    return RedirectToPage("AllCategories");
+                }
+                
                 
              
 

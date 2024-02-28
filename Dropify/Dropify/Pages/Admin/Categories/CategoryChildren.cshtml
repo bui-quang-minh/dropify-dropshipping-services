@@ -177,30 +177,30 @@
                                         <tbody>
                                             @if (Model.categories != null)
                                             {
-                                                @foreach (var p in Model.categories)
+                                                @foreach (var c in Model.categories)
                                                 {
 
                                                     <tr>
                                                         <td>
-                                                            @p.CategoryId
+                                                            @c.CategoryId
                                                         </td>
                                                         <td>
-                                                            <span class="limitedText">@p.CategoryName</span>
+                                                            <span class="limitedText">@c.CategoryName</span>
                                                         </td>
 
-                                                        @if (p.Status != null &&  p.Status.Equals("Active"))
+                                                        @if (c.Status != null &&  c.Status.Equals("Active"))
                                                         {
                                                             <td class="text-center">
-                                                                <span class="badge badge-pill bg-success inv-badge">@p.Status</span>
+                                                                <span class="badge badge-pill bg-success inv-badge">@c.Status</span>
                                                             </td>
                                                         }
-                                                        @if (p.Status != null &&  p.Status.Equals("Inactive"))
+                                                        @if (c.Status != null &&  c.Status.Equals("Inactive"))
                                                         {
                                                             <td class="text-center">
-                                                                <span class="badge badge-pill bg-secondary inv-badge">@p.Status</span>
+                                                                <span class="badge badge-pill bg-secondary inv-badge">@c.Status</span>
                                                             </td>
                                                         }
-                                                        @if (p.Status == null)
+                                                        @if (c.Status == null)
                                                         {
                                                             <td class="text-center">
                                                                 <span class="badge badge-pill bg-danger inv-badge">Null</span>
@@ -210,13 +210,14 @@
 
                                                         <td class="text-center">
                                                             <div class="actions">
-                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.CategoryId"
-                                                                data-name="@p.CategoryName" 
-                                                                 data-status="@p.Status" 
-                                                                data-bs-target="#edit_modal" href="#edit_modal">
+                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@c.CategoryId"
+                                                                  data-name="@c.CategoryName" 
+                                                                 data-status="@c.Status"
+                                                                 data-date="@c.ChangedDate"
+                                                                   data-bs-target="#edit_modal" href="#edit_modal">
                                                                     <i class="fe fe-pencil"></i> Edit
                                                                 </a>
-                                                                <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@p.CategoryId" class="btn btn-sm bg-danger-light">
+                                                                <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-did="@c.CategoryId" class="btn btn-sm bg-danger-light">
                                                                     <i class="fe fe-trash"></i> Delete
                                                                 </a>
                                                               
@@ -244,7 +245,7 @@
             <div class="modal-content"  >
 
                 <div class="modal-body">
-                    <form method="post" asp-page="/Admin/Categories/AllCategories" asp-page-handler="Delete">
+                    <form method="post" asp-page="/Admin/Categories/CategoryChildren"  asp-page-handler="Delete">
                         <div class="form-content p-2">
                             <h4 class="modal-title">Delete</h4>
                             <p class="mb-4">Are you sure want to delete?</p>
@@ -273,27 +274,33 @@
                         </div>
                         <div class="card">
                             <div class="card-body">
-                                <form method="post" asp-page-handler="Edit" asp-page="/Admin/Categories/AllCategories" autocomplete="off">
+                                <form method="post" asp-page-handler="Edit" asp-page="/Admin/Categories/CategoryChildren" autocomplete="off">
                                     <div class="row">
                                         <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
                                         <div class="col-md-12">
                                             <div class="form-group mb-3">
                                                 <label>CategoryID</label>
-                                                <input class="form-control" id="categoryID" asp-for="category.CategoryId" type="text" readonly>
+                                                <input class="form-control" name="cateID" id="categoryID"  type="text" readonly>
                                             </div>
                                         </div>
                                        
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <div class="form-group mb-3">
                                                 <label>CategoryName</label>
-                                                <input class="form-control" id="categoryName" asp-for="category.CategoryName"  type="text">
+                                                <input class="form-control" id="categoryName" name="Namecate" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label>Change Date</label>
+                                                <input class="form-control" id="changeDate" name="dateChange" type="date">
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
                                             <div class="form-group mb-3">
                                                 <label> Status </label>
-                                                <select class="form-control" asp-for="category.Status"  id="cStatus">
+                                                <select class="form-control" name="statusCate" id="cStatus">
                                                     <option value="Active">Active</option>
                                                     <option value="Inactive">Inactive</option>
                                                 </select>
@@ -398,7 +405,7 @@
             links.forEach(function (link) {
                 link.addEventListener('click', function () {
 
-                    var id = link.dataset.id;
+                    var id = link.dataset.did;
                     
                     document.getElementById('c_id').value = id;
                    
@@ -419,13 +426,28 @@
                     var cateId = link.dataset.id;
                     var Name = link.dataset.name;
                     var Status = link.dataset.status;
-                    document.getElementById('categoryID').value = cateId;
-                    document.getElementById('categoryName').value = Name;
-                    document.getElementById('cStatus').value = Status;
+                    var date = link.dataset.date;
                     console.log(cateId);
                     console.log(Name);
-                    console.log(Status);
-                  
+                     console.log(Status);
+                    console.log(date);
+
+                    function formatDate(d) {
+                        var part = d.split(/[\/ :]/);
+                        var formaterDate = part[2] + '-' + part[1] + '-' + part[0];
+                        return formaterDate;
+
+                    }
+                    var changeDate = formatDate(date);
+                    console.log(changeDate);
+                    document.getElementById('categoryID').value = cateId;
+                    document.getElementById('categoryName').value = Name;
+                    document.getElementById('changeDate').value = changeDate;
+                    document.getElementById('cStatus').value = Status;
+
+                    
+
+                   
                     
 
                 });

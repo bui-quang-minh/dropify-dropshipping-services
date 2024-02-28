@@ -70,7 +70,7 @@ namespace Dropify.Pages.Admin.ManageSupplier
             {
                 supp.Status = "Hide";
                 
-                con.SaveChanges();
+                sd.EditSupplier(supp);
                 return RedirectToPage("AllSupplier");
             }
             else
@@ -78,6 +78,12 @@ namespace Dropify.Pages.Admin.ManageSupplier
                 return NotFound();
             }
            
+        }
+        public IActionResult OnPostAdd()
+        {
+            sd.AddSupplier(supplier);
+            return RedirectToPage("AllSupplier");
+
         }
 
     }
