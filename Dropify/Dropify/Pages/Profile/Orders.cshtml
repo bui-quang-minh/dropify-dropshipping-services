@@ -1,7 +1,7 @@
 ﻿@page
 @model Dropify.Pages.Profile.OrdersModel
 @{
-    Layout = "_ProfileLayout";
+    Layout = "_Layout";
 }
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>Mentoring - Categories Page</title>
+    <title>Order Page</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="~/Admin/img/favicon.png">
 
@@ -24,206 +24,399 @@
     <link rel="stylesheet" href="~/Admin/css/style.css">
 </head>
 
-    <div class="main-wrapper">
-            <div class="content container-fluid">
-                <div class="page-header">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <h3 class="page-title">Order</h3>
+<div class="main-wrapper">
+    <div class="content container-fluid">
+        <div class="page-header">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="page-title">Order</h3>
 
-                        </div>
-                    </div>
                 </div>
-              
-                    @* <div class="col">
-                        <a class="btn btn-success" data-bs-toggle="modal" href="#add_modal">
-                            <i class="fe fe-plus"></i>
-                            New Order
-                        </a>
-                    </div> *@
-               
-                <br />
-               
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
-                            <li class="nav-item">
-                                <a class="nav-link active"
-                                   href="#bottom-justified-tab" data-bs-toggle="tab">All order</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#bottom-justified-tab1"
-                                   data-bs-toggle="tab">Shipping</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#bottom-justified-tab2"
-                                   data-bs-toggle="tab">Shipped</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#bottom-justified-tab3"
-                                   data-bs-toggle="tab">Released</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#bottom-justified-tab3"
-                                   data-bs-toggle="tab">Not Released</a>
-                            </li>
-                            
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane show active" id="bottom-justified-tab">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="table-responsive">
-                                                    <table class=" table table-hover table-center mb-0">
-                                                        <thead>
-                                                            <tr>
-                                                                <th width="100">Order ID</th>
-                                                                <th width="100">Order Name</th>
-                                                                <th width="300">Order Date</th>
-                                                                <th width="300">Order Price</th>
-                                                                <th width="300">Address</th>
-                                                                <th width="100">Ship Status</th>
-                                                                <th width="100">Status</th>
-                                                                <th class="text-end">Action</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                                    <tr>
-                                                                        <td>
-                                                                            1
-                                                                        </td>
-                                                                        <td>
-                                                                        <span class="limitedText">GHẾ CÔNG THÁI HỌC HYPERWORK AIRY - ÊM ÁI, THOÁNG MÁT TỐI ĐA</span>
-                                                                        </td>
-                                                                        <td>2024-02-20 </td>
-                                                                        <td>
-                                                                            305.000.000 ₫
-                                                                        </td>
-                                                                <td>Ha Noi</td>
-                                                                            
-                                                                        <td>
-                                                                            Shipping
-                                                                        </td>
-                                                                        <td>
-                                                                            Released
-                                                                        </td>
+            </div>
+        </div>
 
-                                                                        <td class="text-end">
-                                                                            <div class="actions">
-                                                                                <a class="btn btn-sm bg-success-light"  href="#">
-                                                                                    <i class="fe fe-pencil"></i> Edit
-                                                                                </a>
-                                                                        <a data-bs-toggle="modal" data-bs-target="#" href="#" data-id="delete_modal" class="btn btn-sm bg-danger-light">
-                                                                                    <i class="fe fe-trash"></i> Delete
-                                                                                </a>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
+        @* <div class="col">
+        <a class="btn btn-success" data-bs-toggle="modal" href="#add_modal">
+        <i class="fe fe-plus"></i>
+        New Order
+        </a>
+        </div> *@
+
+        <br />
+
+        <div class="card">
+            <div class="card-body">
+                <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           href="#bottom-justified-tab" data-bs-toggle="tab">Ordered</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bottom-justified-tab1"
+                           data-bs-toggle="tab">Success</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bottom-justified-tab2"
+                           data-bs-toggle="tab">Canceled</a>
+                    </li>
+
+
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane show active" id="bottom-justified-tab">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class=" table table-hover table-center mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="100">Order ID</th>
+                                                        <th width="100">Order Name</th>
+                                                        <th width="100">Order Person</th>
+                                                        <th width="300">Order Date</th>
+                                                        <th width="300">Order Price</th>
+                                                        <th width="300">Address</th>
+                                                        <th width="100">Ship Status</th>
+                                                        <th width="100">Status</th>
+                                                        <th class="text-end">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @if (Model.OderedOrders != null)
+                                                    {
+                                                        @foreach (var o in Model.OderedOrders)
+                                                        {
+                                                            <tr>
+                                                                <td>
+                                                                    @o.OrderId
+                                                                </td>
+                                                                <td>
+                                                                    <span class="limitedText">GHẾ CÔNG THÁI HỌC HYPERWORK AIRY - ÊM ÁI, THOÁNG MÁT TỐI ĐA</span>
+                                                                </td>
+                                                                <td>
+                                                                    @o.Ud.Name
+                                                                </td>
+                                                                <td>
+                                                                    @o.OrderedDate
+                                                                </td>
+                                                                <td>
+                                                                    <span class="price" style="font-weight:normal; font-size:medium">@o.OrderedPrice</span>
+                                                                </td>
+                                                                <td>
+                                                                    @o.Address.Address
+                                                                </td>
+                                                                <td>
+                                                                    @o.ShipStatus
+                                                                </td>
+                                                                <td>
+                                                                    @o.Status
+                                                                </td>
+
+                                                                <td class="text-end">
+                                                                    <div class="actions">
+                                                                        <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@o.OrderId" class="btn btn-sm bg-danger-light">
+                                                                            <i class="fe fe-trash"></i> Delete
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        }
+                                                    }
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="bottom-justified-tab1">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class=" table table-hover table-center mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="100">Order ID</th>
+                                                        <th width="100">Order Name</th>
+                                                        <th width="100">Order Person</th>
+                                                        <th width="300">Order Date</th>
+                                                        <th width="300">Order Price</th>
+                                                        <th width="300">Address</th>
+                                                        <th width="100">Ship Status</th>
+                                                        <th width="100">Status</th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @if (Model.SuccessOrders != null)
+                                                    {
+                                                        @foreach (var o in Model.SuccessOrders)
+                                                        {
+
+                                                            <tr>
+                                                                <td>
+                                                                    @o.OrderId
+                                                                </td>
+                                                                <td>
+                                                                    <span class="limitedText">GHẾ CÔNG THÁI HỌC HYPERWORK AIRY - ÊM ÁI, THOÁNG MÁT TỐI ĐA</span>
+                                                                </td>
+                                                                <td>
+                                                                    @o.Ud.Name
+                                                                </td>
+                                                                <td>
+                                                                    @o.OrderedDate
+
+                                                                </td>
+
+                                                                <td>
+                                                                    <span class="price" style="font-weight:normal; font-size:medium">@o.OrderedPrice</span>
+                                                                </td>
+                                                                <td>
+                                                                    @o.Address.Address
+                                                                </td>
+
+                                                                <td>
+                                                                    @o.ShipStatus
+                                                                </td>
+
+                                                                <td>
+                                                                    @o.Status
+                                                                </td>
+
+                                                                
+                                                            </tr>
+
+
+                                                        }
+                                                    }
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="bottom-justified-tab2">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class=" table table-hover table-center mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="100">Order ID</th>
+                                                        <th width="100">Order Name</th>
+                                                        <th width="100">Order Person</th>
+                                                        <th width="300">Order Date</th>
+                                                        <th width="300">Order Price</th>
+                                                        <th width="300">Address</th>
+                                                        <th width="100">Ship Status</th>
+                                                        <th width="100">Status</th>
+                                                        @* <th class="text-end">Action</th> *@
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @if (Model.CanceledOrders != null)
+                                                    {
+                                                        @foreach (var o in Model.CanceledOrders)
+                                                        {
+
+                                                            <tr>
+                                                                <td>
+                                                                    @o.OrderId
+                                                                </td>
+                                                                <td>
+                                                                    <span class="limitedText">GHẾ CÔNG THÁI HỌC HYPERWORK AIRY - ÊM ÁI, THOÁNG MÁT TỐI ĐA</span>
+                                                                </td>
+                                                                <td>
+                                                                    @o.Ud.Name
+                                                                </td>
+                                                                <td>
+                                                                    @o.OrderedDate
+
+                                                                </td>
+
+                                                                <td>
+                                                                    <span class="price" style="font-weight:normal; font-size:medium">@o.OrderedPrice</span>
+                                                                </td>
+                                                                <td>
+                                                                    @o.Address.Address
+                                                                </td>
+
+                                                                <td>
+                                                                    @o.ShipStatus
+                                                                </td>
+
+                                                                <td>
+                                                                    @o.Status
+                                                                </td>
+                                                                @* <td class="text-end">
+                                                                    <div class="actions">
+                                                                        <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@o.OrderId" class="btn btn-sm bg-danger-light">
+                                                                            <i class="fe fe-"></i> Delete
+                                                                        </a>
+                                                                    </div>
+                                                                </td> *@
+
+                                                            </tr>
+
+
+                                                        }
+                                                    }
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-
-                
             </div>
-        
+        </div>
+
+
 
     </div>
-    <div class="modal fade" id="delete_modal" role="dialog"  aria-hidden="true" >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content"  >
 
-                <div class="modal-body">
-                    <form method="post" asp-page="" asp-page-handler="Delete">
-                        <div class="form-content p-2">
-                            <h4 class="modal-title">Delete</h4>
-                            <p class="mb-4">Are you sure want to delete?</p>
-                            <button type="submit" id="MyLink" class="btn btn-primary" >Delete </button>
-                            <input type="hidden" value="" id="p_id" name="p_id"  />
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </form>
-                    
-                </div>
+
+</div>
+<div class="modal fade" id="delete_modal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <form method="post" asp-page="/Profile/Orders" asp-page-handler="Delete">
+                    <div class="form-content p-2">
+                        <h4 class="modal-title">Delete</h4>
+                        <p class="mb-4">Are you sure want to delete?</p>
+                        <button type="submit" id="MyLink" class="btn btn-primary">Delete </button>
+                        <input type="hidden" value="" id="o_id" name="o_id" />
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+
             </div>
         </div>
     </div>
-    
+</div>
+
+@* <div class="modal fade" id="restore_modal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <form method="post" asp-page="/Profile/Orders" asp-page-handler="Restore">
+                    <div class="form-content p-2">
+                        <h4 class="modal-title text-center">Restore</h4>
+                        <p class="mb-4 text-center">Are you sure want to Restore?</p>
+                        <div class="d-flex me-1 justify-content-center">
+                            <button type="submit" id="MyLink" class="btn btn-primary" style="margin-right:6px ;width:75px ;"> Restore </button>
+                            <input type="hidden" value="" id="restore_id" name="restore_id" />
+                            <button type="button" class="btn btn-danger" style="width : 75px;" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div> *@
+
+<script src="~/Admin/js/jquery-3.6.0.min.js"></script>
+
+<script src="~/Admin/js/bootstrap.bundle.min.js"></script>
+
+<script src="~/Admin/js/feather.min.js"></script>
+
+<script src="~/Admin/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<script src="~/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="~/Admin/plugins/datatables/datatables.min.js"></script>
+
+<script src="~/Admin/js/script.js"></script>
 
 
-    
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get modal and link elements
+        var modal = document.getElementById('delete_modal');
+        var links = document.querySelectorAll('[data-bs-target="#delete_modal"]');
 
+        // Add event listener for when any of the links is clicked
+        links.forEach(function (link) {
+            link.addEventListener('click', function () {
 
-   
+                var id = link.dataset.id;
 
+                document.getElementById('o_id').value = id;
 
-    <script src="~/Admin/js/jquery-3.6.0.min.js"></script>
-
-    <script src="~/Admin/js/bootstrap.bundle.min.js"></script>
-
-    <script src="~/Admin/js/feather.min.js"></script>
-
-    <script src="~/Admin/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-    <script src="~/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="~/Admin/plugins/datatables/datatables.min.js"></script>
-
-    <script src="~/Admin/js/script.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get modal and link elements
-            var modal = document.getElementById('delete_modal');
-            var links = document.querySelectorAll('[data-bs-target="#delete_modal"]');
-
-            // Add event listener for when any of the links is clicked
-            links.forEach(function (link) {
-                link.addEventListener('click', function () {
-
-                    var id = link.dataset.id;
-                    
-                    document.getElementById('p_id').value = id;
-                   
-                });
             });
         });
-    </script>
-    
-    
-    <script>
-        var maxLength = 70;
-        var elements = document.querySelectorAll('.limitedText');
-        elements.forEach(function (element) {
-            if (element.textContent.length > maxLength) {
-                element.textContent = element.textContent.substring(0, maxLength) + '...';
-            }
+    });
+</script>
+@* <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get modal and link elements
+        var modal = document.getElementById('restore_modal');
+        var links = document.querySelectorAll('[data-bs-target="#restore_modal"]');
 
+        // Add event listener for when any of the links is clicked
+        links.forEach(function (link) {
+            link.addEventListener('click', function () {
+
+                var id = link.dataset.reid;
+
+                document.getElementById('restore_id').value = id;
+                console.log(id);
+
+            });
         });
-    </script>
+    });
+</script> *@
 
-    <script>
-        var moneys = document.querySelectorAll('.price');
-        moneys.forEach(function (money) {
-            // Lấy giá trị số từ phần tử HTML
-            var amountString = money.textContent.replace(/[^\d,-]/g, ''); // Loại bỏ các ký tự không phải số, dấu phẩy hoặc dấu trừ
-            var amount = parseFloat(amountString.replace(',', '.')); // Chuyển đổi dấu phẩy sang dấu chấm cho số dấu phẩy động
-            var formattedMoney = amount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
-            money.textContent = formattedMoney; // Gán giá trị đã định dạng vào phần tử HTML
-           
-        });
+@* <script>
+    var maxLength = 70;
+    var elements = document.querySelectorAll('.limitedText');
+    elements.forEach(function (element) {
+        if (element.textContent.length > maxLength) {
+            element.textContent = element.textContent.substring(0, maxLength) + '...';
+        }
 
-    </script>
+    });
+</script> *@
 
-    
+<script>
+    var moneys = document.querySelectorAll('.price');
+    moneys.forEach(function (money) {
+        // Lấy giá trị số từ phần tử HTML
+        var amountString = money.textContent.replace(/[^\d.-]/g, ''); // Loại bỏ các ký tự không phải số, dấu phẩy hoặc dấu trừ
+        var amount = parseFloat(amountString); // Chuyển đổi chuỗi thành số
+
+        // Định dạng số tiền dưới dạng chuỗi theo mong muốn
+        var formattedMoney = amount.toLocaleString('vi-VN', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+
+        // Thêm đơn vị tiền tệ nếu cần
+        formattedMoney += ' VND';
+
+        // Gán giá trị đã định dạng vào phần tử HTML
+        money.textContent = formattedMoney;
+    });
+</script>
+
+
+
 </html>
+

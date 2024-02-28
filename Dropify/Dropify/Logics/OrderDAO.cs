@@ -1,4 +1,5 @@
 ﻿using Dropify.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Dropify.Logics
 {
@@ -33,6 +34,22 @@ namespace Dropify.Logics
             {
                 return db.OrderDetails.Where(x => x.OrderId == id).ToList();
             }
+        }
+        // Lấy tất cả order theo status
+        // Người viết: Hà Anh Dũng
+        // Ngày: 26/2/2024
+        public List<Order> GetOrderByStatus(string status)
+        {
+            List<Order> orders = new List<Order>();
+            using (var db = new prn211_dropshippingContext())
+            {
+                orders = db.Orders
+                    .Include(o => o.Address)
+                    .Include(o => o.Ud)
+                    .Where(o => o.Status == status).ToList();
+                return orders;
+            }
+            
         }
     }
 }
