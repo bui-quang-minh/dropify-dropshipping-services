@@ -1,4 +1,5 @@
 ﻿using Dropify.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Dropify.Logics
 {
@@ -12,5 +13,18 @@ namespace Dropify.Logics
                 return db.OrderDetails.ToList();
             }
         }
+
+        public List<OrderDetail> GetOrderDetailsParent(int OrderId) {
+            using (var db = new prn211_dropshippingContext())
+            {
+                var query = db.OrderDetails
+                    .Where(o=> o.OrderDetailParent == null && o.OrderId == OrderId)
+                    .Include(o=> o.Product)
+                    .ToList();
+                return query;
+            }
+        }
+
+        
     }
 }

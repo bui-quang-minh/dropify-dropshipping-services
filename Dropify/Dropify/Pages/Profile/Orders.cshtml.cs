@@ -7,13 +7,14 @@ namespace Dropify.Pages.Profile
 {
     public class OrdersModel : BasePageModel
     {
-        //[BindProperty]
-        //public OrderDetail orderDetail { get; set; }
-
+        
         [BindProperty]
+        
         public Models.Order Order { get; set; }
-        public Dropify.Models.prn211_dropshippingContext con;
-        public OrderDAO od = new OrderDAO();
+        private Dropify.Models.prn211_dropshippingContext con;
+        private OrderDAO od = new OrderDAO();
+        
+
 
         public List<Models.Order> OderedOrders { get; set; }
         public List<Models.Order> SuccessOrders { get; set; }
