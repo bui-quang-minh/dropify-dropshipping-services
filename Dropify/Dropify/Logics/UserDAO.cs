@@ -78,7 +78,7 @@ namespace Dropify.Logics
             string encryptpass = Convert.ToBase64String(storePassword);
             return encryptpass;
         }
-        private string DecryptPass(string password)
+        public string DecryptPass(string password)
         {
             byte[] encryptpass = Convert.FromBase64String(password);
             string decryptpass = ASCIIEncoding.ASCII.GetString(encryptpass);

@@ -1,30 +1,28 @@
 ﻿@using Dropify.Logics
+@using System.Text.Json
+@using Dropify.Models
 @{
-    // Check if user_email is present in session
-    var userEmail = Context.Session.GetString("user_email");
+    var userJson = Context.Session.GetString("user");
 
-    if (!string.IsNullOrEmpty(userEmail))
+    if (!string.IsNullOrEmpty(userJson))
     {
-        // User is logged in, check authorization
+        var user = JsonSerializer.Deserialize<User>(userJson);
         var userDAO = new UserDAO();
-        var isAdmin = userDAO.Authorization(userEmail);
+        var isAdmin = userDAO.Authorization(user.Email);
 
         if (isAdmin)
         {
-            // User is an admin, use _AdminLayout
             Layout = "_AdminLayout";
             System.Diagnostics.Debug.WriteLine("Using _AdminLayout");
         }
         else
         {
-            // User is not an admin, use _Layout
             Layout = "_Layout";
             System.Diagnostics.Debug.WriteLine("Using _Layout");
         }
     }
     else
     {
-        // User is not logged in, use default layout
         Layout = "_Layout";
         System.Diagnostics.Debug.WriteLine("Using no layout (User not logged in)");
     }

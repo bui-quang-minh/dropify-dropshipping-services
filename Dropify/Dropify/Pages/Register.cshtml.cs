@@ -1,7 +1,9 @@
 using Dropify.Logics;
+using Dropify.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Text;
+using System.Text.Json;
 
 namespace Dropify.Pages
 {
@@ -14,27 +16,38 @@ namespace Dropify.Pages
         public string Password { get; set; }
         [BindProperty]
         public string password_confirmation { get; set; }
-        [BindProperty]
-        public string first_name { get; set; }
 
         [BindProperty]
-        public string last_name { get; set; }
-        public void OnGet()
+        public string full_name { get; set; }
+        public IActionResult OnGet()
         {
-
-
+            if (HttpContext.Session.GetString("user") == null)
+                return Page();
+            else
+            {
+                var user = JsonSerializer.Deserialize<User>(HttpContext.Session.GetString("user"));
+                var userDAO = new UserDAO();
+                if (userDAO.Authorization(user.Email))
+                {
+                    return RedirectToPage("Admin/Dashboard");
+                }
+                else
+                {
+                    return RedirectToPage("Index");
+                }
+            }
         }
         public IActionResult OnPost()
         {
             TempData.Clear();
             UserDAO ud = new UserDAO();
-            string fullName = first_name + " " + last_name;
+            string fullName = full_name;
 
             StringBuilder errorMessages = new StringBuilder();
 
-            if (string.IsNullOrEmpty(first_name.Trim()) || string.IsNullOrEmpty(last_name.Trim()))
+            if (string.IsNullOrEmpty(full_name.Trim()))
             {
-                errorMessages.AppendLine("First Name and Last Name are required");
+                errorMessages.AppendLine("Full Name is required");
             }
 
             if (Password != password_confirmation)
