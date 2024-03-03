@@ -2,6 +2,7 @@
 {
     public class Cart
     {
+        public int CartId { get; set; }
         public int ProductId { get; set; }
         public string ProductName { 
             get {
@@ -35,12 +36,15 @@
             {
                 using (var context = new prn211_dropshippingContext())
                 {
-                    ProductDetail color = context.ProductDetails.FirstOrDefault(x => x.ProductDetailId == int.Parse(ProductColor));
-                    if (color == null)
+                    try
+                    {
+                        ProductDetail? color = context.ProductDetails.FirstOrDefault(x => x.ProductDetailId == int.Parse(ProductColor));
+                        return color?.Attribute;
+                    }
+                    catch (Exception e)
                     {
                         return "";
                     }
-                    return color?.Attribute;
                 }
             }
             set { }
@@ -51,12 +55,13 @@
             {
                 using (var context = new prn211_dropshippingContext())
                 {
-                    ProductDetail size = context.ProductDetails.FirstOrDefault(x => x.ProductDetailId == int.Parse(ProductSize));
-                    if (size == null)
-                    {
+                    try { 
+                        ProductDetail? size = context.ProductDetails.FirstOrDefault(x => x.ProductDetailId == int.Parse(ProductSize));
+                        return size?.Attribute;
+                    }
+                    catch (Exception e) {
                         return "";
                     }
-                    return size?.Attribute;
                 }
             }
             set { }
@@ -67,8 +72,14 @@
             {
                 using (var context = new prn211_dropshippingContext())
                 {
-                    ProductDetail options = context.ProductDetails.FirstOrDefault(x => x.ProductDetailId == int.Parse(ProductOptions));
-                    return options?.Attribute;
+                    try { 
+                        ProductDetail? options = context.ProductDetails.FirstOrDefault(x => x.ProductDetailId == int.Parse(ProductOptions));
+                        return options?.Attribute;
+                    }
+                    catch (Exception e)
+                    {
+                        return "";
+                    }
                 }
             }
             set { }

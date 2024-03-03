@@ -48,9 +48,25 @@ namespace Dropify.Pages.Product
             {
                 productCartList = new List<Models.Cart>();
             }
+            int maxId=0;
+            foreach (var item in productCartList)
+            {
+                if (item.CartId > maxId) { 
+                    maxId = item.CartId;
+                }
+            }
+            productCart.CartId = maxId + 1;
             productCartList.Add(productCart);
-            Response.Cookies.Append("cart", JsonConvert.SerializeObject(productCartList));
-            HttpContext.Response.Cookies.Append("cart", JsonConvert.SerializeObject(productCartList));
+            var cookieOptions = new Microsoft.AspNetCore.Http.CookieOptions
+            {
+                Secure = true,
+                HttpOnly = true,
+                SameSite = Microsoft.AspNetCore.Http.SameSiteMode.None,
+                Path = "/; samesite=None; Partitioned"
+            };
+
+            //Response.Cookies.Append("cart", JsonConvert.SerializeObject(productCartList),cookieOptions);
+            HttpContext.Response.Cookies.Append("cart", JsonConvert.SerializeObject(productCartList), cookieOptions);
             return RedirectToPage("/Cart");
         }
     }
