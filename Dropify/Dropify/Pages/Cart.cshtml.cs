@@ -15,8 +15,22 @@ namespace Dropify.Pages
         public List<Models.Cart> productCartList;
         public String jsonCart;
         public List<UserAddress> uad ;
-        public void OnGet()
+        public User user;
+        public UserDetail userDetail;
+        public IActionResult OnGet()
         {
+            string userString = HttpContext.Session.GetString("user");
+            System.Diagnostics.Debug.WriteLine("UID: " + userString);
+            if (userString != null )
+            {
+               user = JsonConvert.DeserializeObject<User>(userString);
+               UserDetailDAO userDAO = new UserDetailDAO();
+               userDetail = userDAO.GetUserDetailById(user.Uid);
+            }
+            else
+            {
+                return RedirectToPage("/Login");
+            }
             UserAddressDAO userAddressDAO = new UserAddressDAO();
             uad = userAddressDAO.GetAllUserAddresses();
             if (Request.Cookies.TryGetValue("cart", out string cartCookieString))
@@ -28,6 +42,7 @@ namespace Dropify.Pages
             {
                 productCartList = new List<Models.Cart>();
             }
+            return Page();
         }
         public IActionResult OnPostRemove() {
             CookieOptions option = new CookieOptions();

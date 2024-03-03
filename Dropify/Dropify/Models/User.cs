@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Dropify.Models
 {
@@ -22,7 +23,7 @@ namespace Dropify.Models
         [Display(Name = "Password (*)")]
         public string Pword { get; set; }
         public string? Status { get; set; }
-
+        
         public virtual ICollection<UserDetail> UserDetails { get; set; }
     }
 }
