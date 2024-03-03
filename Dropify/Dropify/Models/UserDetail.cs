@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Dropify.Models
 {
@@ -10,9 +11,10 @@ namespace Dropify.Models
             Orders = new HashSet<Order>();
             UserAddresses = new HashSet<UserAddress>();
         }
-
+        [Key]
         public int Udid { get; set; }
         public int? Uid { get; set; }
+        [Required(ErrorMessage = "Full name is required.")]
         public string Name { get; set; } = null!;
         public DateTime Dob { get; set; }
         public string Sex { get; set; } = null!;

@@ -35,24 +35,49 @@
                                 <h3>Login <span>Mentoring</span></h3>
                                 <p class="text-muted">Access to our dashboard</p>
                             </div>
-                            @if (TempData["ErrorMessage"] != null)
+                            @if (TempData["msg"] != null)
                             {
                                 <div class="alert alert-danger" role="alert">
-                                    @TempData["ErrorMessage"]
+                                    @TempData["msg"]
                                 </div>
                             }
                             <form method="post">
+                                @{
+                                    var emailErrors = ViewData.ModelState["User.Email"];
+                                    var passwordErrors = ViewData.ModelState["User.Pword"];
+                                }
+
+                                @if (emailErrors != null && emailErrors.Errors.Count > 0)
+                                {
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        <span>@emailErrors.Errors[0].ErrorMessage</span>
+                                        <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                }
                                 <div class="form-group">
-                                    <label class="form-control-label">Email Address</label>
-                                    <input type="email" class="form-control" asp-for="Email">
+                                    <label asp-for="User.Email" class="form-control-label"></label>
+                                    <input class="form-control" asp-for="User.Email">
                                 </div>
+
+                                @if (passwordErrors != null && passwordErrors.Errors.Count > 0)
+                                {
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        <span>@passwordErrors.Errors[0].ErrorMessage</span>
+                                        <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                }
                                 <div class="form-group">
-                                    <label class="form-control-label">Password</label>
+                                    <label asp-for="User.Pword" class="form-control-label"></label>
                                     <div class="pass-group">
-                                        <input type="password" class="form-control pass-input" asp-for="Password">
+                                        <input class="form-control pass-input" asp-for="User.Pword">
                                         <span class="fas fa-eye toggle-password"></span>
                                     </div>
                                 </div>
+
                                 <div class="text-end">
                                     <a class="forgot-link" href="forgot-password.html">Forgot Password ?</a>
                                 </div>

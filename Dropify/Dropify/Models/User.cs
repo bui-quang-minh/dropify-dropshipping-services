@@ -12,9 +12,15 @@ namespace Dropify.Models
         }
         [Key]
         public int Uid { get; set; }
-        [Required]
+        [EmailAddress(ErrorMessage = "Email address incorrect format.")]
+        [Required(ErrorMessage = "Email is required.")]
+        [Display(Name = "Email address (*)")]
         public string Email { get; set; }
-        public string? Pword { get; set; }
+        [DataType(DataType.Password)]
+        [Required(ErrorMessage = "Password is required.")]
+        //[StringLength(50, MinimumLength = 8, ErrorMessage = "Password must be at least 8 characters long.")]
+        [Display(Name = "Password (*)")]
+        public string Pword { get; set; }
         public string? Status { get; set; }
 
         public virtual ICollection<UserDetail> UserDetails { get; set; }

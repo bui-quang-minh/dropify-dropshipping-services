@@ -1,6 +1,8 @@
 ﻿@page
 @model Dropify.Pages.RegisterModel
-
+@{
+    Layout = null;
+}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,16 +43,10 @@
                             }
                             <form method="post">
                                 <div class="row">
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-12">
                                         <div class="form-group">
-                                            <label class="form-control-label">First Name</label>
-                                            <input id="first-name" type="text" class="form-control" name="first_name" asp-for="first_name" autofocus required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="form-control-label">Last Name</label>
-                                            <input id="last-name" type="text" class="form-control" name="last_name" asp-for="last_name" required>
+                                            <label class="form-control-label">Full Name</label>
+                                            <input type="text" class="form-control" asp-for="full_name" required>
                                         </div>
                                     </div>
                                 </div>
