@@ -91,6 +91,12 @@
                                                                 <span class="badge badge-pill bg-secondary inv-badge">@p.Status</span>
                                                             </td>
                                                         }
+                                                        @if (p.Status == null)
+                                                        {
+                                                            <td class="text-center">
+                                                                <span class="badge badge-pill bg-danger inv-badge">Null</span>
+                                                            </td>
+                                                        }
                                                        
 
 
