@@ -20,17 +20,22 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-
+    @{
+        static string ConvertToVND(double number)
+        {
+            string[] parts = number.ToString().Split('.');
+            string formattedBeforeDecimal = string.Format("{0:n0}", Convert.ToInt64(parts[0]));
+            string result = formattedBeforeDecimal + (parts.Length > 1 ? "." + parts[1] : "");
+            return result + " VND";
+        }
+    }
     <div class="main-wrapper">
         <div class="breadcrumb-bar">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-md-12 col-12">
                         <nav aria-label="breadcrumb" class="page-breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Products</li>
-                            </ol>
+                            
                         </nav>
                         <h2 class="breadcrumb-title">Products</h2>
                     </div>
@@ -87,12 +92,8 @@
 
 
                                 <div class="tab-content">
-
-
                                     <div role="tabpanel" id="activeservice" class="tab-pane fade show active">
                                         <div class="row">
-
-
                                             @foreach (Models.Product p in Model.products)
                                             {
                                             <div class="col-12 col-md-6 col-xl-4 d-flex">
@@ -108,9 +109,9 @@
                                                             <div class="col">
                                                             </div>
                                                             <div class="col text-end">
-                                                                    <a href="javascript:void(0);" class="far fa-edit">
-                                                                    <i class="far fa-trash-alt"></i> @p.SellOutPrice
-                                                                </a>
+                                                                <a style="color: red ; font-weight: 500">
+                                                                     @ConvertToVND(Convert.ToDouble(p.SellOutPrice/100*115))
+                                                                    </a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -119,7 +120,34 @@
                                             }
                                         </div>
                                     </div>
-
+                                    <div role="tabpanel" id="inactiveservice" class="tab-pane fade show ">
+                                        <div class="row">
+                                            @foreach (Models.Product p in Model.inactiveproducts)
+                                            {
+                                                <div class="col-12 col-md-6 col-xl-4 d-flex">
+                                                    <div class="course-box blog grid-blog">
+                                                        <div class="blog-image mb-0">
+                                                            <a href="/Product/ProductDetail?productId=@p.ProductId"><img class="img-fluid" src="@p.ProductThumbnailImage" alt="Post Image"></a>
+                                                        </div>
+                                                        <div class="course-content">
+                                                            <span class="date">@p.CreatedDate</span>
+                                                            <span class="course-title"><a href="/Product/ProductDetail?productId=@p.ProductId">@p.ProductShortenName</a></span>
+                                                            <p>@p.ProductDescription</p>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                </div>
+                                                                <div class="col text-end">
+                                                                    <a href="">
+                                                                        <p style="color: red">@p.Status</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>

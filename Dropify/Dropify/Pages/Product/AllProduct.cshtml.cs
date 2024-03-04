@@ -12,10 +12,12 @@ namespace Dropify.Pages.Product
     public class AllProductModel : BasePageModel
     {
         ProductDAO pd = new ProductDAO();
+        public List<Models.Product> inactiveproducts = new List<Models.Product>();
         public List<Models.Product> products = new List<Models.Product>();
         public List<Models.Category> childCategories = new CategoryDAO().GetAvailableCategories();
         public void OnGet()
         {
+            inactiveproducts = pd.GetProductByStatus("Inactive");
             if (Request.Query.TryGetValue("categorySearch", out var cid) || Request.Query.TryGetValue("supplierSearch", out var sid)) {
                 Request.Query.TryGetValue("categorySearch", out cid);
                 Request.Query.TryGetValue("supplierSearch", out sid);
@@ -39,7 +41,8 @@ namespace Dropify.Pages.Product
 
             }
             else {
-                products = pd.GetAllProducts();
+                products = pd.GetProductByStatus("Active");
+                products.AddRange(pd.GetProductByStatus("Release"));
             }
             
         }
