@@ -22,14 +22,18 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body class="account-page">
-
+    <meta name="google-signin-client_id" content="596683861270-mob7go6seueibagkd7f88acv5s69l1et.apps.googleusercontent.com.googleusercontent.com">
     <div class="main-wrapper">
 
-        <div class="bg-pattern-style">
+        <div class="bg-pattern-style" style="background:url('assets/img/abstract-gradient.jpg') no-repeat;background-position:center;background-size:cover;opacity:1">
             <div class="content">
-
                 <div class="account-content">
-                    <div class="account-box">
+                    <div class="account-box" style="height:640px; align-items:start;
+                    background: rgba(255, 255, 255, 0.9);
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                    "
+                    >
                         <div class="login-right">
                             <div class="login-header">
                                 <h3>Login <span>Mentoring</span></h3>
@@ -82,6 +86,10 @@
                                     <a class="forgot-link" href="forgot-password.html">Forgot Password ?</a>
                                 </div>
                                 <button class="btn btn-primary login-btn" type="submit">Login</button>
+                                <br/>k9
+                                <button class="btn btn-google login-btn" type="submit">
+                                    <i class="fab fa-google"></i> Login Using Google
+                                </button>
                                 <div class="text-center dont-have">Don’t have an account? <a href="/Register">Register</a></div>
                             </form>
                         </div>
@@ -92,12 +100,12 @@
         </div>
 
     </div>
-
+    <script src="~/js/google.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <script src="/assets/js/jquery-3.6.0.min.js"></script>
 
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
-
     <script src="/assets/js/script.js"></script>
 </body>
 
