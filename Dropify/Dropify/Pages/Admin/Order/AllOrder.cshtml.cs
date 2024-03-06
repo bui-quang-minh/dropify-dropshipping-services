@@ -1,12 +1,21 @@
+using Dropify.Logics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Dropify.Pages.Admin.Order
 {
-    public class AllOrderModel : PageModel
+    public class AllOrderModel : BasePageModel
     {
+
+        OrderDAO od = new OrderDAO();
+        public List<Models.Order> listOrdered {  get; set; }
+        public List<Models.Order> listSuccess { get; set; }
+        public List<Models.Order> listCancel { get; set; }
         public void OnGet()
         {
+            listOrdered = od.GetOrderByStatus("Ordered");
+            listSuccess = od.GetOrderByStatus("Success");
+            listCancel = od.GetOrderByStatus("Canceled");
         }
     }
 }
