@@ -20,7 +20,7 @@ namespace Dropify.Models
         [StringLength(50, ErrorMessage = "Name must be between 1 and 50 characters", MinimumLength = 1)]
         public string Name { get; set; } = null!;
         [Required(ErrorMessage = "Input Date")]
-        [Display(Name = "Date of bird")]
+        [Display(Name = "Date of birth")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Dob { get; set; }
