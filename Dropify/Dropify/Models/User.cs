@@ -25,5 +25,44 @@ namespace Dropify.Models
         public string? Status { get; set; }
         
         public virtual ICollection<UserDetail> UserDetails { get; set; }
+
+        // set ImgUrl là thuộc tính của User để lấy ảnh từ UserDetail
+        // Người viết : NQT
+        [NotMapped]
+        public virtual string? ImgUrl
+        {
+            get
+            {
+                using (var db = new prn211_dropshippingContext())
+                {
+                    var user = db.UserDetails.FirstOrDefault(u => u.Uid == Uid);
+                    return user?.ImgUrl;
+                }
+            }
+
+            set
+            {
+            }
+        }
+
+        // set ImgUrl là thuộc tính của User để lấy Name user từ UserDetail 
+        // Người viết : NQT
+
+        [NotMapped]
+        public virtual string? NameUser
+        {
+            get
+            {
+                using (var db = new prn211_dropshippingContext())
+                {
+                    var user = db.UserDetails.FirstOrDefault(u => u.Uid == Uid);
+                    return user?.Name;
+                }
+            }
+
+            set
+            {
+            }
+        }
     }
 }

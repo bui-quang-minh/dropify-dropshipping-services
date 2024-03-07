@@ -1,6 +1,10 @@
 using Dropify.Logics;
+using Dropify.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace Dropify.Pages.Admin.Order
 {
@@ -11,13 +15,34 @@ namespace Dropify.Pages.Admin.Order
         public List<Models.Order> listNotShipping{ get; set; }
         public List<Models.Order> listShipping { get; set; }
         public List<Models.Order> listArrived { get; set; }
-        public void OnGet()
+        public User user;
+        public UserDetail userDetail;
+        public IActionResult OnGet()
         {
-            listNotShipping = od.GetOrderByStatusShip("Not Shipped");
-            listShipping = od.GetOrderByStatusShip("Shipping");
-            listArrived = od.GetOrderByStatusShip("Arrived");
-        }
+            string userString = HttpContext.Session.GetString("user");
 
+            if (userString != null)
+            {
+                user = JsonConvert.DeserializeObject<User>(userString);
+                UserDetailDAO userDAO = new UserDetailDAO();
+                userDetail = userDAO.GetUserDetailById(user.Uid);
+                if (userDetail.Admin == true)
+                {
+                    listNotShipping = od.GetOrderByStatusShip("Not Shipped");
+                    listShipping = od.GetOrderByStatusShip("Shipping");
+                    listArrived = od.GetOrderByStatusShip("Arrived");
+                    return Page();
+                }
+                else
+                {
+                    return RedirectToPage("/Index");
+                }
+            }
+            else
+            {
+                return RedirectToPage("/Login");
+            }
+        }
         public IActionResult OnPostUpdate()
         {
             var id = Request.Form["orderId"];

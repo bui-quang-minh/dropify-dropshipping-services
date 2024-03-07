@@ -2,6 +2,7 @@ using Dropify.Logics;
 using Dropify.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
 
 namespace Dropify.Pages.Admin.Categories
 {
@@ -10,16 +11,33 @@ namespace Dropify.Pages.Admin.Categories
         public CategoryDAO cd = new CategoryDAO();
         public List<Category> categories { get; set; }
         public Category category { get; set; }
-        
-        public void OnGet()
+        public User user;
+        public UserDetail userDetail;
+        public IActionResult OnGet()
         {
-           
-            
-                Request.Query.TryGetValue("id", out var id);
-                categories = cd.getCateChildren(int.Parse(id));
-                category = cd.GetCateById(int.Parse(id));
-           
+            string userString = HttpContext.Session.GetString("user");
 
+            if (userString != null)
+            {
+                user = JsonConvert.DeserializeObject<User>(userString);
+                UserDetailDAO userDAO = new UserDetailDAO();
+                userDetail = userDAO.GetUserDetailById(user.Uid);
+                if (userDetail.Admin == true)
+                {
+                    Request.Query.TryGetValue("id", out var id);
+                    categories = cd.getCateChildren(int.Parse(id));
+                    category = cd.GetCateById(int.Parse(id));
+                    return Page();
+                }
+                else
+                {
+                    return RedirectToPage("/Index");
+                }
+            }
+            else
+            {
+                return RedirectToPage("/Login");
+            }
         }
         public IActionResult OnPostAdd()
         {

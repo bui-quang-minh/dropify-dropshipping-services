@@ -1,6 +1,8 @@
 using Dropify.Logics;
+using Dropify.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
 
 namespace Dropify.Pages.Admin.Products
 {
@@ -10,13 +12,35 @@ namespace Dropify.Pages.Admin.Products
         public List<Models.ProductDetail> productDetail;
         ProductDAO pd = new ProductDAO();
         ProductDetailDAO pdd = new ProductDetailDAO();
-
+        public User user;
+        public UserDetail userDetail;
         public IActionResult OnGet(int? id)
         {
-            product = pd.GetProductById((int)id);
-            productDetail = pdd.GetProductDetailById((int)id);
-            return Page();
+            string userString = HttpContext.Session.GetString("user");
+
+            if (userString != null)
+            {
+                user = JsonConvert.DeserializeObject<User>(userString);
+                UserDetailDAO userDAO = new UserDetailDAO();
+                userDetail = userDAO.GetUserDetailById(user.Uid);
+                if (userDetail.Admin == true)
+                {
+                    product = pd.GetProductById((int)id);
+                    productDetail = pdd.GetProductDetailById((int)id);
+                   
+                    return Page();
+                }
+                else
+                {
+                    return RedirectToPage("/Index");
+                }
+            }
+            else
+            {
+                return RedirectToPage("/Login");
+            }
         }
+       
         public IActionResult OnPostEdit()
         {
            

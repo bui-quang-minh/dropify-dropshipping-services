@@ -2,6 +2,7 @@ using Dropify.Logics;
 using Dropify.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
 
 namespace Dropify.Pages.Admin.Order
 {
@@ -11,22 +12,33 @@ namespace Dropify.Pages.Admin.Order
         OrderDAO od = new OrderDAO();
         public List<OrderDetail> listOd {  get; set; }
         public Models.Order order { get; set; }
+        public User user;
+        public UserDetail userDetail;
         public IActionResult OnGet(int id)
         {
-            try
+            string userString = HttpContext.Session.GetString("user");
+
+            if (userString != null)
             {
-                listOd = odd.GetOrderDetailByOrderId(id);
-                order = od.GetOrderById(id);
-                return Page();
+                user = JsonConvert.DeserializeObject<User>(userString);
+                UserDetailDAO userDAO = new UserDetailDAO();
+                userDetail = userDAO.GetUserDetailById(user.Uid);
+                if (userDetail.Admin == true)
+                {
+                    listOd = odd.GetOrderDetailByOrderId(id);
+                    order = od.GetOrderById(id);
+                    return Page();
+                }
+                else
+                {
+                    return RedirectToPage("/Index");
+                }
             }
-            catch(Exception ex)
+            else
             {
-                return NotFound();
+                return RedirectToPage("/Login");
             }
-           
-              
-          
-            
         }
+        
     }
 }

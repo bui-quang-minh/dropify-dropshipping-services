@@ -92,6 +92,8 @@ namespace Dropify.Logics
                                join ud in db.UserDetails on u.Uid equals ud.Uid
                                where u.Email == email && ud.Admin
                                select ud).Any();
+
+                
                 return isAdmin;
             }
         }

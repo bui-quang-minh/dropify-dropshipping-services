@@ -68,15 +68,17 @@
                                     <ul class="submenu">
                                         @foreach (Models.Category c in Model.categories)
                                         {
-                                            if (c.ChildCategory.Count > 0){
-                                            <li class="has-submenu"><a href="">@c.CategoryName</a>
-                                                <ul class="submenu">
-                                                    @foreach (Models.Category c2 in c.ChildCategory)
-                                                    {
-                                                        <li><a href="/Product/AllProduct?categorySearch=@c2.CategoryId">@c2.CategoryName</a></li>
-                                                    }
-                                                </ul>
-                                            </li>
+                                            if (c.ChildCategory.Count > 0)
+                                            {
+                                                <li class="has-submenu">
+                                                    <a href="">@c.CategoryName</a>
+                                                    <ul class="submenu">
+                                                        @foreach (Models.Category c2 in c.ChildCategory)
+                                                        {
+                                                            <li><a href="/Product/AllProduct?categorySearch=@c2.CategoryId">@c2.CategoryName</a></li>
+                                                        }
+                                                    </ul>
+                                                </li>
                                             }
                                             else
                                             {
@@ -115,28 +117,62 @@
                     </ul>
                 </div>
                 <ul class="nav header-navbar-rht">
+                    @{
+                        string UserJson = Context.Request.HttpContext.Session.GetString("user");
+                        if (!string.IsNullOrEmpty(UserJson))
+                        {
+                            Models.User user = JsonSerializer.Deserialize<Models.User>(UserJson);
+                            if (user != null)
+                            {
+                                <li class="nav-item dropdown has-arrow logged-item">
+                                    <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
 
-                    <li class="nav-item dropdown has-arrow logged-item">
-                        <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-                            <span class="user-img">
-                                <img class="rounded-circle" src="/assets/img/user/user.jpg" width="31" alt="Darren Huhu">
-                            </span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <div class="user-header">
-                                <div class="avatar avatar-sm">
-                                    <img src="/assets/img/user/user.jpg" alt="User Image" class="avatar-img rounded-circle">
+                                        <span class="user-img">
+                                            <img class="rounded-circle" src="@user.ImgUrl" width="31" alt="Darren Huhu">
+                                        </span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <div class="user-header">
+                                            <div class="avatar avatar-sm">
+                                                <img src="@user.ImgUrl" alt="User Image" class="avatar-img rounded-circle">
+                                            </div>
+                                            <div class="user-text">
+                                                <h6>@user.NameUser</h6>
+                                                <p class="text-muted mb-0">Customer</p>
+                                            </div>
+                                        </div>
+                                        <a class="dropdown-item" href="dashboard.html">Dashboard</a>
+                                        <a class="dropdown-item" href="profile-settings.html">Profile Settings</a>
+                                        <a class="dropdown-item" href="/Logout">Logout</a>
+                                    </div>
+                                </li>
+                            }
+                        }
+                        else
+                        {
+                            <li class="nav-item dropdown has-arrow logged-item">
+                                <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+
+                                    <span class="user-img">
+                                        <img class="rounded-circle" src="https://img.thuthuatphanmem.vn/uploads/2018/09/22/avatar-trang-den-dep_015640236.png" width="31" alt="Darren Huhu">
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <div class="user-header">
+                                        <div class="avatar avatar-sm">
+                                            <img src="https://img.thuthuatphanmem.vn/uploads/2018/09/22/avatar-trang-den-dep_015640236.png" alt="User Image" class="avatar-img rounded-circle">
+                                        </div>
+                                        <div class="user-text">
+                                            <h6>Guest</h6>
+
+                                        </div>
+                                    </div>
+                                    <a class="dropdown-item" href="/Login">Login</a>
                                 </div>
-                                <div class="user-text">
-                                    <h6>@Context.Request.HttpContext.Session.GetString("user_email")!</h6>
-                                    <p class="text-muted mb-0">Mentor</p>
-                                </div>
-                            </div>
-                            <a class="dropdown-item" href="dashboard.html">Dashboard</a>
-                            <a class="dropdown-item" href="profile-settings.html">Profile Settings</a>
-                            <a class="dropdown-item" href="login.html">Logout</a>
-                        </div>
-                    </li>
+                            </li>
+                        }
+
+                    }
 
                 </ul>
             </nav>

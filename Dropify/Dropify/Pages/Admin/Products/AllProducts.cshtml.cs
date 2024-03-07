@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Dropify.Models;
 using Dropify.Logics;
+using Newtonsoft.Json;
 
 namespace Dropify.Pages.Admin.ManageProduct
 {
@@ -34,19 +35,38 @@ namespace Dropify.Pages.Admin.ManageProduct
         public IList<Models.Product> ListProduct4 { get; set; }
 
         public List<Models.Product> lp = new List<Models.Product>();
-        public void OnGet()
+        public User user;
+        public UserDetail userDetail;
+        public IActionResult OnGet()
         {
-            ListProduct = pd.GetProductByStatus("Release"); // san pham co trạng thái Release
-            ListProduct1 = pd.GetProductByStatus("Selling");// san pham co trạng thái Selling 
-            ListProduct2 = pd.GetProductByStatus("Shipping"); // san pham co trạng thái Shipping
-            ListProduct3 = pd.GetProductByStatus("Success"); // san pham co trạng thái Success
-            ListProduct4 = pd.GetProductByStatus("Cancel"); // san pham co trạng thái Cancel
+            string userString = HttpContext.Session.GetString("user");
 
-            categories = con.Categories.ToList();
-            suppliers = con.Suppliers.ToList();
-            categories = con.Categories.ToList();
-            suppliers = con.Suppliers.ToList();
+            if (userString != null)
+            {
+                user = JsonConvert.DeserializeObject<User>(userString);
+                UserDetailDAO userDAO = new UserDetailDAO();
+                userDetail = userDAO.GetUserDetailById(user.Uid);
+                if (userDetail.Admin == true)
+                {
+                    ListProduct = pd.GetProductByStatus("Release"); // san pham co trạng thái Release
+                    ListProduct1 = pd.GetProductByStatus("Selling");// san pham co trạng thái Selling 
+                    ListProduct2 = pd.GetProductByStatus("Shipping"); // san pham co trạng thái Shipping
+                    ListProduct3 = pd.GetProductByStatus("Success"); // san pham co trạng thái Success
+                    ListProduct4 = pd.GetProductByStatus("Cancel"); // san pham co trạng thái Cancel
 
+                    categories = con.Categories.ToList();
+                    suppliers = con.Suppliers.ToList();
+                    return Page();
+                }
+                else
+                {
+                    return RedirectToPage("/Index");
+                }
+            }
+            else
+            {
+                return RedirectToPage("/Login");
+            }
         }
         public IActionResult OnPostDelete()
         {
