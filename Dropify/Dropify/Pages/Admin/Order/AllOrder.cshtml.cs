@@ -17,5 +17,17 @@ namespace Dropify.Pages.Admin.Order
             listSuccess = od.GetOrderByStatus("Success");
             listCancel = od.GetOrderByStatus("Canceled");
         }
+
+        public IActionResult OnPostDelete()
+        {
+            var id = Request.Form["orderId"];
+            var order = od.GetOrderById(int.Parse(id.ToString()));
+            if(order != null)
+            {
+                order.Status = "Canceled";
+                od.Remove(order);
+            }
+            return RedirectToPage("AllOrder");
+        }
     }
 }

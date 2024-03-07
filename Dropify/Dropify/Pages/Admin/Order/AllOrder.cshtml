@@ -86,13 +86,36 @@
                                                                         }
                                                                         <td class="price">@o.OrderedPrice</td>
                                                                         <td>
-                                                                            <span> @o.ShipStatus</span>
+                                                                            @{
+                                                                                if (o.ShipStatus == "Not Shipped")
+                                                                                {
+                                                                                    <a class="btn btn-sm bg-secondary">
+                                                                                        @o.ShipStatus
+                                                                                    </a>
+                                                                                }
+                                                                                if (o.ShipStatus == "Shipping")
+                                                                                {
+                                                                                    <a class="btn btn-sm bg-warning">
+                                                                                        @o.ShipStatus
+                                                                                    </a>
+                                                                                }
+                                                                                if (o.ShipStatus == "Arrived")
+                                                                                {
+                                                                                    <a class="btn btn-sm bg-success">
+                                                                                        @o.ShipStatus
+                                                                                    </a>
+                                                                                }
+                                                                            }
+                                                                            
                                                                         </td>
 
-                                                                        <td class="text-end">
+                                                                        <td class="text-center">
                                                                             <div class="actions">
+                                                                                <a href="/Admin/Order/OrderDetail?id=@o.OrderId" class="btn btn-sm bg-warning-light">
+                                                                                    <i class="fa fa-eye"></i>   Detail
+                                                                                </a>
                                                                                 <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@o.OrderId" class="btn btn-sm bg-danger-light">
-                                                                                    <i class="fe fe-trash"></i> Delete
+                                                                                    <i class="fe fe-trash"></i> Cancel
                                                                                 </a>
                                                                             </div>
                                                                         </td>
@@ -155,13 +178,33 @@
                                                                         <td class="price">@o.OrderedPrice</td>
 
                                                                         <td>
-                                                                            <span > @o.ShipStatus</span>
+                                                                            @{
+                                                                                if (o.ShipStatus == "Not Shipped")
+                                                                                {
+                                                                                    <a class="btn btn-sm bg-secondary">
+                                                                                        @o.ShipStatus
+                                                                                    </a>
+                                                                                }
+                                                                                if (o.ShipStatus == "Shipping")
+                                                                                {
+                                                                                    <a class="btn btn-sm bg-warning">
+                                                                                        @o.ShipStatus
+                                                                                    </a>
+                                                                                }
+                                                                                if (o.ShipStatus == "Arrived")
+                                                                                {
+                                                                                    <a class="btn btn-sm bg-success">
+                                                                                        @o.ShipStatus
+                                                                                    </a>
+                                                                                }
+                                                                            }
+
                                                                         </td>
 
-                                                                        <td class="text-end">
+                                                                        <td class="text-center">
                                                                             <div class="actions">
-                                                                                <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@o.OrderId" class="btn btn-sm bg-danger-light">
-                                                                                    <i class="fe fe-trash"></i> Delete
+                                                                                <a href="/Admin/Order/OrderDetail?id=@o.OrderId" class="btn btn-sm bg-warning-light">
+                                                                                    <i class="fa fa-eye"></i> Detail
                                                                                 </a>
                                                                             </div>
                                                                         </td>
@@ -224,13 +267,33 @@
                                                                         }
                                                                         <td class="price">@o.OrderedPrice</td>
                                                                         <td>
-                                                                            <span > @o.ShipStatus</span>
+                                                                            @{
+                                                                                if (o.ShipStatus == "Not Shipped")
+                                                                                {
+                                                                                    <a class="btn btn-sm bg-secondary">
+                                                                                        @o.ShipStatus
+                                                                                    </a>
+                                                                                }
+                                                                                if (o.ShipStatus == "Shipping")
+                                                                                {
+                                                                                    <a class="btn btn-sm bg-warning">
+                                                                                        @o.ShipStatus
+                                                                                    </a>
+                                                                                }
+                                                                                if (o.ShipStatus == "Arrived")
+                                                                                {
+                                                                                    <a class="btn btn-sm bg-success">
+                                                                                        @o.ShipStatus
+                                                                                    </a>
+                                                                                }
+                                                                            }
+
                                                                         </td>
 
-                                                                        <td class="text-end">
+                                                                        <td class="text-center">
                                                                             <div class="actions">
-                                                                                <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@o.OrderId" class="btn btn-sm bg-danger-light">
-                                                                                    <i class="fe fe-trash"></i> Delete
+                                                                                <a href="/Admin/Order/OrderDetail?id=@o.OrderId" class="btn btn-sm bg-warning-light">
+                                                                                    <i class="fa fa-eye"></i> Detail
                                                                                 </a>
                                                                             </div>
                                                                         </td>
@@ -262,12 +325,12 @@
             <div class="modal-content"  >
 
                 <div class="modal-body">
-                    <form method="post" asp-page="/Admin/Products/AllProducts" asp-page-handler="Delete">
+                    <form method="post" asp-page="/Admin/Order/AllOrder" asp-page-handler="Delete">
                         <div class="form-content p-2">
                             <h4 class="modal-title">Delete</h4>
                             <p class="mb-4">Are you sure want to delete?</p>
                             <button type="submit" id="MyLink" class="btn btn-primary" >Delete </button>
-                            <input type="hidden" value="" id="p_id" name="p_id"  />
+                            <input type="hidden" value="" id="orderId" name="orderId" />
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                         </div>
                     </form>
@@ -276,31 +339,6 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="restore_modal" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-
-                <div class="modal-body">
-                    <form method="post" asp-page="/Admin/Products/AllProducts" asp-page-handler="Restore">
-                        <div class="form-content p-2">
-                            <h4 class="modal-title text-center">Restore</h4>
-                            <p class="mb-4 text-center">Are you sure want to Restore?</p>
-                            <div class="d-flex me-1 justify-content-center" >
-                            <button  type="submit" id="MyLink" class="btn btn-primary" style="margin-right:6px ;width:75px ;"> Restore </button>
-                            <input type="hidden" value="" id="restore_id" name="restore_id" />
-                            <button type="button" class="btn btn-danger" style="width : 75px;" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-   
-   
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -314,89 +352,13 @@
 
                     var id = link.dataset.id;
                     
-                    document.getElementById('p_id').value = id;
+                    document.getElementById('orderId').value = id;
                    
                 });
             });
         });
     </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get modal and link elements
-            var modal = document.getElementById('restore_modal');
-            var links = document.querySelectorAll('[data-bs-target="#restore_modal"]');
 
-            // Add event listener for when any of the links is clicked
-            links.forEach(function (link) {
-                link.addEventListener('click', function () {
-
-                    var id = link.dataset.reid;
-
-                    document.getElementById('restore_id').value = id;
-                    console.log(id);
-
-                });
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get modal and link elements
-            var modal = document.getElementById('edit_modal');
-            var links = document.querySelectorAll('[data-bs-target="#edit_modal"]');
-
-            // Add event listener for when any of the links is clicked
-            links.forEach(function (link) {
-                link.addEventListener('click', function () {
-                    // Extract data from the clicked link
-                    var productId = link.dataset.id;
-                    var Name = link.dataset.name;
-                    var orPrice = link.dataset.oprice;
-                    var supplier = link.dataset.supp;
-                    var Category = link.dataset.cate;
-                    var soPrice = link.dataset.sprice;
-                    var createDate = link.dataset.create;
-                    var startDate = link.dataset.start;
-                    var endDate = link.dataset.end;
-                    var shipDate = link.dataset.ship;
-                    var Status = link.dataset.status;
-
-                    var create = formatDate(createDate);
-                    var start = formatDate(startDate);
-                    var end = formatDate(endDate);
-                    var ship = formatDate(shipDate);
-
-                    function formatDate(d) {
-                        var part = d.split(/[\/ :]/);
-                        var formaterDate = part[2] + '-' + part[1] + '-' + part[0];
-                        return formaterDate;
-
-                    }
-                 
-                   
-                    // Update modal content with the extracted values
-                    
-                    document.getElementById('edit_id').value = productId;
-                    document.getElementById('productName').value = Name;
-                    document.getElementById('categories').value = Category;
-                    document.getElementById('oPrice').value = orPrice;
-                    document.getElementById('sPrice').value = soPrice;
-                    document.getElementById('supplier').value = supplier;
-                    //modal.querySelector('#imageproduct1').src = productImage;
-                    
-                    document.getElementById('createDate').value = create;
-                    document.getElementById('startDate').value = start;
-                    document.getElementById('endDate').value = end;
-                    
-                    document.getElementById('shipDate').value = ship;
-                   
-                    document.getElementById('pStatus').value = Status;
-                   
-
-                });
-            });
-        });
-    </script>
     <script>
         var maxLength = 50;
         var elements = document.querySelectorAll('.limitedText');
