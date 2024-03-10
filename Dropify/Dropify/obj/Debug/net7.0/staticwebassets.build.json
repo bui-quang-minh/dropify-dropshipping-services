@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dD/OMYemTHuyweWQkDXlhdNSAr962LcOHaXIDsge3xs=",
+  "Hash": "X4GwjYPhqTIQmr6kB+v834+9FhkTDznPLKaJwUXSgHw=",
   "Source": "Dropify",
   "BasePath": "_content/Dropify",
   "Mode": "Default",
@@ -5375,6 +5375,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\path-img8.jpg"
     },
     {
+      "Identity": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\pexels-canvy-mockups-205316.jpg",
+      "SourceId": "Dropify",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\",
+      "BasePath": "_content/Dropify",
+      "RelativePath": "assets/img/pexels-canvy-mockups-205316.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\pexels-canvy-mockups-205316.jpg"
+    },
+    {
       "Identity": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\popular-bg.png",
       "SourceId": "Dropify",
       "SourceType": "Discovered",
@@ -7501,6 +7520,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\js\\google.js",
+      "SourceId": "Dropify",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\",
+      "BasePath": "_content/Dropify",
+      "RelativePath": "js/google.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\google.js"
     },
     {
       "Identity": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\js\\site.js",

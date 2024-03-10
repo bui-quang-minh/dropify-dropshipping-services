@@ -1125,6 +1125,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\path-img8.jpg"
     },
     {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\pexels-canvy-mockups-205316.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\pexels-canvy-mockups-205316.jpg"
+    },
+    {
       "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\popular-bg.png",
       "PackagePath": "staticwebassets\\assets\\img\\popular-bg.png"
     },
@@ -1571,6 +1575,10 @@
     {
       "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\js\\google.js",
+      "PackagePath": "staticwebassets\\js\\google.js"
     },
     {
       "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\js\\site.js",
