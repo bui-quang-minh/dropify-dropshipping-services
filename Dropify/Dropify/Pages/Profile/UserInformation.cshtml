@@ -1,7 +1,7 @@
 ﻿@page
 @model Dropify.Pages.Profile.UserInformationModel
 @{
-    Layout = "_ProfileLayout";
+    Layout = "_Layout";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -23,66 +23,147 @@
 </head>
 
 <body>
-                        <div class="card">
-                            <div class="card-body">
-                                <form>
-                                    <div class="row form-row">
-                                        <div class="col-12 col-md-12">
-                                            <div class="form-group">
-                                                <div class="change-avatar">
-                                                    <div class="profile-img">
-                                                        <img src="assets/img/user/user.jpg" alt="User Image">
-                                                    </div>
-                                                    <div class="upload-img">
-                                                        <div class="change-photo-btn">
-                                                            <span><i class="fa fa-upload"></i> Upload Photo</span>
-                                                            <input type="file" class="upload">
-                                                        </div>
-                                                        <small class="form-text text-muted">
-                                                            Allowed JPG, GIF or PNG. Max
-                                                            size of 2MB
-                                                        </small>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-md-6">
-                                            <div class="form-group">
-                                                <label>Name</label>
-                                                <input type="text" class="form-control" value="Jonathan Doe">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-md-6">
-                                            <div class="form-group">
-                                                <label>Date of Birth</label>
-                                                <div class="cal-icon">
-                                                    <input type="text" class="form-control datetimepicker"
-                                                           value="24-07-1983">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-md-6">
-                                            <div class="form-group">
-                                                <label>Email ID</label>
-                                                <input type="email" class="form-control"
-                                                 value="jonathandoe@example.com" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-md-6">
-                                            <div class="form-group">
-                                                <label>Mobile</label>
-                                                <input type="text" value="+1 202-555-0125" class="form-control" readonly>
-                                            </div>
-                                        </div>
-                                       
-                                    </div>
-                                    <div class="submit-section">
-                                        <button type="submit" class="btn btn-primary submit-btn">Save Changes</button>
-                                    </div>
-                                </form>
+    <div class="container-fluid">
+        <div class="row">
 
+                <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+                        
+                    <div class="profile-sidebar">
+                        <div class="user-widget">
+                            <div class="pro-avatar"><img style="width:100%; height: 100%; border-radius:50%" src="@Model.UserDetail.ImgUrl" alt="avtar" /></div>
+                            <div class="user-info-cont">
+                                <h4 class="usr-name">@Model.UserDetail.Name</h4>
                             </div>
                         </div>
+
+                        <div class="custom-sidebar-nav">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-home"></i>Dashboard <span>
+                                            <i class="fas fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Profile/AddressManagement">
+                                        <i class="fas fa-clock"></i>Address Management <span>
+                                            <i class="fas fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/Profile/ChangePassword">
+                                        <i class="fab fa-blogger-b"></i>Change Password <span>
+                                            <i class="fas fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Profile/UserInformation">
+                                        <i class="fas fa-user-cog"></i>User Information <span>
+                                            <i class="fas fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Login/Login">
+                                        <i class="fas fa-sign-out-alt"></i>Logout <span>
+                                            <i class="fas fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-lg-8 col-xl-9">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-12 col-md-12">
+                                <form method="post" asp-page-handler="UploadImage" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <div class="change-avatar">
+                                            @*<div class="profile-img">
+                                            <img src="assets/img/user/user.jpg" alt="User Image">
+                                            </div>*@
+                                            <div class="upload-img">
+                                                <div class="change-photo-btn">
+                                                    <span><i class="fa fa-upload"></i> Upload Photo</span>
+                                                    <input type="file" class="upload" asp-for="FileImg">
+                                                </div>
+                                                <small class="form-text text-muted">
+                                                    Allowed JPG, GIF or PNG. Max
+                                                    size of 2MB
+                                                </small>
+                                            <p class="form-text text-muted text-danger">@Model.ImgMess</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary submit-btn">Upload</button>
+
+                                </form>
+                            </div>
+                            <br/>
+                            <form method="post">
+                                <div class="row form-row">
+
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input type="text" class="form-control" value="@Model.UserDetail.Name" asp-for="UserDetail.Name">
+                                            <span style="color:red;" asp-validation-for="UserDetail.Name"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label>Date of Birth</label>
+                                            <div class="cal-icon">
+                                                <input type="text" class="form-control datetimepicker"
+                                                       value="@Model.UserDetail.Dob.ToString("dd/MM/yyyy")" asp-for="UserDetail.Dob">
+                                                <span style="color:red;" asp-validation-for="UserDetail.Dob"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label>Email ID</label>
+                                            <input type="email" class="form-control"
+                                                   value="@Model.User.Email" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label>Mobile</label>
+                                            <input type="text" value="@Model.UserDetail.PhoneNumber" class="form-control" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label>Sex</label><br/>
+                                            <input type="radio" value="Male" asp-for="UserDetail.Sex" checked="@(Model.UserDetail.Sex == "Male")">
+                                            <label>male</label>
+                                            <input type="radio" value="Female" asp-for="UserDetail.Sex" checked="@(Model.UserDetail.Sex == "Female")">
+                                            <label>female</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="submit-section">
+                                    <button type="submit" class="btn btn-primary submit-btn">Save Changes</button>
+                                </div>
+                            </form>
+                            <p>@Model.UserDetail.Name</p>
+                            <p>@Model.UserDetail.Dob</p>
+                            <p>@Model.UserDetail.PhoneNumber</p>
+                            <p>@Model.UserDetail.Sex</p>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
 
 
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>

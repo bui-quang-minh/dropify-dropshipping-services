@@ -1,1775 +1,1807 @@
 {
   "Files": [
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Dropify.bundle.scp.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Dropify.bundle.scp.css",
       "PackagePath": "staticwebassets\\Dropify.bundle.scp.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\bootstrap-datetimepicker.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\bootstrap-datetimepicker.min.css",
       "PackagePath": "staticwebassets\\Admin\\css\\bootstrap-datetimepicker.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\bootstrap.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\Admin\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\ckeditor.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\ckeditor.css",
       "PackagePath": "staticwebassets\\Admin\\css\\ckeditor.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\feather.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\feather.css",
       "PackagePath": "staticwebassets\\Admin\\css\\feather.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\feathericon.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\feathericon.min.css",
       "PackagePath": "staticwebassets\\Admin\\css\\feathericon.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\font-awesome.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\font-awesome.min.css",
       "PackagePath": "staticwebassets\\Admin\\css\\font-awesome.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\style.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\css\\style.css",
       "PackagePath": "staticwebassets\\Admin\\css\\style.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\Feather144f.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\Feather144f.svg",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Feather144f.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\Feather144f.ttf",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\Feather144f.ttf",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Feather144f.ttf"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\Feather144f.woff",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\Feather144f.woff",
       "PackagePath": "staticwebassets\\Admin\\fonts\\Feather144f.woff"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\MaterialIcons-Regular.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\MaterialIcons-Regular.eot",
       "PackagePath": "staticwebassets\\Admin\\fonts\\MaterialIcons-Regular.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\MaterialIcons-Regular.html",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\MaterialIcons-Regular.html",
       "PackagePath": "staticwebassets\\Admin\\fonts\\MaterialIcons-Regular.html"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\MaterialIcons-Regular.ttf",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\MaterialIcons-Regular.ttf",
       "PackagePath": "staticwebassets\\Admin\\fonts\\MaterialIcons-Regular.ttf"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\MaterialIcons-Regular.woff",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\MaterialIcons-Regular.woff",
       "PackagePath": "staticwebassets\\Admin\\fonts\\MaterialIcons-Regular.woff"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\feathericon.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\feathericon.eot",
       "PackagePath": "staticwebassets\\Admin\\fonts\\feathericon.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\feathericon.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\feathericon.svg",
       "PackagePath": "staticwebassets\\Admin\\fonts\\feathericon.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\feathericon.ttf",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\feathericon.ttf",
       "PackagePath": "staticwebassets\\Admin\\fonts\\feathericon.ttf"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\feathericon.woff",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\feathericon.woff",
       "PackagePath": "staticwebassets\\Admin\\fonts\\feathericon.woff"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\feathericond41d.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\feathericond41d.eot",
       "PackagePath": "staticwebassets\\Admin\\fonts\\feathericond41d.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfont3e6e.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfont3e6e.eot",
       "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfont3e6e.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfont3e6e.html",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfont3e6e.html",
       "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfont3e6e.html"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfont3e6e.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfont3e6e.svg",
       "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfont3e6e.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfont3e6e.ttf",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfont3e6e.ttf",
       "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfont3e6e.ttf"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfont3e6e.woff",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfont3e6e.woff",
       "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfont3e6e.woff"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfontd41d.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\fonts\\fontawesome-webfontd41d.eot",
       "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfontd41d.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\blog\\blog-01.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\blog\\blog-01.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\blog\\blog-01.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\blog\\blog-02.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\blog\\blog-02.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\blog\\blog-02.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\blog\\blog-03.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\blog\\blog-03.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\blog\\blog-03.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\favicon.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\favicon.png",
       "PackagePath": "staticwebassets\\Admin\\img\\favicon.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\github.html",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\github.html",
       "PackagePath": "staticwebassets\\Admin\\img\\github.html"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\icons\\invoices-icon1.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\icons\\invoices-icon1.svg",
       "PackagePath": "staticwebassets\\Admin\\img\\icons\\invoices-icon1.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\icons\\invoices-icon2.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\icons\\invoices-icon2.svg",
       "PackagePath": "staticwebassets\\Admin\\img\\icons\\invoices-icon2.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\icons\\invoices-icon3.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\icons\\invoices-icon3.svg",
       "PackagePath": "staticwebassets\\Admin\\img\\icons\\invoices-icon3.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\icons\\invoices-icon4.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\icons\\invoices-icon4.svg",
       "PackagePath": "staticwebassets\\Admin\\img\\icons\\invoices-icon4.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\icons\\invoices-icon5.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\icons\\invoices-icon5.svg",
       "PackagePath": "staticwebassets\\Admin\\img\\icons\\invoices-icon5.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\img-01.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\img-01.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\img-01.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\invoice-circle1.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\invoice-circle1.png",
       "PackagePath": "staticwebassets\\Admin\\img\\invoice-circle1.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\invoice-circle2.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\invoice-circle2.png",
       "PackagePath": "staticwebassets\\Admin\\img\\invoice-circle2.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\logo-small.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\logo-small.png",
       "PackagePath": "staticwebassets\\Admin\\img\\logo-small.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\logo-white.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\logo-white.png",
       "PackagePath": "staticwebassets\\Admin\\img\\logo-white.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\logo.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\logo.png",
       "PackagePath": "staticwebassets\\Admin\\img\\logo.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-01.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-01.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-01.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-03.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-03.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-03.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-04.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-04.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-04.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-06.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-06.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-06.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-07.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-07.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-07.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-08.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-08.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-08.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-09.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-09.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-09.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-10.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-10.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-10.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-11.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-11.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-11.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-12.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-12.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-12.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-13.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-13.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-13.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-14.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-14.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-14.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-17.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-17.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-17.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-18.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\profiles\\avatar-18.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\profiles\\avatar-18.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\signature.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\signature.png",
       "PackagePath": "staticwebassets\\Admin\\img\\signature.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user\\user.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user1.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user1.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user\\user1.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user11.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user11.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user\\user11.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user12.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user12.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user\\user12.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user2.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user2.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user\\user2.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user3.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user3.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user\\user3.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user4.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user4.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user\\user4.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user5.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user5.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user\\user5.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user6.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user6.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user\\user6.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user7.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user7.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user\\user7.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user8.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user8.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user\\user8.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user9.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\img\\user\\user9.jpg",
       "PackagePath": "staticwebassets\\Admin\\img\\user\\user9.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\bootstrap-datetimepicker.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\bootstrap-datetimepicker.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\bootstrap-datetimepicker.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\chart.morris.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\chart.morris.js",
       "PackagePath": "staticwebassets\\Admin\\js\\chart.morris.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\ckeditor.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\ckeditor.js",
       "PackagePath": "staticwebassets\\Admin\\js\\ckeditor.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\feather.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\feather.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\feather.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\form-validation.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\form-validation.js",
       "PackagePath": "staticwebassets\\Admin\\js\\form-validation.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\jquery-3.6.0.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\jquery-3.6.0.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\jquery-3.6.0.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\jquery.maskedinput.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\jquery.maskedinput.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\jquery.maskedinput.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\mask.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\mask.js",
       "PackagePath": "staticwebassets\\Admin\\js\\mask.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\moment.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\moment.min.js",
       "PackagePath": "staticwebassets\\Admin\\js\\moment.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\script.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\script.js",
       "PackagePath": "staticwebassets\\Admin\\js\\script.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\bootstrap-tagsinput\\css\\bootstrap-tagsinput.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\bootstrap-tagsinput\\css\\bootstrap-tagsinput.css",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap-tagsinput\\css\\bootstrap-tagsinput.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\bootstrap-tagsinput\\js\\bootstrap-tagsinput.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\bootstrap-tagsinput\\js\\bootstrap-tagsinput.js",
       "PackagePath": "staticwebassets\\Admin\\plugins\\bootstrap-tagsinput\\js\\bootstrap-tagsinput.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\datatables\\datatables.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\datatables\\datatables.min.css",
       "PackagePath": "staticwebassets\\Admin\\plugins\\datatables\\datatables.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\datatables\\datatables.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\datatables\\datatables.min.js",
       "PackagePath": "staticwebassets\\Admin\\plugins\\datatables\\datatables.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\datatables\\jquery.dataTables.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\datatables\\jquery.dataTables.min.js",
       "PackagePath": "staticwebassets\\Admin\\plugins\\datatables\\jquery.dataTables.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\css\\all.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\css\\all.min.css",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\css\\all.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\css\\fontawesome.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\css\\fontawesome.min.css",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\css\\fontawesome.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.eot",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.html",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.html",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.html"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.svg",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.ttf",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.ttf",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.ttf"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.woff",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.woff",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400.woff"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400d41d.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400d41d.eot",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-brands-400d41d.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.eot",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.html",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.html",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.html"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.svg",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.ttf",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.ttf",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.ttf"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.woff",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.woff",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400.woff"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400d41d.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400d41d.eot",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-regular-400d41d.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.eot",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.html",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.html",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.html"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.svg",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.ttf",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.ttf",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.ttf"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.woff",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.woff",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900.woff"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900d41d.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900d41d.eot",
       "PackagePath": "staticwebassets\\Admin\\plugins\\fontawesome\\webfonts\\fa-solid-900d41d.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\morris\\morris.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\morris\\morris.css",
       "PackagePath": "staticwebassets\\Admin\\plugins\\morris\\morris.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\morris\\morris.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\morris\\morris.min.js",
       "PackagePath": "staticwebassets\\Admin\\plugins\\morris\\morris.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\raphael\\raphael.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\raphael\\raphael.min.js",
       "PackagePath": "staticwebassets\\Admin\\plugins\\raphael\\raphael.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\select2\\css\\select2.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\select2\\css\\select2.min.css",
       "PackagePath": "staticwebassets\\Admin\\plugins\\select2\\css\\select2.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\select2\\js\\select2.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\select2\\js\\select2.min.js",
       "PackagePath": "staticwebassets\\Admin\\plugins\\select2\\js\\select2.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\slimscroll\\jquery.slimscroll.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\plugins\\slimscroll\\jquery.slimscroll.min.js",
       "PackagePath": "staticwebassets\\Admin\\plugins\\slimscroll\\jquery.slimscroll.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\css\\bootstrap-datetimepicker.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\css\\bootstrap-datetimepicker.min.css",
       "PackagePath": "staticwebassets\\assets\\css\\bootstrap-datetimepicker.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\css\\bootstrap.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\css\\owl.carousel.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\css\\owl.carousel.min.css",
       "PackagePath": "staticwebassets\\assets\\css\\owl.carousel.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\css\\owl.theme.default.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\css\\owl.theme.default.min.css",
       "PackagePath": "staticwebassets\\assets\\css\\owl.theme.default.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\css\\owl.video.play.html",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\css\\owl.video.play.html",
       "PackagePath": "staticwebassets\\assets\\css\\owl.video.play.html"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\css\\style.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\fonts\\MaterialIcons-Regular.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\fonts\\MaterialIcons-Regular.eot",
       "PackagePath": "staticwebassets\\assets\\fonts\\MaterialIcons-Regular.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\fonts\\MaterialIcons-Regular.html",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\fonts\\MaterialIcons-Regular.html",
       "PackagePath": "staticwebassets\\assets\\fonts\\MaterialIcons-Regular.html"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\fonts\\MaterialIcons-Regular.ttf",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\fonts\\MaterialIcons-Regular.ttf",
       "PackagePath": "staticwebassets\\assets\\fonts\\MaterialIcons-Regular.ttf"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\fonts\\MaterialIcons-Regular.woff",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\fonts\\MaterialIcons-Regular.woff",
       "PackagePath": "staticwebassets\\assets\\fonts\\MaterialIcons-Regular.woff"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\fonts\\impact.ttf",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\fonts\\impact.ttf",
       "PackagePath": "staticwebassets\\assets\\fonts\\impact.ttf"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\banner-08.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\banner-08.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\banner-08.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\banner.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\banner.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\banner.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\bg-1.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\bg-1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\bg-1.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\bg-join.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\bg-join.png",
       "PackagePath": "staticwebassets\\assets\\img\\bg-join.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\bg-slide.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\bg-slide.png",
       "PackagePath": "staticwebassets\\assets\\img\\bg-slide.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\bg.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\bg.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\bg.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\bg.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\bg.png",
       "PackagePath": "staticwebassets\\assets\\img\\bg.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\bg1.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\bg1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\bg1.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-01.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-01.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-01.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-02.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-02.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-02.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-03.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-03.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-03.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-04.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-04.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-04.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-05.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-05.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-05.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-06.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-06.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-06.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-07.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-07.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-07.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-08.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-08.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-08.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-09.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-09.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-09.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-10.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-10.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-10.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-11.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-11.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-11.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-11.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-11.png",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-11.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-12.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-12.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-12.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-12.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-12.png",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-12.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-13.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-13.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-13.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-13.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-13.png",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-13.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-14.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-14.png",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-14.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-15.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-15.png",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-15.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-16.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-16.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-16.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-17.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-17.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-17.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-thumb-01.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-thumb-01.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-thumb-01.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-thumb-02.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-thumb-02.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-thumb-02.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-thumb-03.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-thumb-03.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-thumb-03.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-thumb-04.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-thumb-04.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-thumb-04.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-thumb-05.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\blog\\blog-thumb-05.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-thumb-05.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\bg-1.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\bg-1.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\bg-1.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\bg-2.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\bg-2.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\bg-2.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-1.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-1.svg",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-1.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-10.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-10.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-10.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-11.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-11.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-11.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-12.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-12.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-12.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-13.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-13.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-13.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-14.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-14.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-14.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-15.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-15.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-15.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-16.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-16.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-16.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-17.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-17.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-17.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-18.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-18.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-18.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-19.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-19.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-19.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-2.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-2.svg",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-2.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-20.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-20.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-20.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-21.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-21.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-21.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-22.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-22.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-22.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-23.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-23.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-23.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-24.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-24.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-24.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-25.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-25.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-25.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-26.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-26.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-26.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-27.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-27.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-27.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-28.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-28.svg",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-28.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-29.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-29.svg",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-29.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-3.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-3.svg",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-3.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-30.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-30.svg",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-30.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-31.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-31.svg",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-31.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-32.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-32.svg",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-32.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-4.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-4.svg",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-4.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-5.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-5.svg",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-5.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-6.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-6.svg",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-6.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-7.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-7.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-7.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-8.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-8.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-8.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-9.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\cate-9.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\cate-9.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-1.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-1.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\rec-1.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-2.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-2.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\rec-2.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-3.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-3.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\rec-3.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-4.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-4.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\rec-4.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-5.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-5.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\rec-5.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-6.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-6.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\rec-6.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-7.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-7.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\rec-7.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-8.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-8.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\rec-8.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-9.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\categories\\rec-9.png",
       "PackagePath": "staticwebassets\\assets\\img\\categories\\rec-9.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course-bg-1.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course-bg-1.png",
       "PackagePath": "staticwebassets\\assets\\img\\course-bg-1.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course-bg-2.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course-bg-2.png",
       "PackagePath": "staticwebassets\\assets\\img\\course-bg-2.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course-bg.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course-bg.png",
       "PackagePath": "staticwebassets\\assets\\img\\course-bg.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course-develop-bg.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course-develop-bg.png",
       "PackagePath": "staticwebassets\\assets\\img\\course-develop-bg.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course.png",
       "PackagePath": "staticwebassets\\assets\\img\\course.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\course-01.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\course-01.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\course-01.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\course-02.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\course-02.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\course-02.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\course-03.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\course-03.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\course-03.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\course-04.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\course-04.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\course-04.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\course-05.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\course-05.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\course-05.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\course-06.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\course-06.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\course-06.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\course-07.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\course-07.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\course-07.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\course-08.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\course-08.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\course-08.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-01.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-01.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-01.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-02.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-02.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-02.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-03.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-03.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-03.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-04.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-04.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-04.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-05.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-05.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-05.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-06.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-06.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-06.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-07.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-07.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-07.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-08.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-08.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-08.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-09.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-09.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-09.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-10.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-10.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-10.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-11.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-11.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-11.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-12.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-12.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-12.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-13.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-13.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-13.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-14.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-14.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-14.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-15.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-15.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-15.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-16.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-16.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-16.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-17.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-17.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-17.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-18.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\course\\img-18.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\img-18.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\favicon.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\favicon.png",
       "PackagePath": "staticwebassets\\assets\\img\\favicon.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\five-map.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\five-map.png",
       "PackagePath": "staticwebassets\\assets\\img\\five-map.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\footer-08.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\footer-08.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\footer-08.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\footer-bg.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\footer-bg.png",
       "PackagePath": "staticwebassets\\assets\\img\\footer-bg.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\girl.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\girl.png",
       "PackagePath": "staticwebassets\\assets\\img\\girl.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\home_art.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\home_art.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\home_art.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\how-it-works-bg.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\how-it-works-bg.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\how-it-works-bg.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\icon-1.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\icon-1.png",
       "PackagePath": "staticwebassets\\assets\\img\\icon-1.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\icon-2.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\icon-2.png",
       "PackagePath": "staticwebassets\\assets\\img\\icon-2.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\icon-3.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\icon-3.png",
       "PackagePath": "staticwebassets\\assets\\img\\icon-3.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\img-01.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\img-01.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\img-01.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\img-02.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\img-02.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\img-02.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\img-03.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\img-03.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\img-03.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\img-04.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\img-04.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\img-04.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\img-1.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\img-1.png",
       "PackagePath": "staticwebassets\\assets\\img\\img-1.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\img-2.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\img-2.png",
       "PackagePath": "staticwebassets\\assets\\img\\img-2.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\img-3.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\img-3.png",
       "PackagePath": "staticwebassets\\assets\\img\\img-3.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\img-4.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\img-4.png",
       "PackagePath": "staticwebassets\\assets\\img\\img-4.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\join-2.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\join-2.png",
       "PackagePath": "staticwebassets\\assets\\img\\join-2.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\join-3.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\join-3.png",
       "PackagePath": "staticwebassets\\assets\\img\\join-3.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\join-4.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\join-4.png",
       "PackagePath": "staticwebassets\\assets\\img\\join-4.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\join-5.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\join-5.png",
       "PackagePath": "staticwebassets\\assets\\img\\join-5.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\join-arrow.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\join-arrow.png",
       "PackagePath": "staticwebassets\\assets\\img\\join-arrow.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\join.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\join.png",
       "PackagePath": "staticwebassets\\assets\\img\\join.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\location.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\location.png",
       "PackagePath": "staticwebassets\\assets\\img\\location.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo-2.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo-2.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo-2.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo-3.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo-3.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo-3.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo-4.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo-4.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo-4.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo-5.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo-5.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo-5.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo-6.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo-6.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo-6.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo-7.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo-7.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo-7.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo-9.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo-9.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo-9.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo-white.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo-white.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo-white.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo1.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\logo1.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo1.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\map-pin.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\map-pin.png",
       "PackagePath": "staticwebassets\\assets\\img\\map-pin.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\mendor\\mendor-01.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\mendor\\mendor-01.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\mendor\\mendor-01.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\mendor\\mendor-02.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\mendor\\mendor-02.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\mendor\\mendor-02.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\mendor\\mendor-03.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\mendor\\mendor-03.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\mendor\\mendor-03.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\mendor\\mendor-04.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\mendor\\mendor-04.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\mendor\\mendor-04.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\object-4.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\object-4.png",
       "PackagePath": "staticwebassets\\assets\\img\\object-4.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\object-5.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\object-5.png",
       "PackagePath": "staticwebassets\\assets\\img\\object-5.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\object-6.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\object-6.png",
       "PackagePath": "staticwebassets\\assets\\img\\object-6.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\object-three.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\object-three.png",
       "PackagePath": "staticwebassets\\assets\\img\\object-three.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\path-img1.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\path-img1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\path-img1.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\path-img2.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\path-img2.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\path-img2.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\path-img3.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\path-img3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\path-img3.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\path-img4.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\path-img4.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\path-img4.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\path-img5.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\path-img5.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\path-img5.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\path-img6.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\path-img6.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\path-img6.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\path-img7.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\path-img7.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\path-img7.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\path-img8.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\path-img8.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\path-img8.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\pexels-canvy-mockups-205316.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\pexels-canvy-mockups-205316.jpg"
-    },
-    {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\popular-bg.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\popular-bg.png",
       "PackagePath": "staticwebassets\\assets\\img\\popular-bg.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\quote.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\quote.png",
       "PackagePath": "staticwebassets\\assets\\img\\quote.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\search-1.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\search-1.png",
       "PackagePath": "staticwebassets\\assets\\img\\search-1.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\search-submit.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\search-submit.png",
       "PackagePath": "staticwebassets\\assets\\img\\search-submit.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\search.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\search.png",
       "PackagePath": "staticwebassets\\assets\\img\\search.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\slide-bg.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\slide-bg.png",
       "PackagePath": "staticwebassets\\assets\\img\\slide-bg.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\slide-five.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\slide-five.png",
       "PackagePath": "staticwebassets\\assets\\img\\slide-five.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\statistics-bg.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\statistics-bg.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\statistics-bg.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\stay-turn-1.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\stay-turn-1.png",
       "PackagePath": "staticwebassets\\assets\\img\\stay-turn-1.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\stay-turn.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\stay-turn.png",
       "PackagePath": "staticwebassets\\assets\\img\\stay-turn.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\testi-bg-3.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\testi-bg-3.png",
       "PackagePath": "staticwebassets\\assets\\img\\testi-bg-3.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\testi-bg-5.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\testi-bg-5.png",
       "PackagePath": "staticwebassets\\assets\\img\\testi-bg-5.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\testi-bg-6.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\testi-bg-6.png",
       "PackagePath": "staticwebassets\\assets\\img\\testi-bg-6.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\testi-bg-7.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\testi-bg-7.png",
       "PackagePath": "staticwebassets\\assets\\img\\testi-bg-7.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\trend-img.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\trend-img.png",
       "PackagePath": "staticwebassets\\assets\\img\\trend-img.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\trend-img1.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\trend-img1.png",
       "PackagePath": "staticwebassets\\assets\\img\\trend-img1.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\trend-img2.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\trend-img2.png",
       "PackagePath": "staticwebassets\\assets\\img\\trend-img2.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\trend-img3.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\trend-img3.png",
       "PackagePath": "staticwebassets\\assets\\img\\trend-img3.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\trend-img4.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\trend-img4.png",
       "PackagePath": "staticwebassets\\assets\\img\\trend-img4.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\trend-img5.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\trend-img5.png",
       "PackagePath": "staticwebassets\\assets\\img\\trend-img5.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\Capture.PNG",
+      "PackagePath": "staticwebassets\\assets\\img\\user\\Capture.PNG"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\OIG (1).jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\user\\OIG (1).jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\OIG (11).jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\user\\OIG (11).jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\OIG (2).jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\user\\OIG (2).jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\OIG (3).jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\user\\OIG (3).jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\OIG (9).jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\user\\OIG (9).jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\OIG.CSGCIxMgoG.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\user\\OIG.CSGCIxMgoG.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\_1a9e5937-e853-4949-a7bb-33d4d15e59bd.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\user\\_1a9e5937-e853-4949-a7bb-33d4d15e59bd.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\_bff6ef02-9da8-4e1e-9a45-caa3a0b5d007.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\user\\_bff6ef02-9da8-4e1e-9a45-caa3a0b5d007.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\_ec0f37bc-f50a-48b2-8b3f-db7e8f50ccb0.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\user\\_ec0f37bc-f50a-48b2-8b3f-db7e8f50ccb0.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user1.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user1.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user10.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user10.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user10.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user11.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user11.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user11.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user12.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user12.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user12.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user13.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user13.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user13.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user14.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user14.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user14.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user15.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user15.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user15.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user16.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user16.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user16.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user16.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user16.png",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user16.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user17.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user17.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user17.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user17.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user17.png",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user17.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user18.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user18.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user18.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user18.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user18.png",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user18.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user19.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user19.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user19.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user19.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user19.png",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user19.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user2.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user2.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user2.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user20.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user20.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user20.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user20.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user20.png",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user20.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user21.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user21.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user21.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user21.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user21.png",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user21.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user22.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user22.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user22.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user22.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user22.png",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user22.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user23.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user23.png",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user23.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user24.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user24.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user24.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user24.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user24.png",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user24.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user25.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user25.png",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user25.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user26.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user26.png",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user26.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user27.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user27.png",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user27.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user28.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user28.png",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user28.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user29.png",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user29.png",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user29.png"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user3.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user3.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user4.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user4.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user4.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user5.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user5.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user5.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user6.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user6.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user6.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user7.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user7.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user7.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user8.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user8.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user8.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user9.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\user\\user9.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\user\\user9.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\video-call.jpg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\video-call.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\video-call.jpg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\white-dotted.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\img\\white-dotted.svg",
       "PackagePath": "staticwebassets\\assets\\img\\white-dotted.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\bootstrap-datetimepicker.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\bootstrap-datetimepicker.min.js",
       "PackagePath": "staticwebassets\\assets\\js\\bootstrap-datetimepicker.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\assets\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\jquery-3.6.0.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\jquery-3.6.0.min.js",
       "PackagePath": "staticwebassets\\assets\\js\\jquery-3.6.0.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\jquery.counterup.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\jquery.counterup.min.js",
       "PackagePath": "staticwebassets\\assets\\js\\jquery.counterup.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\jquery.waypoints.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\jquery.waypoints.js",
       "PackagePath": "staticwebassets\\assets\\js\\jquery.waypoints.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\map.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\map.js",
       "PackagePath": "staticwebassets\\assets\\js\\map.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\moment.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\moment.min.js",
       "PackagePath": "staticwebassets\\assets\\js\\moment.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\owl.carousel.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\assets\\js\\owl.carousel.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\script.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\js\\script.js",
       "PackagePath": "staticwebassets\\assets\\js\\script.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\aos\\aos.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\aos\\aos.css",
       "PackagePath": "staticwebassets\\assets\\plugins\\aos\\aos.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\aos\\aos.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\aos\\aos.js",
       "PackagePath": "staticwebassets\\assets\\plugins\\aos\\aos.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\daterangepicker\\daterangepicker.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\daterangepicker\\daterangepicker.css",
       "PackagePath": "staticwebassets\\assets\\plugins\\daterangepicker\\daterangepicker.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\daterangepicker\\daterangepicker.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\daterangepicker\\daterangepicker.js",
       "PackagePath": "staticwebassets\\assets\\plugins\\daterangepicker\\daterangepicker.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\css\\all.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\css\\all.min.css",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\css\\all.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\css\\fontawesome.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\css\\fontawesome.min.css",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\css\\fontawesome.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400.eot",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400.html",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400.html",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400.html"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400.svg",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400.ttf",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400.ttf",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400.ttf"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400.woff",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400.woff",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400.woff"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400d41d.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400d41d.eot",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-brands-400d41d.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400.eot",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400.html",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400.html",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400.html"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400.svg",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400.ttf",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400.ttf",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400.ttf"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400.woff",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400.woff",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400.woff"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400d41d.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400d41d.eot",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-regular-400d41d.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900.eot",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900.html",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900.html",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900.html"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900.svg",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900.svg",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900.svg"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900.ttf",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900.ttf",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900.ttf"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900.woff",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900.woff",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900.woff"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900d41d.eot",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900d41d.eot",
       "PackagePath": "staticwebassets\\assets\\plugins\\fontawesome\\webfonts\\fa-solid-900d41d.eot"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\select2\\css\\select2.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\select2\\css\\select2.min.css",
       "PackagePath": "staticwebassets\\assets\\plugins\\select2\\css\\select2.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\select2\\js\\select2.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\select2\\js\\select2.min.js",
       "PackagePath": "staticwebassets\\assets\\plugins\\select2\\js\\select2.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\slick\\slick-theme.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\slick\\slick-theme.css",
       "PackagePath": "staticwebassets\\assets\\plugins\\slick\\slick-theme.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\slick\\slick.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\slick\\slick.css",
       "PackagePath": "staticwebassets\\assets\\plugins\\slick\\slick.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\slick\\slick.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\slick\\slick.js",
       "PackagePath": "staticwebassets\\assets\\plugins\\slick\\slick.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\theia-sticky-sidebar\\ResizeSensor.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\theia-sticky-sidebar\\ResizeSensor.js",
       "PackagePath": "staticwebassets\\assets\\plugins\\theia-sticky-sidebar\\ResizeSensor.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\theia-sticky-sidebar\\theia-sticky-sidebar.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\assets\\plugins\\theia-sticky-sidebar\\theia-sticky-sidebar.js",
       "PackagePath": "staticwebassets\\assets\\plugins\\theia-sticky-sidebar\\theia-sticky-sidebar.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\css\\site.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\favicon.ico",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\js\\google.js",
-      "PackagePath": "staticwebassets\\js\\google.js"
-    },
-    {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\js\\site.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

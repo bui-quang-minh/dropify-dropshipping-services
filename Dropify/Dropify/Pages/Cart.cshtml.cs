@@ -8,24 +8,24 @@ using System.Text;
 
 namespace Dropify.Pages
 {
-    
+
     public class CartModel : BasePageModel
     {
-        public List<int>test = new List<int>();
+        public List<int> test = new List<int>();
         public List<Models.Cart> productCartList;
         public String jsonCart;
-        public List<UserAddress> uad ;
+        public List<UserAddress> uad;
         public User user;
         public UserDetail userDetail;
         public IActionResult OnGet()
         {
             string userString = HttpContext.Session.GetString("user");
             System.Diagnostics.Debug.WriteLine("UID: " + userString);
-            if (userString != null )
+            if (userString != null)
             {
-               user = JsonConvert.DeserializeObject<User>(userString);
-               UserDetailDAO userDAO = new UserDetailDAO();
-               userDetail = userDAO.GetUserDetailById(user.Uid);
+                user = JsonConvert.DeserializeObject<User>(userString);
+                UserDetailDAO userDAO = new UserDetailDAO();
+                userDetail = userDAO.GetUserDetailById(user.Uid);
             }
             else
             {
@@ -50,7 +50,10 @@ namespace Dropify.Pages
             Response.Cookies.Append("cart", "", option);
             return RedirectToPage("/Cart");
         }
+        public IActionResult OnPostRemoveItem(){
 
+            return RedirectToPage("/Cart");
+        }
         public IActionResult OnPostAdd()
         {
             var uad_form = Request.Form["uad-form"];
