@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Text.Json
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -6,6 +7,7 @@
     <title>Mentoring - Categories Page</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="~/Admin/img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link rel="stylesheet" href="~/Admin/css/bootstrap.min.css">
 
@@ -116,20 +118,23 @@
                     </div>
                 </div>
             </li>
-
-
+          
             <li class="nav-item dropdown has-arrow">
+                @{
+                    Models.User user = JsonSerializer.Deserialize<Models.User>(Context.Request.HttpContext.Session.GetString("user"));
+                }
                 <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-                    <span class="user-img"><img class="rounded-circle" src="~/Admin/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span>
+                    <span class="user-img"><img class="rounded-circle" src="@user.ImgUrl" width="31" alt="Ryan Taylor"></span>
                 </a>
                 <div class="dropdown-menu">
                     <div class="user-header">
                         <div class="avatar avatar-sm">
-                            <img src="~/Admin/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
+                            <img src="@user.ImgUrl" alt="User Image" class="avatar-img rounded-circle">
                         </div>
                         <div class="user-text">
-                            <h6>Ryan Taylor</h6>
-                            <p class="text-muted mb-0">Administrator</p>
+                           
+                            <h6>@user.NameUser</h6>
+                            <p class="text-muted mb-0">Admin</p>
                         </div>
                     </div>
                     <a class="dropdown-item" href="profile.html">My Profile</a>
@@ -164,8 +169,12 @@
                     </li>
 
                     <li>
-                        <a href="settings.html"><span>Settings</span></a>
+                        <a href="/Admin/Order/AllOrder"><span>Manage Order</span></a>
                     </li>
+                    <li>
+                        <a href="/Admin/Order/ShippingOrder"><span>Shipping</span></a>
+                    </li>
+
 
                     <li>
                         <a href="profile.html"><span>My Profile</span></a>
@@ -262,10 +271,17 @@
     </footer>
     -->
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
 
+    <script src="~/Admin/js/jquery-3.6.0.min.js"></script>
+
+    <script src="~/Admin/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/Admin/js/feather.min.js"></script>
+
+    <script src="~/Admin/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="~/Admin/js/script.js"></script>
+   <script src="~/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Admin/plugins/datatables/datatables.min.js"></script> 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -22,7 +22,7 @@ namespace Dropify.Logics
         {
             using (var db = new prn211_dropshippingContext())
             {
-                return db.Orders.Find(id);
+                return db.Orders.Include(o => o.Address).FirstOrDefault(o => o.OrderId == id);
             }
         }
         // Lấy tất cả order detail từ database
@@ -50,6 +50,28 @@ namespace Dropify.Logics
                 return orders;
             }
             
+        }
+        public List<Order> GetOrderByStatusShip(string status)
+        {
+            List<Order> orders = new List<Order>();
+            using (var db = new prn211_dropshippingContext())
+            {
+                orders = db.Orders
+                    .Include(o => o.Address)
+                    .Include(o => o.Ud)
+                    .Where(o => o.ShipStatus.Equals(status)).ToList();
+                return orders;
+            }
+
+        }
+        public void Remove(Order order)
+        {
+            using (var db = new prn211_dropshippingContext())
+            {
+                db.Orders.Update(order);
+                db.SaveChanges();
+            }
+
         }
     }
 }

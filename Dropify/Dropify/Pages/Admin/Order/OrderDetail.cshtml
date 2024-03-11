@@ -1,0 +1,97 @@
+﻿@page
+@model Dropify.Pages.Admin.Order.OrderDetailModel
+@{
+    Layout = "_AdminLayout";
+}
+
+<body>
+    <div class="main-wrapper">
+
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-sm-6">
+                             <h3 class="page-title">Order Detail</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <a href="/Admin/Order/AllOrder" class="btn btn-success">
+                        <i class="fas fa-arrow-left"></i>
+                        Back
+                    </a>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        @if (Model.listOd.Count == 0)
+                        {
+                            <h1>Không có đơn hàng nào !!</h1>
+                        }
+                        @if (Model.listOd != null)
+                        {
+                            @foreach (var o in Model.listOd)
+                            {
+                                
+                                if (o.OrderDetailParent == null)
+                                {
+                                    <div class="profile-header">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto profile-image">
+                                                <a href="#">
+                                                    <img class="product-rounded" alt="User Image"
+                                                         src="@o.Product.ProductThumbnailImage">
+                                                </a>
+                                            </div>
+                                            <div class="col ms-md-n2 profile-user-info">
+                                                <h4 class="user-name mb-0">@o.Product.Name</h4>
+                                                <br />
+                                                <div class="pb-2">Type:
+                                                    @foreach (var od in Model.listOd)
+                                                    {
+
+                                                        if (od.OrderDetailParent == o.OrderDetailId)
+                                                        {
+                                                            <span>@od.Attribute ;</span>
+                                                        }
+                                                    }
+                                                </div>
+                                                <div class="pb-3"><i class="fa fa-map-marker"></i> @Model.order.Address.Address</div>
+                                                <div class="pb-3">Quantity: @o.Quantity </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="profile-header">
+                                        <div class="row align-items-center">
+                                            <div class="col ms-md-n2 profile-user-info">
+                                                <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="price mb-0 text-danger" >Price: @o.OrderedPrice</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                }
+                            }
+                        }
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    var moneys = document.querySelectorAll('.price');
+    moneys.forEach(function (money) {
+        // Lấy giá trị số từ phần tử HTML
+        var amountString = money.textContent.replace(/[^\d,-]/g, ''); // Loại bỏ các ký tự không phải số, dấu phẩy hoặc dấu trừ
+        var amount = parseFloat(amountString.replace(',', '.')); // Chuyển đổi dấu phẩy sang dấu chấm cho số dấu phẩy động
+        var formattedMoney = amount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+        money.textContent = "Price: " + formattedMoney; // Gán giá trị đã định dạng vào phần tử HTML
+
+    });
+
+</script>

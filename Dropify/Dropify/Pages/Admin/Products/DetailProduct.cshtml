@@ -1,0 +1,221 @@
+﻿@page
+@model Dropify.Pages.Admin.Products.DetailProductModel
+@{
+    Layout = "_AdminLayout";
+}
+<body>
+    
+
+    <div class="main-wrapper">
+
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3 class="page-title">@Model.product.Name</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <a href="/Admin/Products/AllProducts" class="btn btn-success">
+                        <i class="fas fa-arrow-left"></i>
+                        Back
+                    </a>
+                </div>
+
+                <br />
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="datatable table table-hover table-center mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th width="200">Image</th>
+                                                <th width="100">Type</th>
+                                                <th width="300">Atribute</th>
+                                                <th width="300" class="text-center">Status</th>
+                                                <th width="300" class="text-center">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @if (Model.productDetail != null)
+                                            {
+                                                @foreach (var pd in Model.productDetail)
+                                                {
+
+                                                    <tr>
+                                                        <td>
+                                                            @{
+                                                                if (pd.Type == "P_IMAGE_THUMBNAIL" || pd.Type == "P_IMAGE_CONTENTS")
+                                                                {
+                                                                    <img src="@pd.Attribute" class="img-fluid" />
+                                                                }
+                                                            }
+                                                            
+                                                        </td>
+                                                        <td>
+                                                            @pd.Type
+                                                        </td>
+                                                        <td>
+                                                            <span class="limitedText">@pd.Attribute</span>
+                                                        </td>
+
+                                                        @if (pd.Status != null && pd.Status.Equals("Active"))
+                                                        {
+                                                            <td class="text-center">
+                                                                <span class="badge badge-pill bg-success inv-badge">@pd.Status</span>
+                                                            </td>
+                                                        }
+                                                        @if (pd.Status != null && pd.Status.Equals("Inactive"))
+                                                        {
+                                                            <td class="text-center">
+                                                                <span class="badge badge-pill bg-secondary inv-badge">@pd.Status</span>
+                                                            </td>
+                                                        }
+                                                        @if (pd.Status == null)
+                                                        {
+                                                            <td class="text-center">
+                                                                <span class="badge badge-pill bg-danger inv-badge">Null</span>
+                                                            </td>
+                                                        }
+
+
+                                                        <td class="text-center">
+                                                            <div class="actions">
+                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@pd.ProductDetailId"
+                                                                   data-type="@pd.Type"
+                                                                   data-attribute="@pd.Attribute"
+                                                                   data-status="@pd.Status"
+                                                                   data-bs-target="#edit_modal" href="#edit_modal">
+                                                                    <i class="fe fe-pencil"></i> Edit
+                                                                </a>
+             
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                }
+                                            }
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+   
+
+
+    <div class="modal fade" id="edit_modal" aria-hidden="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" style="width: 900px ; max-width:100%" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="form-content p-2">
+                        <div class="modal-header border-0">
+                            <h4 class="modal-title">Edit</h4>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <form method="post"  asp-page-handler="Edit" asp-page="/Admin/Products/DetailProduct" autocomplete="off">
+                                    <div class="row">
+                                        <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                                        <div class="col-md-12">
+                                            <div class="form-group mb-3">
+                                                <label>ProductDetailID</label>
+                                                <input class="form-control" name="pdID" id="pdID" type="text" readonly>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label>Type</label>
+                                                <input class="form-control" id="type" name="type" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label>Attribute</label>
+                                                <input class="form-control" id="Attribute" name="Attribute" type="text">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-3">
+                                                <label> Status </label>
+                                                <select class="form-control" name="pdStatus" id="pdStatus">
+                                                    <option value="Active">Active</option>
+                                                    <option value="Inactive">Inactive</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-4">
+                                            <button class="btn btn-primary" name="form_submit" value="submit" type="submit"> Save </button>
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get modal and link elements
+            var modal = document.getElementById('edit_modal');
+            var links = document.querySelectorAll('[data-bs-target="#edit_modal"]');
+
+            // Add event listener for when any of the links is clicked
+            links.forEach(function (link) {
+                link.addEventListener('click', function () {
+
+                    var pdID = link.dataset.id;
+                    var type = link.dataset.type;
+                    var Attribute = link.dataset.attribute;
+                    var Status = link.dataset.status;
+
+                   
+                    document.getElementById('pdID').value = pdID;
+                    document.getElementById('type').value = type;
+                    document.getElementById('Attribute').value = Attribute;
+                    document.getElementById('pdStatus').value = Status;
+
+
+
+
+
+
+                });
+            });
+        });
+    </script>
+    <script>
+        var maxLength = 65;
+        var elements = document.querySelectorAll('.limitedText');
+        elements.forEach(function (element) {
+            if (element.textContent.length > maxLength) {
+                element.textContent = element.textContent.substring(0, maxLength) + '...';
+            }
+
+        });
+    </script>
+</body>
+

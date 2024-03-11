@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Dropify.Models
 {
@@ -21,5 +22,8 @@ namespace Dropify.Models
         public virtual UserAddress Address { get; set; } = null!;
         public virtual UserDetail? Ud { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+
+       
     }
+
 }
