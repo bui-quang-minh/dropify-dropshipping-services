@@ -55,7 +55,7 @@ namespace Dropify.Logics
             }
             
         }
-<<<<<<< HEAD
+
 
         //public List<Order> GetOrdersWithDetailsAndProducts()
         //{
@@ -71,7 +71,7 @@ namespace Dropify.Logics
 
         //    return ordersWithDetailsAndProducts;
         //}
-=======
+
         public List<Order> GetOrderByStatusShip(string status)
         {
             List<Order> orders = new List<Order>();
@@ -94,6 +94,6 @@ namespace Dropify.Logics
             }
 
         }
->>>>>>> 087fc99e1eacfc59fbf214fb275f41ebffbc8123
+
     }
 }

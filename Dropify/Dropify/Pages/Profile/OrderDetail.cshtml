@@ -1,79 +1,12 @@
 ﻿@page
 @model Dropify.Pages.Profile.OrderDetailModel
 @{
-    Layout = "_Layout";
+    Layout = "_ProfileLayout";
 }
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>Mentoring - Categories Page</title>
-
-    <link rel="shortcut icon" type="image/x-icon" href="~/Admin/img/favicon.png">
-
-    <link rel="stylesheet" href="~/Admin/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="~/Admin/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="~/Admin/css/feathericon.min.css">
-
-    <link rel="stylesheet" href="~/Admin/plugins/datatables/datatables.min.css">
-
-    <link rel="stylesheet" href="~/Admin/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<div class="row">
-    <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
-        <div class="profile-sidebar">
-            <div class="user-widget">
-                <div class="pro-avatar">JD</div>
-                <div class="user-info-cont">
-                    <h4 class="usr-name">Jonathan Doe</h4>
-                </div>
-            </div>
 
-            <div class="custom-sidebar-nav">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-home"></i>Dashboard <span>
-                                <i class="fas fa-chevron-right"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Profile/AddressManagement">
-                            <i class="fas fa-clock"></i>Address Management <span>
-                                <i class="fas fa-chevron-right"></i>
-                            </span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/Profile/ChangePassword">
-                            <i class="fab fa-blogger-b"></i>Change Password <span>
-                                <i class="fas fa-chevron-right"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Profile/UserInformation">
-                            <i class="fas fa-user-cog"></i>User Information <span>
-                                <i class="fas fa-chevron-right"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Login/Login">
-                            <i class="fas fa-sign-out-alt"></i>Logout <span>
-                                <i class="fas fa-chevron-right"></i>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-    <div class="col-md-7 col-lg-8 col-xl-9">
         <div class="page-header">
             <div class="row">
                 <div class="col-sm-12">
@@ -93,14 +26,14 @@
                                             <div class="card">
                                                 <div class="card-body">
                                                     <div class="table-responsive">
-                                                        <table class=" table table-hover table-center mb-0">
+                                                        <table class=" table table-striped mb-0">
                                                             <thead>
                                                                 <tr>
-                                                                    <th width="100">Order Id</th>
+                                                                    <th width="150">Order Id</th>
                                                                     @* <th width="100">Order Name</th> *@
-                                                                    <th width="100">Product Name</th>
-                                                                    <th width="300">Quantity</th>
-                                                                    <th width="300">Price</th>
+                                                                    <th width="1000">Product Name</th>
+                                                                    <th width="auto">Quantity</th>
+                                                                    <th width="auto">Price</th>
                                                                     
                                                                 </tr>
                                                             </thead>
@@ -150,9 +83,9 @@
         
 
 
-    </div>
     
-</div>
+    
+
 <script>
     var moneys = document.querySelectorAll('.price');
     moneys.forEach(function (money) {
@@ -182,3 +115,4 @@
 <script src="~/Admin/plugins/datatables/datatables.min.js"></script>
 
 <script src="~/Admin/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
