@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Dropify.Models;
 using Dropify.Logics;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Newtonsoft.Json;
 
 namespace Dropify.Pages.Admin.ManageSupplier
 {
@@ -26,13 +27,35 @@ namespace Dropify.Pages.Admin.ManageSupplier
             con = context;
           
         }
-
-        public void OnGet()
+        public User user;
+        public UserDetail userDetail;
+        public IActionResult OnGet()
         {
-            
-            suppliers = con.Suppliers.Where(s => s.Status != "Hide").ToList();
+            string userString = HttpContext.Session.GetString("user");
+
+            if (userString != null)
+            {
+                user = JsonConvert.DeserializeObject<User>(userString);
+                UserDetailDAO userDAO = new UserDetailDAO();
+                userDetail = userDAO.GetUserDetailById(user.Uid);
+                if (userDetail.Admin == true)
+                {
+                    suppliers = con.Suppliers.Where(s => s.Status != "Hide").ToList();
+
+                    return Page();
+                }
+                else
+                {
+                    return RedirectToPage("/Index");
+                }
+            }
+            else
+            {
+                return RedirectToPage("/Login");
+            }
         }
 
+      
         public IActionResult OnPostEdit() {
 
             try
@@ -70,7 +93,7 @@ namespace Dropify.Pages.Admin.ManageSupplier
             {
                 supp.Status = "Hide";
                 
-                con.SaveChanges();
+                sd.EditSupplier(supp);
                 return RedirectToPage("AllSupplier");
             }
             else
@@ -78,6 +101,12 @@ namespace Dropify.Pages.Admin.ManageSupplier
                 return NotFound();
             }
            
+        }
+        public IActionResult OnPostAdd()
+        {
+            sd.AddSupplier(supplier);
+            return RedirectToPage("AllSupplier");
+
         }
 
     }

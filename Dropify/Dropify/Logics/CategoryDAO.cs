@@ -72,7 +72,16 @@ namespace Dropify.Logics
                 }
                 return returnList;
             }
-        }   
+        }
+        //Chỉ lấy các category là category cha // cách ngắn hơn 
+        public List<Category> ParentCategories()
+        {
+            using (var db = new prn211_dropshippingContext())
+            {
+                var returnList = db.Categories.Where(c => c.CategoryParent == null && c.CategoryId != 1).ToList();
+                return returnList.ToList();
+            }
+        }
         //Lấy child category theo parentID  từ database
         // Người viết: Bùi Quang Minh
         public List<Category> GetChildByParentId(int id)
@@ -89,6 +98,7 @@ namespace Dropify.Logics
             using(var db = new prn211_dropshippingContext())
             {
                 db.Categories.Update(category);
+                db.SaveChanges();
             }
         }
         public void addCategory(Category category)
@@ -96,6 +106,7 @@ namespace Dropify.Logics
             using (var db = new prn211_dropshippingContext())
             {
                 db.Categories.Add(category);
+                db.SaveChanges();
             }
         }
 
@@ -104,7 +115,7 @@ namespace Dropify.Logics
         {
             using (var db = new prn211_dropshippingContext())
             {
-                return db.Categories.Where(c => c.CategoryParent == id).ToList();
+                return db.Categories.Where(c => c.CategoryParent == id && c.Status != "Hide").ToList();
             }
         }
 

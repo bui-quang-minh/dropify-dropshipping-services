@@ -14,6 +14,7 @@ namespace Dropify.Logics
             }
         }
 
+<<<<<<< HEAD
         public List<OrderDetail> GetOrderDetailsParent(int OrderId) {
             using (var db = new prn211_dropshippingContext())
             {
@@ -26,5 +27,15 @@ namespace Dropify.Logics
         }
 
         
+=======
+        // Lấy tất cả order detail theo orderID từ database
+        public List<OrderDetail> GetOrderDetailByOrderId( int id)
+        {
+            using (var db = new prn211_dropshippingContext())
+            {
+                return db.OrderDetails.Include(o => o.Product).Where(od => od.OrderId == id).ToList();
+            }
+        }
+>>>>>>> 087fc99e1eacfc59fbf214fb275f41ebffbc8123
     }
 }

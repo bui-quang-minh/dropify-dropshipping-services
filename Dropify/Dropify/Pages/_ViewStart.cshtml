@@ -1,3 +1,29 @@
-﻿@{
-    Layout = "_Layout";
+﻿@using Dropify.Logics
+@using System.Text.Json
+@using Dropify.Models
+@{
+    var userJson = Context.Session.GetString("user");
+
+    if (!string.IsNullOrEmpty(userJson))
+    {
+        var user = JsonSerializer.Deserialize<User>(userJson);
+        var userDAO = new UserDAO();
+        var isAdmin = userDAO.Authorization(user.Email);
+
+        if (isAdmin)
+        {
+            Layout = "_AdminLayout";
+            System.Diagnostics.Debug.WriteLine("Using _AdminLayout");
+        }
+        else
+        {
+            Layout = "_Layout";
+            System.Diagnostics.Debug.WriteLine("Using _Layout");
+        }
+    }
+    else
+    {
+        Layout = "_Layout";
+        System.Diagnostics.Debug.WriteLine("Using no layout (User not logged in)");
+    }
 }

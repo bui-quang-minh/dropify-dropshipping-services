@@ -18,7 +18,7 @@ namespace Dropify.Logics
         {
             using (var db = new prn211_dropshippingContext())
             {
-                return db.UserDetails.Find(id);
+                return db.UserDetails.FirstOrDefault(x => x.Uid == id);
             }
         }
     }

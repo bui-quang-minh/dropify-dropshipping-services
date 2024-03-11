@@ -39,16 +39,25 @@
                 </div>
             </div>
         </div>
-
-
+        
+        <form asp-page="/Cart" asp-page-handler="Remove"><button type="submit">Remove cookie </button></form>
+        @{
+            static string ConvertToVND(double number)
+            {
+                string[] parts = number.ToString().Split('.');
+                string formattedBeforeDecimal = string.Format("{0:n0}", Convert.ToInt64(parts[0]));
+                string result = formattedBeforeDecimal + (parts.Length > 1 ? "." + parts[1] : "");
+                return result + " VND";
+            }
+        }
+        <form form asp-page="/Cart" asp-page-handler="Add">
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-7 col-lg-8">
                         <div class="card">
                             <div class="card-body">
-
-                                <form action="">
+                                
 
                                     <div class="info-widget">
                                         <h4 class="card-title">Cart List</h4>
@@ -68,174 +77,33 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <input type="checkbox"></input>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h2 class="table-avatar">
-                                                                            <a href="profile-mentee.html" class="avatar avatar-sm me-2">
-                                                                                <img class="avatar-img"
-                                                                                     src="assets/img/user/user2.jpg" alt="User Image">
-                                                                            </a>
-                                                                            <a href="profile-mentee.html">Sản phẩm 1<span>XXL, Red, Extra</span></a>
-                                                                        </h2>
-                                                                    </td>
-                                                                    <td>2</td>
-                                                                    <td>450$</td>
-                                                                    <td class="text-end">
-                                                                        <div class="table-action">
-                                                                            <a href="javascript:void(0);"
-                                                                               class="btn btn-danger">
-                                                                                <i class="fa fa-trash"></i> Delete
-                                                                            </a>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <input type="checkbox"></input>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h2 class="table-avatar">
-                                                                            <a href="profile-mentee.html" class="avatar avatar-sm me-2">
-                                                                                <img class="avatar-img"
-                                                                                     src="assets/img/user/user2.jpg" alt="User Image">
-                                                                            </a>
-                                                                            <a href="profile-mentee.html">Sản phẩm 1<span>XXL, Red, Extra</span></a>
-                                                                        </h2>
-                                                                    </td>
-                                                                    <td>2</td>
-                                                                    <td>450$</td>
-                                                                    <td class="text-end">
-                                                                        <div class="table-action">
-                                                                            <a href="javascript:void(0);"
-                                                                               class="btn btn-danger">
-                                                                                <i class="fa fa-trash"></i> Delete
-                                                                            </a>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <input type="checkbox"></input>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h2 class="table-avatar">
-                                                                            <a href="profile-mentee.html" class="avatar avatar-sm me-2">
-                                                                                <img class="avatar-img"
-                                                                                     src="assets/img/user/user2.jpg" alt="User Image">
-                                                                            </a>
-                                                                            <a href="profile-mentee.html">Sản phẩm 1<span>XXL, Red, Extra</span></a>
-                                                                        </h2>
-                                                                    </td>
-                                                                    <td>2</td>
-                                                                    <td>450$</td>
-                                                                    <td class="text-end">
-                                                                        <div class="table-action">
-                                                                            <a href="javascript:void(0);"
-                                                                               class="btn btn-danger">
-                                                                                <i class="fa fa-trash"></i> Delete
-                                                                            </a>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <input type="checkbox"></input>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h2 class="table-avatar">
-                                                                            <a href="profile-mentee.html" class="avatar avatar-sm me-2">
-                                                                                <img class="avatar-img"
-                                                                                     src="assets/img/user/user2.jpg" alt="User Image">
-                                                                            </a>
-                                                                            <a href="profile-mentee.html">Sản phẩm 1<span>XXL, Red, Extra</span></a>
-                                                                        </h2>
-                                                                    </td>
-                                                                    <td>2</td>
-                                                                    <td>450$</td>
-                                                                    <td class="text-end">
-                                                                        <div class="table-action">
-                                                                            <a href="javascript:void(0);"
-                                                                               class="btn btn-danger">
-                                                                                <i class="fa fa-trash"></i> Delete
-                                                                            </a>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <input type="checkbox"></input>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h2 class="table-avatar">
-                                                                            <a href="profile-mentee.html" class="avatar avatar-sm me-2">
-                                                                                <img class="avatar-img"
-                                                                                     src="assets/img/user/user2.jpg" alt="User Image">
-                                                                            </a>
-                                                                            <a href="profile-mentee.html">Sản phẩm 1<span>XXL, Red, Extra</span></a>
-                                                                        </h2>
-                                                                    </td>
-                                                                    <td>2</td>
-                                                                    <td>450$</td>
-                                                                    <td class="text-end">
-                                                                        <div class="table-action">
-                                                                            <a href="javascript:void(0);"
-                                                                               class="btn btn-danger">
-                                                                                <i class="fa fa-trash"></i> Delete
-                                                                            </a>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <input type="checkbox"></input>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h2 class="table-avatar">
-                                                                            <a href="profile-mentee.html" class="avatar avatar-sm me-2">
-                                                                                <img class="avatar-img"
-                                                                                     src="assets/img/user/user2.jpg" alt="User Image">
-                                                                            </a>
-                                                                            <a href="profile-mentee.html">Sản phẩm 1<span>XXL, Red, Extra</span></a>
-                                                                        </h2>
-                                                                    </td>
-                                                                    <td>2</td>
-                                                                    <td>450$</td>
-                                                                    <td class="text-end">
-                                                                        <div class="table-action">
-                                                                            <a href="javascript:void(0);"
-                                                                               class="btn btn-danger">
-                                                                                <i class="fa fa-trash"></i> Delete
-                                                                            </a>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <input type="checkbox"></input>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h2 class="table-avatar">
-                                                                            <a href="profile-mentee.html" class="avatar avatar-sm me-2">
-                                                                                <img class="avatar-img"
-                                                                                     src="assets/img/user/user2.jpg" alt="User Image">
-                                                                            </a>
-                                                                            <a href="profile-mentee.html">Sản phẩm 1<span>XXL, Red, Extra</span></a>
-                                                                        </h2>
-                                                                    </td>
-                                                                    <td>2</td>
-                                                                    <td>450$</td>
-                                                                    <td class="text-end">
-                                                                        <div class="table-action">
-                                                                            <a href="javascript:void(0);"
-                                                                               class="btn btn-danger">
-                                                                                <i class="fa fa-trash"></i> Delete
-                                                                            </a>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
+                                                                @foreach (var coc in Model.productCartList)
+                                                                {
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" name="SelectedItems" value="@coc.CartId" id="@coc.CartId"></input>
+                                                                        </td>
+                                                                        <td>
+                                                                            <h2 class="table-avatar">
+                                                                                <a href="/Product/ProductDetail?productId=@coc.ProductId" class="avatar avatar-sm me-2">
+                                                                                    <img class="avatar-img"
+                                                                                         src="@coc.ProductImage" alt="Product Image">
+                                                                                </a>
+                                                                                <a href="/Product/ProductDetail?productId=@coc.ProductId">@coc.ProductName<span>@coc.ProductSizeDetail, @coc.ProductColorDetail, @coc.ProductOptionsDetail</span></a>
+                                                                            </h2>
+                                                                        </td>
+                                                                        <td>@coc.ProductQuantity</td>
+                                                                        <td>@ConvertToVND(Convert.ToDouble(coc.ProductPrice*coc.ProductQuantity))</td>
+                                                                        <td class="text-end">
+                                                                            <div class="table-action">
+                                                                                <a href="javascript:void(0);"
+                                                                                   class="btn btn-danger">
+                                                                                    <i class="fa fa-trash"></i> Delete
+                                                                                </a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                }
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -264,7 +132,7 @@
                                             Pay
                                         </button>
                                     </div>
-                                </form>
+                                
 
                             </div>
                         </div>
@@ -279,40 +147,44 @@
 
                                 <div class="booking-user-info">
                                     <a href="profile.html" class="booking-user-img">
-                                        <img src="/assets/img/user/user2.jpg" alt="User Image">
+                                        <img src="@Model.userDetail.ImgUrl" alt="User Image">
                                     </a>
                                     <div class="booking-info">
-                                        <h4><a href="profile.html">Darren Elder</a></h4>
-                                        <div class="rating">
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star"></i>
-                                            <span class="d-inline-block average-rating">35</span>
-                                        </div>
-                                        <div class="mentor-details">
-                                            <p class="user-location">
-                                                <i class="fas fa-map-marker-alt"></i> Newyork, USA
+                                        <h4><a href="profile.html">@Model.userDetail.Name</a></h4>
+
+                                        <div>
+                                            <p class="user-location">   
+                                            <select class="form-select" name="uad-form" id="uad-form">
+                                                @foreach(var item in Model.uad){
+                                                    if (item.Default == true)
+                                                    {
+                                                        <option value="@item.AddressId" selected>@item.Address</option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="@item.AddressId">@item.Address</option>
+                                                    }
+                                            }
+                                            </select>
                                             </p>
-                                        </div>
+                                            </div>
                                     </div>
                                 </div>
 
                                 <div class="booking-summary">
                                     <div class="booking-item-wrap">
                                         <ul class="booking-date">
-                                            <li>Date <span>14 Feb 2024</span></li>
-                                            <li>Time <span>10:00 AM</span></li>
+                                            <li>Date <span id="daynow">--</span></li>
+                                            <li>Time <span id="timenow">--</span></li>
                                         </ul>
                                         <ul class="booking-fee">
-                                            <li>Product Fee <span>100.000VND</span></li>
+                                            <li>Product Fee <span id="totalprice1">0</span></li>
                                         </ul>
                                         <div class="booking-total">
                                             <ul class="booking-total-list">
                                                 <li>
                                                     <span>Total</span>
-                                                    <span class="total-cost">100.000VND</span>
+                                                    <span class="total-cost" id="totalprice2">0</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -325,7 +197,7 @@
                 </div>
             </div>
         </div>
-
+        </form>
 
         <footer class="footer">
 
@@ -449,6 +321,33 @@
     <script src="/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
 
     <script src="/assets/js/script.js"></script>
+    <script>
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('click', () => {
+                var totalPrice = 0;
+                var cartCookie = @Html.Raw(Json.Serialize(Model.jsonCart));
+                if (cartCookie) {
+                    var cookieData = JSON.parse(cartCookie);
+                    if (Array.isArray(cookieData)) {
+                        const selectedCartIds = [];
+                        document.querySelectorAll('input[type="checkbox"]:checked').forEach(selectedCheckbox => {
+                            selectedCartIds.push(parseInt(selectedCheckbox.id)); // Parse the ID to an integer
+                        });
+                        cookieData.forEach(cartItem => {
+                            if (selectedCartIds.includes(cartItem.CartId)) { // Use includes() to check if the ID exists in the array
+                                totalPrice += cartItem.ProductPrice * cartItem.ProductQuantity;
+                            }
+                        }); console.log("cookie = " + cookieData);
+                    }
+                    document.getElementById('daynow').textContent = new Date().toDateString();
+                    document.getElementById('timenow').textContent = new Date().toLocaleTimeString();
+                    document.getElementById('totalprice1').textContent = totalPrice.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });;
+                    document.getElementById('totalprice2').textContent = totalPrice.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });;
+                }
+            });
+        });
+
+    </script>
 </body>
 
 <!-- Mirrored from mentoring.dreamguystech.com/html/template/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 May 2023 10:32:23 GMT -->

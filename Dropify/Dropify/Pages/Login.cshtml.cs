@@ -1,46 +1,64 @@
-using Dropify.Logics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Security.Cryptography.X509Certificates;
+using System.Text.Json;
+using Dropify.Models;
+using Dropify.Logics;
 
 namespace Dropify.Pages
 {
     public class LoginModel : PageModel
     {
         [BindProperty]
-        public string Email { get; set; }
+        public User User { get; set; }
 
-        [BindProperty]
-        public string Password { get; set; }
-        BasePageModel basePageModel = new BasePageModel();
-        public void OnGet()
+        public IActionResult OnGet()
         {
-
+            if (HttpContext.Session.GetString("user") == null)
+                return Page();
+            else
+            {
+                var user = JsonSerializer.Deserialize<User>(HttpContext.Session.GetString("user"));
+                var userDAO = new UserDAO();
+                if (userDAO.Authorization(user.Email))
+                {
+                    return RedirectToPage("Admin/Dashboard");
+                }
+                else
+                {
+                    return RedirectToPage("Index");
+                }
+            }
         }
+
         public IActionResult OnPost()
         {
-            //List<Models.User> users= basePageModel.User;
+            var userDAO = new UserDAO();
             TempData.Clear();
-            List<Models.User> users = basePageModel.users;
-            foreach (Models.User user in users)
+            if (!ModelState.IsValid)
             {
-                if (user.Email == Email)
+                return Page();
+            }
+
+            using (var dbContext = new prn211_dropshippingContext())
+            {
+                var user = dbContext.Users.FirstOrDefault(a => a.Email == User.Email);
+                
+                if (user != null && userDAO.DecryptPass(user.Pword) == User.Pword)
                 {
-                    UserDAO userDAO = new UserDAO();
-                    if (userDAO.Authentication(Email, Password))
+                    HttpContext.Session.SetString("user", JsonSerializer.Serialize(user));
+                    
+                    if (userDAO.Authorization(user.Email))
                     {
-                        TempData["ErrorMessage"] = "Credentials!";
-                        HttpContext.Session.SetString("user_email", Email);
-                        return RedirectToPage("/Index");
+                        return RedirectToPage("Admin/Dashboard");
                     }
                     else
                     {
-                        TempData["ErrorMessage"] = "Invalid Password!";
-                        return Page();
+                        return RedirectToPage("Index");
                     }
                 }
             }
-            TempData["ErrorMessage"] = "Email doesn't exsit!";
+
+            TempData["msg"] = "Email or password incorrect.";
             return Page();
         }
     }

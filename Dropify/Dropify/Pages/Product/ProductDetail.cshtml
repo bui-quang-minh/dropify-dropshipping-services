@@ -27,10 +27,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-12 col-12">
                         <nav aria-label="breadcrumb" class="page-breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                em active" aria-current="page">Product</li>
-                            </ol>
+                            
                         </nav>
                         <h2 class="breadcrumb-title">Product Details</h2>
                     </div>
@@ -209,7 +206,7 @@
                                             </div>
                                         }
                                     }
-                                    
+
                                 </div>
 
                             </div>
@@ -221,12 +218,14 @@
                         <div class="card search-widget">
 
                             <div class="card-body">
-                                
 
+                                @if(Model.product.Status=="Active"){ 
                                 <s style="font-size: 22px; font-weight:bold">@originalPriceVND</s>
                                 <p style="font-size: 22px; font-weight:bold" class="text-danger">@discountVND</p>
 
-                                <form class="search-form" action="ProductDetail" method="post">
+                                <form class="search-form" asp-page="/Product/ProductDetail" asp-page-handler="Add">
+                                    <input type="hidden" name="productId" value="@Model.product.ProductId">
+                                    <input type="hidden" name="price" value="@discount">
                                     <!--Color-->
                                     <div class="input-group">
                                          @{
@@ -309,6 +308,15 @@
                                         
                                     </div>
                                 </form>
+                                }
+                                else if (Model.product.Status == "Release")
+                                {
+                                    <p class="text-danger">This product will soon be avalible</p>
+                                }
+                                else
+                                {
+                                    <p class="text-danger">This product is not avalible</p>
+                                }
                             </div>
                         </div>
 
