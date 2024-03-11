@@ -39,8 +39,9 @@
                 </div>
             </div>
         </div>
-        
-        <form asp-page="/Cart" asp-page-handler="Remove"><button type="submit">Remove cookie </button></form>
+        <form form asp-page="/Cart" id="remove-form" asp-page-handler="Remove">
+            <input type="hidden" value="" id="cookie-content" name="cookie_content"></input>
+        </form>
         @{
             static string ConvertToVND(double number)
             {
@@ -96,10 +97,9 @@
                                                                         <td>@ConvertToVND(Convert.ToDouble(coc.ProductPrice*coc.ProductQuantity))</td>
                                                                         <td class="text-end">
                                                                             <div class="table-action">
-                                                                                <a href="javascript:void(0);"
-                                                                                   class="btn btn-danger">
+                                                                                <button type="button" class="btn btn-danger delete-button" data-cart-id="@coc.CartId">
                                                                                     <i class="fa fa-trash"></i> Delete
-                                                                                </a>
+                                                                                </button>
                                                                             </div>
                                                                         </td>
                                                                     </tr>
@@ -113,27 +113,11 @@
                                         </div>
                                     </div>
 
-                                    <div class="terms-accept">
-                                        <div class="custom-checkbox">
-                                            <input type="checkbox" id="terms_accept">
-                                            <label for="terms_accept">
-                                                I have read and accepted <a href="#">
-                                                    Terms
-                                                    &amp; Conditions
-                                                </a>
-                                            </label>
-                                        </div>
-                                    </div>
-
-
                                     <div class="submit-section mt-4">
                                         <button type="submit" class="btn btn-primary submit-btn">
-                                            Confirm and
-                                            Pay
+                                            Buy Now
                                         </button>
                                     </div>
-                                
-
                             </div>
                         </div>
                     </div>
@@ -198,6 +182,8 @@
             </div>
         </div>
         </form>
+
+        
 
         <footer class="footer">
 
@@ -346,10 +332,39 @@
                 }
             });
         });
+    </script>
+    <script>
+        const deleteButtons = document.querySelectorAll('.delete-button');
+
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                console.log('delete button clicked');
+                const cartId = button.dataset.cartId;
+
+                var cartCookie = @Html.Raw(Json.Serialize(Model.jsonCart));
+                if (cartCookie) {
+                    console.log("cartcookie found");
+                    var cookieData = JSON.parse(cartCookie);
+                    if (Array.isArray(cookieData)) {
+                        console.log("is array" + cookieData);
+
+                        cookieData.forEach(cartItem => {
+                            if (cartItem.CartId==cartId) { // Use includes() to check if the ID exists in the array
+                                console.log("is found (for): " + cartItem.CartId);
+                                cookieData.splice(cartItem, 1);
+                                console.log("New array: " + cookieData);
+                                //Send cookieData to C# backend
+                                cookieData = JSON.stringify(cookieData);
+                                document.getElementById("cookie-content").value = cookieData;
+                                document.getElementById("remove-form").submit();
+                            }
+                        });
+                    }
+
+                }
+            });
+        });
 
     </script>
 </body>
-
-<!-- Mirrored from mentoring.dreamguystech.com/html/template/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 May 2023 10:32:23 GMT -->
-
 </html>

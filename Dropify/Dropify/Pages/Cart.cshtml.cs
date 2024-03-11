@@ -26,13 +26,14 @@ namespace Dropify.Pages
                 user = JsonConvert.DeserializeObject<User>(userString);
                 UserDetailDAO userDAO = new UserDetailDAO();
                 userDetail = userDAO.GetUserDetailById(user.Uid);
+                UserAddressDAO userAddressDAO = new UserAddressDAO();
+                uad = userAddressDAO.GetAllUserAddressesByUid(user.Uid);
             }
             else
             {
                 return RedirectToPage("/Login");
             }
-            UserAddressDAO userAddressDAO = new UserAddressDAO();
-            uad = userAddressDAO.GetAllUserAddresses();
+            
             if (Request.Cookies.TryGetValue("cart", out string cartCookieString))
             {
                 jsonCart = cartCookieString;
@@ -44,16 +45,21 @@ namespace Dropify.Pages
             }
             return Page();
         }
-        public IActionResult OnPostRemove() {
+        public IActionResult OnPostRemove(string cookie_content) {
             CookieOptions option = new CookieOptions();
             option.Expires = DateTime.Now.AddDays(-1);
             Response.Cookies.Append("cart", "", option);
+            var cookieOptions = new Microsoft.AspNetCore.Http.CookieOptions
+            {
+                Secure = true,
+                HttpOnly = true,
+                SameSite = Microsoft.AspNetCore.Http.SameSiteMode.None,
+                Path = "/; samesite=None; Partitioned"
+            };
+            Response.Cookies.Append("cart", cookie_content, cookieOptions);
             return RedirectToPage("/Cart");
         }
-        public IActionResult OnPostRemoveItem(){
-
-            return RedirectToPage("/Cart");
-        }
+        
         public IActionResult OnPostAdd()
         {
             var uad_form = Request.Form["uad-form"];
