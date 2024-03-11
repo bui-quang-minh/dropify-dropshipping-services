@@ -2,6 +2,7 @@ using Dropify.Logics;
 using Dropify.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
 
 namespace Dropify.Pages.Profile
 {
@@ -10,26 +11,46 @@ namespace Dropify.Pages.Profile
         
         [BindProperty]
         
-        public Models.Order Order { get; set; }
-        private Dropify.Models.prn211_dropshippingContext con;
+        public Order Order { get; set; }
+        private readonly prn211_dropshippingContext con;
         private OrderDAO od = new OrderDAO();
-        
 
+        [BindProperty]
+        public UserDetail UserDetail { get; set; }
+        [BindProperty]
+        public User User { get; set; }
+        public User user;
 
+        private readonly IWebHostEnvironment _webHostEnvironment;
         public List<Models.Order> OderedOrders { get; set; }
         public List<Models.Order> SuccessOrders { get; set; }
         public List<Models.Order> CanceledOrders { get; set; }
 
 
-        public OrdersModel(Dropify.Models.prn211_dropshippingContext context)
+        public OrdersModel(IWebHostEnvironment webHostEnvironment, prn211_dropshippingContext context)
         {
+            _webHostEnvironment = webHostEnvironment;
             con = context;
         }
-        public void OnGet()
+        public IActionResult OnGet()
         {
-            OderedOrders = od.GetOrderByStatus("Ordered");
-            SuccessOrders = od.GetOrderByStatus("Success");
-            CanceledOrders = od.GetOrderByStatus("Canceled");
+            string userString = HttpContext.Session.GetString("user");
+            System.Diagnostics.Debug.WriteLine("UID: " + userString);
+            if (userString != null)
+            {
+                user = JsonConvert.DeserializeObject<User>(userString);
+                UserDetail = con.UserDetails.FirstOrDefault(ud => ud.Uid == user.Uid);
+                User = con.Users.FirstOrDefault(u => u.Uid == user.Uid);
+                OderedOrders = od.GetOrderByStatus("Ordered");
+                SuccessOrders = od.GetOrderByStatus("Success");
+                CanceledOrders = od.GetOrderByStatus("Canceled");
+            }
+            else
+            {
+                return RedirectToPage("/Login");
+            }
+            return Page();
+            
         }
 
         public IActionResult OnPostDelete()
