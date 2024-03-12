@@ -56,6 +56,23 @@ namespace Dropify.Logics
             
         }
 
+        public List<Order> GetOrderByStatus(string status, int udid)
+        {
+            string ProductName = string.Empty;
+            List<Order> orders = new List<Order>();
+            using (var db = new prn211_dropshippingContext())
+            {
+                orders = db.Orders
+                    .Include(o => o.Address)
+                    .Include(o => o.Ud)
+                    .Include(od => od.OrderDetails)
+                    .ThenInclude(p => p.Product)
+                    .Where(o => o.Status == status && o.Udid==udid).ToList();
+                return orders;
+            }
+
+        }
+
 
         //public List<Order> GetOrdersWithDetailsAndProducts()
         //{
