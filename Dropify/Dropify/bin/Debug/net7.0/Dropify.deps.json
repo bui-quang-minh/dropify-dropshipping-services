@@ -9,6 +9,7 @@
       "Dropify/1.0.0": {
         "dependencies": {
           "CloudinaryDotNet": "1.21.0",
+          "Microsoft.AspNetCore.Authentication.Google": "7.0.13",
           "Microsoft.EntityFrameworkCore.Design": "6.0.26",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.26",
           "Microsoft.Extensions.Configuration.Json": "6.0.0"
@@ -35,6 +36,14 @@
           "lib/netstandard2.0/Humanizer.dll": {
             "assemblyVersion": "2.8.0.0",
             "fileVersion": "2.8.26.1919"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/7.0.13": {
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "assemblyVersion": "7.0.13.0",
+            "fileVersion": "7.0.1323.52007"
           }
         }
       },
@@ -529,6 +538,13 @@
       "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Google/7.0.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-auoXmLwSnmzgmbIyJdElEQ0c/Uj3WL/nrlXU0h0xpKa5ZHSozjt3ywb0O3PJ3NLge0TR4rOT9m8O/8ZSC29eKw==",
+      "path": "microsoft.aspnetcore.authentication.google/7.0.13",
+      "hashPath": "microsoft.aspnetcore.authentication.google.7.0.13.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "type": "package",

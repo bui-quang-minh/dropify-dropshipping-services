@@ -1,4 +1,6 @@
 using Dropify.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,7 +21,22 @@ builder.Services.AddSession(options =>
 
 builder.Services.AddScoped<prn211_dropshippingContext>();
 
+// Add authentication services
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+}).AddCookie().AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
+    {
+        IConfiguration configuration = builder.Configuration;
+        options.ClientId = configuration["Authentication:Google:ClientId"];
+        options.ClientSecret = configuration["Authentication:Google:ClientSecret"];
+        options.CallbackPath = "/signin-google";
+    });
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -34,6 +51,7 @@ app.UseStaticFiles();// to use wwwroot
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseSession();  // Add this line to enable session middleware

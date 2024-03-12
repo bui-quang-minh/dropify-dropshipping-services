@@ -348,3 +348,4 @@ D:\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\obj\Debug\net7.0\refin
 D:\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.pdb
 D:\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.genruntimeconfig.cache
 D:\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\obj\Debug\net7.0\ref\Dropify.dll
+D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Google.dll

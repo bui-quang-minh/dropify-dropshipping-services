@@ -33,6 +33,22 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Authentication.Google/7.0.13": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1044,6 +1060,21 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Google/7.0.13": {
+      "sha512": "auoXmLwSnmzgmbIyJdElEQ0c/Uj3WL/nrlXU0h0xpKa5ZHSozjt3ywb0O3PJ3NLge0TR4rOT9m8O/8ZSC29eKw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.google/7.0.13",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net7.0/Microsoft.AspNetCore.Authentication.Google.dll",
+        "lib/net7.0/Microsoft.AspNetCore.Authentication.Google.xml",
+        "microsoft.aspnetcore.authentication.google.7.0.13.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.google.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -2502,29 +2533,30 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "CloudinaryDotNet >= 1.21.0",
+      "Microsoft.AspNetCore.Authentication.Google >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.26",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.26",
       "Microsoft.Extensions.Configuration.Json >= 6.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\buiqu\\.nuget\\packages\\": {},
+    "C:\\Users\\GF63\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
+      "projectUniqueName": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
       "projectName": "Dropify",
-      "projectPath": "D:\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
-      "packagesPath": "C:\\Users\\buiqu\\.nuget\\packages\\",
-      "outputPath": "D:\\PRN221\\Dropify\\Dropify\\obj\\",
+      "projectPath": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
+      "packagesPath": "C:\\Users\\GF63\\.nuget\\packages\\",
+      "outputPath": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\buiqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\GF63\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2533,7 +2565,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2555,6 +2586,10 @@
           "CloudinaryDotNet": {
             "target": "Package",
             "version": "[1.21.0, )"
+          },
+          "Microsoft.AspNetCore.Authentication.Google": {
+            "target": "Package",
+            "version": "[7.0.13, )"
           },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

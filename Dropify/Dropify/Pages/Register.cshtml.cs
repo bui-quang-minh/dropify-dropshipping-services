@@ -1,5 +1,7 @@
 using Dropify.Logics;
 using Dropify.Models;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Text;
@@ -73,6 +75,29 @@ namespace Dropify.Pages
             }
 
             return Page();
+        }
+        public IActionResult OnGetLoginWithGoogle()
+        {
+            // cai nay de hien cai man hinh google xong xuong duoi
+            var redirectUrl = Url.Page("/Register", pageHandler: "GoogleResponse");
+            return Challenge(new AuthenticationProperties { RedirectUri = redirectUrl }, GoogleDefaults.AuthenticationScheme);
+        }
+
+        public async Task<IActionResult> OnGetGoogleResponse()
+        {
+            // cai nay de lay du lieu nguoi dung
+            var result = await HttpContext.AuthenticateAsync(GoogleDefaults.AuthenticationScheme);
+            var claims = result?.Principal?.Identities?.FirstOrDefault()?.Claims
+                .Select(claim => new
+                {
+                    claim.Issuer,
+                    //claim.OriginalIssuer,
+                    //claim.Type,
+                    claim.Value
+                });
+
+            var json = JsonSerializer.Serialize(claims);
+            return Content(json, "application/json");
         }
 
     }
