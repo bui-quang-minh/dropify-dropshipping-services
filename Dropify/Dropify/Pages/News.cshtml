@@ -50,7 +50,7 @@
                                 <div class="col-md-6 col-sm-12">
                                     <div class="blog grid-blog">
                                         <div class="blog-image">
-                                            <a href="/Product/ProductDetail?productId=@n.ProductId"><img class="img-fluid" src="@n.ImgUrl" alt="Post Image"></a>
+                                            <a href="/News?NewsId=@n.NewsId"><img class="img-fluid" src="@n.ImgUrl" alt="Post Image"></a>
                                         </div>
                                         <div class="blog-content">
                                             <ul class="entry-meta meta-item">
@@ -63,7 +63,7 @@
                                             </ul>
                                             <h3 class="blog-title"><a href="/News?NewsId=@n.NewsId">The new about Product</a></h3>
                                             <p class="mb-0">@n.NewsContents.Substring(0, Math.Min(n.NewsContents.Length, 200))@(n.NewsContents.Length > 200 ? "..." : "")</p>
-                                            <a href="/News?NewsId=@n.NewsId" style="color:blue">View more information >></a>
+                                            <a href="/Product/ProductDetail?productId=@n.ProductId" style="color:blue">View more information >></a>
                                         </div>
                                     </div>
                                 </div>
@@ -71,10 +71,10 @@
                             
                                 if(Model.News != null)
                             {
-                                <div class="col-md-6 col-sm-12">
+                                <div class="col-md-6 col-sm-12" style="width: 100%;">
                                     <div class="blog grid-blog">
                                         <div class="blog-image">
-                                            <a href="/Product/ProductDetail?productId=@Model.News.ProductId"><img class="img-fluid" src="@Model.News.ImgUrl" alt="Post Image"></a>
+                                            <img class="img-fluid" src="@Model.News.ImgUrl" alt="Post Image" style="height:750px" >
                                         </div>
                                         <div class="blog-content">
                                             <ul class="entry-meta meta-item">
@@ -148,7 +148,7 @@
                                 {
                                     <li>
                                         <div class="post-thumb">
-                                            <a href="/Product/ProductDetail?productId=@ln.ProductId">
+                                            <a href="/News?NewsId=@ln.NewsId">
                                                 <img class="img-fluid" src="@ln.ImgUrl" alt>
                                             </a>
                                         </div>

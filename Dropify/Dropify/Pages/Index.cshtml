@@ -40,7 +40,7 @@
                                     <div class="form-group search-info location-search ">
                                         <input type="text" class="form-control text-truncate"
                                                placeholder=" Search Categories, Products, etc...">
-                                        <a href="search.html"
+                                        <a href="#"
                                            class="btn bg-search search-btn align-items-center d-flex justify-content-center">
                                             <i class="fa fa-search" aria-hidden="true"></i>
                                         </a>
@@ -71,13 +71,13 @@
                         </p>
                     </div>
                     <div class="section-btn align-items-center aos " data-aos="fade-up">
-                        <a href="search.html" class="btn btn-primary">See All Categories</a>
+                        <a href="#" class="btn btn-primary">See All Categories</a>
                     </div>
                 </div>
                 <div class="popular-categories aos " data-aos="fade-up">
                     <div class="row">
                         <div class="col-lg-2 col-md-4">
-                            <a href="search.html">
+                            <a href="/Product/AllProduct?categorySearch=2">
                                 <div class="sub-categories bg-design align-items-center">
                                     <div class="categories-img d-flex justify-content-center align-items-center">
                                         <img src="/assets/img/categories/cate-1.svg" alt>
@@ -89,7 +89,7 @@
                             </a>
                         </div>
                         <div class="col-lg-2 col-md-4">
-                            <a href="search.html">
+                            <a href="/Product/AllProduct?categorySearch=5">
                                 <div class="sub-categories bg-development align-items-center">
                                     <div class="categories-img d-flex justify-content-center align-items-center">
                                         <img src="/assets/img/categories/cate-2.svg" alt>
@@ -101,7 +101,7 @@
                             </a>
                         </div>
                         <div class="col-lg-2 col-md-4">
-                            <a href="search.html">
+                            <a href="/Product/AllProduct?categorySearch=8">
                                 <div class="sub-categories bg-software align-items-center">
                                     <div class="categories-img d-flex justify-content-center align-items-center">
                                         <img src="/assets/img/categories/cate-27.png" alt>
@@ -113,7 +113,7 @@
                             </a>
                         </div>
                         <div class="col-lg-2 col-md-4">
-                            <a href="search.html">
+                            <a href="/Product/AllProduct?categorySearch=11">
                                 <div class="sub-categories bg-business align-items-center">
                                     <div class="categories-img d-flex justify-content-center align-items-center">
                                         <img src="/assets/img/categories/cate-4.svg" alt>
@@ -125,7 +125,7 @@
                             </a>
                         </div>
                         <div class="col-lg-2 col-md-4">
-                            <a href="search.html">
+                            <a href="/Product/AllProduct?categorySearch=12">
                                 <div class="sub-categories bg-marketing align-items-center">
                                     <div class="categories-img d-flex justify-content-center align-items-center">
                                         <img src="/assets/img/categories/cate-5.svg" alt>
@@ -137,7 +137,7 @@
                             </a>
                         </div>
                         <div class="col-lg-2 col-md-4">
-                            <a href="search.html">
+                            <a href="/Product/AllProduct?categorySearch=13">
                                 <div class="sub-categories bg-photography align-items-center">
                                     <div class="categories-img d-flex justify-content-center align-items-center">
                                         <img src="/assets/img/categories/cate-6.svg" alt>
@@ -167,7 +167,7 @@
                     </div>
 
                     <div class="section-btn align-items-center aos " data-aos="fade-up">
-                        <a href="search.html" class="btn btn-primary">View All</a>
+                        <a href="/Products/AllProducts" class="btn btn-primary">View All</a>
                     </div>
                 </div>
                 <div class="course-two-all aos " data-aos="fade-up">
@@ -179,7 +179,7 @@
                                     <div class="product">
                                         <div class="product-img">
                                             <a href="search.html">
-                                                <img class="img-fluid" alt src="/assets/img/trend-img5.png" width="600"
+                                                <img class="img-fluid" alt src="@item.ProductThumbnailImage" width="600"
                                                      height="300">
                                             </a>
                                         </div>
@@ -200,7 +200,7 @@
                                                 <div class="rating-img">
                                                     <img src="/assets/img/user/user2.jpg" alt>
                                                 </div>
-                                                <h5>James Collins</h5>
+                                                <h5>@item.CreatedBy</h5>
                                                 <div class="course-price">
                                                     <h4>
                                                         <span>$@item.SellOutPrice</span>
@@ -265,148 +265,25 @@
                     </div>
                 </div>
                 <div class="owl-carousel popular-course-slide-two owl-theme aos " data-aos="fade-up">
+                    
+                @foreach(var n in Model.ListNews)
+                {
                     <div class="course-box">
                         <div class="product">
                             <div class="product-img">
-                                <a href="search.html">
-                                    <img class="img-fluid" alt src="/assets/img/trend-img.png" width="600" height="300">
-                                </a>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="title"><a href="search.html">Information About UI/UX Design Degree</a></h3>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-box">
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="search.html">
-                                    <img class="img-fluid" alt src="/assets/img/trend-img1.png" width="600" height="300">
+                                <a href="/News?NewsId=@n.NewsId">
+                                    <img class="img-fluid" alt src="@n.ImgUrl" width="600" height="300">
                                 </a>
                             </div>
                             <div class="product-content">
                                 <h3 class="title">
-                                    <a href="search.html">Photography Crash Course for Photographer</a>
-                                </h3>
+                                    <a href="/News?NewsId=@n.NewsId">@n.NewsContents.Substring(0, Math.Min(n.NewsContents.Length, 100))@(n.NewsContents.Length > 100 ? "..." : "")</a>
+                                    </h3>
+
                             </div>
                         </div>
                     </div>
-                    <div class="course-box">
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="search.html">
-                                    <img class="img-fluid" alt src="/assets/img/trend-img2.png" width="600" height="300">
-                                </a>
-                            </div>
-                            <div class="product-content">
-                                
-                                <h3 class="title">
-                                    <a href="search.html">React – The Complete Guide (React Router)</a>
-                                </h3>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-box">
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="search.html">
-                                    <img class="img-fluid" alt src="/assets/img/trend-img3.png" width="600" height="300">
-                                </a>
-                            </div>
-                            <div class="product-content">
-                                
-                                <h3 class="title"><a href="search.html">Java (Beginner) Programming Tutorials</a></h3>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-box">
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="search.html">
-                                    <img class="img-fluid" alt src="/assets/img/trend-img4.png" width="600" height="300">
-                                </a>
-                            </div>
-                            <div class="product-content">
-                                
-                                <h3 class="title"><a href="search.html">Information About UI/UX Design Degree</a></h3>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-box">
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="search.html">
-                                    <img class="img-fluid" alt src="/assets/img/trend-img5.png" width="600" height="300">
-                                </a>
-                            </div>
-                            <div class="product-content">
-                                
-                                <h3 class="title"><a href="search.html">Php (Beginner) Programming Tutorials</a></h3>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-box">
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="search.html">
-                                    <img class="img-fluid" alt src="/assets/img/trend-img.png" width="600" height="300">
-                                </a>
-                            </div>
-                            <div class="product-content">
-                                
-                                <h3 class="title"><a href="search.html">Information About UI/UX Design Degree</a></h3>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-box">
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="search.html">
-                                    <img class="img-fluid" alt src="/assets/img/trend-img2.png" width="600" height="300">
-                                </a>
-                            </div>
-                            <div class="product-content">
-                                
-                                <h3 class="title"><a href="search.html">Email & Affiliate Marketing Mastermind</a></h3>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-box">
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="search.html">
-                                    <img class="img-fluid" alt src="/assets/img/trend-img3.png" width="600" height="300">
-                                </a>
-                            </div>
-                            <div class="product-content">
-                                
-                                <h3 class="title"><a href="search.html">Information About UI/UX Design Degree</a></h3>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-box">
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="search.html">
-                                    <img class="img-fluid" alt src="/assets/img/trend-img1.png" width="600" height="300">
-                                </a>
-                            </div>
-                            <div class="product-content">
-                                
-                                <h3 class="title"><a href="search.html">Node (Beginner) Programming Tutorials</a></h3>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
         </section>
 

@@ -68,7 +68,7 @@ namespace Dropify.Logics
                 return p.ProductId;
             }
         }
-        public List<Product> GetProductByStatus3(string status)
+        public List<Product> GetProductByStatus(string status)
         {
             List<Product> products = new List<Product>();
             using (var db = new prn211_dropshippingContext())

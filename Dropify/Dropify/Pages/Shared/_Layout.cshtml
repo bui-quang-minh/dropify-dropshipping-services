@@ -67,8 +67,10 @@
                                     <ul class="submenu">
                                         @foreach (Models.Category c in Model.categories)
                                         {
-                                            if (c.ChildCategory.Count > 0){
-                                            <li class="has-submenu"><a href="">@c.CategoryName</a>
+                                            if (c.ChildCategory.Count > 0)
+                                            {
+                                            <li class="has-submenu">
+                                                <a href="">@c.CategoryName</a>
                                                 <ul class="submenu">
                                                     @foreach (Models.Category c2 in c.ChildCategory)
                                                     {
