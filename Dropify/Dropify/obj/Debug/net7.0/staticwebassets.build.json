@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "X4GwjYPhqTIQmr6kB+v834+9FhkTDznPLKaJwUXSgHw=",
+  "Hash": "n4065F6GqEfi71rjzvUmCg1J5DevJenx+DBfD4wGVmI=",
   "Source": "Dropify",
   "BasePath": "_content/Dropify",
   "Mode": "Default",
@@ -1385,25 +1385,6 @@
       "OriginalItemSpec": "wwwroot\\Admin\\js\\bootstrap-datetimepicker.min.js"
     },
     {
-      "Identity": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\chart.morris.js",
-      "SourceId": "Dropify",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\",
-      "BasePath": "_content/Dropify",
-      "RelativePath": "Admin/js/chart.morris.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Admin\\js\\chart.morris.js"
-    },
-    {
       "Identity": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\ckeditor.js",
       "SourceId": "Dropify",
       "SourceType": "Discovered",
@@ -1421,6 +1402,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\js\\ckeditor.js"
+    },
+    {
+      "Identity": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\chart.morris.js",
+      "SourceId": "Dropify",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\",
+      "BasePath": "_content/Dropify",
+      "RelativePath": "Admin/js/chart.morris.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\js\\chart.morris.js"
     },
     {
       "Identity": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\Admin\\js\\feather.min.js",
