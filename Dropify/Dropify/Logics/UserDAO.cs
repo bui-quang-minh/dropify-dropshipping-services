@@ -72,7 +72,7 @@ namespace Dropify.Logics
                 return false;
             }
         }
-        private string Encryption(string password)
+        public string Encryption(string password)
         {
             byte[] storePassword = ASCIIEncoding.ASCII.GetBytes(password);
             string encryptpass = Convert.ToBase64String(storePassword);
