@@ -150,7 +150,7 @@
     <div class="sidebar" id="sidebar">
         <div class="sidebar-inner slimscroll">
             <div id="sidebar-menu" class="sidebar-menu">
-                <ul>
+                <ul class="main-nav">
                     <li class="menu-title">
                         <span><i class="fe fe-home"></i> Main</span>
                     </li>
@@ -282,6 +282,27 @@
     <script src="~/Admin/js/script.js"></script>
    <script src="~/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="~/Admin/plugins/datatables/datatables.min.js"></script> 
+
+    <script>
+        var currentPath = window.location.pathname;
+
+        // Lặp qua mỗi thẻ <a> trong danh sách submenu
+        document.querySelectorAll('.main-nav li a').forEach(function (item) {
+            // Lấy đường dẫn của từng thẻ <a>
+            var link = item.getAttribute('href');
+            // Kiểm tra xem đường dẫn hiện tại có trùng khớp với đường dẫn của thẻ <a> không
+            // if (currentPath === "/Product/AllProduct") {
+            //     // Tìm phần tử có class 'has-submenu' và thêm lớp 'active' vào đó
+            //     var activelink = document.querySelector('.main-nav .has-submenu');
+            //     activelink.classList.add('active');
+            // }
+            if (currentPath === link) {
+                // Nếu có, thêm lớp 'active' vào thẻ <li> chứa thẻ <a>
+                item.parentNode.classList.add('active');
+            }
+        });
+
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
