@@ -93,7 +93,7 @@ namespace Dropify.Pages
                     o.OrderedDate = DateTime.Parse(formattedTime);
                     o.OrderedPrice = total;
                     o.AddressId = int.Parse(uad_form);
-                    o.ShipStatus = "Not shipped";   
+                    o.ShipStatus = "Not Shipped";   
                     o.Status = "Ordered";
                     db.Orders.Add(o);
                     db.SaveChanges();

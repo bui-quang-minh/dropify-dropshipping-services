@@ -25,7 +25,6 @@ namespace Dropify.Pages.Admin.ManageProduct
             con = context;
         }
        
-
         public IList<Category> categories { get; set; }
         public IList<Models.Supplier> suppliers { get; set; }
         public IList<Models.Product> ListProduct { get;set; }
@@ -53,7 +52,6 @@ namespace Dropify.Pages.Admin.ManageProduct
                     ListProduct2 = pd.GetProductByStatus("Shipping"); // san pham co trạng thái Shipping
                     ListProduct3 = pd.GetProductByStatus("Success"); // san pham co trạng thái Success
                     ListProduct4 = pd.GetProductByStatus("Cancel"); // san pham co trạng thái Cancel
-
                     categories = con.Categories.ToList();
                     suppliers = con.Suppliers.ToList();
                     return Page();
