@@ -85,20 +85,26 @@ namespace Dropify.Pages
 
         public async Task<IActionResult> OnGetGoogleResponse()
         {
-            // cai nay de lay du lieu nguoi dung
             var result = await HttpContext.AuthenticateAsync(GoogleDefaults.AuthenticationScheme);
-            var claims = result?.Principal?.Identities?.FirstOrDefault()?.Claims
-                .Select(claim => new
-                {
-                    claim.Issuer,
-                    //claim.OriginalIssuer,
-                    //claim.Type,
-                    claim.Value
-                });
+            var claims = result?.Principal?.Identities?.FirstOrDefault()?.Claims.Select(claim => claim.Value).ToList();
+            string password = claims.FirstOrDefault();
+            string fullname = claims.Skip(1).FirstOrDefault();
+            string Email = claims.LastOrDefault();
+            UserDAO ud = new UserDAO();
+           // ud.Register(Email, password, fullname);
 
-            var json = JsonSerializer.Serialize(claims);
-            return Content(json, "application/json");
-        }
+            //if (ud.Register(Email, Password, fullName))
+            //{
+            //    HttpContext.Session.SetString("user_email", Email);
+            //    return RedirectToPage("/Index");
+            //}
+            //else
+            //{
+            //    TempData["ErrorMessage"] = "User's Email already exists!";
+            //}
 
+
+            return Content(password + fullname + Email, "application/json");
+            }
     }
 }
