@@ -12,7 +12,7 @@ namespace Dropify.Logics
         {
             using (var db = new prn211_dropshippingContext())
             {
-                return db.News.ToList();
+                return db.News.Where(x => x.NewsType == "NEWS").ToList();
             }
         }
 

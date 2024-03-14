@@ -1,80 +1,15 @@
 ﻿@page
 @model Dropify.Pages.Profile.AddressManagementModel
 @{
-    Layout = "_Layout";
+    Layout = "_ProfileLayout";
 }
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Mentoring</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="/assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="/assets/plugins/fontawesome/css/all.min.css">
-
-    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <div class="container-fluid mt-3">
+    <div class="page-header">
         <div class="row">
-
-            <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
-
-                <div class="profile-sidebar">
-                    <div class="user-widget">
-                        <div class="pro-avatar"><img style="width:100%; height: 100%; border-radius:50%" src="@Model.UserDetail.ImgUrl" alt="avtar" /></div>
-                        <div class="user-info-cont">
-                            <h4 class="usr-name">@Model.UserDetail.Name</h4>
-                        </div>
-                    </div>
-
-                    <div class="custom-sidebar-nav">
-                        <ul>
-                            <li>
-                                <a href="/Index">
-                                    <i class="fas fa-home"></i>Dashboard <span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/Profile/AddressManagement">
-                                    <i class="fas fa-clock"></i>Address Management <span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="/Profile/ChangePassword">
-                                    <i class="fab fa-blogger-b"></i>Change Password <span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/Profile/UserInformation">
-                                    <i class="fas fa-user-cog"></i>User Information <span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/Logout">
-                                    <i class="fas fa-sign-out-alt"></i>Logout <span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
             <div class="col-md-7 col-lg-8 col-xl-9">
                 <div class="content container-fluid">
                     <div class="page-header">
