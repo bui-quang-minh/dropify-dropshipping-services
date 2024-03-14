@@ -76,6 +76,7 @@ namespace Dropify.Pages
 
             return Page();
         }
+
         public IActionResult OnGetLoginWithGoogle()
         {
             // cai nay de hien cai man hinh google xong xuong duoi
@@ -91,7 +92,7 @@ namespace Dropify.Pages
             string fullname = claims.Skip(1).FirstOrDefault();
             string Email = claims.LastOrDefault();
             UserDAO ud = new UserDAO();
-           // ud.Register(Email, password, fullname);
+            // ud.Register(Email, password, fullname);
 
             //if (ud.Register(Email, Password, fullName))
             //{
@@ -102,9 +103,7 @@ namespace Dropify.Pages
             //{
             //    TempData["ErrorMessage"] = "User's Email already exists!";
             //}
-
-
             return Content(password + fullname + Email, "application/json");
-            }
+        }
     }
 }

@@ -67,8 +67,10 @@
                                     <ul class="submenu">
                                         @foreach (Models.Category c in Model.categories)
                                         {
-                                            if (c.ChildCategory.Count > 0){
-                                            <li class="has-submenu"><a href="">@c.CategoryName</a>
+                                            if (c.ChildCategory.Count > 0)
+                                            {
+                                            <li class="has-submenu">
+                                                <a href="">@c.CategoryName</a>
                                                 <ul class="submenu">
                                                     @foreach (Models.Category c2 in c.ChildCategory)
                                                     {
@@ -281,7 +283,26 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        var currentPath = window.location.pathname;
 
+        // Lặp qua mỗi thẻ <a> trong danh sách submenu
+        document.querySelectorAll('.main-nav li a').forEach(function (item) {
+            // Lấy đường dẫn của từng thẻ <a>
+            var link = item.getAttribute('href');
+            // Kiểm tra xem đường dẫn hiện tại có trùng khớp với đường dẫn của thẻ <a> không
+            if (currentPath === "/Product/AllProduct") {
+                // Tìm phần tử có class 'has-submenu' và thêm lớp 'active' vào đó
+                var activelink = document.querySelector('.main-nav .has-submenu');
+                activelink.classList.add('active');
+            }
+            if (currentPath === link) {
+                // Nếu có, thêm lớp 'active' vào thẻ <li> chứa thẻ <a>
+                item.parentNode.classList.add('active');
+            }
+        });
+
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

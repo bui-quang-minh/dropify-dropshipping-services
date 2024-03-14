@@ -2,33 +2,52 @@ using Dropify.Logics;
 using Dropify.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
 
 namespace Dropify.Pages.Profile
 {
     public class OrdersModel : BasePageModel
     {
-        //[BindProperty]
-        //public OrderDetail orderDetail { get; set; }
-
+        
         [BindProperty]
-        public Models.Order Order { get; set; }
-        public Dropify.Models.prn211_dropshippingContext con;
-        public OrderDAO od = new OrderDAO();
-
+        
+        public Order Order { get; set; }
+        private readonly prn211_dropshippingContext con;
+        private OrderDAO od = new OrderDAO();
+        
+        public User user;
+        public UserDetail userDetail;
+        //public User User { get;set; }
+        
         public List<Models.Order> OderedOrders { get; set; }
         public List<Models.Order> SuccessOrders { get; set; }
         public List<Models.Order> CanceledOrders { get; set; }
 
 
-        public OrdersModel(Dropify.Models.prn211_dropshippingContext context)
+        public OrdersModel(prn211_dropshippingContext context)
         {
+            
             con = context;
         }
-        public void OnGet()
+        public IActionResult OnGet()
         {
-            OderedOrders = od.GetOrderByStatus("Ordered");
-            SuccessOrders = od.GetOrderByStatus("Success");
-            CanceledOrders = od.GetOrderByStatus("Canceled");
+            string userString = HttpContext.Session.GetString("user");
+            
+            if (userString != null)
+            {
+                user = JsonConvert.DeserializeObject<User>(userString);
+                userDetail = con.UserDetails.FirstOrDefault(ud => ud.Uid == user.Uid);
+                //User = con.Users.FirstOrDefault(u => u.Uid == user.Uid);
+                OderedOrders = od.GetOrderByStatus("Ordered", (int)userDetail.Uid);
+                SuccessOrders = od.GetOrderByStatus("Success", (int)userDetail.Uid);
+                CanceledOrders = od.GetOrderByStatus("Canceled", (int)userDetail.Uid);
+            }
+            else
+            {
+                return RedirectToPage("/Login");
+            }
+            return Page();
+            
         }
 
         public IActionResult OnPostDelete()
@@ -46,19 +65,19 @@ namespace Dropify.Pages.Profile
             return RedirectToPage("/Profile/Orders");
         }
 
-        public IActionResult OnPostRestore()
-        {
-            int oid = int.Parse(Request.Form["o_id"].ToString());
+        //public IActionResult OnPostRestore()
+        //{
+        //    int oid = int.Parse(Request.Form["o_id"].ToString());
 
-            var order = con.Orders.Find(oid);
-            if (order != null)
-            {
-                order.Status = "Canceled";
-                order.ShipStatus = "Not Shipped";
-                con.Orders.Update(order);
-                con.SaveChanges();
-            }
-            return RedirectToPage("/Profile/Orders");
-        }
+        //    var order = con.Orders.Find(oid);
+        //    if (order != null)
+        //    {
+        //        order.Status = "Canceled";
+        //        order.ShipStatus = "Not Shipped";
+        //        con.Orders.Update(order);
+        //        con.SaveChanges();
+        //    }
+        //    return RedirectToPage("/Profile/Orders");
+        //}
     }
 }

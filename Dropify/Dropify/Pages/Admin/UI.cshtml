@@ -1,0 +1,79 @@
+﻿@page
+@model Dropify.Pages.Admin.UIModel
+@{
+}
+<body>
+    <div class="page-wrapper">
+        <div class="content container-fluid">
+
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h3 class="page-title">Adjust page carousel</h3>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item active">Preview</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="datatable table table-hover table-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Promoted Product</th>
+                                            <th>Image</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.listC){
+                                            <tr>
+                                                <td>
+                                                    <span class="">@item.NewsProduct</span>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-pill bg-success inv-badge"><img style="height: 100px" src="@item.ImgUrl"></img></span>
+                                                </td>
+                                                <td class="text-center">
+                                                    
+                                                </td>
+                                                <td class="text-center">
+                                                    <div class="actions">
+                                                        <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id=""
+                                                           data-name=""
+                                                           data-status=""
+                                                           data-bs-target="#edit_modal" href="#edit_modal">
+                                                            <i class="fe fe-pencil"></i> Edit
+                                                        </a>
+                                                        <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="" class="btn btn-sm bg-danger-light">
+                                                            <i class="fe fe-trash"></i> Delete
+                                                        </a>
+                                                        <a href="" class="btn btn-sm bg-warning-light">
+                                                            <i class="fa fa-eye"></i> More
+                                                        </a>
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                                
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+
+        </div>
+
+</body>

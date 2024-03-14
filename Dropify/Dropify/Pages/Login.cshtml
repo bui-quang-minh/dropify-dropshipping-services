@@ -87,17 +87,9 @@
                                 </div>
                                 <button class="btn btn-primary login-btn" type="submit">Login</button>
                                 <br/>k9
-                                <a asp-page="./Login" asp-page-handler="LoginWithGoogle" class="btn btn-google login-btn" id="google-login-btn">
-                                    <i class="fab fa-google"></i> Login with Google
-                                </a>
-                                <script>
-                                    document.getElementById('google-login-btn').addEventListener('click', function () {
-                                        console.log("activeate");
-                                    });
-                                </script>
-
-                                <meta name="google-signin-client_id" content="596683861270-mob7go6seueibagkd7f88acv5s69l1et.apps.googleusercontent.com">
-
+                                <button class="btn btn-google login-btn" type="submit">
+                                    <i class="fab fa-google"></i> Login Using Google
+                                </button>
                                 <div class="text-center dont-have">Don’t have an account? <a href="/Register">Register</a></div>
                             </form>
                         </div>
@@ -110,7 +102,9 @@
     </div>
     <script src="~/js/google.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+
     <script src="/assets/js/jquery-3.6.0.min.js"></script>
+
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/js/script.js"></script>
 </body>

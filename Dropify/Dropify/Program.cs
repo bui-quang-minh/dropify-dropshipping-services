@@ -19,24 +19,22 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-builder.Services.AddScoped<prn211_dropshippingContext>();
-
 // Add authentication services
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
 }).AddCookie().AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
-    {
-        IConfiguration configuration = builder.Configuration;
-        options.ClientId = configuration["Authentication:Google:ClientId"];
-        options.ClientSecret = configuration["Authentication:Google:ClientSecret"];
-        options.CallbackPath = "/signin-google";
-    });
+{
+    IConfiguration configuration = builder.Configuration;
+    options.ClientId = configuration["Authentication:Google:ClientId"];
+    options.ClientSecret = configuration["Authentication:Google:ClientSecret"];
+    options.CallbackPath = "/signin-google";
+});
+builder.Services.AddScoped<prn211_dropshippingContext>();
+
 
 var app = builder.Build();
-
-
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -51,7 +49,6 @@ app.UseStaticFiles();// to use wwwroot
 
 app.UseRouting();
 
-app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseSession();  // Add this line to enable session middleware

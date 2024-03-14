@@ -22,7 +22,7 @@ namespace Dropify.Pages.Profile
         [BindProperty]
         public string ConfirmPasswordMessage { get; set; }
         [BindProperty]
-        public string Message { get;set; }
+        public string Message { get; set; }
         public User user;
 
         private readonly prn211_dropshippingContext con;
@@ -50,7 +50,7 @@ namespace Dropify.Pages.Profile
         }
         public IActionResult OnPost()
         {
-
+            var userDAO = new UserDAO();
             string userString = HttpContext.Session.GetString("user");
             System.Diagnostics.Debug.WriteLine("UID: " + userString);
             if (userString != null)
@@ -77,7 +77,7 @@ namespace Dropify.Pages.Profile
                 else
                 {
 
-                    if (u.Pword != OldPassword)
+                    if (userDAO.DecryptPass(u.Pword) != OldPassword)
                     {
                         OldPasswordMessage = "Old password not exit !";
                         return Page();
@@ -91,7 +91,7 @@ namespace Dropify.Pages.Profile
                         }
                         else
                         {
-                            u.Pword = User.Pword;
+                            u.Pword = userDAO.Encryption(User.Pword);
                             con.Users.Update(u);
                             con.SaveChanges();
                             Message = "Change password successfull!";
@@ -102,13 +102,13 @@ namespace Dropify.Pages.Profile
             }
             else
             {
-                return RedirectToPage("/Login/Login");
+                return RedirectToPage("/Login");
             }
 
 
             //OldPasswordMessage = OldPassword;
             //ConfirmPasswordMessage = ConfirmPassword;
-            
+
         }
     }
 }
