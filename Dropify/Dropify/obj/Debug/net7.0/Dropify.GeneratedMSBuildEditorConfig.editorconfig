@@ -9,143 +9,143 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Dropify
 build_property.RootNamespace = Dropify
-build_property.ProjectDir = D:\PRN221\Dropify\Dropify\
+build_property.ProjectDir = D:\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\PRN221\Dropify\Dropify
+build_property.MSBuildProjectDirectory = D:\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/PRN221/Dropify/Dropify/Pages/AboutUs.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/AboutUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXRVcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Admin/Categories/AllCategories.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Admin/Categories/AllCategories.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0ZWdvcmllc1xBbGxDYXRlZ29yaWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Admin/Categories/CategoryChildren.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Admin/Categories/CategoryChildren.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0ZWdvcmllc1xDYXRlZ29yeUNoaWxkcmVuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Admin/Dashboard.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Admin/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Admin/New/AddNew.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Admin/New/AddNew.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTmV3XEFkZE5ldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Admin/Order/AllOrder.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Admin/Order/AllOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JkZXJcQWxsT3JkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Admin/Order/OrderDetail.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Admin/Order/OrderDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JkZXJcT3JkZXJEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Admin/Order/ShippingOrder.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Admin/Order/ShippingOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JkZXJcU2hpcHBpbmdPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Admin/Products/AddProduct.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Admin/Products/AddProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdHNcQWRkUHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Admin/Products/AllProducts.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Admin/Products/AllProducts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdHNcQWxsUHJvZHVjdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Admin/Products/DetailProduct.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Admin/Products/DetailProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdHNcRGV0YWlsUHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Admin/Supplier/AllSupplier.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Admin/Supplier/AllSupplier.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU3VwcGxpZXJcQWxsU3VwcGxpZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Cart.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Error.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Index.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Login.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Logout.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/News.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/News.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Privacy.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Product/AllProduct.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Product/AllProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxBbGxQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Product/ProductDetail.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Product/ProductDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxQcm9kdWN0RGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Profile/AddressManagement.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Profile/AddressManagement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZVxBZGRyZXNzTWFuYWdlbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Profile/ChangePassword.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Profile/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZVxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Profile/OrderDetail.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Profile/OrderDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZVxPcmRlckRldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Profile/Orders.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Profile/Orders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZVxPcmRlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Profile/UserInformation.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Profile/UserInformation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZVxVc2VySW5mb3JtYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Register.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/_ViewImports.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/_ViewStart.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/Dropify/Dropify/Pages/Shared/_AdminLayout.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-zkzlqd7e7z
 
-[D:/PRN221/Dropify/Dropify/Pages/Shared/_Layout.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-hzp8w2mrf2
 
-[D:/PRN221/Dropify/Dropify/Pages/Shared/_ProfileLayout.cshtml]
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Shared/_ProfileLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Qcm9maWxlTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-opvser5xh6

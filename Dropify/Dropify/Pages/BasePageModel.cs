@@ -12,6 +12,7 @@ namespace Dropify.Pages
         public List<Models.Category> categories = new CategoryDAO().GetParentCategories();
         public List<Models.Supplier> suppliers = new SupplierDAO().GetAllSuppliers();
         public List<Models.User> users = new UserDAO().GetAllUsers();
+        public List<Models.News> news = new NewsDAO().GetLastestNews();
     }
 }
     

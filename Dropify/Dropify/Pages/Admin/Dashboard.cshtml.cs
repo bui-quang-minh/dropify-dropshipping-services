@@ -6,10 +6,11 @@ using Newtonsoft.Json;
 
 namespace Dropify.Pages.Admin
 {
-    public class DashboardModel : PageModel
+    public class DashboardModel : BasePageModel
     {
         public User user;
         public UserDetail userDetail;
+        public List<News> listNews {  get; set; }
         public IActionResult OnGet()
         {
             string userString = HttpContext.Session.GetString("user");
@@ -20,6 +21,7 @@ namespace Dropify.Pages.Admin
                 userDetail = userDAO.GetUserDetailById(user.Uid);
                 if (userDetail.Admin == true)
                 {
+                    
                     return Page();
                 }
                 else
