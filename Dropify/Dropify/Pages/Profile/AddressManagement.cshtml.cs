@@ -124,19 +124,42 @@ namespace Dropify.Pages.Profile
         }
         public IActionResult OnPostDelete()
         {
-            int cid = int.Parse(Request.Form["c_id"].ToString());
-            var adr = con.UserAddresses.Find(cid);  
-            if (adr != null)
+            try
             {
-                adr.Status = "Deleted";
-                ud.updateAddress(adr);
-                con.SaveChanges();
-                return RedirectToPage("AddressManagement");
+                string userString = HttpContext.Session.GetString("user");
+                System.Diagnostics.Debug.WriteLine("UID: " + userString);
+                if (userString != null)
+                {
+                    user = JsonConvert.DeserializeObject<User>(userString);
+                    int cid = int.Parse(Request.Form["c_id"].ToString());
+                    var ar = con.UserAddresses.Find(cid);
+
+                    if (ar == null)
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        if ((bool)ar.Default)
+                        {
+                            return RedirectToPage("AddressManagement");
+                        }
+                        ar.Status = "Deleted";
+                        ud.updateAddress(ar);
+                        con.SaveChanges();
+                        return RedirectToPage("AddressManagement");
+                        
+                    }
+                }
+                else
+                {
+                    return RedirectToPage("/Login");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return NotFound();
+                throw new Exception(ex.Message);
             }
         }
     }
-}
+ }

@@ -2540,23 +2540,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\buiqu\\.nuget\\packages\\": {},
+    "C:\\Users\\dell\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
+      "projectUniqueName": "F:\\learnInUnivercity\\Section7\\PRN221\\projectPRN221\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
       "projectName": "Dropify",
-      "projectPath": "D:\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
-      "packagesPath": "C:\\Users\\buiqu\\.nuget\\packages\\",
-      "outputPath": "D:\\PRN221\\Dropify\\Dropify\\obj\\",
+      "projectPath": "F:\\learnInUnivercity\\Section7\\PRN221\\projectPRN221\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
+      "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
+      "outputPath": "F:\\learnInUnivercity\\Section7\\PRN221\\projectPRN221\\PRN221\\Dropify\\Dropify\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\buiqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2566,6 +2566,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2626,7 +2627,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

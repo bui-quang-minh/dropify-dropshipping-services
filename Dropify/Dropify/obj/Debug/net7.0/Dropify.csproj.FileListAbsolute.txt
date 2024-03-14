@@ -419,3 +419,5 @@ F:\learnInUnivercity\Section7\PRN221\projectPRN221\PRN221\Dropify\Dropify\obj\De
 F:\learnInUnivercity\Section7\PRN221\projectPRN221\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.pdb
 F:\learnInUnivercity\Section7\PRN221\projectPRN221\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.genruntimeconfig.cache
 F:\learnInUnivercity\Section7\PRN221\projectPRN221\PRN221\Dropify\Dropify\obj\Debug\net7.0\ref\Dropify.dll
+F:\learnInUnivercity\Section7\PRN221\projectPRN221\PRN221\Dropify\Dropify\bin\Debug\net7.0\libman.json
+F:\learnInUnivercity\Section7\PRN221\projectPRN221\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Google.dll
