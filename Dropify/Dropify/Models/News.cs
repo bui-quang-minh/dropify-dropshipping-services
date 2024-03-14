@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Dropify.Logics;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Dropify.Models
 {
@@ -15,5 +17,18 @@ namespace Dropify.Models
         public string? Statis { get; set; }
 
         public virtual Product? Product { get; set; }
+
+        [NotMapped]
+        public virtual string? NewsProduct
+        {
+            get
+            {
+                var cat = new ProductDAO().GetProductById(ProductId ?? 0);
+                return cat?.ProductShortenName;
+            }
+            set
+            {
+            }
+        }
     }
 }
