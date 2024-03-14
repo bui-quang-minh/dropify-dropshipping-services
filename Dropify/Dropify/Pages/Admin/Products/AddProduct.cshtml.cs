@@ -136,6 +136,7 @@ namespace Dropify.Pages.Admin.Products
                 }
             }
             //P_DESCRIPTION
+
             if (!string.IsNullOrEmpty(description)) { 
                 Models.ProductDetail p_d = new Models.ProductDetail();
                 p_d.Type = "P_DESCRIPTION";

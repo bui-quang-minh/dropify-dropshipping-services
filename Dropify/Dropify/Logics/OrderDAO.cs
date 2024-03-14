@@ -1,5 +1,6 @@
 ﻿using Dropify.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace Dropify.Logics
 {
@@ -67,7 +68,8 @@ namespace Dropify.Logics
                     .Include(o => o.Ud)
                     .Include(od => od.OrderDetails)
                     .ThenInclude(p => p.Product)
-                    .Where(o => o.Status == status && o.Udid==udid).ToList();
+                    .Where(o => o.Status == status && o.Udid==udid).
+                    OrderByDescending(o => o.OrderedDate).ToList();
                 return orders;
             }
 

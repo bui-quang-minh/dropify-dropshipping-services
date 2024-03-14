@@ -20,7 +20,7 @@
 
     <link rel="stylesheet" href="/assets/css/style.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   
 </head>
 
     <div class="page-header">
@@ -55,7 +55,6 @@
                                                 <table class="table table-hover mb-0">
                                                         <thead>
                                                             <tr>
-                                                            <th width="auto">ID</th>
                                                             <th width="150">Person</th>
                                                             <th width="100">Date</th>
                                                             <th width="100">Price</th>
@@ -70,11 +69,7 @@
                                                             {
                                                                 @foreach (var o in Model.OderedOrders)
                                                                 {
-                                                                    <tr>
-                                                                        <td>
-                                                                            @o.OrderId
-                                                                        </td>
-                                                                       
+                                                                    <tr>                                                                       
                                                                         <td>
                                                                             @o.Ud.Name
                                                                         </td>
@@ -95,10 +90,10 @@
 
                                                                         <td class="text-end">
                                                                             <div class="actions">
-                                                                                <a href="OrderDetail?OrderId=@o.OrderId" class="btn btn-sm bg-warning-light">
-                                                                                <i class="fa fa-eye"></i>Detail
+                                                                                <a style="width:100%;margin-bottom:2px" href="OrderDetail?OrderId=@o.OrderId" class="btn btn-sm bg-warning-light">
+                                                                                Detail
                                                                                 </a>
-                                                                                <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@o.OrderId" class="btn btn-sm bg-danger-light">
+                                                                            <a style="width:100%;" data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@o.OrderId" class="btn btn-sm bg-danger-light">
                                                                                     <i class="fe fe-trash"></i> Cancel
                                                                                 </a>
                                                                             </div>
@@ -123,7 +118,6 @@
                                                     <table class=" table table-hover mb-0">
                                                         <thead>
                                                             <tr>
-                                                            <th width="auto">ID</th>
                                                             <th width="150">Person</th>
                                                             <th width="100">Date</th>
                                                             <th width="100">Price</th>
@@ -140,11 +134,7 @@
                                                                 @foreach (var o in Model.SuccessOrders)
                                                                 {
 
-                                                                    <tr>
-                                                                        <td>
-                                                                            @o.OrderId
-                                                                        </td>
-                                                                        
+                                                                    <tr>                                                                        
                                                                         <td>
                                                                             @o.Ud.Name
                                                                         </td>
@@ -167,7 +157,7 @@
                                                                         <td class="text-end">
                                                                             <div class="actions">
                                                                                 <a href="OrderDetail?OrderId=@o.OrderId" class="btn btn-sm bg-warning-light">
-                                                                                    <i class="fa fa-eye"></i>Detail
+                                                                                    Detail
                                                                                 </a>
                                                                             </div>
                                                                         </td>
@@ -191,7 +181,6 @@
                                                     <table class="  table table-hover mb-0">
                                                         <thead>
                                                             <tr>
-                                                            <th width="auto">ID</th>
                                                             <th width="150">Person</th>
                                                             <th width="100">Date</th>
                                                             <th width="100">Price</th>
@@ -208,11 +197,7 @@
                                                                 @foreach (var o in Model.CanceledOrders)
                                                                 {
 
-                                                                    <tr>
-                                                                        <td>
-                                                                            @o.OrderId
-                                                                        </td>
-                                                                        
+                                                                    <tr>                                                                        
                                                                         <td>
                                                                             @o.Ud.Name
                                                                         </td>
@@ -235,7 +220,7 @@
                                                                         <td class="text-end">
                                                                             <div class="actions">
                                                                                 <a href="OrderDetail?OrderId=@o.OrderId" class="btn btn-sm bg-warning-light">
-                                                                                    <i class="fa fa-eye"></i>Detail
+                                                                                    Detail
                                                                                 </a>
                                                                             </div>
                                                                         </td>
@@ -364,17 +349,11 @@
     var moneys = document.querySelectorAll('.price');
     moneys.forEach(function (money) {
         // Lấy giá trị số từ phần tử HTML
-        var amountString = money.textContent.replace(/[^\d.-]/g, ''); // Loại bỏ các ký tự không phải số, dấu phẩy hoặc dấu trừ
-        var amount = parseFloat(amountString); // Chuyển đổi chuỗi thành số
+        var amountString = money.textContent.replace(/[^\d,-]/g, ''); // Loại bỏ các ký tự không phải số, dấu phẩy hoặc dấu trừ
+        var amount = parseFloat(amountString.replace(',', '.')); // Chuyển đổi dấu phẩy sang dấu chấm cho số dấu phẩy động
+        var formattedMoney = amount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+        money.textContent = formattedMoney; // Gán giá trị đã định dạng vào phần tử HTML
 
-        // Định dạng số tiền dưới dạng chuỗi theo mong muốn
-        var formattedMoney = amount.toLocaleString('vi-VN', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-
-        // Thêm đơn vị tiền tệ nếu cần
-        formattedMoney += ' VND';
-
-        // Gán giá trị đã định dạng vào phần tử HTML
-        money.textContent = formattedMoney;
     });
 </script>
 
@@ -390,6 +369,3 @@
 <script src="/assets/plugins/datatables/datatables.min.js"></script>
 
 <script src="/assets/js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "n4065F6GqEfi71rjzvUmCg1J5DevJenx+DBfD4wGVmI=",
+  "Hash": "zYhizBkwsHZn3fmlAe0VeTpqKjMuupCgHk6yu1q4HI0=",
   "Source": "Dropify",
   "BasePath": "_content/Dropify",
   "Mode": "Default",
@@ -8641,6 +8641,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\microsoft\\signalr\\dist\\browser\\signalr.js",
+      "SourceId": "Dropify",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\",
+      "BasePath": "_content/Dropify",
+      "RelativePath": "microsoft/signalr/dist/browser/signalr.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\microsoft\\signalr\\dist\\browser\\signalr.js"
+    },
+    {
+      "Identity": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\microsoft\\signalr\\dist\\browser\\signalr.min.js",
+      "SourceId": "Dropify",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\",
+      "BasePath": "_content/Dropify",
+      "RelativePath": "microsoft/signalr/dist/browser/signalr.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\microsoft\\signalr\\dist\\browser\\signalr.min.js"
     }
   ]
 }
