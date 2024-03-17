@@ -47,15 +47,11 @@
                         <li class="">
                             <a href="/Cart">Cart <i class=""></i></a>
                         </li>
-                        <li class="has-submenu active">
+                        <li class="has-submenu">
                             <a>Products <i class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
-                                <li class="has-submenu active">
-                                    <a href="/Product/AllProduct">Product</a>
-                                    <ul class="submenu">
-                                        <li class="active"><a href="blog.html">Active Product</a></li>
-                                        <li><a href="blog-details.html">Inactive Product</a></li>
-                                    </ul>
+                                <li class="">
+                                    <a href="/Product/AllProduct">All Product</a>
                                 </li>
                                 <li class="has-submenu">
                                     <a href="">Provider</a>
@@ -98,16 +94,17 @@
                         <li class="">
                             <a href="/AboutUs">About Us <i class=""></i></a>
                         </li>
+                        <!--
                         <li class="has-submenu">
                             <a href="/Admin/Dashboard">Admin <i class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
-                                <!--All Products (Admin Site)	/Admin/Products/AllProducts
+                               All Products (Admin Site)	/Admin/Products/AllProducts
                                 All Categories(Admin Site)	/Admin/Categories/AllCategories
                                 All Supplier(Admin Site)	/Admin/Supplier/AllSupplier
                                 Dashboard(Admin Site)	/Admin/Dashboard
                                 All News (Admin Site)	/Admin/News
                                 All Orders (Admin Site)	/Admin/AllOrders
-                                All Users (Admin Site)	/Admin/AllUsers-->
+                                All Users (Admin Site)	/Admin/AllUsers
                                 <li><a href="/Admin/Dashboard">Dashboard</a></li>
                                 <li><a href="/Admin/Products/AllProducts">All Products</a></li>
                                 <li><a href="/Admin/Categories/AllCategories">All Categories</a></li>
@@ -117,6 +114,7 @@
                                 <li><a href="/Admin/AllUsers">All Users</a></li>
                             </ul>
                         </li>
+                        -->
                     </ul>
                 </div>
                 <!--Login button here-->
@@ -141,8 +139,6 @@
                                  <img class="rounded-circle" src="@ud.ImgUrl" width="31" alt="Darren Huhu">
                             </span>
                         </a>
-                        
-                        
                             <div class="dropdown-menu dropdown-menu-end">
                                 <div class="user-header">
                                     <div class="avatar avatar-sm">
@@ -153,46 +149,18 @@
                                         <p class="text-muted mb-0">Mentor</p>
                                     </div>
                                 </div>
-                                <a class="dropdown-item" href="dashboard.html">Dashboard</a>
-                                <a class="dropdown-item" href="profile-settings.html">Profile Settings</a>
-                                <a class="dropdown-item" href="login.html">Logout</a>
-                            </div>      
-                        
-                        
-                                <div class="user-text">
-                                    @if (!string.IsNullOrEmpty(Context.Request.HttpContext.Session.GetString("user")))
-                                    {
-                                        string userJson = Context.Request.HttpContext.Session.GetString("user");
-                                        dynamic user = Newtonsoft.Json.JsonConvert.DeserializeObject(userJson);
-                                        <h6>@user.Email</h6>
-                                    }
-                                    else
-                                    {
-                                        <h6>Guest User</h6>
-                                    }
-                                    <p class="text-muted mb-0">Mentor</p>
-                                </div>
-                            <a class="dropdown-item" href="dashboard.html">Dashboard</a>
-                            <a class="dropdown-item" href="profile-settings.html">Profile Settings</a>
-                            @if (!string.IsNullOrEmpty(Context.Request.HttpContext.Session.GetString("user")))
-                            {
+                                <a class="dropdown-item" href="/Profile/UserInformation">Profile Settings</a>
                                 <a class="dropdown-item" href="/Logout">Logout</a>
-                            }
-                            else
-                            {
-                                <a class="dropdown-item" href="/Login">Login</a>
-                            }
+                            </div>      
+                                    
                     </li>
                 </ul>
-
                 }
                 else
                 {
                     <ul class="nav header-navbar-rht">
                         <div style="margin-right: 5px"><a class="btn btn-primary" href="/Login">Login</a></div>
                         <div><a class="btn btn-primary" href="/Register">Register</a></div>
-                         
-                        
                     </ul>
                 }
             </nav>
@@ -215,7 +183,7 @@
                                 <img src="/assets/img/logo.png" alt="logo">
                             </div>
                             <div class="footer-about-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <p>Với sứ mệnh mang đến cho khách hàng những sản phẩm với chất lượng tốt nhất. Công ty TNHH nhiều thành viên Dropify của chúng tôi xin cam kết ưu tiên chất lượng trên giá thành. </p>
                                 <div class="social-icon">
                                     <ul>
                                         <li>
@@ -230,9 +198,6 @@
                                         <li>
                                             <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
                                         </li>
-                                        <li>
-                                            <a href="#" target="_blank"><i class="fab fa-dribbble"></i> </a>
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -242,13 +207,12 @@
                     <div class="col-lg-3 col-md-6">
 
                         <div class="footer-widget footer-menu">
-                            <h2 class="footer-title">For Mentee</h2>
+                            <h2 class="footer-title">Our Supplier</h2>
                             <ul>
-                                <li><a href="search.html">Search Mentors</a></li>
-                                <li><a href="login.html">Login</a></li>
-                                <li><a href="register.html">Register</a></li>
-                                <li><a href="booking.html">Booking</a></li>
-                                <li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
+                                @foreach (Models.Supplier s in Model.suppliers)
+                                {
+                                    <li><a href="/Product/AllProduct?supplierSearch=@s.SupplierId">@s.SupplierName</a></li>
+                                }
                             </ul>
                         </div>
 
@@ -256,13 +220,9 @@
                     <div class="col-lg-3 col-md-6">
 
                         <div class="footer-widget footer-menu">
-                            <h2 class="footer-title">For Mentors</h2>
+                            <h2 class="footer-title">For More Information</h2>
                             <ul>
-                                <li><a href="appointments.html">Appointments</a></li>
-                                <li><a href="chat.html">Chat</a></li>
-                                <li><a href="login.html">Login</a></li>
-                                <li><a href="register.html">Register</a></li>
-                                <li><a href="dashboard.html">Mentor Dashboard</a></li>
+                                <li><a href="/AboutUs">About us</a></li>
                             </ul>
                         </div>
 
@@ -274,15 +234,15 @@
                             <div class="footer-contact-info">
                                 <div class="footer-address">
                                     <span><i class="fas fa-map-marker-alt"></i></span>
-                                    <p> 3556 Beech Street, San Francisco,<br> California, CA 94108 </p>
+                                    <p> Thạch Hòa, Thạch Thất, Hòa Lạc,<br> Hà Nội, Đại Học FPT</p>
                                 </div>
                                 <p>
                                     <i class="fas fa-phone-alt"></i>
-                                    +1 315 369 5943
+                                    +84 000 000 0000
                                 </p>
                                 <p class="mb-0">
                                     <i class="fas fa-envelope"></i>
-                                    <a href="https://mentoring.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ee838b809a819c878089ae8b968f839e828bc08d8183">[email&#160;protected]</a>
+                                    <a href="" class="__cf_email__"> customersupport.dropify@dropify.com</a>
                                 </p>
                             </div>
                         </div>
@@ -300,7 +260,7 @@
                     <div class="row">
                         <div class="col-12 text-center">
                             <div class="copyright-text">
-                                <p class="mb-0">&copy; 2020 Mentoring. All rights reserved.</p>
+                                <p class="mb-0">Design in 2023 - 2024</p>
                             </div>
                         </div>
                     </div>
@@ -323,7 +283,26 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        var currentPath = window.location.pathname;
 
+        // Lặp qua mỗi thẻ <a> trong danh sách submenu
+        document.querySelectorAll('.main-nav li a').forEach(function (item) {
+            // Lấy đường dẫn của từng thẻ <a>
+            var link = item.getAttribute('href');
+            // Kiểm tra xem đường dẫn hiện tại có trùng khớp với đường dẫn của thẻ <a> không
+            if (currentPath === "/Product/AllProduct") {
+                // Tìm phần tử có class 'has-submenu' và thêm lớp 'active' vào đó
+                var activelink = document.querySelector('.main-nav .has-submenu');
+                activelink.classList.add('active');
+            }
+            if (currentPath === link) {
+                // Nếu có, thêm lớp 'active' vào thẻ <li> chứa thẻ <a>
+                item.parentNode.classList.add('active');
+            }
+        });
+
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

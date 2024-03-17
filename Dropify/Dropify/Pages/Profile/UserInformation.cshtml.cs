@@ -1,4 +1,6 @@
-﻿using Dropify.Models;
+﻿using CloudinaryDotNet.Actions;
+using Dropify.Logics;
+using Dropify.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Mvc;
@@ -66,18 +68,24 @@ namespace Dropify.Pages.Profile
                     ImgMess = "File not contain data.";
                     return Page();
                 }
-                // find path
-                string tpath = "\\assets\\img\\user\\";
-                string rootpath = _webHostEnvironment.ContentRootPath + "\\wwwroot" + tpath;
-                string uploadsFolderPath = Path.Combine(rootpath, FileImg.FileName);
-                // copyfile in user
-                using (var stream = new FileStream(uploadsFolderPath, FileMode.Create))
-                {
-                    FileImg.CopyTo(stream);
-                }
-                //save to database
+
+                CloudinarySettings cs = new CloudinarySettings();
+                ImageUploadResult res = cs.CloudinaryUpload(FileImg);
                 UserDetail ud = UserDetail;
-                ud.ImgUrl = tpath + FileImg.FileName;
+                ud.ImgUrl = res.SecureUrl.ToString();
+
+                //// find path
+                //string tpath = "\\assets\\img\\user\\";
+                //string rootpath = _webHostEnvironment.ContentRootPath + "\\wwwroot" + tpath;
+                //string uploadsFolderPath = Path.Combine(rootpath, FileImg.FileName);
+                //// copyfile in user
+                //using (var stream = new FileStream(uploadsFolderPath, FileMode.Create))
+                //{
+                //    FileImg.CopyTo(stream);
+                //}
+                ////save to database
+                //UserDetail ud = UserDetail;
+                //ud.ImgUrl = tpath + FileImg.FileName;
                 con.UserDetails.Update(ud);
                 con.SaveChanges();
 

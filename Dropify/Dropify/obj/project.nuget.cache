@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "r+wXQ/M8r+8x5uk6HNc033yDRr3P8nffdny/LwHbXadT4i7NH1+lF43twYruLAW3jOUy4M/n6aU85IVRGvF9NA==",
+  "dgSpecHash": "ookkoYe6xA3kHiZFEwact5+a06faOg5xw1N0v4D8P9kgy3fV8bDeEm6FMYHA6ew3L7hy2vpq7F7w9vIYgVyqsg==",
   "success": true,
   "projectFilePath": "C:\\Users\\admin\\Desktop\\PRN221\\Final_Project\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\cloudinarydotnet\\1.21.0\\cloudinarydotnet.1.21.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\7.0.13\\microsoft.aspnetcore.authentication.google.7.0.13.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",

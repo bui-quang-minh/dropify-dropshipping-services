@@ -24,5 +24,15 @@ namespace Dropify.Logics
                 db.UserAddresses.Update(userAddress);
             }
         }
+        //Lấy tất cả address của user từ database
+        //Người viết: Bùi Quang Minh
+        //Ngày: 11/3/2024
+        public List<UserAddress> GetAllUserAddressesByUid(int uid)
+        {
+            using (var db = new prn211_dropshippingContext())
+            {
+                return db.UserAddresses.Where(x => x.Udid == uid && x.Status == "Active").ToList();
+            }
+        }
     }
 }

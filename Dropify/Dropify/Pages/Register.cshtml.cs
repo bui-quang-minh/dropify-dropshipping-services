@@ -1,5 +1,7 @@
 using Dropify.Logics;
 using Dropify.Models;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Text;
@@ -75,5 +77,33 @@ namespace Dropify.Pages
             return Page();
         }
 
+        public IActionResult OnGetLoginWithGoogle()
+        {
+            // cai nay de hien cai man hinh google xong xuong duoi
+            var redirectUrl = Url.Page("/Register", pageHandler: "GoogleResponse");
+            return Challenge(new AuthenticationProperties { RedirectUri = redirectUrl }, GoogleDefaults.AuthenticationScheme);
+        }
+
+        public async Task<IActionResult> OnGetGoogleResponse()
+        {
+            var result = await HttpContext.AuthenticateAsync(GoogleDefaults.AuthenticationScheme);
+            var claims = result?.Principal?.Identities?.FirstOrDefault()?.Claims.Select(claim => claim.Value).ToList();
+            string password = claims.FirstOrDefault();
+            string fullname = claims.Skip(1).FirstOrDefault();
+            string Email = claims.LastOrDefault();
+            UserDAO ud = new UserDAO();
+            // ud.Register(Email, password, fullname);
+
+            //if (ud.Register(Email, Password, fullName))
+            //{
+            //    HttpContext.Session.SetString("user_email", Email);
+            //    return RedirectToPage("/Index");
+            //}
+            //else
+            //{
+            //    TempData["ErrorMessage"] = "User's Email already exists!";
+            //}
+            return Content(password + fullname + Email, "application/json");
+        }
     }
 }

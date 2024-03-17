@@ -17,7 +17,9 @@ namespace Dropify.Pages.Product
         public List<Models.Category> childCategories = new CategoryDAO().GetAvailableCategories();
         public void OnGet()
         {
-            inactiveproducts = pd.GetProductByStatus("Inactive");
+            inactiveproducts = pd.GetProductByStatus("Success");
+            inactiveproducts.AddRange(pd.GetProductByStatus("Cancel"));
+            inactiveproducts.AddRange(pd.GetProductByStatus("Shipping"));
             if (Request.Query.TryGetValue("categorySearch", out var cid) || Request.Query.TryGetValue("supplierSearch", out var sid)) {
                 Request.Query.TryGetValue("categorySearch", out cid);
                 Request.Query.TryGetValue("supplierSearch", out sid);
@@ -41,7 +43,7 @@ namespace Dropify.Pages.Product
 
             }
             else {
-                products = pd.GetProductByStatus("Active");
+                products = pd.GetProductByStatus("Selling");
                 products.AddRange(pd.GetProductByStatus("Release"));
             }
             
