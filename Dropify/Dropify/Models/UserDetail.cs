@@ -25,6 +25,9 @@ namespace Dropify.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Dob { get; set; }
         public string Sex { get; set; } = null!;
+        [Required(ErrorMessage = "Phone number is required.")]
+        [Display(Name = "Phone Number")]
+        [RegularExpression(@"^(\d{9,}[\d-. ]+)?(\([\d-. ]+\))?[\d-. ]+\d$", ErrorMessage = "Invalid phone number.")]
         public string PhoneNumber { get; set; } = null!;
         public string? ImgUrl { get; set; }
         public bool Admin { get; set; }

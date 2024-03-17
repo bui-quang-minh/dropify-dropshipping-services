@@ -28,8 +28,17 @@ namespace Dropify.Logics
             }
         }
 
-
-        public bool Register(string email, string password, string? fullname)
+        public User takeUser(String email) {
+            using (var db = new prn211_dropshippingContext())
+            {
+                if (email != null)
+                {
+                    return db.Users.Where(u => u.Email == email).FirstOrDefault();
+                }
+                return null;
+            }
+        }
+        public bool Register(string email, string password, string fullname, string phonenumber)
         {
             using (var db = new prn211_dropshippingContext())
             {
@@ -46,14 +55,27 @@ namespace Dropify.Logics
                     {
                         Email = email,
                         Pword = userDAO.Encryption(password)
-
                     };
+
                     db.Users.Add(newUser);
-                    db.SaveChanges();
+                    db.SaveChanges(); // Save changes to generate Uid
+
+                    var newUserDetail = new UserDetail
+                    {
+                        Uid = newUser.Uid,
+                        Name = fullname,
+                        PhoneNumber = phonenumber,
+                        Dob = DateTime.Now,
+                        Sex = "unknown"
+                    };
+                    db.UserDetails.Add(newUserDetail);
+                    db.SaveChanges(); // Save changes to add UserDetails
+
                     return true;
                 }
             }
         }
+
         public bool Authentication(string email, string password)
         {
             using (var db = new prn211_dropshippingContext())
