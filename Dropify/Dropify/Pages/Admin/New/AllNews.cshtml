@@ -1,0 +1,110 @@
+﻿@page
+@model Dropify.Pages.Admin.New.AllNewsModel
+@{
+    Layout = "_AdminLayout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <div class="main-wrapper">
+
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3 class="page-title">All News</h3>
+                            <ul class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="/Admin/Dashboard">Dashboard &nbsp;</a>
+                            </li>
+                            <li class="breadcrumb-item active">List of all news</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+
+                            <div class="row">
+                                @foreach (var item in Model.NewsList)
+                                {
+                                    <div class="col-12 col-md-6 col-xl-4">
+                                        <div class="course-box blog grid-blog">
+                                            <div class="blog-image mb-0">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="@item.ImgUrl" alt="Post Image">
+                                                </a>
+                                            </div>
+                                            <div class="course-content">
+                                                <span class="date">
+                                                    @item.CreatedDate
+                                                </span>
+                                                <span class="course-title">
+                                                    New issue number @item.NewsId
+                                                </span>
+                                                <p>
+                                                    @{
+                                                        var maxLength = 150; 
+                                                        var content = item.NewsContents;
+                                                        if (content.Length > maxLength)
+                                                        {
+                                                            content = content.Substring(0, maxLength) + "...";
+                                                        }
+                                                        @content
+                                                    }
+                                                    @if (item.NewsContents.Length > maxLength)
+                                                    {
+                                                        <a href="#" class="see-more-link">See more...</a>
+                                                    }
+                                                </p>
+                                                <div class="full-content" style="display: none;">
+                                                    @item.NewsContents
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <a asp-page="EditNew" asp-route-id="@item.NewsId" class="text-success">
+                                                            <i class="far fa-edit"></i> Edit
+                                                        </a>
+                                                    </div>
+                                                    <div class="col text-end">
+                                                        <a asp-page-handler="Delete" class="text-danger">
+                                                            <i class="far fa-trash-alt"></i> Inactive
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+
+                            <script>
+                                document.querySelectorAll('.see-more-link').forEach(function (link) {
+                                    link.addEventListener('click', function (event) {
+                                        event.preventDefault();
+                                        var contentContainer = this.parentElement.nextElementSibling;
+                                        contentContainer.style.display = 'block';
+                                        this.style.display = 'none';
+                                    });
+                                });
+                            </script>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</html>

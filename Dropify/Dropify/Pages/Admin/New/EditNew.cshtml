@@ -1,12 +1,12 @@
-﻿@page
-@model Dropify.Pages.Admin.New.AddNewModel
+﻿@page "/Admin/New/EditNew/{id}"
+@model Dropify.Pages.Admin.New.EditNewModel
 @{
     Layout = "_AdminLayout";
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://cdn.tiny.cloud/1/37b95ympk7cm2jqe22oiefgl3pw5dn0bi3f26kebhr6e3a2p/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tinys.cloud/1/37b95ympk7cm2jqe22oiefgl3pw5dn0bi3f26kebhr6e3a2p/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <title>Add News</title>
@@ -18,10 +18,10 @@
                 <div class="page-header">
                     <div class="row">
                         <div class="col-sm-12">
-                            <h3 class="page-title">Add News</h3>
+                            <h3 class="page-title">Edit News</h3>
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/Admin/Dashboard">Dashboard &nbsp;</a></li>
-                                <li>Add News</li>
+                                <li>Edit News</li>
                             </ul>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-12 blog-details">
-                                        <form>
+                                        <form method="post">
                                             <div class="form-group">
                                                 <label>News Name</label>
                                                 <input class="form-control" type="text">
@@ -78,7 +78,7 @@
                                                 <label>Contents <span class="text-danger">*</span></label>
                                                 <!-- Place the first <script> tag in your HTML's <head> -->
                                                 <textarea>
-                                                    Enter new content ....
+                                                    111111111111111
                                                 </textarea>
                                             </div>
                                             <div class="form-group">
