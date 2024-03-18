@@ -1,0 +1,126 @@
+﻿@page "/Admin/New/EditNew/{id}"
+@model Dropify.Pages.Admin.New.EditNewModel
+@{
+    Layout = "_AdminLayout";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tinys.cloud/1/37b95ympk7cm2jqe22oiefgl3pw5dn0bi3f26kebhr6e3a2p/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Add News</title>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3 class="page-title">Edit News</h3>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/Admin/Dashboard">Dashboard &nbsp;</a></li>
+                                <li>Edit News</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 blog-details">
+                                        <form method="post">
+                                            <div class="form-group">
+                                                <label>News Name</label>
+                                                <input class="form-control" type="text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>News Images</label>
+                                                <div>
+                                                    <input class="form-control" type="file">
+                                                    <small class="form-text text-muted">Max. file size: 50 MB. Allowed images: jpg, gif, png. Maximum 10 images only.</small>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>News Category</label>
+                                                        <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true">
+                                                            <option>New about product</option>
+                                                            <option>New about update</option>
+                                                            <option>New about project</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <!--
+                                                    for future reference
+                                                    <div class="form-group">
+                                                        <label>News Sub Category</label>
+                                                        <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true">
+                                                            <option>Html</option>
+                                                            <option>Css</option>
+                                                            <option>Javascript</option>
+                                                            <option>PHP</option>
+                                                            <option>Codeignitor</option>
+                                                            <option>iOS</option>
+                                                            <option>Android</option>
+                                                        </select>
+                                                    </div>
+                                                    -->
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Contents <span class="text-danger">*</span></label>
+                                                <!-- Place the first <script> tag in your HTML's <head> -->
+                                                <textarea>
+                                                    111111111111111
+                                                </textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="display-block w-100">News Status</label>
+                                                <div>
+                                                    <div class="form-check form-radio form-check-inline">
+                                                        <input class="form-check-input" id="active" name="active-blog" value="active" type="radio" checked>
+                                                        <label class="form-check-label" for="active">Active</label>
+                                                    </div>
+                                                    <div class="form-check form-radio form-check-inline">
+                                                        <input class="form-check-input" id="inactive" name="active-blog" value="inactive" type="radio">
+                                                        <label class="form-check-label" for="inactive">Inactive</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="m-t-20 text-center">
+                                                <button class="btn btn-primary btn-lg">Publish New</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Initialize TinyMCE editor
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+            mergetags_list: [
+                { value: 'First.Name', title: 'First Name' },
+                { value: 'Email', title: 'Email' },
+            ],
+            ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
+        });
+    </script>
+</body>
+</html>
