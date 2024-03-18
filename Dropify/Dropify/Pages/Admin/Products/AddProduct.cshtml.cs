@@ -1,19 +1,43 @@
 using CloudinaryDotNet.Actions;
 using Dropify.Logics;
+using Dropify.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
 
 namespace Dropify.Pages.Admin.Products
 {
     public class AddProductModel : BasePageModel
     {
         public List<Models.Category> availableCategory = new List<Models.Category>();
-        public void OnGet()
+        public User user;
+        public UserDetail userDetail;
+        public IActionResult OnGet()
         {
-            availableCategory = new CategoryDAO().GetAvailableCategories();
-        }
+            string userString = HttpContext.Session.GetString("user");
 
+            if (userString != null)
+            {
+                user = JsonConvert.DeserializeObject<User>(userString);
+                UserDetailDAO userDAO = new UserDetailDAO();
+                userDetail = userDAO.GetUserDetailById(user.Uid);
+                if (userDetail.Admin == true)
+                {
+                    availableCategory = new CategoryDAO().GetAvailableCategories();
+                    return Page();
+                }
+                else
+                {
+                    return RedirectToPage("/Index");
+                }
+            }
+            else
+            {
+                return RedirectToPage("/Login");
+            }
+        }
+       
         public IActionResult OnPostAdd(List<IFormFile> images)
         {
             var name = Request.Form["productName"];
@@ -112,6 +136,7 @@ namespace Dropify.Pages.Admin.Products
                 }
             }
             //P_DESCRIPTION
+
             if (!string.IsNullOrEmpty(description)) { 
                 Models.ProductDetail p_d = new Models.ProductDetail();
                 p_d.Type = "P_DESCRIPTION";

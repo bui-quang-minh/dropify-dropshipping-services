@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Text.Json
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -6,6 +7,7 @@
     <title>Mentoring - Categories Page</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="~/Admin/img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link rel="stylesheet" href="~/Admin/css/bootstrap.min.css">
 
@@ -116,20 +118,23 @@
                     </div>
                 </div>
             </li>
-
-
+          
             <li class="nav-item dropdown has-arrow">
+                @{
+                    Models.User user = JsonSerializer.Deserialize<Models.User>(Context.Request.HttpContext.Session.GetString("user"));
+                }
                 <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-                    <span class="user-img"><img class="rounded-circle" src="~/Admin/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span>
+                    <span class="user-img"><img class="rounded-circle" src="@user.ImgUrl" width="31" alt="Ryan Taylor"></span>
                 </a>
                 <div class="dropdown-menu">
                     <div class="user-header">
                         <div class="avatar avatar-sm">
-                            <img src="~/Admin/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
+                            <img src="@user.ImgUrl" alt="User Image" class="avatar-img rounded-circle">
                         </div>
                         <div class="user-text">
-                            <h6>Ryan Taylor</h6>
-                            <p class="text-muted mb-0">Administrator</p>
+                           
+                            <h6>@user.NameUser</h6>
+                            <p class="text-muted mb-0">Admin</p>
                         </div>
                     </div>
                     <a class="dropdown-item" href="profile.html">My Profile</a>
@@ -145,7 +150,7 @@
     <div class="sidebar" id="sidebar">
         <div class="sidebar-inner slimscroll">
             <div id="sidebar-menu" class="sidebar-menu">
-                <ul>
+                <ul class="main-nav">
                     <li class="menu-title">
                         <span><i class="fe fe-home"></i> Main</span>
                     </li>
@@ -164,19 +169,22 @@
                     </li>
 
                     <li>
-                        <a href="settings.html"><span>Settings</span></a>
+                        <a href="/Admin/Order/AllOrder"><span>Manage Order</span></a>
                     </li>
+                    <li>
+                        <a href="/Admin/Order/ShippingOrder"><span>Shipping</span></a>
+                    </li>
+
 
                     <li>
                         <a href="profile.html"><span>My Profile</span></a>
                     </li>
                     <li class="submenu">
-                        <a href="#"><span>Blog</span> <span class="menu-arrow"></span></a>
+                        <a href="#"><span>News</span> <span class="menu-arrow"></span></a>
                         <ul style="display: none;">
-                            <li><a href="blog.html"> Blog </a></li>
-                            <li><a href="blog-details.html"> Blog Details </a></li>
-                            <li><a href="add-blog.html"> Add Blog </a></li>
-                            <li><a href="edit-blog.html"> Edit Blog </a></li>
+                            <li><a href=/Admin/New/AllNews> All News </a></li>
+                            <li><a href=/Admin/New/AddNew>Add News </a></li>
+                            <li><a href="/Admin/New/EditNew"> Add Blog </a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -202,7 +210,7 @@
                         <span><i class="fe fe-star-o"></i> UI Interface</span>
                     </li>
                     <li>
-                        <a href="components.html"><span>Components</span></a>
+                        <a href="/Admin/UI"><span>Front Page</span></a>
                     </li>
                     <li class="submenu">
                         <a href="#"><span> Forms </span> <span class="menu-arrow"></span></a>
@@ -249,9 +257,6 @@
         </div>
     </div>
 
-
-    
-
             @RenderBody()
 
     <!--
@@ -262,10 +267,38 @@
     </footer>
     -->
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
 
+    <script src="~/Admin/js/jquery-3.6.0.min.js"></script>
+
+    <script src="~/Admin/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/Admin/js/feather.min.js"></script>
+
+    <script src="~/Admin/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="~/Admin/js/script.js"></script>
+   <script src="~/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Admin/plugins/datatables/datatables.min.js"></script> 
+
+    <script>
+        var currentPath = window.location.pathname;
+
+        // Lặp qua mỗi thẻ <a> trong danh sách submenu
+        document.querySelectorAll('.main-nav li a').forEach(function (item) {
+            // Lấy đường dẫn của từng thẻ <a>
+            var link = item.getAttribute('href');
+            // Kiểm tra xem đường dẫn hiện tại có trùng khớp với đường dẫn của thẻ <a> không
+            // if (currentPath === "/Product/AllProduct") {
+            //     // Tìm phần tử có class 'has-submenu' và thêm lớp 'active' vào đó
+            //     var activelink = document.querySelector('.main-nav .has-submenu');
+            //     activelink.classList.add('active');
+            // }
+            if (currentPath === link) {
+                // Nếu có, thêm lớp 'active' vào thẻ <li> chứa thẻ <a>
+                item.parentNode.classList.add('active');
+            }
+        });
+
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

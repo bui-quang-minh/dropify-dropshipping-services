@@ -7,8 +7,8 @@ namespace Dropify.Pages
     {
         public IActionResult OnGet()
         {
-            HttpContext.Session.Clear();
-            return RedirectToPage("Index");
+            HttpContext.Session.Remove("user");
+            return RedirectToPage("Login");
         }
     }
 }

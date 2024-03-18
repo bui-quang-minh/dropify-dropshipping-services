@@ -5,25 +5,7 @@
     Layout = "_AdminLayout";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>Mentoring - Categories Page</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="~/Admin/img/favicon.png">
-
-    <link rel="stylesheet" href="~/Admin/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="~/Admin/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="~/Admin/css/feathericon.min.css">
-
-    <link rel="stylesheet" href="~/Admin/plugins/datatables/datatables.min.css">
-
-    <link rel="stylesheet" href="~/Admin/css/style.css">
-</head>
 <body>
 
     
@@ -42,7 +24,7 @@
                 </div>
               
                     <div class="col">
-                        <a class="btn btn-success" data-bs-toggle="modal" href="#add_modal">
+                        <a href="/Admin/Products/AddProduct" class="btn btn-success" >
                             <i class="fe fe-plus"></i>
                             New Product
                         </a>
@@ -99,13 +81,12 @@
                                                             {
                                                                 @foreach (var p in Model.ListProduct)
                                                                 {
-
                                                                     <tr>
                                                                         <td>
                                                                             @p.ProductId
                                                                         </td>
                                                                         <td>
-                                                                            <span class="limitedText">@p.Name</span>
+                                                                            <a asp-page="DetailProduct" asp-route-id="@p.ProductId" > <span class="limitedText">@p.Name</span></a>
                                                                         </td>
                                                                         <td>@p.Category.CategoryName </td>
                                                                         <td>
@@ -175,7 +156,7 @@
                                                         <tbody>
                                                             @if (Model.ListProduct2 != null)
                                                             {
-                                                                @foreach (var p in Model.ListProduct2)
+                                                                @foreach (var p in Model.ListProduct1)
                                                                 {
 
                                                                     <tr>
@@ -253,7 +234,7 @@
                                                         <tbody>
                                                             @if (Model.ListProduct3 != null)
                                                             {
-                                                                @foreach (var p in Model.ListProduct3)
+                                                                @foreach (var p in Model.ListProduct2)
                                                                 {
 
                                                                     <tr>
@@ -765,22 +746,6 @@
     </div>
 
 
-   
-
-
-    <script src="~/Admin/js/jquery-3.6.0.min.js"></script>
-
-    <script src="~/Admin/js/bootstrap.bundle.min.js"></script>
-
-    <script src="~/Admin/js/feather.min.js"></script>
-
-    <script src="~/Admin/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-    <script src="~/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="~/Admin/plugins/datatables/datatables.min.js"></script>
-
-    <script src="~/Admin/js/script.js"></script>
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Get modal and link elements
@@ -901,4 +866,3 @@
     </script>
 </body>
 
-</html>
