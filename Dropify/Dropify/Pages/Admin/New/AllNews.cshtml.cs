@@ -15,7 +15,7 @@ namespace Dropify.Pages.Admin.New
         }
         public void OnGet()
         {
-            NewsList = _Context.News.ToList();
+            NewsList = _Context.News.Where(x => x.NewsType == "NEWS").ToList();
 
         }
         public void OnPost() { }

@@ -38,8 +38,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTmV3XEFkZE5ldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/PRN221/Dropify/Dropify/Pages/Admin/New/AllNews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTmV3XEFsbE5ld3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/Dropify/Dropify/Pages/Admin/New/EditNew.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTmV3XEVkaXROZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PRN221/Dropify/Dropify/Pages/Admin/Order/AllOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JkZXJcQWxsT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/Dropify/Dropify/Pages/Admin/Order/OrderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JkZXJcT3JkZXJEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/Dropify/Dropify/Pages/Admin/Order/ShippingOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JkZXJcU2hpcHBpbmdPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PRN221/Dropify/Dropify/Pages/Admin/Products/AddProduct.cshtml]
@@ -50,8 +66,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdHNcQWxsUHJvZHVjdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/PRN221/Dropify/Dropify/Pages/Admin/Products/DetailProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdHNcRGV0YWlsUHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PRN221/Dropify/Dropify/Pages/Admin/Supplier/AllSupplier.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU3VwcGxpZXJcQWxsU3VwcGxpZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/Dropify/Dropify/Pages/Admin/UI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVUkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PRN221/Dropify/Dropify/Pages/Cart.cshtml]
@@ -68,6 +92,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/PRN221/Dropify/Dropify/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/Dropify/Dropify/Pages/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PRN221/Dropify/Dropify/Pages/News.cshtml]
@@ -94,6 +122,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZVxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/PRN221/Dropify/Dropify/Pages/Profile/OrderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZVxPcmRlckRldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PRN221/Dropify/Dropify/Pages/Profile/Orders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZVxPcmRlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -108,6 +140,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/PRN221/Dropify/Dropify/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/Dropify/Dropify/Pages/TakePhoneNumber.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFrZVBob25lTnVtYmVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PRN221/Dropify/Dropify/Pages/_ViewImports.cshtml]
