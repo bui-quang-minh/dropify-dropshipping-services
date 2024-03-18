@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace Dropify.Pages.Admin.Order
 {
-    public class OrderDetailModel : PageModel
+    public class OrderDetailModel : BasePageModel
     {
         OrderDetailDAO odd = new OrderDetailDAO();
         OrderDAO od = new OrderDAO();

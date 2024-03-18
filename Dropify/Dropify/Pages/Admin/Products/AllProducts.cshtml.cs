@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 
 namespace Dropify.Pages.Admin.ManageProduct
 {
-    public class ProductModel : PageModel
+    public class ProductModel : BasePageModel
     {
         [BindProperty]
         public ProductDetail productDetail { get; set; }

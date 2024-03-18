@@ -1,3 +1,4 @@
+using Dropify.Hubs;
 using Dropify.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
@@ -32,7 +33,7 @@ builder.Services.AddAuthentication(options =>
     options.CallbackPath = "/signin-google";
 });
 builder.Services.AddScoped<prn211_dropshippingContext>();
-
+builder.Services.AddSignalR();
 
 var app = builder.Build();
 
@@ -48,7 +49,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();// to use wwwroot
 
 app.UseRouting();
-
+app.MapHub<HubServer>("/hub");
 app.UseAuthorization();
 
 app.UseSession();  // Add this line to enable session middleware
