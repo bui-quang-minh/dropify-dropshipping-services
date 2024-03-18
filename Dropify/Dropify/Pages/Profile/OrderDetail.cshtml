@@ -7,73 +7,65 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head> *@
 
-        <div class="page-header">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h3 class="page-title">Order Detail</h3>
-                <div class="col">
-                    <a href="/Profile/Orders" class="btn btn-success">
-                        <i class="fas fa-arrow-left"></i>
-                        Back
-                    </a>
-                </div>
-            <div class="row">
-                <div class="col-md-12">
-                    @if (Model.OrderDetails.Count == 0)
-                    {
-                        <h1>Không có đơn hàng nào !!</h1>
-                    }
-                    @if (Model.OrderDetails != null)
-                    {
-                        @foreach (var o in Model.OrderDetails)
-                        {
-
-                            if (o.OrderDetailParent == null)
-                            {
-                                <div class="profile-header">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto profile-image">
-                                            <a href="#">
-                                                <img class="img-thumbnail" alt="User Image"
-                                                     src="@o.Product.ProductThumbnailImage" style="height: 150px">
-                                            </a>
-                                        </div>
-                                        <div class="col ms-md-n2 profile-user-info">
-                                            <h4 class="user-name mb-0">@o.Product.Name</h4>
-                                            <br />
-                                            <div class="pb-2">
-                                                Type:
-                                                @foreach (var od in Model.OrderDetails)
-                                                {
-
-                                                    if (od.OrderDetailParent == o.OrderDetailId)
-                                                    {
-                                                        <span>@od.Attribute ;</span>
-                                                    }
-                                                }
-                                            </div>
-                                            <div class="pb-3"><i class="fa fa-map-marker"></i> @Model.order.Address.Address</div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="profile-header">
-                                    <div class="row align-items-center">
-                                        <div class="col ms-md-n2 profile-user-info">
-                                            <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="price mb-0 text-danger">Price: @o.OrderedPrice</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
-                            }
-                        }
-                    }
-
-                </div>
-            </div>
-                </div>
+<div class="page-header">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="page-title">Order Detail</h3>
+            <div class="col">
+                <a href="/Profile/Orders" class="btn btn-success">
+                    <i class="fas fa-arrow-left"></i>
+                    Back
+                </a>
             </div>
         </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            @if (Model.OrderDetails.Count == 0)
+            {
+                <h1>Không có đơn hàng nào !!</h1>
+            }
+            @if (Model.OrderDetails != null)
+            {
+                @foreach (var o in Model.OrderDetails)
+                {
+                    @if (o.OrderDetailParent == null)
+                    {
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="@o.Product.ProductThumbnailImage" class="img-thumbnail" alt="Product Image" style="height: 100%;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">@o.Product.Name</h5>
+                                        <p class="card-text">
+                                            Type:
+                                            @foreach (var od in Model.OrderDetails)
+                                            {
+                                                if (od.OrderDetailParent == o.OrderDetailId)
+                                                {
+                                                    <span>@od.Attribute; </span>
+                                                }
+                                            }
+                                        </p>
+                                        <p class="card-text">Address: @Model.order.Address.Address</p>
+                                        <p class="card-text">Quantity: @o.Quantity</p>
+                                        <p class="price mb-0 text-danger"><span class="text-danger">Price: @o.OrderedPrice</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>
+
+
+
 <script>
     var moneys = document.querySelectorAll('.price');
     moneys.forEach(function (money) {

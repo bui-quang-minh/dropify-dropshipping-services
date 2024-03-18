@@ -423,3 +423,5 @@ D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\ne
 D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.genruntimeconfig.cache
 D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\ref\Dropify.dll
 D:\PRN221\Dropify\Dropify\obj\Debug\net7.0\scopedcss\Pages\Shared\_LayoutProfile.cshtml.rz.scp.css
+C:\Users\admin\Desktop\PRN221\Final_Project\PRN221\Dropify\Dropify\bin\Debug\net7.0\libman.json
+C:\Users\admin\Desktop\PRN221\Final_Project\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Google.dll

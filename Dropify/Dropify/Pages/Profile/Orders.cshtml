@@ -4,6 +4,10 @@
     Layout = "_LayoutProfile";
 }
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Order</title>
 
     <div class="page-header">
         <div class="row">
@@ -109,146 +113,263 @@
                                                             <th width="130">Ship Status</th>
                                                             <th class="text-end">Action</th>
 
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            @if (Model.SuccessOrders != null)
-                                                            {
-                                                                @foreach (var o in Model.SuccessOrders)
-                                                                {
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/feathericon.min.css">
+    <link rel="stylesheet" href="/assets/plugins/datatables/datatables.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/plugins/slick/slick.css">
+    <link rel="stylesheet" href="/assets/plugins/slick/slick-theme.css">
+    <link rel="stylesheet" href="/assets/plugins/aos/aos.css">
 
-                                                                    <tr>                                                                        
-                                                                        <td>
-                                                                            @o.Ud.Name
-                                                                        </td>
-                                                                        <td>
-                                                                            @o.OrderedDate
 
-                                                                        </td>
+</head>
 
-                                                                        <td>
-                                                                            <span class="price" style="font-weight:normal; font-size:medium">@o.OrderedPrice</span>
-                                                                        </td>
-                                                                        
-                                                                        <td>
-                                                                            @o.Address.Address
-                                                                        </td>
+<h3 class="">Order</h3>
 
-                                                                        <td>
-                                                                            @o.ShipStatus
-                                                                        </td>
-                                                                        <td class="text-end">
-                                                                            <div class="actions">
-                                                                                <a href="OrderDetail?OrderId=@o.OrderId" class="btn btn-sm bg-warning-light">
-                                                                                    Detail
-                                                                                </a>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                }
-                                                            }
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="bottom-justified-tab2">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="table-responsive">
-                                                    <table class="  table table-hover mb-0">
-                                                        <thead>
-                                                            <tr>
-                                                            <th width="150">Person</th>
-                                                            <th width="100">Date</th>
-                                                            <th width="100">Price</th>
-                                                            
-                                                            <th width="auto">Address</th>
-                                                            <th width="130">Ship Status</th>
-                                                            <th class="text-end">Action</th>
+<ul class="nav nav-tabs nav-tabs-bottom nav-justified">
+    <li class="nav-item">
+        <a class="nav-link active"
+           href="#bottom-justified-tab" data-bs-toggle="tab">Ordered</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#bottom-justified-tab1"
+           data-bs-toggle="tab">Success</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#bottom-justified-tab2"
+           data-bs-toggle="tab">Canceled</a>
+    </li>
 
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            @if (Model.CanceledOrders != null)
-                                                            {
-                                                                @foreach (var o in Model.CanceledOrders)
-                                                                {
 
-                                                                    <tr>                                                                        
-                                                                        <td>
-                                                                            @o.Ud.Name
-                                                                        </td>
-                                                                        <td>
-                                                                            @o.OrderedDate
+</ul>
+<div class="tab-content">
+    <div class="tab-pane show active" id="bottom-justified-tab">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead>
+                                    <tr>
+                                        <th width="150">Person</th>
+                                        <th width="100">Date</th>
+                                        <th width="100">Price</th>
 
-                                                                        </td>
+                                        <th width="auto">Address</th>
+                                        <th width="130">Ship Status</th>
+                                        <th class="text-end">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.OderedOrders != null)
+                                    {
+                                        @foreach (var o in Model.OderedOrders)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @o.Ud.Name
+                                                </td>
+                                                <td>
+                                                    @o.OrderedDate
+                                                </td>
+                                                <td>
+                                                    <span class="price" style="font-weight:normal; font-size:medium">@o.OrderedPrice</span>
+                                                </td>
 
-                                                                        <td>
-                                                                            <span class="price" style="font-weight:normal; font-size:medium">@o.OrderedPrice</span>
-                                                                        </td>
-                                                                        
-                                                                        <td>
-                                                                            @o.Address.Address
-                                                                        </td>
 
-                                                                        <td>
-                                                                            @o.ShipStatus
-                                                                        </td>
-                                                                        <td class="text-end">
-                                                                            <div class="actions">
-                                                                                <a href="OrderDetail?OrderId=@o.OrderId" class="btn btn-sm bg-warning-light">
-                                                                                    Detail
-                                                                                </a>
-                                                                            </div>
-                                                                        </td>
+                                                <td>
+                                                    @o.Address.Address
+                                                </td>
+                                                <td>
+                                                    @o.ShipStatus
+                                                </td>
 
-                                                                        </tr>
-                                                                }
-                                                            }
 
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                
-    </div>
-    <div class="modal fade" id="delete_modal" role="" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
+                                                <td class="text-end">
+                                                    <div class="actions">
+                                                        <a style="width:100%;margin-bottom:2px" href="OrderDetail?OrderId=@o.OrderId" class="btn btn-sm bg-warning-light">
+                                                            Detail
+                                                        </a>
+                                                        @if(o.ShipStatus != "Shipping"){
+                                                            <a style="width:100%;" data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@o.OrderId" class="btn btn-sm bg-danger-light">
+                                                                <i class="fe fe-trash"></i> Cancel
+                                                            </a>
+                                                        }
 
-                <div class="modal-body">
-                    <form method="post" asp-page="/Profile/Orders" asp-page-handler="Delete">
-                        <div class="form-content p-2">
-                            <h4 class="modal-title">Delete</h4>
-                            <p class="mb-4">Are you sure want to delete?</p>
-                            <button type="submit" id="MyLink" class="btn btn-primary">Delete </button>
-                            <input type="hidden" value="" id="o_id" name="o_id" />
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
                         </div>
-                    </form>
-
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-     
-            
-            
-        
+    <div class="tab-pane" id="bottom-justified-tab1">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class=" table table-hover mb-0">
+                                <thead>
+                                    <tr>
+                                        <th width="150">Person</th>
+                                        <th width="100">Date</th>
+                                        <th width="100">Price</th>
+
+                                        <th width="auto">Address</th>
+                                        <th width="130">Ship Status</th>
+                                        <th class="text-end">Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.SuccessOrders != null)
+                                    {
+                                        @foreach (var o in Model.SuccessOrders)
+                                        {
+
+                                            <tr>
+                                                <td>
+                                                    @o.Ud.Name
+                                                </td>
+                                                <td>
+                                                    @o.OrderedDate
+
+                                                </td>
+
+                                                <td>
+                                                    <span class="price" style="font-weight:normal; font-size:medium">@o.OrderedPrice</span>
+                                                </td>
+
+                                                <td>
+                                                    @o.Address.Address
+                                                </td>
+
+                                                <td>
+                                                    @o.ShipStatus
+                                                </td>
+                                                <td class="text-end">
+                                                    <div class="actions">
+                                                        <a href="OrderDetail?OrderId=@o.OrderId" class="btn btn-sm bg-warning-light">
+                                                            Detail
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="bottom-justified-tab2">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="  table table-hover mb-0">
+                                <thead>
+                                    <tr>
+                                        <th width="150">Person</th>
+                                        <th width="100">Date</th>
+                                        <th width="100">Price</th>
+
+                                        <th width="auto">Address</th>
+                                        <th width="130">Ship Status</th>
+                                        <th class="text-end">Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.CanceledOrders != null)
+                                    {
+                                        @foreach (var o in Model.CanceledOrders)
+                                        {
+
+                                            <tr>
+                                                <td>
+                                                    @o.Ud.Name
+                                                </td>
+                                                <td>
+                                                    @o.OrderedDate
+
+                                                </td>
+
+                                                <td>
+                                                    <span class="price" style="font-weight:normal; font-size:medium">@o.OrderedPrice</span>
+                                                </td>
+
+                                                <td>
+                                                    @o.Address.Address
+                                                </td>
+
+                                                <td>
+                                                    @o.ShipStatus
+                                                </td>
+                                                <td class="text-end">
+                                                    <div class="actions">
+                                                        <a href="OrderDetail?OrderId=@o.OrderId" class="btn btn-sm bg-warning-light">
+                                                            Detail
+                                                        </a>
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                        }
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-    
+</div>
+<div class="modal fade" id="delete_modal" role="" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <form method="post" asp-page="/Profile/Orders" asp-page-handler="Delete">
+                    <div class="form-content p-2">
+                        <h4 class="modal-title">Delete</h4>
+                        <p class="mb-4">Are you sure want to cancel?</p>
+                        <button type="submit" id="MyLink" class="btn btn-primary">Cancel </button>
+                        <input type="hidden" value="" id="o_id" name="o_id" />
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
 
 @* <div class="modal fade" id="restore_modal" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -336,6 +457,17 @@
     });
 </script>
 
+<script src="/assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
+<script src="/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/assets/plugins/datatables/datatables.min.js"></script>
+
+<script src="/assets/js/owl.carousel.min.js"></script>
+
+<script src="/assets/plugins/slick/slick.js"></script>
+
+<script src="/assets/plugins/aos/aos.js"></script>
+
+<script src="/assets/js/script.js"></script>
 
 
