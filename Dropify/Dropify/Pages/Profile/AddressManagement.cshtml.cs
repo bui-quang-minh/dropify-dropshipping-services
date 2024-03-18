@@ -1,8 +1,11 @@
-﻿using Dropify.Logics;
+﻿using CloudinaryDotNet.Actions;
+using Dropify.Logics;
 using Dropify.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using System.Security.Cryptography;
 
 namespace Dropify.Pages.Profile
 {
@@ -18,10 +21,25 @@ namespace Dropify.Pages.Profile
         {
             con = context;
         }
-        public void OnGet()
+        public User user;
+        public UserDetail userDetail;
+        public IActionResult OnGet()
         {
-            UserAddresses = con.UserAddresses.Where(a => (a.Udid == 1) && (a.Status != "Deleted")).ToList();
-        }
+            string userString = HttpContext.Session.GetString("user");
+
+            if (userString != null)
+            {
+                user = JsonConvert.DeserializeObject<User>(userString);
+                UserDetailDAO userDAO = new UserDetailDAO();
+                userDetail = userDAO.GetUserDetailById(user.Uid);
+                UserAddresses = con.UserAddresses.Where(a => (a.Udid == 1) && (a.Status != "Deleted")).ToList();
+            }
+            else
+            {
+                return RedirectToPage("/Login");
+            }
+            return Page();
+        }  
         public string thongbao { get; set; }
         public IActionResult OnPostAdd()
         {

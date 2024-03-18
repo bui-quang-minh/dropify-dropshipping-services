@@ -1,82 +1,11 @@
 ﻿@page
 @model Dropify.Pages.Profile.AddressManagementModel
 @{
-    Layout = "_Layout";
+    Layout = "_LayoutProfile";
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Mentoring</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="/assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="/assets/plugins/fontawesome/css/all.min.css">
-
-    <link rel="stylesheet" href="/assets/css/style.css">
-</head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-
-            <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
-
-                <div class="profile-sidebar">
-                    <div class="user-widget">
-                        <div class="pro-avatar">JD</div>
-                        <div class="user-info-cont">
-                            <h4 class="usr-name">Jonathan Doe</h4>
-                        </div>
-                    </div>
-
-                    <div class="custom-sidebar-nav">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-home"></i>Dashboard <span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/Profile/AddressManagement">
-                                    <i class="fas fa-clock"></i>Address Management <span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="/Profile/ChangePassword">
-                                    <i class="fab fa-blogger-b"></i>Change Password <span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/Profile/UserInformation">
-                                    <i class="fas fa-user-cog"></i>User Information <span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/Login/Login">
-                                    <i class="fas fa-sign-out-alt"></i>Logout <span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-7 col-lg-8 col-xl-9">
-                <div class="content container-fluid">
+    
                     <div class="page-header">
                         <div class="row">
                             <div class="col-sm-6">
@@ -95,17 +24,15 @@
                     </div>
                     <br />
 
-
-
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="table-responsive">
                                         <table class="datatable table table-hover table-center mb-0">
                                             <thead>
                                                 <tr>
-                                                    <th width="300">Name</th>
+                                                    <th width="300" class="text-start">Địa chỉ</th>
                                                     <th width="300" class="text-center">Status</th>
                                                     <th width="300" class="text-end">Action</th>
                                                 </tr>
@@ -155,11 +82,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+     
 
-        </div>
-    </div>
+
 
 
     <div class="modal fade" id="add_modal" aria-hidden="true" role="dialog">
@@ -283,18 +208,7 @@
             </div>
         </div>
     </div>
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
 
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-
-    <script src="assets/plugins/select2/js/select2.min.js"></script>
-
-    <script src="assets/js/moment.min.js"></script>
-    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-
-    <script src="assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
-    <script src="assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Get modal and link elements
@@ -337,9 +251,8 @@
         });
     </script>
 
-    <script src="assets/js/script.js"></script>
+  @*   <script src="assets/js/script.js"></script> *@
 
 
 </body>
 
-</html>

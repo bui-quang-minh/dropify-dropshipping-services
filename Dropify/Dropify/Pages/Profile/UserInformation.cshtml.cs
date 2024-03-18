@@ -42,7 +42,7 @@ namespace Dropify.Pages.Profile
             }
             else
             {
-                return RedirectToPage("/Login/Login");
+                return RedirectToPage("/Login");
             }
             return Page();
         }
