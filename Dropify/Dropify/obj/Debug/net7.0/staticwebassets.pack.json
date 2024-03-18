@@ -1581,6 +1581,10 @@
       "PackagePath": "staticwebassets\\js\\google.js"
     },
     {
+      "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\js\\signalR.js",
+      "PackagePath": "staticwebassets\\js\\signalR.js"
+    },
+    {
       "Id": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

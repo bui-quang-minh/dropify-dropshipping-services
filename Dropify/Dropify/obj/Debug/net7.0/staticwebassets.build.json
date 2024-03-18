@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zYhizBkwsHZn3fmlAe0VeTpqKjMuupCgHk6yu1q4HI0=",
+  "Hash": "ScZG9Q67LXMZDDJhRREQdIDTxLF8wZ8dZ/pW7UL03is=",
   "Source": "Dropify",
   "BasePath": "_content/Dropify",
   "Mode": "Default",
@@ -7539,6 +7539,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\google.js"
+    },
+    {
+      "Identity": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\js\\signalR.js",
+      "SourceId": "Dropify",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\",
+      "BasePath": "_content/Dropify",
+      "RelativePath": "js/signalR.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\signalR.js"
     },
     {
       "Identity": "D:\\PRN221\\Dropify\\Dropify\\wwwroot\\js\\site.js",

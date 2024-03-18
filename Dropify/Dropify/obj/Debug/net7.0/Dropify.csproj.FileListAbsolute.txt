@@ -59,7 +59,6 @@ D:\PRN221\Dropify\Dropify\obj\Debug\net7.0\staticwebassets\msbuild.buildTransiti
 D:\PRN221\Dropify\Dropify\obj\Debug\net7.0\staticwebassets.pack.json
 D:\PRN221\Dropify\Dropify\obj\Debug\net7.0\scopedcss\Pages\Shared\_AdminLayout.cshtml.rz.scp.css
 D:\PRN221\Dropify\Dropify\obj\Debug\net7.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
-D:\PRN221\Dropify\Dropify\obj\Debug\net7.0\scopedcss\Pages\Shared\_ProfileLayout.cshtml.rz.scp.css
 D:\PRN221\Dropify\Dropify\obj\Debug\net7.0\scopedcss\bundle\Dropify.styles.css
 D:\PRN221\Dropify\Dropify\obj\Debug\net7.0\scopedcss\projectbundle\Dropify.bundle.scp.css
 D:\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.csproj.CopyComplete
@@ -423,3 +422,4 @@ D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\ne
 D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.pdb
 D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.genruntimeconfig.cache
 D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\ref\Dropify.dll
+D:\PRN221\Dropify\Dropify\obj\Debug\net7.0\scopedcss\Pages\Shared\_LayoutProfile.cshtml.rz.scp.css
