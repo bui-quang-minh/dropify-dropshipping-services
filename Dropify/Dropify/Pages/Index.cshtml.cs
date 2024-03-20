@@ -17,7 +17,7 @@ namespace Dropify.Pages
 
         public void OnGet()
         {
-            ListProducts = new ProductDAO().GetAllProducts();
+            ListProducts = new ProductDAO().GetLastestProducts();
             ListNews = new NewsDAO().GetAllNews();
         }
     }
