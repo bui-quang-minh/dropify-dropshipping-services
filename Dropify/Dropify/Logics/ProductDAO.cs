@@ -5,6 +5,12 @@ namespace Dropify.Logics
 {
     public class ProductDAO
     {
+        public List<Product> GetLastestProducts() {
+            using (var db = new prn211_dropshippingContext())
+            {
+                return db.Products.OrderByDescending(p => p.CreatedDate).Take(6).ToList();
+            }
+        }
         // Lấy tất cả sản phẩm từ database
         // Người viết: Bùi Quang Minh
         // Ngày: 16/2/2024
