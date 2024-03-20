@@ -17,7 +17,8 @@
                     </div>
                 </div>
                 <div class="col">
-                    <a href="/Admin/Order/AllOrder" class="btn btn-success">
+                    <a onclick="goBack()" class="btn btn-success">
+                       @*  href="/Admin/Order/AllOrder" *@
                         <i class="fas fa-arrow-left"></i>
                         Back
                     </a>
@@ -95,3 +96,9 @@
     });
 
 </script>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
