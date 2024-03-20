@@ -62,6 +62,14 @@ namespace Dropify.Pages
         
         public IActionResult OnPostAdd()
         {
+            string userString = HttpContext.Session.GetString("user");
+            System.Diagnostics.Debug.WriteLine("UID: " + userString);
+            if (userString != null)
+            {
+                user = JsonConvert.DeserializeObject<User>(userString);
+                UserDetailDAO userDAO = new UserDetailDAO();
+                userDetail = userDAO.GetUserDetailById(user.Uid);
+            }
             var uad_form = Request.Form["uad-form"];
             string[] strings = Request.Form["SelectedItems"].ToArray();
             int orderId = 0;
@@ -89,7 +97,7 @@ namespace Dropify.Pages
                 using (var db = new prn211_dropshippingContext())
                 {
                     Order o = new Order();
-                    o.Udid = 2;
+                    o.Udid = userDetail.Udid;
                     o.OrderedDate = DateTime.Parse(formattedTime);
                     o.OrderedPrice = total;
                     o.AddressId = int.Parse(uad_form);
@@ -174,7 +182,7 @@ namespace Dropify.Pages
             {
                 return RedirectToPage("/Cart");
             }
-            return RedirectToPage("/Cart");
+            return RedirectToPage("/Profile/Orders");
         }
     }
 }

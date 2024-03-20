@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>Mentoring - Categories Page</title>
+    <title>@ViewData["Title"] - Dropify</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="~/Admin/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link rel="stylesheet" href="~/Admin/css/bootstrap.min.css">
@@ -58,28 +58,7 @@
                         <span class="notification-title">News</span>
                       @*   <a href="javascript:void(0)" class="clear-noti"> Clear All </a> *@
                     </div>
-                    <div class="noti-content">
-                        @foreach(Models.News n in Model.news)
-                        {
-                            <ul class="notification-list">
-                                <li class="notification-message">
-                                    <a href="#">
-                                        <div class="media d-flex">
-                                            <span class="avatar avatar-sm flex-shrink-0">
-                                                <img class="avatar-img rounded-circle" alt="User Image" src="@n.ImgUrl">
-                                            </span>
-                                            <div class="media-body flex-grow-1">
-                                                <p class="noti-details"><span class="noti-title">@n.NewsType</span></p>
-                                                <p class="noti-time"><span class="notification-time">@n.CreatedDate</span></p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        }
-                       
-                    </div>
+                    
                     <div class="topnav-dropdown-footer">
                         <a href="#">View all Notifications</a>
                     </div>
