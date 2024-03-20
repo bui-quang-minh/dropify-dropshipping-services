@@ -6,6 +6,7 @@ using Dropify.Logics;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
+using CloudinaryDotNet.Actions;
 
 namespace Dropify.Pages
 {
@@ -83,6 +84,7 @@ namespace Dropify.Pages
                 if (user != null)
                 {
                     HttpContext.Session.SetString("user", JsonSerializer.Serialize(user));
+                    HttpContext.Session.SetString("tempPass", password);
                     var userDAO = new UserDAO();
                     TempData.Clear();
                     if (userDAO.Authorization(user.Email))

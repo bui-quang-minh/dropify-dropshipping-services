@@ -52,6 +52,7 @@ namespace Dropify.Pages
                 if (ud.Register(Email, Pword, FullName, PhoneNumber))
                 {
                     HttpContext.Session.SetString("user", JsonSerializer.Serialize(ud.takeUser(Email)));
+                    HttpContext.Session.SetString("tempPass", Pword);
                     return RedirectToPage("/Index");
                 }
                 else

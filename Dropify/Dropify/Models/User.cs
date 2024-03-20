@@ -20,7 +20,7 @@ namespace Dropify.Models
         public string Email { get; set; }
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Password is required.")]
-        //[StringLength(50, MinimumLength = 8, ErrorMessage = "Password must be at least 8 characters long.")]
+        [StringLength(50, MinimumLength = 8, ErrorMessage = "Password must be at least 8 characters long.")]
         [Display(Name = "Password (*)")]
         public string Pword { get; set; }
         public string? Status { get; set; }
