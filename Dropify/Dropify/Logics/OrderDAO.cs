@@ -50,7 +50,7 @@ namespace Dropify.Logics
                     .Include(o => o.Address)
                     .Include(o => o.Ud)
                     .Include(od => od.OrderDetails)
-                    .ThenInclude(p => p.Product)
+                    .ThenInclude(p => p.Product).OrderByDescending(o => o.OrderedDate)
                     .Where(o => o.Status == status).ToList();
                 return orders;
             }
