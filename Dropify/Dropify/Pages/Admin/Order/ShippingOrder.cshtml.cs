@@ -8,7 +8,7 @@ using System.Security.Cryptography;
 
 namespace Dropify.Pages.Admin.Order
 {
-    public class ShippingOrderModel : PageModel
+    public class ShippingOrderModel : BasePageModel
     {
 
         OrderDAO od = new OrderDAO();

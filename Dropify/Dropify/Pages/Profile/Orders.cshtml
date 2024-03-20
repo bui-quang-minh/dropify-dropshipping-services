@@ -1,29 +1,17 @@
 ﻿@page
 @model Dropify.Pages.Profile.OrdersModel
 @{
-    Layout = "_ProfileLayout";
+    Layout = "_LayoutProfile";
+    
 }
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>Order</title>
-
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
-
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/assets/css/feathericon.min.css">
-    <link rel="stylesheet" href="/assets/plugins/datatables/datatables.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/assets/plugins/slick/slick.css">
-    <link rel="stylesheet" href="/assets/plugins/slick/slick-theme.css">
-    <link rel="stylesheet" href="/assets/plugins/aos/aos.css">
-
-
-</head>
-
+@if (ViewData["Message"] != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            alert("@ViewData["Message"]");
+        };
+    </script>
+}
 <h3 class="">Order</h3>
 
 <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
@@ -77,6 +65,7 @@
                                                     <span class="price" style="font-weight:normal; font-size:medium">@o.OrderedPrice</span>
                                                 </td>
 
+
                                                 <td>
                                                     @o.Address.Address
                                                 </td>
@@ -95,7 +84,9 @@
                                                                 <i class="fe fe-trash"></i> Cancel
                                                             </a>
                                                         }
-
+                                                        <a style="width:100%;" href="CustomerSupport?OrderId=@o.OrderId&CusName=@o.Ud.Name" class="btn btn-sm bg-primary">
+                                                            Support
+                                                        </a>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -156,8 +147,11 @@
                                                 </td>
                                                 <td class="text-end">
                                                     <div class="actions">
-                                                        <a href="OrderDetail?OrderId=@o.OrderId" class="btn btn-sm bg-warning-light">
+                                                        <a style="width:100%;margin-bottom:2px" href="OrderDetail?OrderId=@o.OrderId" class="btn btn-sm bg-warning-light">
                                                             Detail
+                                                        </a>
+                                                        <a style="width:100%;" href="CustomerSupport?OrderId=@o.OrderId&CusName=@o.Ud.Name" class="btn btn-sm bg-primary">
+                                                            Support
                                                         </a>
                                                     </div>
                                                 </td>
@@ -219,8 +213,11 @@
                                                 </td>
                                                 <td class="text-end">
                                                     <div class="actions">
-                                                        <a href="OrderDetail?OrderId=@o.OrderId" class="btn btn-sm bg-warning-light">
+                                                        <a style="width:100%;margin-bottom:2px" href="OrderDetail?OrderId=@o.OrderId" class="btn btn-sm bg-warning-light">
                                                             Detail
+                                                        </a>
+                                                        <a style="width:100%;" href="CustomerSupport?OrderId=@o.OrderId&CusName=@o.Ud.Name" class="btn btn-sm bg-primary">
+                                                            Support
                                                         </a>
                                                     </div>
                                                 </td>
@@ -237,9 +234,8 @@
             </div>
         </div>
     </div>
-
-
 </div>
+
 <div class="modal fade" id="delete_modal" role="" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -260,44 +256,15 @@
     </div>
 </div>
 
-
-
-
-
-
-
-
-@* <div class="modal fade" id="restore_modal" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-
-            <div class="modal-body">
-                <form method="post" asp-page="/Profile/Orders" asp-page-handler="Restore">
-                    <div class="form-content p-2">
-                        <h4 class="modal-title text-center">Restore</h4>
-                        <p class="mb-4 text-center">Are you sure want to Restore?</p>
-                        <div class="d-flex me-1 justify-content-center">
-                            <button type="submit" id="MyLink" class="btn btn-primary" style="margin-right:6px ;width:75px ;"> Restore </button>
-                            <input type="hidden" value="" id="restore_id" name="restore_id" />
-                            <button type="button" class="btn btn-danger" style="width : 75px;" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-    </div>
-</div> *@
-
-
-
-
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         // Get modal and link elements
         var modal = document.getElementById('delete_modal');
         var links = document.querySelectorAll('[data-bs-target="#delete_modal"]');
 
+
+        
+        
         // Add event listener for when any of the links is clicked
         links.forEach(function (link) {
             link.addEventListener('click', function () {
@@ -310,36 +277,6 @@
         });
     });
 </script>
-@* <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Get modal and link elements
-        var modal = document.getElementById('restore_modal');
-        var links = document.querySelectorAll('[data-bs-target="#restore_modal"]');
-
-        // Add event listener for when any of the links is clicked
-        links.forEach(function (link) {
-            link.addEventListener('click', function () {
-
-                var id = link.dataset.reid;
-
-                document.getElementById('restore_id').value = id;
-                console.log(id);
-
-            });
-        });
-    });
-</script> *@
-
-@* <script>
-    var maxLength = 70;
-    var elements = document.querySelectorAll('.limitedText');
-    elements.forEach(function (element) {
-        if (element.textContent.length > maxLength) {
-            element.textContent = element.textContent.substring(0, maxLength) + '...';
-        }
-
-    });
-</script> *@
 
 <script>
     var moneys = document.querySelectorAll('.price');
@@ -353,11 +290,7 @@
     });
 </script>
 
-<script src="/assets/js/jquery-3.6.0.min.js"></script>
 
-<script src="/assets/js/bootstrap.bundle.min.js"></script>
-
-<script src="/assets/js/feather.min.js"></script>
 
 <script src="/assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
@@ -371,6 +304,5 @@
 <script src="/assets/plugins/aos/aos.js"></script>
 
 <script src="/assets/js/script.js"></script>
-
 
 

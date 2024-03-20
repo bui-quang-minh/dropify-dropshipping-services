@@ -1,12 +1,13 @@
 ﻿@using System.Text.Json
+@using Dropify.Pages.Admin
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>Mentoring - Categories Page</title>
+    <title>@ViewData["Title"] - Dropify</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="~/Admin/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link rel="stylesheet" href="~/Admin/css/bootstrap.min.css">
@@ -54,71 +55,16 @@
                 </a>
                 <div class="dropdown-menu notifications">
                     <div class="topnav-dropdown-header">
-                        <span class="notification-title">Notifications</span>
-                        <a href="javascript:void(0)" class="clear-noti"> Clear All </a>
+                        <span class="notification-title">News</span>
+                      @*   <a href="javascript:void(0)" class="clear-noti"> Clear All </a> *@
                     </div>
-                    <div class="noti-content">
-                        <ul class="notification-list">
-                            <li class="notification-message">
-                                <a href="#">
-                                    <div class="media d-flex">
-                                        <span class="avatar avatar-sm flex-shrink-0">
-                                            <img class="avatar-img rounded-circle" alt="User Image" src="~/Admin/img/user/user.jpg">
-                                        </span>
-                                        <div class="media-body flex-grow-1">
-                                            <p class="noti-details"><span class="noti-title">Jonathan Doe</span> Schedule <span class="noti-title">his appointment</span></p>
-                                            <p class="noti-time"><span class="notification-time">4 mins ago</span></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="notification-message">
-                                <a href="#">
-                                    <div class="media d-flex">
-                                        <span class="avatar avatar-sm flex-shrink-0">
-                                            <img class="avatar-img rounded-circle" alt="User Image" src="~/Admin/img/user/user1.jpg">
-                                        </span>
-                                        <div class="media-body flex-grow-1">
-                                            <p class="noti-details"><span class="noti-title">Julie Pennington</span> has booked her appointment to <span class="noti-title">Ruby Perrin</span></p>
-                                            <p class="noti-time"><span class="notification-time">6 mins ago</span></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="notification-message">
-                                <a href="#">
-                                    <div class="media d-flex">
-                                        <span class="avatar avatar-sm flex-shrink-0">
-                                            <img class="avatar-img rounded-circle" alt="User Image" src="~/Admin/img/user/user2.jpg">
-                                        </span>
-                                        <div class="media-body flex-grow-1">
-                                            <p class="noti-details"><span class="noti-title">Tyrone Roberts</span> sent a amount of $210 for his <span class="noti-title">appointment</span></p>
-                                            <p class="noti-time"><span class="notification-time">8 mins ago</span></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="notification-message">
-                                <a href="#">
-                                    <div class="media d-flex">
-                                        <span class="avatar avatar-sm flex-shrink-0">
-                                            <img class="avatar-img rounded-circle" alt="User Image" src="~/Admin/img/user/user4.jpg">
-                                        </span>
-                                        <div class="media-body flex-grow-1">
-                                            <p class="noti-details"><span class="noti-title">Patricia Manzi</span> send a message <span class="noti-title"> to his Mentee</span></p>
-                                            <p class="noti-time"><span class="notification-time">12 mins ago</span></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    
                     <div class="topnav-dropdown-footer">
                         <a href="#">View all Notifications</a>
                     </div>
                 </div>
             </li>
-          
+
             <li class="nav-item dropdown has-arrow">
                 @{
                     Models.User user = JsonSerializer.Deserialize<Models.User>(Context.Request.HttpContext.Session.GetString("user"));
@@ -132,7 +78,7 @@
                             <img src="@user.ImgUrl" alt="User Image" class="avatar-img rounded-circle">
                         </div>
                         <div class="user-text">
-                           
+
                             <h6>@user.NameUser</h6>
                             <p class="text-muted mb-0">Admin</p>
                         </div>
@@ -164,101 +110,21 @@
                     <li>
                         <a href="/Admin/Categories/AllCategories"><span>Manage Category</span></a>
                     </li>
-                    <li >
+                    <li>
                         <a href="/Admin/Supplier/AllSupplier"><span>Manage Supplier</span></a>
                     </li>
-
                     <li>
                         <a href="/Admin/Order/AllOrder"><span>Manage Order</span></a>
                     </li>
                     <li>
-                        <a href="/Admin/Order/ShippingOrder"><span>Shipping</span></a>
-                    </li>
-
-
-                    <li>
-                        <a href="profile.html"><span>My Profile</span></a>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><span>Blog</span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a href="blog.html"> Blog </a></li>
-                            <li><a href="blog-details.html"> Blog Details </a></li>
-                            <li><a href="add-blog.html"> Add Blog </a></li>
-                            <li><a href="edit-blog.html"> Edit Blog </a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><span> Authentication </span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a href="login.html"> Login </a></li>
-                            <li><a href="register.html"> Register </a></li>
-                            <li><a href="forgot-password.html"> Forgot Password </a></li>
-                            <li><a href="lock-screen.html"> Lock Screen </a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><span> Error Pages </span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a href="error-404.html">404 Error </a></li>
-                            <li><a href="error-500.html">500 Error </a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="blank-page.html"><span>Blank Page</span></a>
-                    </li>
-                    <li class="menu-title">
-                        <span><i class="fe fe-star-o"></i> UI Interface</span>
-                    </li>
-                    <li>
-                        <a href="/Admin/UI"><span>Front Page</span></a>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><span> Forms </span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a href="form-basic-inputs.html">Basic Inputs </a></li>
-                            <li><a href="form-input-groups.html">Input Groups </a></li>
-                            <li><a href="form-horizontal.html">Horizontal Form </a></li>
-                            <li><a href="form-vertical.html"> Vertical Form </a></li>
-                            <li><a href="form-mask.html"> Form Mask </a></li>
-                            <li><a href="form-validation.html"> Form Validation </a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><span> Tables </span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a href="tables-basic.html">Basic Tables </a></li>
-                            <li><a href="data-tables.html">Data Table </a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"><span>Multi Level</span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li class="submenu">
-                                <a href="javascript:void(0);"> <span>Level 1</span> <span class="menu-arrow"></span></a>
-                                <ul style="display: none;">
-                                    <li><a href="javascript:void(0);"><span>Level 2</span></a></li>
-                                    <li class="submenu">
-                                        <a href="javascript:void(0);"> <span> Level 2</span> <span class="menu-arrow"></span></a>
-                                        <ul style="display: none;">
-                                            <li><a href="javascript:void(0);">Level 3</a></li>
-                                            <li><a href="javascript:void(0);">Level 3</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="javascript:void(0);"> <span>Level 2</span></a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);"> <span>Level 1</span></a>
-                            </li>
-                        </ul>
+                        <a href="/Admin/Order/ShippingOrder"><span>Manage Shipping</span></a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 
-            @RenderBody()
+    @RenderBody()
 
     <!--
     <footer class="border-top footer text-muted">
@@ -278,8 +144,10 @@
     <script src="~/Admin/plugins/slimscroll/jquery.slimscroll.min.js"></script>
     <script src="~/Admin/js/script.js"></script>
    <script src="~/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="~/Admin/plugins/datatables/datatables.min.js"></script> 
-
+    <script src="~/Admin/plugins/datatables/datatables.min.js"></script>
+    <script src="~/microsoft/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/signalr.js"></script>
+  
     <script>
         var currentPath = window.location.pathname;
 

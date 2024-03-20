@@ -97,7 +97,7 @@ namespace Dropify.Logics
             {
                 using (var db = new prn211_dropshippingContext())
                 {
-                    products = db.Products.Where(p => p.Name.ToLower().Contains(name.ToLower()) && p.CategoryId == cid && p.SupplierId == sid && (p.Status == "Active" || p.Status=="Release")).ToList();
+                    products = db.Products.Where(p => p.Name.ToLower().Contains(name.ToLower()) && p.CategoryId == cid && p.SupplierId == sid && (p.Status == "Selling" || p.Status=="Release")).ToList();
                     return products;
                 }
             }
@@ -105,7 +105,7 @@ namespace Dropify.Logics
             {
                 using (var db = new prn211_dropshippingContext())
                 {
-                    products = db.Products.Where(p => p.Name.ToLower().Contains(name.ToLower()) && p.CategoryId == cid && (p.Status == "Active" || p.Status == "Release")).ToList();
+                    products = db.Products.Where(p => p.Name.ToLower().Contains(name.ToLower()) && p.CategoryId == cid && (p.Status == "Selling" || p.Status == "Release")).ToList();
                     return products;
                 }
             }
@@ -113,7 +113,7 @@ namespace Dropify.Logics
             {
                 using (var db = new prn211_dropshippingContext())
                 {
-                    products = db.Products.Where(p =>  p.Name.ToLower().Contains(name.ToLower()) && p.SupplierId == sid && (p.Status == "Active" || p.Status == "Release")).ToList();
+                    products = db.Products.Where(p =>  p.Name.ToLower().Contains(name.ToLower()) && p.SupplierId == sid && (p.Status == "Selling" || p.Status == "Release")).ToList();
                     return products;
                 }
             }
@@ -121,7 +121,7 @@ namespace Dropify.Logics
             {
                 using (var db = new prn211_dropshippingContext())
                 {
-                    products = db.Products.Where(p =>  p.Name.ToLower().Contains(name.ToLower()) && (p.Status == "Active" || p.Status == "Release")).ToList();
+                    products = db.Products.Where(p =>  p.Name.ToLower().Contains(name.ToLower()) && (p.Status == "Selling" || p.Status == "Release")).ToList();
                     return products;
                 }
             }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tbTTnhEgf5z2NZivGsJtVFCe9SW36zvpoUHNDw8ac4Y=",
+  "Hash": "KDzZwvE1NRB9T8D+xN0u5a49OdT3tBieLnrM7CXQxCo=",
   "Source": "Dropify",
   "BasePath": "_content/Dropify",
   "Mode": "Default",
@@ -7484,6 +7484,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\plugins\\theia-sticky-sidebar\\theia-sticky-sidebar.js"
     },
     {
+      "Identity": "C:\\Users\\admin\\Desktop\\PRN221\\Final_Project\\PRN221\\Dropify\\Dropify\\wwwroot\\css\\customersp.css",
+      "SourceId": "Dropify",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\PRN221\\Final_Project\\PRN221\\Dropify\\Dropify\\wwwroot\\",
+      "BasePath": "_content/Dropify",
+      "RelativePath": "css/customersp.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\customersp.css"
+    },
+    {
       "Identity": "C:\\Users\\admin\\Desktop\\PRN221\\Final_Project\\PRN221\\Dropify\\Dropify\\wwwroot\\css\\site.css",
       "SourceId": "Dropify",
       "SourceType": "Discovered",
@@ -7539,6 +7558,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\google.js"
+    },
+    {
+      "Identity": "C:\\Users\\admin\\Desktop\\PRN221\\Final_Project\\PRN221\\Dropify\\Dropify\\wwwroot\\js\\signalR.js",
+      "SourceId": "Dropify",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\PRN221\\Final_Project\\PRN221\\Dropify\\Dropify\\wwwroot\\",
+      "BasePath": "_content/Dropify",
+      "RelativePath": "js/signalR.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\signalR.js"
     },
     {
       "Identity": "C:\\Users\\admin\\Desktop\\PRN221\\Final_Project\\PRN221\\Dropify\\Dropify\\wwwroot\\js\\site.js",

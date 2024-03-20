@@ -1,3 +1,4 @@
+using Dropify.Hubs;
 using Dropify.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
@@ -32,26 +33,24 @@ builder.Services.AddAuthentication(options =>
     options.CallbackPath = "/signin-google";
 });
 builder.Services.AddScoped<prn211_dropshippingContext>();
-
+builder.Services.AddSignalR();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();// to use wwwroot
+app.UseStaticFiles();
 
 app.UseRouting();
-
+app.MapHub<HubServer>("/hub");
 app.UseAuthorization();
 
-app.UseSession();  // Add this line to enable session middleware
+app.UseSession();
 
 app.MapRazorPages();
 

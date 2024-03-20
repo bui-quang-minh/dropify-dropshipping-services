@@ -1,7 +1,6 @@
 using Dropify.Logics;
 using Dropify.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 
 namespace Dropify.Pages.Profile
@@ -9,6 +8,8 @@ namespace Dropify.Pages.Profile
     public class OrdersModel : BasePageModel
     {
         
+        
+
         [BindProperty]
         
         public Order Order { get; set; }
@@ -26,7 +27,6 @@ namespace Dropify.Pages.Profile
 
         public OrdersModel(prn211_dropshippingContext context)
         {
-            
             con = context;
         }
         public IActionResult OnGet()
@@ -65,19 +65,6 @@ namespace Dropify.Pages.Profile
             return RedirectToPage("/Profile/Orders");
         }
 
-        //public IActionResult OnPostRestore()
-        //{
-        //    int oid = int.Parse(Request.Form["o_id"].ToString());
-
-        //    var order = con.Orders.Find(oid);
-        //    if (order != null)
-        //    {
-        //        order.Status = "Canceled";
-        //        order.ShipStatus = "Not Shipped";
-        //        con.Orders.Update(order);
-        //        con.SaveChanges();
-        //    }
-        //    return RedirectToPage("/Profile/Orders");
-        //}
+        
     }
 }

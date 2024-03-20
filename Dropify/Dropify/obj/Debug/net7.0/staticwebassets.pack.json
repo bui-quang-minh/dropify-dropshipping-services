@@ -1569,6 +1569,10 @@
       "PackagePath": "staticwebassets\\assets\\plugins\\theia-sticky-sidebar\\theia-sticky-sidebar.js"
     },
     {
+      "Id": "C:\\Users\\admin\\Desktop\\PRN221\\Final_Project\\PRN221\\Dropify\\Dropify\\wwwroot\\css\\customersp.css",
+      "PackagePath": "staticwebassets\\css\\customersp.css"
+    },
+    {
       "Id": "C:\\Users\\admin\\Desktop\\PRN221\\Final_Project\\PRN221\\Dropify\\Dropify\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -1579,6 +1583,10 @@
     {
       "Id": "C:\\Users\\admin\\Desktop\\PRN221\\Final_Project\\PRN221\\Dropify\\Dropify\\wwwroot\\js\\google.js",
       "PackagePath": "staticwebassets\\js\\google.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\Desktop\\PRN221\\Final_Project\\PRN221\\Dropify\\Dropify\\wwwroot\\js\\signalR.js",
+      "PackagePath": "staticwebassets\\js\\signalR.js"
     },
     {
       "Id": "C:\\Users\\admin\\Desktop\\PRN221\\Final_Project\\PRN221\\Dropify\\Dropify\\wwwroot\\js\\site.js",

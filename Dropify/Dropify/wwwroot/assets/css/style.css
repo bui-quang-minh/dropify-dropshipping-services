@@ -2905,13 +2905,13 @@ html.menu-opened body {
 }
 .bg-pattern-style {
     background: url(../img/home_art.jpg) no-repeat;
-	background-position: center;
-	background-size: cover;
-	width: 100%;
-	height: 100vh;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-	opacity: 1;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    opacity: 1;
 }
 .bg-pattern-style:before {
 	position: absolute;
@@ -10662,7 +10662,7 @@ div.dataTables_wrapper div.dataTables_filter input{
     height: 100%;
 }
 .user-name {
-    color: #fff;
+    color: black;
     font-size: 20px;
     margin-top: 10px;
     text-align: center;

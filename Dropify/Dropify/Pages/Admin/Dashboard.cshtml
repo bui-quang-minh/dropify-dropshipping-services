@@ -5,6 +5,8 @@
 }
 
 <body>
+   
+
     <div class="page-wrapper">
         <div class="content container-fluid">
 
@@ -28,7 +30,7 @@
                                     <i class="fe fe-users"></i>
                                 </span>
                                 <div class="dash-count">
-                                    <h3>168</h3>
+                                    <h3>@Model.Users.Count</h3>
                                 </div>
                             </div>
                             <div class="dash-widget-info">
@@ -48,7 +50,7 @@
                                     <i class="fe fe-credit-card"></i>
                                 </span>
                                 <div class="dash-count">
-                                    <h3>487</h3>
+                                    <h3>@Model.Order.Count</h3>
                                 </div>
                             </div>
                             <div class="dash-widget-info">
@@ -65,14 +67,17 @@
                         <div class="card-body">
                             <div class="dash-widget-header">
                                 <span class="dash-widget-icon text-danger border-danger">
-                                    <i class="fe fe-star-o"></i>
+                                    <i class="fa fa-money" ></i>
                                 </span>
                                 <div class="dash-count">
-                                    <h3>485</h3>
+                                    @{
+                                        var profit = (Model.Revenue - Model.Profit);
+                                    }
+                                    <h3 class="price">@profit</h3>
                                 </div>
                             </div>
                             <div class="dash-widget-info">
-                                <h6 class="text-muted">Evaluate</h6>
+                                <h6 class="text-muted">Profit</h6>
                                 <div class="progress progress-sm">
                                     <div class="progress-bar bg-danger w-50"></div>
                                 </div>
@@ -88,7 +93,7 @@
                                     <i class="fe fe-folder"></i>
                                 </span>
                                 <div class="dash-count">
-                                    <h3>$62523</h3>
+                                    <h3 class="price">@Model.Revenue</h3>
                                 </div>
                             </div>
                             <div class="dash-widget-info">
@@ -101,7 +106,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+           @*  <div class="row">
                 <div class="col-md-12 col-lg-6">
 
                     <div class="card card-chart">
@@ -126,131 +131,58 @@
                     </div>
 
                 </div>
-            </div>
+            </div> *@
             <div class="row">
                 <div class="col-md-6 d-flex">
 
                     <div class="card card-table flex-fill">
                         <div class="card-header">
-                            <h4 class="card-title">Mentor List</h4>
+                            <h4 class="card-title">New Member</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-hover table-center mb-0">
                                     <thead>
                                         <tr>
-                                            <th>Mentor Name</th>
-                                            <th>Course</th>
-                                            <th>Earned</th>
-                                            <th>Reviews</th>
+                                            
+                                            <th>Name</th>
+                                            <th>Phone</th>
+                                            <th>Email</th>
+                                            <th>Dob</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                <h2 class="table-avatar">
-                                                    <a href="profile.html" class="avatar avatar-sm me-2">
-                                                        <img class="avatar-img rounded-circle"
-                                                             src="assets/img/profiles/avatar-08.jpg"
-                                                             alt="User Image">
-                                                    </a>
-                                                    <a href="profile.html">James Amen</a>
-                                                </h2>
-                                            </td>
-                                            <td>Maths</td>
-                                            <td>$3200.00</td>
-                                            <td>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star-o text-secondary"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h2 class="table-avatar">
-                                                    <a href="profile.html" class="avatar avatar-sm me-2">
-                                                        <img class="avatar-img rounded-circle"
-                                                             src="assets/img/profiles/avatar-07.jpg"
-                                                             alt="User Image">
-                                                    </a>
-                                                    <a href="profile.html">Jessica Fogarty</a>
-                                                </h2>
-                                            </td>
-                                            <td>Business Maths</td>
-                                            <td>$3100.00</td>
-                                            <td>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star-o text-secondary"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h2 class="table-avatar">
-                                                    <a href="profile.html" class="avatar avatar-sm me-2">
-                                                        <img class="avatar-img rounded-circle"
-                                                             src="assets/img/profiles/avatar-17.jpg"
-                                                             alt="User Image">
-                                                    </a>
-                                                    <a href="profile.html">Jose Anderson</a>
-                                                </h2>
-                                            </td>
-                                            <td>Algebra</td>
-                                            <td>$4000.00</td>
-                                            <td>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star-o text-secondary"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h2 class="table-avatar">
-                                                    <a href="profile.html" class="avatar avatar-sm me-2">
-                                                        <img class="avatar-img rounded-circle"
-                                                             src="assets/img/profiles/avatar-06.jpg"
-                                                             alt="User Image">
-                                                    </a>
-                                                    <a href="profile.html">Sofia Brient</a>
-                                                </h2>
-                                            </td>
-                                            <td>Integrated Sum</td>
-                                            <td>$3200.00</td>
-                                            <td>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star-o text-secondary"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h2 class="table-avatar">
-                                                    <a href="profile.html" class="avatar avatar-sm me-2">
-                                                        <img class="avatar-img rounded-circle"
-                                                             src="assets/img/profiles/avatar-14.jpg"
-                                                             alt="User Image">
-                                                    </a>
-                                                    <a href="profile.html">Marvin Campbell</a>
-                                                </h2>
-                                            </td>
-                                            <td>Flow chart</td>
-                                            <td>$3500.00</td>
-                                            <td>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star text-warning"></i>
-                                                <i class="fe fe-star-o text-secondary"></i>
-                                            </td>
-                                        </tr>
+                                        @if(Model.listUdetail != null)
+                                        {
+                                            @foreach(var ud in Model.listUdetail)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        <h2 class="table-avatar">
+                                                            <a href="" class="avatar avatar-sm me-2">
+                                                                <img class="avatar-img rounded-circle"
+                                                                     src="@ud.ImgUrl"
+                                                                     alt="User Image">
+                                                            </a>
+                                                            <a href="profile.html">@ud.Name</a>
+                                                        </h2>
+                                                    </td>
+                                                    <td>@ud.PhoneNumber</td>
+                                                    <td>@ud.UidNavigation.Email</td>
+                                                    
+                                                        @{
+                                                            DateTime dob = ud.Dob;
+                                                            string formattedDate = dob.ToString("dd/MM/yyyy");
+
+                                                        }
+                                                    <td>
+                                                        @formattedDate
+                                                    </td>
+                                                </tr>
+                                            }
+                                        }
+                                        
+                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -262,90 +194,54 @@
 
                     <div class="card  card-table flex-fill">
                         <div class="card-header">
-                            <h4 class="card-title">Mentee List</h4>
+                            <h4 class="card-title">New order</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-hover table-center mb-0">
                                     <thead>
                                         <tr>
-                                            <th>Mentee Name</th>
-                                            <th>Phone</th>
-                                            <th>Last Visit</th>
-                                            <th class="text-end">Paid</th>
+                                            <th>Customer</th>
+                                            <th>Order Date</th>
+                                            <th>Address</th>
+                                            <th class="text-center">Order Price</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                <h2 class="table-avatar">
-                                                    <a href="profile.html" class="avatar avatar-sm me-2">
-                                                        <img class="avatar-img rounded-circle"
-                                                             src="assets/img/user/user.jpg" alt="User Image">
-                                                    </a>
-                                                    <a href="profile.html">Jonathan Doe </a>
-                                                </h2>
-                                            </td>
-                                            <td>8286329170</td>
-                                            <td>20 Oct 2019</td>
-                                            <td class="text-end">$100.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h2 class="table-avatar">
-                                                    <a href="profile.html" class="avatar avatar-sm me-2">
-                                                        <img class="avatar-img rounded-circle"
-                                                             src="assets/img/user/user1.jpg" alt="User Image">
-                                                    </a>
-                                                    <a href="profile.html">Julie Pennington </a>
-                                                </h2>
-                                            </td>
-                                            <td>2077299974</td>
-                                            <td>22 Oct 2019</td>
-                                            <td class="text-end">$200.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h2 class="table-avatar">
-                                                    <a href="profile.html" class="avatar avatar-sm me-2">
-                                                        <img class="avatar-img rounded-circle"
-                                                             src="assets/img/user/user2.jpg" alt="User Image">
-                                                    </a>
-                                                    <a href="profile.html">Tyrone Roberts</a>
-                                                </h2>
-                                            </td>
-                                            <td>2607247769</td>
-                                            <td>21 Oct 2019</td>
-                                            <td class="text-end">$250.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h2 class="table-avatar">
-                                                    <a href="profile.html" class="avatar avatar-sm me-2">
-                                                        <img class="avatar-img rounded-circle"
-                                                             src="assets/img/user/user3.jpg" alt="User Image">
-                                                    </a>
-                                                    <a href="profile.html">Allen Davis </a>
-                                                </h2>
-                                            </td>
-                                            <td>5043686874</td>
-                                            <td>21 Sep 2019</td>
-                                            <td class="text-end">$150.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h2 class="table-avatar">
-                                                    <a href="profile.html" class="avatar avatar-sm me-2">
-                                                        <img class="avatar-img rounded-circle"
-                                                             src="assets/img/user/user4.jpg" alt="User Image">
-                                                    </a>
-                                                    <a href="profile.html">Patricia Manzi </a>
-                                                </h2>
-                                            </td>
-                                            <td>9548207887</td>
-                                            <td>18 Sep 2019</td>
-                                            <td class="text-end">$350.00</td>
-                                        </tr>
+                                        @if(Model.Order != null)
+                                        {
+                                            @foreach(var o in Model.Order)
+                                            {
+                                                
+                                                <tr>
+                                                   
+                                                    <td>
+                                                        <h2 class="table-avatar">
+                                                            <a href="/Order/OrderDetail?id=@o.OrderId" class="avatar avatar-sm me-2">
+                                                                <img class="avatar-img rounded-circle"
+                                                                     src="@o.Ud.ImgUrl"
+                                                                     alt="User Image">
+                                                            </a>
+                                                            <a href ="/Order/OrderDetail?id=@o.OrderId">@o.Ud.Name</a>
+                                                        </h2>
+                                                       
+                                                    </td>
+                                                    @{
+                                                        DateTime orderdate = o.OrderedDate;
+                                                        string order = orderdate.ToString("dd/MM/yyyy");
+
+                                                    }
+                                                    <td>
+                                                        @order
+                                                    </td>
+                                                    <td>@o.Address.Address</td>
+                                                    <td class="price text-center">@o.OrderedPrice</td>
+                                                </tr>
+                                            }
+
+                                        }
+                                        
+                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -357,5 +253,16 @@
             
         </div>
     </div>
- 
+    <script>
+        var moneys = document.querySelectorAll('.price');
+        moneys.forEach(function (money) {
+            // Lấy giá trị số từ phần tử HTML
+            var amountString = money.textContent.replace(/[^\d,-]/g, ''); // Loại bỏ các ký tự không phải số, dấu phẩy hoặc dấu trừ
+            var amount = parseFloat(amountString.replace(',', '.')); // Chuyển đổi dấu phẩy sang dấu chấm cho số dấu phẩy động
+            var formattedMoney = amount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+            money.textContent = formattedMoney; // Gán giá trị đã định dạng vào phần tử HTML
+
+        });
+
+    </script>
 </body>

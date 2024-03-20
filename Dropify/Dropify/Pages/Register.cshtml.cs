@@ -6,21 +6,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Text;
 using System.Text.Json;
+using CloudinaryDotNet.Actions;
+using Microsoft.EntityFrameworkCore;
 
 namespace Dropify.Pages
 {
     public class RegisterModel : PageModel
     {
         [BindProperty]
-        public string Email { get; set; }
-
+        public User user { get; set; }
         [BindProperty]
-        public string Password { get; set; }
+        public UserDetail userDetail { get; set; }
         [BindProperty]
         public string password_confirmation { get; set; }
-
-        [BindProperty]
-        public string full_name { get; set; }
         public IActionResult OnGet()
         {
             if (HttpContext.Session.GetString("user") == null)
@@ -43,18 +41,25 @@ namespace Dropify.Pages
         {
             TempData.Clear();
             UserDAO ud = new UserDAO();
-            string fullName = full_name;
-
+            string fullName = userDetail.Name;
             StringBuilder errorMessages = new StringBuilder();
 
-            if (string.IsNullOrEmpty(full_name.Trim()))
+            if (string.IsNullOrEmpty(userDetail.Name.Trim()))
             {
-                errorMessages.AppendLine("Full Name is required");
+                errorMessages.AppendLine("Full Name is required\n");
+            }
+            if (string.IsNullOrEmpty(userDetail.PhoneNumber))
+            {
+                errorMessages.AppendLine("Phone Number is required\n");
+            }
+            if (!string.IsNullOrEmpty(userDetail.PhoneNumber)) {
+                if (userDetail.PhoneNumber.Length > 10) { errorMessages.AppendLine("Phone Number is invalid\n"); 
+                }
             }
 
-            if (Password != password_confirmation)
+            if (user.Pword != password_confirmation)
             {
-                errorMessages.AppendLine("Password did not match Confirm Password");
+                errorMessages.AppendLine("Password did not match Confirm Password\n");
             }
 
             if (errorMessages.Length > 0)
@@ -63,9 +68,9 @@ namespace Dropify.Pages
             }
             else
             {
-                if (ud.Register(Email, Password, fullName))
+                if (ud.Register(user.Email, user.Pword, userDetail.Name,userDetail.PhoneNumber))
                 {
-                    HttpContext.Session.SetString("user_email", Email);
+                    HttpContext.Session.SetString("user", JsonSerializer.Serialize(ud.takeUser(user.Email)));
                     return RedirectToPage("/Index");
                 }
                 else
@@ -76,10 +81,9 @@ namespace Dropify.Pages
 
             return Page();
         }
-
+        //google stuff
         public IActionResult OnGetLoginWithGoogle()
         {
-            // cai nay de hien cai man hinh google xong xuong duoi
             var redirectUrl = Url.Page("/Register", pageHandler: "GoogleResponse");
             return Challenge(new AuthenticationProperties { RedirectUri = redirectUrl }, GoogleDefaults.AuthenticationScheme);
         }
@@ -91,19 +95,18 @@ namespace Dropify.Pages
             string password = claims.FirstOrDefault();
             string fullname = claims.Skip(1).FirstOrDefault();
             string Email = claims.LastOrDefault();
-            UserDAO ud = new UserDAO();
-            // ud.Register(Email, password, fullname);
+            using (var dbContext = new prn211_dropshippingContext())
+            {
+                var user = dbContext.Users.FirstOrDefault(a => a.Email == Email);
+                if (user != null)
+                {
+                    TempData["ErrorMessage"] = "User's Email already exists!";
+                    return Page();
+                }
+            }
 
-            //if (ud.Register(Email, Password, fullName))
-            //{
-            //    HttpContext.Session.SetString("user_email", Email);
-            //    return RedirectToPage("/Index");
-            //}
-            //else
-            //{
-            //    TempData["ErrorMessage"] = "User's Email already exists!";
-            //}
-            return Content(password + fullname + Email, "application/json");
+
+                return RedirectToPage("/TakePhoneNumber", new {Email = Email, FullName = fullname, Pword= password });
         }
     }
 }
