@@ -1,0 +1,32 @@
+﻿@page
+@model CustomerSupportModel
+@{
+    Layout = "_LayoutProfile";
+}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customer Feedback Form</title>
+    <link href="~/css/customersp.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="testbox">
+        <form method="post">
+            <h1>Customer Feedback Form</h1>
+            <p>Please take a few minutes to give us feedback about our service by filling in this short Customer Feedback Form. We are conducting this research in order to measure your level of satisfaction with the quality of our service. We thank you for your participation.</p>
+            <hr />
+            <h3>Overall experience with our service</h3>
+            
+            <h4>What should we change in order to live up to your expectations?</h4>
+            <textarea rows="5" asp-for="Model.Body"></textarea>
+            <h4>Email</h4>
+            <small>Only if you want to hear more from us.</small>
+            <input class="email" type="text" name="name"  />
+            <div class="btn-block">
+                <button type="submit" asp-page-handler="SendEmail">Send Feedback</button>
+            </div>
+        </form>
+        
+    </div>
+  </body>
+</html>

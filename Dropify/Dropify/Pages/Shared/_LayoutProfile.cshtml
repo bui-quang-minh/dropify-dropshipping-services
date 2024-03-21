@@ -177,9 +177,13 @@
                 <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
                     <div class="profile-sidebar">
                         <div class="user-widget">
-                            <div class="pro-avatar">JD</div>
+                            @{
+                                string UserJson1 = Context.Request.HttpContext.Session.GetString("user");
+                                Models.User user1 = JsonSerializer.Deserialize<Models.User>(UserJson);
+                            }
+                            <div class="pro-avatar"><img src="@user1.ImgUrl" style="width:100%; height: 100%; border-radius:50%"></img></div>
                             <div class="user-info-cont">
-                                <h4 class="usr-name">Jonathan Doe</h4>
+                                <h4 class="usr-name">@user1.NameUser</h4>
                             </div>
                         </div>
 
