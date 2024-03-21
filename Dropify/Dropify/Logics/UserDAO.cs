@@ -1,11 +1,14 @@
 ﻿using Dropify.Models;
+using Org.BouncyCastle.Crypto.Generators;
 using System.Diagnostics.Eventing.Reader;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Dropify.Logics
 {
     public class UserDAO
     {
+        private static string key = "asjrlkmcoewjtjle;oxqskjhdafevoprlsvmx@123";
         // Lấy tất cả user từ database
         public List<User> GetAllUsers()
         {
@@ -58,8 +61,7 @@ namespace Dropify.Logics
                     };
 
                     db.Users.Add(newUser);
-                    db.SaveChanges(); // Save changes to generate Uid
-
+                    db.SaveChanges();
                     var newUserDetail = new UserDetail
                     {
                         Uid = newUser.Uid,
@@ -96,10 +98,36 @@ namespace Dropify.Logics
         }
         public string Encryption(string password)
         {
-            byte[] storePassword = ASCIIEncoding.ASCII.GetBytes(password);
-            string encryptpass = Convert.ToBase64String(storePassword);
+            string encryptpass = EncryptPass(password);
             return encryptpass;
         }
+        public string EncryptPass(string password)
+        {
+            byte[] salt = GenerateSalt();
+            byte[] passwordBytes = Encoding.UTF8.GetBytes(password + key);
+
+            using (SHA512 sha512 = SHA512.Create())
+            {
+                byte[] saltedPasswordBytes = new byte[salt.Length + passwordBytes.Length];
+                Array.Copy(salt, 0, saltedPasswordBytes, 0, salt.Length);
+                Array.Copy(passwordBytes, 0, saltedPasswordBytes, salt.Length, passwordBytes.Length);
+                byte[] hashedPassword = sha512.ComputeHash(saltedPasswordBytes);
+                string base64HashedPassword = Convert.ToBase64String(hashedPassword);
+                
+                return base64HashedPassword;
+            }
+        }
+
+        private byte[] GenerateSalt()
+        {
+            byte[] salt = new byte[64];
+            using (RNGCryptoServiceProvider rngCsp = new RNGCryptoServiceProvider())
+            {
+                rngCsp.GetBytes(salt);
+            }
+            return salt;
+        }
+
         public string DecryptPass(string password)
         {
             byte[] encryptpass = Convert.FromBase64String(password);
