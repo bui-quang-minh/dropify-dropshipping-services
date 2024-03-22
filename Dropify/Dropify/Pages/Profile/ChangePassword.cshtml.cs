@@ -1,4 +1,5 @@
-﻿using Dropify.Logics;
+﻿using CloudinaryDotNet.Actions;
+using Dropify.Logics;
 using Dropify.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -26,7 +27,8 @@ namespace Dropify.Pages.Profile
         public User user;
 
         private readonly prn211_dropshippingContext con;
-
+        [BindProperty]
+        public string temppass { get; set; }
         public ChangePasswordModel(prn211_dropshippingContext context)
         {
             con = context;
@@ -35,6 +37,7 @@ namespace Dropify.Pages.Profile
 
         public IActionResult OnGet()
         {
+            temppass = HttpContext.Session.GetString("tempPass");
             string userString = HttpContext.Session.GetString("user");
             System.Diagnostics.Debug.WriteLine("UID: " + userString);
             if (userString != null)
@@ -50,6 +53,7 @@ namespace Dropify.Pages.Profile
         }
         public IActionResult OnPost()
         {
+            temppass = HttpContext.Session.GetString("tempPass");
             var userDAO = new UserDAO();
             string userString = HttpContext.Session.GetString("user");
             System.Diagnostics.Debug.WriteLine("UID: " + userString);
@@ -77,16 +81,16 @@ namespace Dropify.Pages.Profile
                 else
                 {
 
-                    if (userDAO.DecryptPass(u.Pword) != OldPassword)
+                    if (u.Pword != userDAO.Encryption(OldPassword))
                     {
-                        OldPasswordMessage = "Old password not exit !";
+                        OldPasswordMessage = "Old password wrong !";
                         return Page();
                     }
                     else
                     {
                         if (ConfirmPassword != User.Pword)
                         {
-                            ConfirmPasswordMessage = "Confirm password not exit with new password!";
+                            ConfirmPasswordMessage = "Confirm password is not the same with new password!";
                             return Page();
                         }
                         else

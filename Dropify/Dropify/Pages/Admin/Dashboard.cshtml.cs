@@ -29,6 +29,10 @@ namespace Dropify.Pages.Admin
         public IActionResult OnGet()
         {
             string userString = HttpContext.Session.GetString("user");
+            if (string.IsNullOrEmpty(userString))
+            {
+                return RedirectToPage("/Error");
+            }
             if (userString != null)
             {
                 user = JsonConvert.DeserializeObject<User>(userString);

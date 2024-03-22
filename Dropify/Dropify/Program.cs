@@ -1,4 +1,5 @@
 using Dropify.Hubs;
+using Dropify.Logics;
 using Dropify.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
@@ -12,6 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddScoped<IVNPayService, VnPayService>();
 builder.Services.AddAntiforgery(options => options.HeaderName = "XSRF-TOKEN");
 builder.Services.AddSession(options =>
 {
@@ -32,6 +34,7 @@ builder.Services.AddAuthentication(options =>
     options.ClientSecret = configuration["Authentication:Google:ClientSecret"];
     options.CallbackPath = "/signin-google";
 });
+
 builder.Services.AddScoped<prn211_dropshippingContext>();
 builder.Services.AddSignalR();
 
