@@ -38,9 +38,9 @@ namespace Dropify.Pages.Profile
                 user = JsonConvert.DeserializeObject<User>(userString);
                 userDetail = con.UserDetails.FirstOrDefault(ud => ud.Uid == user.Uid);
                 //User = con.Users.FirstOrDefault(u => u.Uid == user.Uid);
-                OderedOrders = od.GetOrderByStatus("Ordered", (int)userDetail.Uid);
-                SuccessOrders = od.GetOrderByStatus("Success", (int)userDetail.Uid);
-                CanceledOrders = od.GetOrderByStatus("Canceled", (int)userDetail.Uid);
+                OderedOrders = od.GetOrderByStatus("Ordered", (int)userDetail.Udid);
+                SuccessOrders = od.GetOrderByStatus("Success", (int)userDetail.Udid);
+                CanceledOrders = od.GetOrderByStatus("Canceled", (int)userDetail.Udid);
             }
             else
             {

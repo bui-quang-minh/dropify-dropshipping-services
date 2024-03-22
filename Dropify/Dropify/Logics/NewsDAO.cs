@@ -12,7 +12,7 @@ namespace Dropify.Logics
         {
             using (var db = new prn211_dropshippingContext())
             {
-                return db.News.Where(x => x.NewsType == "NEWS").ToList();
+                return db.News.ToList();
             }
         }
 
@@ -23,7 +23,7 @@ namespace Dropify.Logics
         {
             using (var db = new prn211_dropshippingContext())
             {
-                return db.News.Where(x => x.NewsType=="NEWS").OrderByDescending(n => n.CreatedDate).Take(5).ToList();
+                return db.News.OrderByDescending(n => n.CreatedDate).Take(5).ToList();
             }
         }
 
@@ -58,7 +58,7 @@ namespace Dropify.Logics
         {
             using (var db = new prn211_dropshippingContext())
             {
-                return db.News.Where(n => n.NewsType == type).OrderByDescending(n => n.CreatedDate).ToList();
+                return db.News.OrderByDescending(n => n.CreatedDate).ToList();
             }
         }
         // get news by id

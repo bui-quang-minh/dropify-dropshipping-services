@@ -138,8 +138,8 @@ namespace Dropify.Pages.Admin
             // Tạo một tệp Excel
             var stream = new MemoryStream();
             orders = od.GetOrderByStatusandYear("Success", DateTime.Now.Year);
+            ExcelPackage.LicenseContext = LicenseContext.Commercial;
 
-           
             using (var package = new ExcelPackage(stream))
             {
                 var worksheet = package.Workbook.Worksheets.Add("Sheet1");

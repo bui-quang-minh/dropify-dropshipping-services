@@ -75,8 +75,8 @@ namespace Dropify.Logics
                     db.SaveChanges();
                     var newuserAddress = new UserAddress
                     {
-                        Udid = newUserDetail.Udid,
-                        Address = "hòa lạc",
+                        Udid = newUserDetail.Uid,
+                        Address = "Địa chỉ mới",
                         Default = true,
                         Status = "Active"
                     };

@@ -33,7 +33,7 @@ namespace Dropify.Pages.Profile
                 user = JsonConvert.DeserializeObject<User>(userString);
                 UserDetailDAO userDAO = new UserDetailDAO();
                 userDetail = userDAO.GetUserDetailById(user.Uid);
-                UserAddresses = con.UserAddresses.Where(a => (a.Udid == userDetail.Udid) && (a.Status != "Deleted")).ToList();
+                UserAddresses = con.UserAddresses.Where(a => (a.Udid == userDetail.Uid) && (a.Status != "Deleted")).ToList();
             }
             else
             {

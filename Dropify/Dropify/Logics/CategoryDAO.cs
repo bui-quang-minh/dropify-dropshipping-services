@@ -78,7 +78,7 @@ namespace Dropify.Logics
         {
             using (var db = new prn211_dropshippingContext())
             {
-                var returnList = db.Categories.Where(c => c.CategoryParent == null && c.CategoryId != 1).ToList();
+                var returnList = db.Categories.Where(c => c.CategoryParent == null && c.CategoryId != 1&&c.Status!="Hide").ToList();
                 return returnList.ToList();
             }
         }

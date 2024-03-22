@@ -144,7 +144,7 @@ namespace Dropify.Pages.Admin.Products
                 p_d.Attribute = description;
                 new ProductDetailDAO().AddProductDetail(p_d);
             }
-            return RedirectToPage("/Product/AllProduct");
+            return RedirectToPage("/Admin/Products/AllProducts");
         }
     }
 }

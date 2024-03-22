@@ -52,8 +52,6 @@ namespace Dropify.Pages.Admin.ManageCategoris
                 {
                     return RedirectToPage("/Index");
                 }
-
-                
             }
             else
             {

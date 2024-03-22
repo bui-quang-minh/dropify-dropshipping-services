@@ -150,7 +150,7 @@ namespace Dropify.Logics
             {
                 orders = db.Orders
                     .Include(o => o.Address)
-                    .Include(o => o.Ud)
+                    .Include(o => o.Ud).OrderByDescending(o => o.OrderedDate)
                     .Where(o => o.ShipStatus.Equals(status)).ToList();
                 return orders;
             }

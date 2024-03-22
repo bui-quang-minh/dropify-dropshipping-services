@@ -452,3 +452,6 @@ D:\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\obj\Debug\net7.0\ref\D
 D:\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\bin\Debug\net7.0\EPPlus.dll
 D:\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.IO.RecyclableMemoryStream.dll
 D:\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\bin\Debug\net7.0\System.Xml.XPath.XmlDocument.dll
+D:\PRN221\Dropify\Dropify\bin\Debug\net7.0\EPPlus.dll
+D:\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.IO.RecyclableMemoryStream.dll
+D:\PRN221\Dropify\Dropify\bin\Debug\net7.0\System.Xml.XPath.XmlDocument.dll
