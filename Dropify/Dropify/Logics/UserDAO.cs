@@ -87,10 +87,11 @@ namespace Dropify.Logics
 
                 if (existingUser != null)
                 {
-                    string realpass = userDAO.DecryptPass(existingUser.Pword);
-                    if (password.Equals(realpass))
-                    {
+                    if(existingUser.Pword == userDAO.Encryption(password))
                         return true;
+                    else
+                    {
+                        return false;
                     }
                 }
                 return false;
@@ -103,7 +104,8 @@ namespace Dropify.Logics
         }
         public string EncryptPass(string password)
         {
-            byte[] salt = GenerateSalt();
+            //byte[] salt = GenerateSalt();
+            byte[] salt = GenerateSalt(key);
             byte[] passwordBytes = Encoding.UTF8.GetBytes(password + key);
 
             using (SHA512 sha512 = SHA512.Create())
@@ -117,22 +119,20 @@ namespace Dropify.Logics
                 return base64HashedPassword;
             }
         }
-
-        private byte[] GenerateSalt()
+        // làm cái cách này thì lại phải thêm 
+        //private byte[] GenerateSalt()
+        //{
+        //    byte[] salt = new byte[64];
+        //    using (RNGCryptoServiceProvider rngCsp = new RNGCryptoServiceProvider())
+        //    {
+        //        rngCsp.GetBytes(salt);
+        //    }
+        //    return salt;
+        //}
+        private byte[] GenerateSalt(string key)
         {
-            byte[] salt = new byte[64];
-            using (RNGCryptoServiceProvider rngCsp = new RNGCryptoServiceProvider())
-            {
-                rngCsp.GetBytes(salt);
-            }
+            byte[] salt = Encoding.UTF8.GetBytes(key); // Sử dụng key như một cách tạo salt cố định
             return salt;
-        }
-
-        public string DecryptPass(string password)
-        {
-            byte[] encryptpass = Convert.FromBase64String(password);
-            string decryptpass = ASCIIEncoding.ASCII.GetString(encryptpass);
-            return decryptpass;
         }
         public bool Authorization(string email)
         {

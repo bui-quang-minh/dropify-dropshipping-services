@@ -47,7 +47,7 @@ namespace Dropify.Pages
             {
                 var user = dbContext.Users.FirstOrDefault(a => a.Email == User.Email);
                 
-                if (user != null && userDAO.DecryptPass(user.Pword) == User.Pword)
+                if (user != null && user.Pword == userDAO.EncryptPass(User.Pword))
                 {
                     HttpContext.Session.SetString("user", JsonSerializer.Serialize(user));
                     

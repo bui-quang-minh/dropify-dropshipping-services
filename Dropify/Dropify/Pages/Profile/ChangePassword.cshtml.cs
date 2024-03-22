@@ -81,9 +81,9 @@ namespace Dropify.Pages.Profile
                 else
                 {
 
-                    if (userDAO.DecryptPass(u.Pword) != OldPassword)
+                    if (u.Pword != userDAO.Encryption(OldPassword))
                     {
-                        OldPasswordMessage = "Old password not exit !";
+                        OldPasswordMessage = "Old password wrong !";
                         return Page();
                     }
                     else
