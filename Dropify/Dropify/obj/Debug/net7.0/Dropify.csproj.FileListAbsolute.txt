@@ -279,77 +279,6 @@ F:\learnInUnivercity\Section7\PRN221\projectPRN221\PRN221\Dropify\Dropify\obj\De
 F:\learnInUnivercity\Section7\PRN221\projectPRN221\PRN221\Dropify\Dropify\obj\Debug\net7.0\ref\Dropify.dll
 F:\learnInUnivercity\Section7\PRN221\projectPRN221\PRN221\Dropify\Dropify\bin\Debug\net7.0\libman.json
 F:\learnInUnivercity\Section7\PRN221\projectPRN221\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Google.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\appsettings.Development.json
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\appsettings.json
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\libman.json
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Dropify.staticwebassets.runtime.json
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Dropify.exe
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Dropify.deps.json
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Dropify.runtimeconfig.json
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Dropify.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Dropify.pdb
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\CloudinaryDotNet.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Humanizer.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Google.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.Identity.Client.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Newtonsoft.Json.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\System.Drawing.Common.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\System.Runtime.Caching.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\System.Security.Permissions.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\System.Windows.Extensions.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.csproj.AssemblyReference.cache
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.GeneratedMSBuildEditorConfig.editorconfig
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.AssemblyInfoInputs.cache
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.AssemblyInfo.cs
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.csproj.CoreCompileInputs.cache
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.MvcApplicationPartsAssemblyInfo.cache
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.RazorAssemblyInfo.cache
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.RazorAssemblyInfo.cs
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.sourcelink.json
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\staticwebassets.build.json
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\staticwebassets.development.json
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\staticwebassets\msbuild.Dropify.Microsoft.AspNetCore.StaticWebAssets.props
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\staticwebassets\msbuild.build.Dropify.props
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Dropify.props
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Dropify.props
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\staticwebassets.pack.json
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\scopedcss\Pages\Shared\_AdminLayout.cshtml.rz.scp.css
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\scopedcss\bundle\Dropify.styles.css
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\scopedcss\projectbundle\Dropify.bundle.scp.css
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.csproj.CopyComplete
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\refint\Dropify.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.pdb
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\Dropify.genruntimeconfig.cache
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\ref\Dropify.dll
 D:\PRN221\Dropify\Dropify\obj\Debug\net7.0\scopedcss\Pages\Shared\_LayoutProfile.cshtml.rz.scp.css
 C:\Users\admin\Desktop\PRN221\Final_Project\PRN221\Dropify\Dropify\obj\Debug\net7.0\scopedcss\Pages\Shared\_LayoutProfile.cshtml.rz.scp.css
 C:\Users\admin\Desktop\PRN221\Final_Project\PRN221\Dropify\Dropify\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
@@ -454,15 +383,3 @@ D:\Documents\PRN221\Project_PRN221\PRN221\Dropify\Dropify\bin\Debug\net7.0\Syste
 D:\PRN221\Dropify\Dropify\bin\Debug\net7.0\EPPlus.dll
 D:\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.IO.RecyclableMemoryStream.dll
 D:\PRN221\Dropify\Dropify\bin\Debug\net7.0\System.Xml.XPath.XmlDocument.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\EPPlus.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\MailKit.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\Microsoft.IO.RecyclableMemoryStream.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\MimeKit.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\System.Formats.Asn1.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\System.Text.Encoding.CodePages.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\System.Xml.XPath.XmlDocument.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Text.Encoding.CodePages.dll
-D:\SCHOOL\On school\PRN221\PROJECT\Connecter\PRN221\Dropify\Dropify\obj\Debug\net7.0\scopedcss\Pages\Shared\_LayoutProfile.cshtml.rz.scp.css
