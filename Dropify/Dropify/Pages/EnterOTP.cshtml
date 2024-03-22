@@ -1,0 +1,80 @@
+﻿@page
+@model Dropify.Pages.EnterOTPModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mentoring</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/plugins/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="account-page">
+
+    <div class="main-wrapper">
+
+        <div class="bg-pattern-style">
+            <div class="content">
+
+                <div class="account-content">
+                    <div class="account-box">
+                        <div class="login-right">
+                            <div class="login-header">
+                                <h3>Forgot Password?</h3>
+                                <p class="text-muted">Enter your email to get a password reset code through your mail</p>
+                            </div>
+
+                            <form method="POST">
+                                <div class="form-group">
+                                    @if (ViewData["ErrorMessage"] != null)
+                                    {
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                            <strong>Error!</strong> @ViewData["ErrorMessage"]
+                                            <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                    }
+                                    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                        <span>A code has been sent to email account:</span>
+                                        <span>@Model.Usermail</span>
+                                        <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <label>Enter OTP</label>
+                                    <input asp-for="otp" type="text" class="form-control" placeholder="Enter OTP received via email">
+                                </div>
+                                <div class="text-end">
+                                    <a class="forgot-link" href="/login">Remember your password?</a>
+                                </div>
+                                <button class="btn btn-primary login-btn" type="submit">Reset Password</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/assets/js/script.js"></script>
+</body>
