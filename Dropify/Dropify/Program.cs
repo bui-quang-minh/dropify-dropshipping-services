@@ -34,6 +34,7 @@ builder.Services.AddAuthentication(options =>
     options.ClientSecret = configuration["Authentication:Google:ClientSecret"];
     options.CallbackPath = "/signin-google";
 });
+
 builder.Services.AddScoped<prn211_dropshippingContext>();
 builder.Services.AddSignalR();
 
