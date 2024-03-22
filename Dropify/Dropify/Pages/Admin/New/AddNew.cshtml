@@ -19,10 +19,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <h3 class="page-title">Add News</h3>
-                            <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/Admin/Dashboard">Dashboard &nbsp;</a></li>
-                                <li>Add News</li>
-                            </ul>
+                            
                         </div>
                     </div>
                 </div>
@@ -33,15 +30,15 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-12 blog-details">
-                                        <form>
+                                        <form method="post" enctype="multipart/form-data">
                                             <div class="form-group">
-                                                <label>News Name</label>
-                                                <input class="form-control" type="text">
+                                                <label>News Title</label>
+                                                <input class="form-control" type="text" name="title">
                                             </div>
                                             <div class="form-group">
                                                 <label>News Images</label>
                                                 <div>
-                                                    <input class="form-control" type="file">
+                                                    <input class="form-control" name="fileImg" type="file">
                                                     <small class="form-text text-muted">Max. file size: 50 MB. Allowed images: jpg, gif, png. Maximum 10 images only.</small>
                                                 </div>
                                             </div>
@@ -49,51 +46,27 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label>News Category</label>
-                                                        <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true">
-                                                            <option>New about product</option>
-                                                            <option>New about update</option>
-                                                            <option>New about project</option>
+                                                        <select class="select select2-hidden-accessible form-control" name="category" tabindex="-1" aria-hidden="true">
+                                                            @if(Model.products != null)
+                                                            {
+                                                                @foreach(var p in Model.products)
+                                                                {
+                                                                    <option value="@p.ProductId"> @p.Name</option>
+                                                                }
+                                                            }
+                                                           
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <!--
-                                                    for future reference
-                                                    <div class="form-group">
-                                                        <label>News Sub Category</label>
-                                                        <select class="select select2-hidden-accessible form-control" tabindex="-1" aria-hidden="true">
-                                                            <option>Html</option>
-                                                            <option>Css</option>
-                                                            <option>Javascript</option>
-                                                            <option>PHP</option>
-                                                            <option>Codeignitor</option>
-                                                            <option>iOS</option>
-                                                            <option>Android</option>
-                                                        </select>
-                                                    </div>
-                                                    -->
-                                                </div>
+                                               
                                             </div>
+
+
                                             <div class="form-group">
                                                 <label>Contents <span class="text-danger">*</span></label>
-                                                <!-- Place the first <script> tag in your HTML's <head> -->
-                                                <textarea>
-                                                    Enter new content ....
-                                                </textarea>
+                                                <textarea type="text" id="tiny" class="form-control service-desc" name="description" placeholder=" Enter new content..."></textarea>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="display-block w-100">News Status</label>
-                                                <div>
-                                                    <div class="form-check form-radio form-check-inline">
-                                                        <input class="form-check-input" id="active" name="active-blog" value="active" type="radio" checked>
-                                                        <label class="form-check-label" for="active">Active</label>
-                                                    </div>
-                                                    <div class="form-check form-radio form-check-inline">
-                                                        <input class="form-check-input" id="inactive" name="active-blog" value="inactive" type="radio">
-                                                        <label class="form-check-label" for="inactive">Inactive</label>
-                                                    </div>
-                                                </div>
-                                            </div>
+
                                             <div class="m-t-20 text-center">
                                                 <button class="btn btn-primary btn-lg">Publish New</button>
                                             </div>
@@ -107,20 +80,18 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.tiny.cloud/1/cbe4dmnrfnb1r4ampgnr2oiyi9cr4vk0xbosboqsvablktk5/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
-        // Initialize TinyMCE editor
         tinymce.init({
-            selector: 'textarea',
-            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
-            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-            tinycomments_mode: 'embedded',
-            tinycomments_author: 'Author name',
-            mergetags_list: [
-                { value: 'First.Name', title: 'First Name' },
-                { value: 'Email', title: 'Email' },
+            selector: 'textarea#tiny',
+            plugins: [
+                'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
+                'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
+                'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help', 'wordcount'
             ],
-            ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
-        });
+            toolbar: 'undo redo | a11ycheck casechange blocks | bold italic backcolor | alignleft aligncenter alignright alignjustify |' +
+                'bullist numlist checklist outdent indent | removeformat | code table help'
+        })
     </script>
 </body>
 </html>

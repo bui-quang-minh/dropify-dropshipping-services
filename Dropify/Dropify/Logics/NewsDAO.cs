@@ -69,5 +69,15 @@ namespace Dropify.Logics
                 return db.News.Find(id);
             }
         }
+
+        public void SaveNews(News news)
+        {
+            using (var db = new prn211_dropshippingContext())
+            {
+                 db.News.Add(news);
+                db.SaveChanges();
+
+            }
+        }
     }
 }

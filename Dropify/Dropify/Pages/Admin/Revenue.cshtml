@@ -1,0 +1,304 @@
+﻿@page
+@model Dropify.Pages.Admin.RevenueModel
+@{
+    Layout = "_AdminLayout";
+}
+<style>
+    .form-container {
+        white-space: nowrap; /* Đảm bảo các form không xuống dòng */
+        margin-bottom: 15px;
+    }
+
+        .form-container form {
+            display: inline-block; /* Hiển thị các form cạnh nhau */
+            margin-right: 30px; /* Khoảng cách giữa các form */
+        }
+
+            .form-container form:last-child {
+                margin-right: 0; /* Không cần margin-right cho form cuối cùng */
+            }
+
+    select {
+        padding: 10px; /* Kích thước padding */
+        font-size: 16px; /* Kích thước chữ */
+        border: 1px solid #ccc; /* Đường viền */
+        border-radius: 5px; /* Bo góc */
+        background-color: #f4f4f4; /* Màu nền */
+        color: #333; /* Màu chữ */
+        appearance: none; /* Loại bỏ kiểu mặc định của select */
+        -webkit-appearance: none; /* Loại bỏ kiểu mặc định trên trình duyệt Chrome/Safari */
+        -moz-appearance: none; /* Loại bỏ kiểu mặc định trên trình duyệt Firefox */
+    }
+
+        /* CSS cho select khi hover */
+        select:hover {
+            border-color: #aaa; /* Màu viền khi hover */
+        }
+
+        /* CSS cho select khi focus */
+        select:focus {
+            outline: none; /* Loại bỏ đường viền khi focus */
+            border-color: #66afe9; /* Màu viền khi focus */
+        }
+</style>
+
+<body>
+
+    <div class="page-wrapper">
+        <div class="content container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Thống kê doanh thu</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <div class="form-container">
+                                    <form method="post" asp-page-handler="Year" id="frmYear">
+                                        <select name="year" onchange="sendForm()">
+                                            @{
+                                                if (Model.year != null)
+                                                {
+                                                    if (@Model.year.Equals("2024"))
+                                                    {
+                                                        <option selected value="2024">Năm 2024</option>
+                                                        <option value="2023">Năm 2023</option>
+                                                        <option value="2022">Năm 2022</option>
+                                                    }
+                                                    else if (@Model.year.Equals("2023"))
+                                                    {
+                                                        <option value="2024">Năm 2024</option>
+                                                        <option selected value="2023">Năm 2023</option>
+                                                        <option value="2022">Năm 2022</option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="2024">Năm 2024</option>
+                                                        <option value="2023">Năm 2023</option>
+                                                        <option selected value="2022">Năm 2022</option>
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    <option selected value="2024">Năm 2024</option>
+                                                    <option value="2023">Năm 2023</option>
+                                                    <option value="2022">Năm 2022</option>
+                                                }
+                                            }
+
+                                        </select>
+                                        <select name="month" onchange="sendForm()">
+                                            @if (!string.IsNullOrEmpty(Model.Month))
+                                            {
+                                                if (Model.Month.Equals("none"))
+                                                {
+                                                    <option selected value="none">-None-</option>
+                                                    @for (int i = 1; i < 13; i++)
+                                                    {
+                                                        <option value="@i">Tháng @i</option>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <option value="none">-None-</option>
+                                                    @for (int i = 1; i < 13; i++)
+                                                    {
+                                                        if (int.Parse(Model.Month) == i)
+                                                        {
+                                                            <option selected value="@i">Tháng @i</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="@i">Tháng @i</option>
+                                                        }
+                                                    }
+
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <option selected value="none">-None-</option>
+                                                @for (int i = 1; i < 13; i++)
+                                                {
+                                                    <option value="@i">Tháng @i</option>
+                                                }
+                                            }
+                                        </select>
+                                    </form>
+                                    <form method="post" asp-page-handler="Day" id="formDay">
+                                        <select name="day" onchange="submitForm()">
+                                            @if (Model.day != null)
+                                            {
+                                                if (Model.day.Equals("none"))
+                                                {
+                                                    <option selected value="none">-None-</option>
+                                                    <option value="0">Today</option>
+                                                    <option value="7">Last 7day</option>
+                                                    <option value="30">Last 30day</option>
+                                                    <option value="90">Last 90day</option>
+                                                }
+                                                else
+                                                {
+                                                    if (int.Parse(Model.day) == 0)
+                                                    {
+                                                        <option value="none">-None-</option>
+                                                        <option selected value="0">Today</option>
+                                                        <option value="7">Last 7day</option>
+                                                        <option value="30">Last 30day</option>
+                                                        <option value="90">Last 90day</option>
+                                                    }
+                                                    else if (int.Parse(Model.day) == 7)
+                                                    {
+                                                        <option value="none">-None-</option>
+                                                        <option value="0">Today</option>
+                                                        <option selected value="7">Last 7day</option>
+                                                        <option value="30">Last 30day</option>
+                                                        <option value="90">Last 90day</option>
+                                                    }
+                                                    else if (int.Parse(Model.day) == 30)
+                                                    {
+                                                        <option value="none">-None-</option>
+                                                        <option value="0">Today</option>
+                                                        <option value="7">Last 7day</option>
+                                                        <option selected value="30">Last 30day</option>
+                                                        <option value="90">Last 90day</option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="none">-None-</option>
+                                                        <option value="0">Today</option>
+                                                        <option value="7">Last 7day</option>
+                                                        <option value="30">Last 30day</option>
+                                                        <option selected value="90">Last 90day</option>
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <option selected value="none">-None-</option>
+                                                <option value="0">Today</option>
+                                                <option value="7">Last 7day</option>
+                                                <option value="30">Last 30day</option>
+                                                <option value="90">Last 90day</option>
+                                            }
+
+
+                                        </select>
+                                    </form>
+                                    <form method="post" asp-page-handler="Excel">
+                                        <button class="btn btn-success">Xuất Excel</button>
+                                    </form>
+                                </div>
+
+                                <table class="datatable table table-stripped">
+                                    <thead>
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Quantity</th>
+                                            <th>Date</th>
+                                            <th>Revenue</th>
+                                            <th>OriginPrice</th>
+                                            <th>Profit</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td>All</td>
+
+                                            @{
+                                                int? quantity = 0;
+                                                decimal? revenues = 0;
+                                                decimal? origin = 0;
+                                                @foreach (var oder in Model.orders)
+                                                {
+                                                    revenues += oder.OrderedPrice;
+                                                    @foreach (var odd in oder.OrderDetails)
+                                                    {
+                                                       
+                                                        if(odd.OrderDetailParent == null)
+                                                        {
+                                                            quantity += odd.Quantity;
+                                                            origin += @odd.Product.SellOutPrice * @odd.Quantity;
+                                                        }
+
+                                                    }
+                                                }
+                                            }
+                                        <td>@quantity</td>
+                                        <td></td>
+                                        <td class="price">@revenues</td>
+                                        <td class="price" >@origin</td>
+                                        <td class="price">@(revenues - origin)</td>
+                                        </tr>
+                                        @if (Model.orders != null)
+                                        {
+                                            @foreach (var o in Model.orders)
+                                            {
+                                                @foreach (var od in o.OrderDetails)
+                                                {
+                                                    @if (od.OrderDetailParent == null)
+                                                    {
+                                                        <tr>
+                                                            <td class="limitedText">@od.Product.Name</td>
+                                                            <td>@od.Quantity</td>
+                                                            <td>@o.OrderedDate</td>
+                                                            @{
+                                                                var revenue = @od.OrderedPrice * @od.Quantity;
+                                                                var originPrice = @od.Product.SellOutPrice * @od.Quantity;
+                                                            }
+                                                            <td class="price">@revenue</td>
+                                                            <td class="price">@originPrice</td>
+                                                            <td class="price">@(revenue - originPrice)</td>
+                                                        </tr>
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var moneys = document.querySelectorAll('.price');
+        moneys.forEach(function (money) {
+            // Lấy giá trị số từ phần tử HTML
+            var amountString = money.textContent.replace(/[^\d,-]/g, ''); // Loại bỏ các ký tự không phải số, dấu phẩy hoặc dấu trừ
+            var amount = parseFloat(amountString.replace(',', '.')); // Chuyển đổi dấu phẩy sang dấu chấm cho số dấu phẩy động
+            var formattedMoney = amount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+            money.textContent = formattedMoney; // Gán giá trị đã định dạng vào phần tử HTML
+
+        });
+
+    </script>
+    <script>
+        var maxLength = 50;
+        var elements = document.querySelectorAll('.limitedText');
+        elements.forEach(function (element) {
+            if (element.textContent.length > maxLength) {
+                element.textContent = element.textContent.substring(0, maxLength) + '...';
+            }
+
+        });
+    </script>
+    <script>
+        function sendForm() {
+            var form = document.getElementById('frmYear');
+            form.submit();
+        }
+    </script>
+    <script>
+        function submitForm() {
+            var form = document.getElementById('formDay');
+            form.submit();
+        }
+    </script>
+
+</body>

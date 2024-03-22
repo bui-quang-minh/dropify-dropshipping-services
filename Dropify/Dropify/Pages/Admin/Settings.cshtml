@@ -1,0 +1,83 @@
+﻿@page
+@model Dropify.Pages.Admin.SettingsModel
+@{
+    Layout = "_AdminLayout";
+}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="settings-menu-links">
+                    <ul class="nav nav-tabs menu-tabs">
+                    
+                        <li class="nav-item active">
+                            <a class="nav-link" href="email-settings.html">Change Password</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="social-settings.html">Carosel</a>
+                        </li>
+                       
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h5 class="card-title">Change Password</h5>
+                            </div>
+                            <div class="card-body pt-0">
+                                <form method="post" >
+                                    
+                                    <div class="settings-form">
+                                        <div class="form-group">
+                                            @if (!string.IsNullOrEmpty(Model.Message))
+                                            {
+                                                <span ><p class="alert alert-success">@Model.Message</p></span>
+                                            }
+                                        </div>
+
+                                        <div class="form-group form-placeholder">
+                                            <label>Old Password <span class="star-red">*</span></label>
+                                            <input type="password" class="form-control" asp-for="OldPassword">
+                                            @if (!string.IsNullOrEmpty(Model.OldPasswordMessage))
+                                            {
+                                                <span ><p class="alert alert-danger">@Model.OldPasswordMessage</p></span>
+                                            }
+                                        </div>
+                                        <div class="form-group form-placeholder">
+                                            <label>New Password <span class="star-red">*</span></label>
+                                            <input type="password" class="form-control" asp-for="NewPassword">
+                                            @if (!string.IsNullOrEmpty(Model.NewPasswordMess))
+                                            {
+                                                <span><p class="alert alert-danger">@Model.NewPasswordMess</p></span>
+                                            }
+                                            @* <span style="color:red;" asp-validation-for="User.Pword"></span> *@
+
+                                        </div>
+                                        <div class="form-group form-placeholder">
+                                            <label>Confirm Password<span class="star-red">*</span></label>
+                                            <input type="password" class="form-control" asp-for="ConfirmPassword">
+                                            @if (!string.IsNullOrEmpty(Model.ConfirmPasswordMessage))
+                                            {
+                                                <span><p class="alert alert-danger">@Model.ConfirmPasswordMessage</p></span>
+                                            }
+                                          
+                                        </div>
+                                        <div class="form-group mb-0">
+                                            <div class="settings-btns">
+                                                <button type="submit" class="btn btn-primary submit-btn">Save Changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
