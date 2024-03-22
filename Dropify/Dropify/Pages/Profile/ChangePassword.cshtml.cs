@@ -53,8 +53,9 @@ namespace Dropify.Pages.Profile
         }
         public IActionResult OnPost()
         {
-            temppass = HttpContext.Session.GetString("tempPass");
             var userDAO = new UserDAO();
+            
+            temppass = HttpContext.Session.GetString("tempPass");
             string userString = HttpContext.Session.GetString("user");
             System.Diagnostics.Debug.WriteLine("UID: " + userString);
             if (userString != null)
@@ -63,7 +64,26 @@ namespace Dropify.Pages.Profile
                 UserDetail = con.UserDetails.FirstOrDefault(ud => ud.Uid == user.Uid);
 
                 User u = con.Users.FirstOrDefault(ud => ud.Uid == user.Uid);
-
+                if (HttpContext.Session.Get("Pass") != null)
+                {
+                    if (ConfirmPassword == null)
+                    {
+                        ConfirmPasswordMessage = "Input Confirm Passwordl";
+                    }
+                    if (ConfirmPassword != User.Pword)
+                    {
+                        ConfirmPasswordMessage = "Confirm password is not the same with new password!";
+                        return Page();
+                    }
+                    else
+                    {
+                        u.Pword = userDAO.Encryption(User.Pword);
+                        con.Users.Update(u);
+                        con.SaveChanges();
+                        Message = "Change password successfull!";
+                        return Page();
+                    }
+                }
                 if (OldPassword == null)
                 {
                     OldPasswordMessage = "Input Old Password";
