@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Dropify.Pages
@@ -11,12 +12,17 @@ namespace Dropify.Pages
 
     public class CartModel : BasePageModel
     {
+        private readonly Logics.IVNPayService _vnPayService;
         public List<int> test = new List<int>();
         public List<Models.Cart> productCartList;
         public String jsonCart;
         public List<UserAddress> uad;
         public User user;
         public UserDetail userDetail;
+        public CartModel (IVNPayService vnPayService)
+        {
+            _vnPayService = vnPayService;
+        }
         public IActionResult OnGet()
         {
             string userString = HttpContext.Session.GetString("user");
@@ -58,8 +64,14 @@ namespace Dropify.Pages
             };
             Response.Cookies.Append("cart", cookie_content, cookieOptions);
             return RedirectToPage("/Cart");
-        }
-        
+        }        
+
+        // public IActionResult PaymentCallback()
+        //{
+        //    var response = _vnPayService.PaymentExecute(Request.Query);
+        //
+        //    return Json(response);
+        //}
         public IActionResult OnPostAdd()
         {
             string userString = HttpContext.Session.GetString("user");
@@ -102,13 +114,19 @@ namespace Dropify.Pages
                     o.OrderedPrice = total;
                     o.AddressId = int.Parse(uad_form);
                     o.ShipStatus = "Not Shipped";   
-                    o.Status = "Ordered";
+                    o.Status = "Canceled";
                     db.Orders.Add(o);
                     db.SaveChanges();
                     orderId = o.OrderId;
                 }
                 // Process the selected items
+                PaymentInformationModel model = new PaymentInformationModel();
+                //payment model
 
+                model.OrderType = "billpayment";
+                model.Amount = (double)total;
+                model.OrderDescription = "Thanh toan don hang #"+ orderId +" ngay "+ formattedTime;
+                model.Name = "Dropify Order #" + orderId;
                 foreach (string itemId in strings)
                 {
 
@@ -128,6 +146,7 @@ namespace Dropify.Pages
                         db.SaveChanges();
                         odId = od.OrderDetailId;
                     }
+                    
                     //Child Detail P_COLOR
                     using (var db = new prn211_dropshippingContext())
                     {
@@ -177,12 +196,14 @@ namespace Dropify.Pages
                     Path = "/; samesite=None; Partitioned"
                 };
                 Response.Cookies.Append("cart", JsonConvert.SerializeObject(productCartList), cookieOptions);
+                var url = _vnPayService.CreatePaymentUrl(model, HttpContext, orderId);
+                
+                return Redirect(url);
             }
             else
             {
                 return RedirectToPage("/Cart");
             }
-            return RedirectToPage("/Profile/Orders");
         }
     }
 }
