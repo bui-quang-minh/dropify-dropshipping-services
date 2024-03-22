@@ -52,7 +52,7 @@ namespace Dropify.Pages
                     
                     if (userDAO.Authorization(user.Email))
                     {
-                        return RedirectToPage("Admin/Dashboard");
+                        return RedirectToPage("Admin/Revenue");
                     }
                     else
                     {

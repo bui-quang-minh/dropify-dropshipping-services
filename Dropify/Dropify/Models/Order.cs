@@ -19,6 +19,11 @@ namespace Dropify.Models
         public string? ShipStatus { get; set; }
         public string? Status { get; set; }
 
+        [NotMapped]
+        public virtual dynamic month {  get; set; }
+        [NotMapped]
+        public virtual dynamic Total { get; set; }
+
         public virtual UserAddress Address { get; set; } = null!;
         public virtual UserDetail? Ud { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }

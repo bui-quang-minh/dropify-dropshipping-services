@@ -1,11 +1,14 @@
 ﻿@page
 @model DashboardModel
+@using System.Text.Json;
+@using System.Text.Json.Serialization;
+
 @{
     Layout = "_AdminLayout";
 }
 
 <body>
-   
+
 
     <div class="page-wrapper">
         <div class="content container-fluid">
@@ -67,7 +70,7 @@
                         <div class="card-body">
                             <div class="dash-widget-header">
                                 <span class="dash-widget-icon text-danger border-danger">
-                                    <i class="fa fa-money" ></i>
+                                    <i class="fa fa-money"></i>
                                 </span>
                                 <div class="dash-count">
                                     @{
@@ -106,16 +109,16 @@
                     </div>
                 </div>
             </div>
-           @*  <div class="row">
+            <div class="row">
                 <div class="col-md-12 col-lg-6">
 
                     <div class="card card-chart">
                         <div class="card-header">
                             <h4 class="card-title">Revenue</h4>
                         </div>
-                        <div class="card-body">
-                            <div id="morrisArea"></div>
-                        </div>
+                       @*  <div id="chartContainer" style="height: 300px; width: 100%;"></div> *@
+                        <canvas id="myChart" width="400" height="200"></canvas>
+
                     </div>
 
                 </div>
@@ -125,13 +128,12 @@
                         <div class="card-header">
                             <h4 class="card-title">Order</h4>
                         </div>
-                        <div class="card-body">
-                            <div id="morrisLine"></div>
-                        </div>
+                       
+
                     </div>
 
                 </div>
-            </div> *@
+            </div>
             <div class="row">
                 <div class="col-md-6 d-flex">
 
@@ -144,7 +146,7 @@
                                 <table class="table table-hover table-center mb-0">
                                     <thead>
                                         <tr>
-                                            
+
                                             <th>Name</th>
                                             <th>Phone</th>
                                             <th>Email</th>
@@ -152,9 +154,9 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @if(Model.listUdetail != null)
+                                        @if (Model.listUdetail != null)
                                         {
-                                            @foreach(var ud in Model.listUdetail)
+                                            @foreach (var ud in Model.listUdetail)
                                             {
                                                 <tr>
                                                     <td>
@@ -169,20 +171,20 @@
                                                     </td>
                                                     <td>@ud.PhoneNumber</td>
                                                     <td>@ud.UidNavigation.Email</td>
-                                                    
-                                                        @{
-                                                            DateTime dob = ud.Dob;
-                                                            string formattedDate = dob.ToString("dd/MM/yyyy");
 
-                                                        }
+                                                    @{
+                                                        DateTime dob = ud.Dob;
+                                                        string formattedDate = dob.ToString("dd/MM/yyyy");
+
+                                                    }
                                                     <td>
                                                         @formattedDate
                                                     </td>
                                                 </tr>
                                             }
                                         }
-                                        
-                                        
+
+
                                     </tbody>
                                 </table>
                             </div>
@@ -208,13 +210,13 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @if(Model.Order != null)
+                                        @if (Model.Order != null)
                                         {
-                                            @foreach(var o in Model.Order)
+                                            @foreach (var o in Model.Order)
                                             {
-                                                
+
                                                 <tr>
-                                                   
+
                                                     <td>
                                                         <h2 class="table-avatar">
                                                             <a href="/Order/OrderDetail?id=@o.OrderId" class="avatar avatar-sm me-2">
@@ -222,9 +224,9 @@
                                                                      src="@o.Ud.ImgUrl"
                                                                      alt="User Image">
                                                             </a>
-                                                            <a href ="/Order/OrderDetail?id=@o.OrderId">@o.Ud.Name</a>
+                                                            <a href="/Order/OrderDetail?id=@o.OrderId">@o.Ud.Name</a>
                                                         </h2>
-                                                       
+
                                                     </td>
                                                     @{
                                                         DateTime orderdate = o.OrderedDate;
@@ -240,8 +242,8 @@
                                             }
 
                                         }
-                                        
-                                        
+
+
                                     </tbody>
                                 </table>
                             </div>
@@ -250,7 +252,7 @@
 
                 </div>
             </div>
-            
+
         </div>
     </div>
     <script>
@@ -265,4 +267,6 @@
         });
 
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    
 </body>

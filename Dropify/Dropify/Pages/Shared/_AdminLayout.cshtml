@@ -67,26 +67,32 @@
 
             <li class="nav-item dropdown has-arrow">
                 @{
-                    Models.User user = JsonSerializer.Deserialize<Models.User>(Context.Request.HttpContext.Session.GetString("user"));
-                }
-                <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-                    <span class="user-img"><img class="rounded-circle" src="@user.ImgUrl" width="31" alt="Ryan Taylor"></span>
-                </a>
-                <div class="dropdown-menu">
-                    <div class="user-header">
-                        <div class="avatar avatar-sm">
-                            <img src="@user.ImgUrl" alt="User Image" class="avatar-img rounded-circle">
-                        </div>
-                        <div class="user-text">
+                    var json = Context.Request.HttpContext.Session.GetString("user");
+                    if (!string.IsNullOrEmpty(json))
+                    {
+                        Models.User user = JsonSerializer.Deserialize<Models.User>(Context.Request.HttpContext.Session.GetString("user"));
+                        <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+                            <span class="user-img"><img class="rounded-circle" src="@user.ImgUrl" width="31" alt="Ryan Taylor"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="user-header">
+                                <div class="avatar avatar-sm">
+                                    <img src="@user.ImgUrl" alt="User Image" class="avatar-img rounded-circle">
+                                </div>
+                                <div class="user-text">
 
-                            <h6>@user.NameUser</h6>
-                            <p class="text-muted mb-0">Admin</p>
+                                    <h6>@user.NameUser</h6>
+                                    <p class="text-muted mb-0">Admin</p>
+                                </div>
+                            </div>
+                            <a class="dropdown-item" href="profile.html">My Profile</a>
+                            <a class="dropdown-item" href="settings.html">Settings</a>
+                            <a class="dropdown-item" href="/Logout">Logout</a>
                         </div>
-                    </div>
-                    <a class="dropdown-item" href="profile.html">My Profile</a>
-                    <a class="dropdown-item" href="settings.html">Settings</a>
-                    <a class="dropdown-item" href="/Logout">Logout</a>
-                </div>
+                    }
+
+                }
+               
             </li>
 
         </ul>
@@ -101,24 +107,39 @@
                         <span><i class="fe fe-home"></i> Main</span>
                     </li>
                     <li>
-                        <a href="/Admin/Dashboard"><span>Dashboard</span></a>
+                        <a href="/Admin/Dashboard">  <i class="fa fa-tachometer" aria-hidden="true"></i>  <span>Dashboard</span></a>
                     </li>
 
                     <li>
-                        <a href="/Admin/Products/AllProducts"><span>Manage Product</span></a>
+                        <a href="/Admin/Products/AllProducts">  <i class="fa fa-product-hunt" aria-hidden="true"></i> <span> Manage Product</span></a>
                     </li>
                     <li>
-                        <a href="/Admin/Categories/AllCategories"><span>Manage Category</span></a>
+                        <a href="/Admin/Categories/AllCategories"><i class="fa fa-tags" aria-hidden="true"></i> <span>  Manage Category</span></a>
                     </li>
                     <li>
-                        <a href="/Admin/Supplier/AllSupplier"><span>Manage Supplier</span></a>
+                        <a href="/Admin/Supplier/AllSupplier">  <i class="fa fa-handshake-o" aria-hidden="true"></i> <span> Manage Supplier</span></a>
                     </li>
                     <li>
-                        <a href="/Admin/Order/AllOrder"><span>Manage Order</span></a>
+                        <a href="/Admin/Order/AllOrder"> <i class="fa fa-shopping-basket" aria-hidden="true"></i> <span> Manage Order</span></a>
                     </li>
                     <li>
-                        <a href="/Admin/Order/ShippingOrder"><span>Manage Shipping</span></a>
+                        <a href="/Admin/Order/ShippingOrder">  <i class="fas fa-truck"></i>  <span>Manage Shipping</span></a>
                     </li>
+                    <li class="submenu">
+                        <a href="#"> <i class="fa fa-newspaper-o" aria-hidden="true"></i><span>Management News</span> <span class="menu-arrow"></span></a>
+                        <ul style="display: none;">
+                            <li><a href="/Admin/New/AllNews"> All News </a></li>
+                            <li><a href="/Admin/New/AddNew"> Add News </a></li>
+                           @*  <li><a href="/Admin/New/EditNew"> Edit News </a></li> *@
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/Admin/Revenue">  <i class="fa fa-bar-chart-o"></i>  <span>Revenue Statistics</span></a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Settings">  <i class="fa fa-cog" aria-hidden="true"></i>  <span>Settings</span></a>
+                    </li>
+                   
                 </ul>
             </div>
         </div>
@@ -143,10 +164,8 @@
 
     <script src="~/Admin/plugins/slimscroll/jquery.slimscroll.min.js"></script>
     <script src="~/Admin/js/script.js"></script>
-   <script src="~/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="~/Admin/plugins/datatables/datatables.min.js"></script>
-    <script src="~/microsoft/signalr/dist/browser/signalr.js"></script>
-    <script src="~/js/signalr.js"></script>
+ 
+  
   
     <script>
         var currentPath = window.location.pathname;
