@@ -62,6 +62,7 @@ namespace Dropify.Logics
 
                     db.Users.Add(newUser);
                     db.SaveChanges();
+
                     var newUserDetail = new UserDetail
                     {
                         Uid = newUser.Uid,
@@ -71,7 +72,16 @@ namespace Dropify.Logics
                         Sex = "unknown"
                     };
                     db.UserDetails.Add(newUserDetail);
-                    db.SaveChanges(); // Save changes to add UserDetails
+                    db.SaveChanges();
+                    var newuserAddress = new UserAddress
+                    {
+                        Udid = newUserDetail.Udid,
+                        Address = "hòa lạc",
+                        Default = true,
+                        Status = "Active"
+                    };
+                    db.UserAddresses.Add(newuserAddress);
+                    db.SaveChanges();
 
                     return true;
                 }

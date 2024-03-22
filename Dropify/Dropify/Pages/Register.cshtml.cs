@@ -106,7 +106,7 @@ namespace Dropify.Pages
             }
 
 
-                return RedirectToPage("/TakePhoneNumber", new {Email = Email, FullName = fullname, Pword= password });
+                return RedirectToPage("/TakePhoneNumber", new { Email = Email, FullName = fullname, Pword= password });
         }
     }
 }

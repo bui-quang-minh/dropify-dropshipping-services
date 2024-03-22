@@ -1,256 +1,247 @@
 ﻿@page
 @model Dropify.Pages.Profile.AddressManagementModel
 @{
-    Layout = "_LayoutProfile";
+Layout = "_LayoutProfile";
 }
 
 <body>
-    
-                    <div class="page-header">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h3 class="page-title">Address Management</h3>
-                            </div>
+    <div class="page-header">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3 class="page-title">Address Management</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <a class="btn btn-success" data-bs-toggle="modal" href="#add_modal">
+            <i class="fe fe-plus"></i>
+            New Address
+        </a>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="datatable table table-hover table-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th width="300" class="text-start">Địa chỉ</th>
+                                    <th width="300" class="text-center">Status</th>
+                                    <th width="300" class="text-end">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model.UserAddresses != null)
+                                {
+                                    @foreach (var p in Model.UserAddresses)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <span class="limitedText">@p.Address</span>
+                                            </td>
+                                            @if (p.Default.Value)
+                                            {
+                                                <td class="text-center">
+                                                    <span class="badge badge-pill bg-success inv-badge">Default</span>
+                                                </td>
+                                            }
+                                            @if (!p.Default.Value)
+                                            {
+                                                <td class="text-center">
+                                                    <span class="badge badge-pill bg-secondary inv-badge">UnDefault</span>
+                                                </td>
+                                            }
 
-
-                        </div>
+                                            <td class="text-end">
+                                                <div class="actions">
+                                                    <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.AddressId"
+                                                        data-name="@p.Address"
+                                                        data-status="@p.Default"
+                                                        data-bs-target="#edit_modal" href="#edit_modal">
+                                                        <i class="fe fe-pencil"></i> Edit
+                                                    </a>
+                                                    <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@p.AddressId" class="btn btn-sm bg-danger-light">
+                                                        <i class="fe fe-trash"></i> Delete
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
                     </div>
-
-                    <div class="col">
-                        <a class="btn btn-success" data-bs-toggle="modal" href="#add_modal">
-                            <i class="fe fe-plus"></i>
-                            New Address
-                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal fade" id="add_modal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog modal-dialog-centered " style="width: 900px ; max-width:100%" role="document">
+        <div class="modal-content ">
+            <div class="modal-body">
+                <div class="form-content p-2">
+                    <div class="modal-header border-0">
+                        <h4 class="modal-title">Add Product</h4>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
                     </div>
-                    <br />
+                    <div class="card">
+                        <div class="card-body">
+                            <form method="post" asp-page-handler="Add" asp-page="/Profile/AddressManagement" autocomplete="off">
+                                <div class="row">
+                                    <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="datatable table table-hover table-center mb-0">
-                                            <thead>
-                                                <tr>
-                                                    <th width="300" class="text-start">Địa chỉ</th>
-                                                    <th width="300" class="text-center">Status</th>
-                                                    <th width="300" class="text-end">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                @if (Model.UserAddresses != null)
-                                                {
-                                                    @foreach (var p in Model.UserAddresses)
-                                                    {
-                                                        <tr>
-                                                            <td>
-                                                                <span class="limitedText">@p.Address</span>
-                                                            </td>
-                                                            @if (p.Default.Value)
-                                                            {
-                                                                <td class="text-center">
-                                                                    <span class="badge badge-pill bg-success inv-badge">Default</span>
-                                                                </td>
-                                                            }
-                                                            @if (!p.Default.Value)
-                                                            {
-                                                                <td class="text-center">
-                                                                    <span class="badge badge-pill bg-secondary inv-badge">UnDefault</span>
-                                                                </td>
-                                                            }
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-3">
+                                            <label>Address</label>
+                                            <input class="form-control" asp-for="UserAddress.Address" type="text">
+                                        </div>
+                                    </div>
 
-                                                            <td class="text-end">
-                                                                <div class="actions">
-                                                                    <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.AddressId"
-                                                                       data-name="@p.Address"
-                                                                       data-status="@p.Default"
-                                                                       data-bs-target="#edit_modal" href="#edit_modal">
-                                                                        <i class="fe fe-pencil"></i> Edit
-                                                                    </a>
-                                                                    <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@p.AddressId" class="btn btn-sm bg-danger-light">
-                                                                        <i class="fe fe-trash"></i> Delete
-                                                                    </a>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    }
-                                                }
-                                            </tbody>
-                                        </table>
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label> Status </label>
+                                            <select class="form-control" asp-for="UserAddress.Default">
+                                                <option value="True">Default</option>
+                                                <option value="False">Undefault</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4">
+                                        <button class="btn btn-primary" name="form_submit" value="submit" type="submit"> Save </button>
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
                                     </div>
                                 </div>
-                            </div>
+
+                            </form>
                         </div>
                     </div>
-     
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-
-
-    <div class="modal fade" id="add_modal" aria-hidden="true" role="dialog">
-        <div class="modal-dialog modal-dialog-centered " style="width: 900px ; max-width:100%" role="document">
-            <div class="modal-content ">
-                <div class="modal-body">
-                    <div class="form-content p-2">
-                        <div class="modal-header border-0">
-                            <h4 class="modal-title">Add Product</h4>
-                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <form method="post" asp-page-handler="Add" asp-page="/Profile/AddressManagement" autocomplete="off">
-                                    <div class="row">
-                                        <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
-
-                                        <div class="col-md-12">
-                                            <div class="form-group mb-3">
-                                                <label>Address</label>
-                                                <input class="form-control" asp-for="UserAddress.Address" type="text">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="form-group mb-3">
-                                                <label> Status </label>
-                                                <select class="form-control" asp-for="UserAddress.Default">
-                                                    <option value="True">Default</option>
-                                                    <option value="False">Undefault</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="mt-4">
-                                            <button class="btn btn-primary" name="form_submit" value="submit" type="submit"> Save </button>
-                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+<div class="modal fade" id="edit_modal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" style="width: 900px ; max-width:100%" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="form-content p-2">
+                    <div class="modal-header border-0">
+                        <h4 class="modal-title">Edit</h4>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <form method="post" asp-page-handler="Edit" asp-page="/Profile/AddressManagement" autocomplete="off">
+                                <div class="row">
+                                    <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-3">
+                                            <input class="form-control" id="addressID" asp-for="UserAddress.AddressId" type="text" hidden>
                                         </div>
                                     </div>
 
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="edit_modal" aria-hidden="true" role="dialog">
-        <div class="modal-dialog modal-dialog-centered" style="width: 900px ; max-width:100%" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="form-content p-2">
-                        <div class="modal-header border-0">
-                            <h4 class="modal-title">Edit</h4>
-                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <form method="post" asp-page-handler="Edit" asp-page="/Profile/AddressManagement" autocomplete="off">
-                                    <div class="row">
-                                        <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
-                                        <div class="col-md-12">
-                                            <div class="form-group mb-3">
-                                                <input class="form-control" id="addressID" asp-for="UserAddress.AddressId" type="text" hidden>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <div class="form-group mb-3">
-                                                <label>Address</label>
-                                                <input class="form-control" id="addressName" asp-for="UserAddress.Address" type="text">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="form-group mb-3">
-                                                <label> Status </label>
-                                                <select class="form-control" asp-for="UserAddress.Default" id="aDefault">
-                                                    <option value="True">Default</option>
-                                                    <option value="False">Undefault</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="mt-4">
-                                            <button class="btn btn-primary" name="form_submit" value="submit" type="submit"> Save </button>
-                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-3">
+                                            <label>Address</label>
+                                            <input class="form-control" id="addressName" asp-for="UserAddress.Address" type="text">
                                         </div>
                                     </div>
 
-                                </form>
-                            </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label> Status </label>
+                                            <select class="form-control" asp-for="UserAddress.Default" id="aDefault">
+                                                <option value="True">Default</option>
+                                                <option value="False">Undefault</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4">
+                                        <button class="btn btn-primary" name="form_submit" value="submit" type="submit"> Save </button>
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="delete_modal" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <form method="post" asp-page="/Profile/AddressManagement" asp-page-handler="Delete">
-                        <div class="form-content p-2">
-                            <h4 class="modal-title">Delete</h4>
-                            <p class="mb-4">Are you sure want to delete?</p>
-                            <button type="submit" id="MyLink" class="btn btn-primary">Delete </button>
-                            <input type="hidden" value="" id="c_id" name="c_id" />
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </form>
+</div>
+<div class="modal fade" id="delete_modal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form method="post" asp-page="/Profile/AddressManagement" asp-page-handler="Delete">
+                    <div class="form-content p-2">
+                        <h4 class="modal-title">Delete</h4>
+                        <p class="mb-4">Are you sure want to delete?</p>
+                        <button type="submit" id="MyLink" class="btn btn-primary">Delete </button>
+                        <input type="hidden" value="" id="c_id" name="c_id" />
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
 
-                </div>
             </div>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get modal and link elements
-            var modal = document.getElementById('delete_modal');
-            var links = document.querySelectorAll('[data-bs-target="#delete_modal"]');
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get modal and link elements
+        var modal = document.getElementById('delete_modal');
+        var links = document.querySelectorAll('[data-bs-target="#delete_modal"]');
 
-            // Add event listener for when any of the links is clicked
-            links.forEach(function (link) {
-                link.addEventListener('click', function () {
+        // Add event listener for when any of the links is clicked
+        links.forEach(function (link) {
+            link.addEventListener('click', function () {
 
-                    var id = link.dataset.id;
+                var id = link.dataset.id;
 
-                    document.getElementById('c_id').value = id;
+                document.getElementById('c_id').value = id;
 
-                });
             });
         });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get modal and link elements
-            var modal = document.getElementById('edit_modal');
-            var links = document.querySelectorAll('[data-bs-target="#edit_modal"]');
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get modal and link elements
+        var modal = document.getElementById('edit_modal');
+        var links = document.querySelectorAll('[data-bs-target="#edit_modal"]');
 
-            // Add event listener for when any of the links is clicked
-            links.forEach(function (link) {
-                link.addEventListener('click', function () {
+        // Add event listener for when any of the links is clicked
+        links.forEach(function (link) {
+            link.addEventListener('click', function () {
 
-                    var addressId = link.dataset.id;
-                    var address = link.dataset.name;
-                    var adefault = link.dataset.status;
-                    document.getElementById('addressID').value = addressId;
-                    document.getElementById('addressName').value = address;
-                    document.getElementById('aDefault').value = adefault;
-                    console.log(addressId);
-                    console.log(address);
-                    console.log(adefault);
-                });
+                var addressId = link.dataset.id;
+                var address = link.dataset.name;
+                var adefault = link.dataset.status;
+                document.getElementById('addressID').value = addressId;
+                document.getElementById('addressName').value = address;
+                document.getElementById('aDefault').value = adefault;
+                console.log(addressId);
+                console.log(address);
+                console.log(adefault);
             });
         });
-    </script>
+    });
+</script>
+<script src="/assets/js/jquery-3.6.0.min.js"></script>
 
-  @*   <script src="assets/js/script.js"></script> *@
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
 
-
+<script src="/assets/js/script.js"></script>
 </body>
 
