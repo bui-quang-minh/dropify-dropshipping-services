@@ -47,11 +47,8 @@ namespace Dropify.Pages.Admin.ManageProduct
                 userDetail = userDAO.GetUserDetailById(user.Uid);
                 if (userDetail.Admin == true)
                 {
-                    ListProduct = pd.GetProductByStatus("Release"); // san pham co trạng thái Release
-                    ListProduct1 = pd.GetProductByStatus("Selling");// san pham co trạng thái Selling 
-                    ListProduct2 = pd.GetProductByStatus("Shipping"); // san pham co trạng thái Shipping
-                    ListProduct3 = pd.GetProductByStatus("Success"); // san pham co trạng thái Success
-                    ListProduct4 = pd.GetProductByStatus("Cancel"); // san pham co trạng thái Cancel
+                    ListProduct = pd.GetAllProducts(); // all sản phẩm 
+                   
                     categories = con.Categories.ToList();
                     suppliers = con.Suppliers.ToList();
                     return Page();
@@ -106,51 +103,7 @@ namespace Dropify.Pages.Admin.ManageProduct
             return RedirectToPage("AllProducts");
         }
 
-        public IActionResult OnPostAdd()
-        {
-
-            //Models.Product p = new Models.Product
-            //{
-            //    Name = product.Name,
-            //    CategoryId = product.CategoryId,
-            //    SupplierId = product.SupplierId,
-            //    OriginalPrice = product.OriginalPrice,
-            //    SellOutPrice = product.SellOutPrice,
-            //    CreatedDate = product.CreatedDate,
-            //    StartDate = product.StartDate,
-            //    EndDate = product.EndDate,
-            //    Shipdate = product.Shipdate,
-            //    Status = product.Status,
-
-            //};
-            //con.Products.Add(p);
-            //con.SaveChanges();
-
-            //var pro = con.Products.Find(p.ProductId);
-            //if(pro != null)
-            //{
-            //    ProductDetail pDetail = new ProductDetail
-            //    {
-            //        ProductId = pro.ProductId,
-            //        Type = productDetail.Type,
-            //        Attribute = productDetail.Attribute,
-            //        Status = pro.Status
-            //    };
-            //    if (productDetail != null)
-            //    {
-            //        con.ProductDetails.Add(productDetail);
-            //        con.SaveChanges();
-            //    }
-            //    else
-            //    {
-            //        return NotFound();
-            //    }
-               
-            //}
-           
-            return RedirectToPage("AllProducts");
-        }
-
+      
        public IActionResult OnPostEdit()
         {
             var p = con.Products.Find(product.ProductId);

@@ -110,6 +110,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -128,6 +132,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Profile/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZVxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Profile/CustomerSupport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZVxDdXN0b21lclN1cHBvcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Documents/PRN221/Project_PRN221/PRN221/Dropify/Dropify/Pages/Profile/OrderDetail.cshtml]

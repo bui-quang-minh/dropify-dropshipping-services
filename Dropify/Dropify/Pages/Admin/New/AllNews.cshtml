@@ -52,25 +52,37 @@
                                                 <p>
                                                     @{
                                                         var maxLength = 150; 
-                                                        var content = item.NewsContents;
-                                                        if (content.Length > maxLength)
+                                                        string? content = item.NewsContents;
+                                                        @if(content != null)
                                                         {
-                                                            content = content.Substring(0, maxLength) + "...";
-                                                            <div class="short-content">
-                                                                @Html.Raw(content)
-                                                            </div>
-                                                            <div class="full-content" style="display:none;">
-                                                                @Html.Raw(item.NewsContents)
-                                                            </div>
-                                                            <a href="#" class="see-more-link">See more...</a>
+                                                            if (content.Length > maxLength)
+                                                            {
+                                                                content = content.Substring(0, maxLength) + "...";
+                                                                <div class="short-content">
+                                                                    @Html.Raw(content)
+                                                                </div>
+                                                                <div class="full-content" style="display:none;">
+                                                                    @Html.Raw(item.NewsContents)
+                                                                </div>
+                                                                <a href="#" class="see-more-link">See more...</a>
+                                                            }
+                                                            else
+                                                            {
+                                                                <div class="full-content">
+                                                                    @Html.Raw(item.NewsContents)
+                                                                </div>
+
+                                                            }
                                                         }
                                                         else
                                                         {
+
                                                             <div class="full-content">
                                                                 @Html.Raw(item.NewsContents)
                                                             </div>
-
+                                                            
                                                         }
+
                                                        
                                                     }
                                                    

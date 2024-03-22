@@ -81,6 +81,10 @@
                                                             {
                                                                 @foreach (var p in Model.ListProduct)
                                                                 {
+
+                                                                    if (p.Status.Equals("Release")){
+
+                                                                 
                                                                     <tr>
                                                                         <td>
                                                                             @p.ProductId
@@ -120,6 +124,7 @@
                                                                             </div>
                                                                         </td>
                                                                     </tr>
+                                                                   }
 
 
                                                                 }
@@ -154,51 +159,53 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            @if (Model.ListProduct2 != null)
+                                                            @if (Model.ListProduct != null)
                                                             {
-                                                                @foreach (var p in Model.ListProduct1)
+                                                                @foreach (var p in Model.ListProduct)
                                                                 {
+                                                                    if (p.Status.Equals("Selling"))
+                                                                    {
 
-                                                                    <tr>
-                                                                        <td>
-                                                                            @p.ProductId
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="limitedText">@p.Name</span>
-                                                                        </td>
-                                                                        <td>@p.Category.CategoryName </td>
-                                                                        <td>
-                                                                            @p.Supplier.SupplierName
+                                                                        <tr>
+                                                                            <td>
+                                                                                @p.ProductId
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="limitedText">@p.Name</span>
+                                                                            </td>
+                                                                            <td>@p.Category.CategoryName </td>
+                                                                            <td>
+                                                                                @p.Supplier.SupplierName
 
-                                                                        </td>
+                                                                            </td>
 
-                                                                        <td>
-                                                                            <span class="price">@p.OriginalPrice</span>
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="price"> @p.SellOutPrice</span>
-                                                                        </td>
+                                                                            <td>
+                                                                                <span class="price">@p.OriginalPrice</span>
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="price"> @p.SellOutPrice</span>
+                                                                            </td>
 
-                                                                        <td>
-                                                                            @p.Status
-                                                                        </td>
+                                                                            <td>
+                                                                                @p.Status
+                                                                            </td>
 
-                                                                        <td class="text-end">
-                                                                            <div class="actions">
-                                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.ProductId"
-                                                                                   data-name="@p.Name" data-cate="@p.CategoryId" data-supp="@p.SupplierId"
-                                                                                   data-oprice="@p.OriginalPrice" data-sprice="@p.SellOutPrice" data-create="@p.CreatedDate" data-end="@p.EndDate"
-                                                                                   data-start="@p.StartDate" data-ship="@p.Shipdate" data-status="@p.Status"
-                                                                                   data-bs-target="#edit_modal" href="#edit_modal">
-                                                                                    <i class="fe fe-pencil"></i> Edit
-                                                                                </a>
-                                                                                <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@p.ProductId" class="btn btn-sm bg-danger-light">
-                                                                                    <i class="fe fe-trash"></i> Delete
-                                                                                </a>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-
+                                                                            <td class="text-end">
+                                                                                <div class="actions">
+                                                                                    <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.ProductId"
+                                                                                    data-name="@p.Name" data-cate="@p.CategoryId" data-supp="@p.SupplierId"
+                                                                                    data-oprice="@p.OriginalPrice" data-sprice="@p.SellOutPrice" data-create="@p.CreatedDate" data-end="@p.EndDate"
+                                                                                    data-start="@p.StartDate" data-ship="@p.Shipdate" data-status="@p.Status"
+                                                                                    data-bs-target="#edit_modal" href="#edit_modal">
+                                                                                        <i class="fe fe-pencil"></i> Edit
+                                                                                    </a>
+                                                                                    <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@p.ProductId" class="btn btn-sm bg-danger-light">
+                                                                                        <i class="fe fe-trash"></i> Delete
+                                                                                    </a>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    }
 
                                                                 }
                                                             }
@@ -232,52 +239,55 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            @if (Model.ListProduct3 != null)
+                                                            @if (Model.ListProduct != null)
                                                             {
-                                                                @foreach (var p in Model.ListProduct2)
+                                                                @foreach (var p in Model.ListProduct)
                                                                 {
+                                                                    if (p.Status.Equals("Shipping"))
+                                                                    {
 
-                                                                    <tr>
-                                                                        <td>
-                                                                            @p.ProductId
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="limitedText">@p.Name</span>
-                                                                        </td>
-                                                                        <td>@p.Category.CategoryName </td>
-                                                                        <td>
-                                                                            @p.Supplier.SupplierName
+                                                                        <tr>
+                                                                            <td>
+                                                                                @p.ProductId
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="limitedText">@p.Name</span>
+                                                                            </td>
+                                                                            <td>@p.Category.CategoryName </td>
+                                                                            <td>
+                                                                                @p.Supplier.SupplierName
 
-                                                                        </td>
+                                                                            </td>
 
-                                                                        <td>
-                                                                            <span class="price">@p.OriginalPrice</span>
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="price"> @p.SellOutPrice</span>
-                                                                        </td>
+                                                                            <td>
+                                                                                <span class="price">@p.OriginalPrice</span>
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="price"> @p.SellOutPrice</span>
+                                                                            </td>
 
-                                                                        <td>
-                                                                            @p.Status
-                                                                        </td>
+                                                                            <td>
+                                                                                @p.Status
+                                                                            </td>
 
-                                                                        <td class="text-end">
-                                                                            <div class="actions">
-                                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.ProductId"
-                                                                                   data-name="@p.Name" data-cate="@p.CategoryId" data-supp="@p.SupplierId"
-                                                                                   data-oprice="@p.OriginalPrice" data-sprice="@p.SellOutPrice" data-create="@p.CreatedDate" data-end="@p.EndDate"
-                                                                                   data-start="@p.StartDate" data-ship="@p.Shipdate" data-status="@p.Status"
-                                                                                   data-bs-target="#edit_modal" href="#edit_modal">
-                                                                                    <i class="fe fe-pencil"></i> Edit
-                                                                                </a>
-                                                                                <a data-bs-toggle="modal" data-bs-target="#restore_modal" href="#restore_modal" data-reid="@p.ProductId" class="btn btn-sm bg-warning-light">
-                                                                                    <i class="fe fe-trash"></i> Restore
-                                                                                </a>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
+                                                                            <td class="text-end">
+                                                                                <div class="actions">
+                                                                                    <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.ProductId"
+                                                                                    data-name="@p.Name" data-cate="@p.CategoryId" data-supp="@p.SupplierId"
+                                                                                    data-oprice="@p.OriginalPrice" data-sprice="@p.SellOutPrice" data-create="@p.CreatedDate" data-end="@p.EndDate"
+                                                                                    data-start="@p.StartDate" data-ship="@p.Shipdate" data-status="@p.Status"
+                                                                                    data-bs-target="#edit_modal" href="#edit_modal">
+                                                                                        <i class="fe fe-pencil"></i> Edit
+                                                                                    </a>
+                                                                                    <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@p.ProductId" class="btn btn-sm bg-danger-light">
+                                                                                        <i class="fe fe-trash"></i> Delete
+                                                                                    </a>
+                                                                                   
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
 
-
+                                                                    }
                                                                 }
                                                             }
 
@@ -310,52 +320,55 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            @if (Model.ListProduct4 != null)
+                                                            @if (Model.ListProduct != null)
                                                             {
-                                                                @foreach (var p in Model.ListProduct3)
+                                                                @foreach (var p in Model.ListProduct)
                                                                 {
+                                                                    if (p.Status.Equals("Success"))
+                                                                    {
 
-                                                                    <tr>
-                                                                        <td>
-                                                                            @p.ProductId
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="limitedText">@p.Name</span>
-                                                                        </td>
-                                                                        <td>@p.Category.CategoryName </td>
-                                                                        <td>
-                                                                            @p.Supplier.SupplierName
+                                                                        <tr>
+                                                                            <td>
+                                                                                @p.ProductId
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="limitedText">@p.Name</span>
+                                                                            </td>
+                                                                            <td>@p.Category.CategoryName </td>
+                                                                            <td>
+                                                                                @p.Supplier.SupplierName
 
-                                                                        </td>
+                                                                            </td>
 
-                                                                        <td>
-                                                                            <span class="price">@p.OriginalPrice</span>
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="price"> @p.SellOutPrice</span>
-                                                                        </td>
+                                                                            <td>
+                                                                                <span class="price">@p.OriginalPrice</span>
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="price"> @p.SellOutPrice</span>
+                                                                            </td>
 
-                                                                        <td>
-                                                                            @p.Status
-                                                                        </td>
+                                                                            <td>
+                                                                                @p.Status
+                                                                            </td>
 
-                                                                        <td class="text-end">
-                                                                            <div class="actions">
-                                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.ProductId"
-                                                                                   data-name="@p.Name" data-cate="@p.CategoryId" data-supp="@p.SupplierId"
-                                                                                   data-oprice="@p.OriginalPrice" data-sprice="@p.SellOutPrice" data-create="@p.CreatedDate" data-end="@p.EndDate"
-                                                                                   data-start="@p.StartDate" data-ship="@p.Shipdate" data-status="@p.Status"
-                                                                                   data-bs-target="#edit_modal" href="#edit_modal">
-                                                                                    <i class="fe fe-pencil"></i> Edit
-                                                                                </a>
-                                                                                <a data-bs-toggle="modal" data-bs-target="#restore_modal" href="#restore_modal" data-reid="@p.ProductId" class="btn btn-sm bg-warning-light">
-                                                                                    <i class="fe fe-trash"></i> Restore
-                                                                                </a>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
+                                                                            <td class="text-end">
+                                                                                <div class="actions">
+                                                                                    <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.ProductId"
+                                                                                    data-name="@p.Name" data-cate="@p.CategoryId" data-supp="@p.SupplierId"
+                                                                                    data-oprice="@p.OriginalPrice" data-sprice="@p.SellOutPrice" data-create="@p.CreatedDate" data-end="@p.EndDate"
+                                                                                    data-start="@p.StartDate" data-ship="@p.Shipdate" data-status="@p.Status"
+                                                                                    data-bs-target="#edit_modal" href="#edit_modal">
+                                                                                        <i class="fe fe-pencil"></i> Edit
+                                                                                    </a>
+                                                                                    <a data-bs-toggle="modal" data-bs-target="#delete_modal" href="#delete_modal" data-id="@p.ProductId" class="btn btn-sm bg-danger-light">
+                                                                                        <i class="fe fe-trash"></i> Delete
+                                                                                    </a>
+                                                                                    
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
 
-
+                                                                    }
                                                                 }
                                                             }
 
@@ -388,51 +401,51 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            @if (Model.ListProduct4 != null)
+                                                            @if (Model.ListProduct != null)
                                                             {
-                                                                @foreach (var p in Model.ListProduct4)
+                                                                @foreach (var p in Model.ListProduct)
                                                                 {
+                                                                    if (p.Status.Equals("Cancel"))
+                                                                    {
 
-                                                                    <tr>
-                                                                        <td>
-                                                                            @p.ProductId
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="limitedText">@p.Name</span>
-                                                                        </td>
-                                                                        <td>@p.Category.CategoryName </td>
-                                                                        <td>
-                                                                            @p.Supplier.SupplierName
+                                                                        <tr>
+                                                                            <td>
+                                                                                @p.ProductId
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="limitedText">@p.Name</span>
+                                                                            </td>
+                                                                            <td>@p.Category.CategoryName </td>
+                                                                            <td>
+                                                                                @p.Supplier.SupplierName
 
-                                                                        </td>
+                                                                            </td>
 
-                                                                        <td>
-                                                                            <span class="price">@p.OriginalPrice</span>
-                                                                        </td>
-                                                                        <td>
-                                                                            <span class="price"> @p.SellOutPrice</span>
-                                                                        </td>
+                                                                            <td>
+                                                                                <span class="price">@p.OriginalPrice</span>
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="price"> @p.SellOutPrice</span>
+                                                                            </td>
 
-                                                                        <td>
-                                                                            @p.Status
-                                                                        </td>
+                                                                            <td>
+                                                                                @p.Status
+                                                                            </td>
 
-                                                                        <td class="text-end">
-                                                                            <div class="actions">
-                                                                                <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.ProductId"
-                                                                                   data-name="@p.Name" data-cate="@p.CategoryId" data-supp="@p.SupplierId"
-                                                                                   data-oprice="@p.OriginalPrice" data-sprice="@p.SellOutPrice" data-create="@p.CreatedDate" data-end="@p.EndDate"
-                                                                                   data-start="@p.StartDate" data-ship="@p.Shipdate" data-status="@p.Status"
-                                                                                   data-bs-target="#edit_modal" href="#edit_modal">
-                                                                                    <i class="fe fe-pencil"></i> Edit
-                                                                                </a>
-                                                                                <a data-bs-toggle="modal" data-bs-target="#restore_modal" href="#restore_modal" data-reid="@p.ProductId" class="btn btn-sm bg-warning-light">
-                                                                                    <i class="fe fe-trash"></i> Restore
-                                                                                </a>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-
+                                                                            <td class="text-end">
+                                                                                <div class="actions">
+                                                                                    <a class="btn btn-sm bg-success-light" data-bs-toggle="modal" data-id="@p.ProductId"
+                                                                                    data-name="@p.Name" data-cate="@p.CategoryId" data-supp="@p.SupplierId"
+                                                                                    data-oprice="@p.OriginalPrice" data-sprice="@p.SellOutPrice" data-create="@p.CreatedDate" data-end="@p.EndDate"
+                                                                                    data-start="@p.StartDate" data-ship="@p.Shipdate" data-status="@p.Status"
+                                                                                    data-bs-target="#edit_modal" href="#edit_modal">
+                                                                                        <i class="fe fe-pencil"></i> Edit
+                                                                                    </a>
+                                                                                   
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    }
 
                                                                 }
                                                             }

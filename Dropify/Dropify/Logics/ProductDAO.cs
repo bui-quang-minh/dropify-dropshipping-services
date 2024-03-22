@@ -18,7 +18,9 @@ namespace Dropify.Logics
         {
             using (var db = new prn211_dropshippingContext())
             {
-                return db.Products.ToList();
+                return db.Products.Include(p => p.Category)
+              .Include(p => p.Supplier)
+              .Include(p => p.ProductDetails).ToList();
             }
         }
         // Lấy ID category của sane phẩm từ database
