@@ -15,13 +15,11 @@
             <h1>Customer Feedback Form</h1>
             <p>Please take a few minutes to give us feedback about our service by filling in this short Customer Feedback Form. We are conducting this research in order to measure your level of satisfaction with the quality of our service. We thank you for your participation.</p>
             <hr />
-            <h3>Overall experience with our service</h3>
+            <h3>Order support request</h3>
             
-            <h4>What should we change in order to live up to your expectations?</h4>
+            <h4>What would you like us to help you with?</h4>
             <textarea rows="5" asp-for="Model.Body"></textarea>
-            <h4>Email</h4>
-            <small>Only if you want to hear more from us.</small>
-            <input class="email" type="text" name="name"  />
+            <input class="email" type="hidden" name="name"  />
             <div class="btn-block">
                 <button type="submit" asp-page-handler="SendEmail">Send Feedback</button>
             </div>
