@@ -252,7 +252,7 @@
                                 <img src="/assets/img/logo.png" alt="logo">
                             </div>
                             <div class="footer-about-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <p>Với sứ mệnh mang đến cho khách hàng những sản phẩm với chất lượng tốt nhất. Công ty TNHH nhiều thành viên Dropify của chúng tôi xin cam kết ưu tiên chất lượng trên giá thành. </p>
                                 <div class="social-icon">
                                     <ul>
                                         <li>
@@ -267,9 +267,6 @@
                                         <li>
                                             <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
                                         </li>
-                                        <li>
-                                            <a href="#" target="_blank"><i class="fab fa-dribbble"></i> </a>
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -279,13 +276,12 @@
                     <div class="col-lg-3 col-md-6">
 
                         <div class="footer-widget footer-menu">
-                            <h2 class="footer-title">For Mentee</h2>
+                            <h2 class="footer-title">Our Supplier</h2>
                             <ul>
-                                <li><a href="search.html">Search Mentors</a></li>
-                                <li><a href="login.html">Login</a></li>
-                                <li><a href="register.html">Register</a></li>
-                                <li><a href="booking.html">Booking</a></li>
-                                <li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
+                                @foreach (Models.Supplier s in Model.suppliers)
+                                {
+                                    <li><a href="/Product/AllProduct?supplierSearch=@s.SupplierId">@s.SupplierName</a></li>
+                                }
                             </ul>
                         </div>
 
@@ -293,13 +289,9 @@
                     <div class="col-lg-3 col-md-6">
 
                         <div class="footer-widget footer-menu">
-                            <h2 class="footer-title">For Mentors</h2>
+                            <h2 class="footer-title">For More Information</h2>
                             <ul>
-                                <li><a href="appointments.html">Appointments</a></li>
-                                <li><a href="chat.html">Chat</a></li>
-                                <li><a href="login.html">Login</a></li>
-                                <li><a href="register.html">Register</a></li>
-                                <li><a href="dashboard.html">Mentor Dashboard</a></li>
+                                <li><a href="/AboutUs">About us</a></li>
                             </ul>
                         </div>
 
@@ -311,15 +303,15 @@
                             <div class="footer-contact-info">
                                 <div class="footer-address">
                                     <span><i class="fas fa-map-marker-alt"></i></span>
-                                    <p> 3556 Beech Street, San Francisco,<br> California, CA 94108 </p>
+                                    <p> Thạch Hòa, Thạch Thất, Hòa Lạc,<br> Hà Nội, Đại Học FPT</p>
                                 </div>
                                 <p>
                                     <i class="fas fa-phone-alt"></i>
-                                    +1 315 369 5943
+                                    +84 000 000 0000
                                 </p>
                                 <p class="mb-0">
                                     <i class="fas fa-envelope"></i>
-                                    <a href="https://mentoring.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ee838b809a819c878089ae8b968f839e828bc08d8183">[email&#160;protected]</a>
+                                    <a href="" class="__cf_email__"> customersupport.dropify@dropify.com</a>
                                 </p>
                             </div>
                         </div>
@@ -337,7 +329,7 @@
                     <div class="row">
                         <div class="col-12 text-center">
                             <div class="copyright-text">
-                                <p class="mb-0">&copy; 2020 Mentoring. All rights reserved.</p>
+                                <p class="mb-0">Design in 2023 - 2024</p>
                             </div>
                         </div>
                     </div>

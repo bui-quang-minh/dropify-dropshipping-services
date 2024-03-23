@@ -6716,23 +6716,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\GF63\\.nuget\\packages\\": {},
+    "C:\\Users\\buiqu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
+      "projectUniqueName": "D:\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
       "projectName": "Dropify",
-      "projectPath": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
-      "packagesPath": "C:\\Users\\GF63\\.nuget\\packages\\",
-      "outputPath": "D:\\SCHOOL\\On school\\PRN221\\PROJECT\\Connecter\\PRN221\\Dropify\\Dropify\\obj\\",
+      "projectPath": "D:\\PRN221\\Dropify\\Dropify\\Dropify.csproj",
+      "packagesPath": "C:\\Users\\buiqu\\.nuget\\packages\\",
+      "outputPath": "D:\\PRN221\\Dropify\\Dropify\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\GF63\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\buiqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -6741,6 +6741,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

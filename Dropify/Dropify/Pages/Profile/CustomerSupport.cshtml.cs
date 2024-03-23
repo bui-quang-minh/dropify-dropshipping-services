@@ -46,8 +46,8 @@ namespace Dropify.Pages.Profile
         }
         public IActionResult OnPostSendEmail(EmailModel model)
         {
-            string host = this.Configuration.GetValue<string>("Smtp:Server");
-            int port = this.Configuration.GetValue<int>("Smtp:Port");
+            string host = "smtp.gmail.com";
+            int port = 587;
 
             using (MimeMessage mm = new MimeMessage())
             {
@@ -55,8 +55,8 @@ namespace Dropify.Pages.Profile
                 string customerName = TempData["CustomerName"] as string;
                 model.To = "dcustomersuppor2313@gmail.com";
                 model.Subject = $"The custmomer {customerName} need to support about order {orderId}";
-                model.Email = "dcustomersuppor2313@gmail.com";
-                model.Password = "vlvp sgyh ibqv gxms";
+                model.Email = "droptifywebsite@gmail.com";
+                model.Password = "wfjn sgkf qyhk goiu";
                 mm.From.Add(new MailboxAddress("DROPIFY_CUSTOMER_SUPPORT", model.Email));
                 mm.To.Add(new MailboxAddress(model.To, model.To));
                 mm.Subject = model.Subject;
@@ -65,7 +65,7 @@ namespace Dropify.Pages.Profile
                 mm.Body = builder.ToMessageBody();
                 using (MailKit.Net.Smtp.SmtpClient smtp = new MailKit.Net.Smtp.SmtpClient())
                 {
-                    smtp.Connect(host, port);
+                    smtp.Connect(host, port, false);
                     smtp.Authenticate(model.Email, model.Password);
                     smtp.Send(mm);
                     smtp.Disconnect(true);
