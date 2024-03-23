@@ -1,6 +1,8 @@
 ﻿using Dropify.Models;
 using Org.BouncyCastle.Crypto.Generators;
 using System.Diagnostics.Eventing.Reader;
+using System.Net;
+using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -9,7 +11,6 @@ namespace Dropify.Logics
     public class UserDAO
     {
         private static string key = "asjrlkmcoewjtjle;oxqskjhdafevoprlsvmx@123";
-        // Lấy tất cả user từ database
         public List<User> GetAllUsers()
         {
             using (var db = new prn211_dropshippingContext())
@@ -17,7 +18,6 @@ namespace Dropify.Logics
                 return db.Users.ToList();
             }
         }
-
         public UserDetail Login(String email, String password)
         {
             using (var db = new prn211_dropshippingContext())
@@ -30,7 +30,6 @@ namespace Dropify.Logics
                 return null;
             }
         }
-
         public User takeUser(String email) {
             using (var db = new prn211_dropshippingContext())
             {
@@ -87,7 +86,6 @@ namespace Dropify.Logics
                 }
             }
         }
-
         public bool Authentication(string email, string password)
         {
             using (var db = new prn211_dropshippingContext())
@@ -114,7 +112,6 @@ namespace Dropify.Logics
         }
         public string EncryptPass(string password)
         {
-            //byte[] salt = GenerateSalt();
             byte[] salt = GenerateSalt(key);
             byte[] passwordBytes = Encoding.UTF8.GetBytes(password + key);
 
@@ -129,19 +126,9 @@ namespace Dropify.Logics
                 return base64HashedPassword;
             }
         }
-        // làm cái cách này thì lại phải thêm 
-        //private byte[] GenerateSalt()
-        //{
-        //    byte[] salt = new byte[64];
-        //    using (RNGCryptoServiceProvider rngCsp = new RNGCryptoServiceProvider())
-        //    {
-        //        rngCsp.GetBytes(salt);
-        //    }
-        //    return salt;
-        //}
         private byte[] GenerateSalt(string key)
         {
-            byte[] salt = Encoding.UTF8.GetBytes(key); // Sử dụng key như một cách tạo salt cố định
+            byte[] salt = Encoding.UTF8.GetBytes(key);
             return salt;
         }
         public bool Authorization(string email)

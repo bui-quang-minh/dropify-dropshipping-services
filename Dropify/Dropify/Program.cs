@@ -38,6 +38,8 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddScoped<prn211_dropshippingContext>();
 builder.Services.AddSignalR();
 
+//add mail 
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())

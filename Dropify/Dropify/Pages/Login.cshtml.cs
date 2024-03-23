@@ -84,7 +84,7 @@ namespace Dropify.Pages
                 if (user != null)
                 {
                     HttpContext.Session.SetString("user", JsonSerializer.Serialize(user));
-                    HttpContext.Session.SetString("tempPass", password);
+                    HttpContext.Session.SetString("Pass", user.Pword);
                     var userDAO = new UserDAO();
                     TempData.Clear();
                     if (userDAO.Authorization(user.Email))
